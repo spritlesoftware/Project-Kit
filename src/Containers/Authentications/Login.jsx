@@ -1,13 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import { colors } from '../../Utils/colors'
-import { fonts } from '../../Utils/fonts'
+import { styles } from './LoginStyles'
+import LoginLogo from '../../Assets/images/login_logo.svg';
 
 const Login = () => {
   return (
-    <View style={{ justifyContent: 'center', alignItems: 'center' }}>
-      <Text style={{ fontFamily: fonts.BOLD, fontSize: 20 }} >Login</Text>
-    </View>
+    <View style={styles.center}>
+      <View style={{ flex: 1, alignItems: 'center' }}>
+        <LoginLogo width={300} height={300} />
+      </View>
+    </View>  
   )
 }
 
