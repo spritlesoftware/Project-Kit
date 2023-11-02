@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Fri Nov 03 07:48:47 IST 2023
+=======
+#Thu Nov 02 10:40:05 IST 2023
+>>>>>>> 5058a68 (feat:UI of the forms:completed)
 path.4=7/classes.dex
 path.3=14/classes.dex
 path.2=0/classes.dex
