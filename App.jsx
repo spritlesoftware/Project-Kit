@@ -6,7 +6,7 @@ import StackNavigator from './src/Navigations/StackNavigator';
 
 
 function App() {
-  return (
+  return ( 
     <NavigationContainer>
       <StackNavigator />
     </NavigationContainer>
