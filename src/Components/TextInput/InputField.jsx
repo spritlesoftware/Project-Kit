@@ -14,9 +14,10 @@ export default function InputField({label, ...props}) {
         outlineColor={colors.GRAY1}
         activeOutlineColor={colors.GREY20}
         selectionColor={colors.BLACK}
-        placeholderTextColor={colors.BLUE1}
+        placeholderTextColor={colors.GREY20}
         style={styles.input}
         contentStyle={styles.inputText}
+        textColor={colors.BLACK}
         {...props}
       />
       {props.error ? <Text style={styles.error}>{props.errorMsg}</Text> : null}
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
     width: '100%',
     marginTop: moderateScale(5),
     fontFamily: fonts.MEDIUM,
+    backgroundColor: colors.WHITE,
   },
 
   inputText: {

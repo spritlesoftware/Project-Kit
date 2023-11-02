@@ -67,6 +67,8 @@ export const styles = StyleSheet.create({
   errorStyleWithLarge: {
     fontFamily: fonts.REGULAR,
     fontSize: moderateScale(10),
+    alignSelf: 'flex-start',
+    color: colors.RED_BORDER,
   },
   headerTitle: {
     fontFamily: fonts.BOLD,
