@@ -1,20 +1,21 @@
-import { StyleSheet } from "react-native";
-import { colors } from "../../Utils/colors";
-import { moderateScale } from "react-native-size-matters";
-import { fonts } from "../../Utils/fonts";
+import {StyleSheet} from 'react-native';
+import {colors} from '../../Utils/colors';
+import {moderateScale} from 'react-native-size-matters';
+import {fonts} from '../../Utils/fonts';
 
 const styles = StyleSheet.create({
   center: {
     backgroundColor: colors.WHITE,
-    height: "100%",
+    height: '100%',
+    padding: moderateScale(20),
   },
 
   inputContainer: {
-    alignItems: "center",
+    alignItems: 'center',
   },
 
   orContainer: {
-    textAlign: "center",
+    textAlign: 'center',
     marginTop: moderateScale(20),
     fontSize: moderateScale(14),
     color: colors.GRAY_TEXT,
@@ -22,8 +23,9 @@ const styles = StyleSheet.create({
   },
 
   titleContainer: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: moderateScale(-20),
   },
 
   headerTitle: {
@@ -31,16 +33,16 @@ const styles = StyleSheet.create({
   },
 
   divider: {
-    width: "90%",
-    alignSelf: "center",
+    width: '90%',
+    alignSelf: 'center',
     marginTop: moderateScale(20),
     borderWidth: 0.1,
     borderColor: colors.GREY20,
   },
 
   socialContainer: {
-    flexDirection: "row",
-    justifyContent: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
     marginTop: moderateScale(20),
   },
 
@@ -56,28 +58,25 @@ const styles = StyleSheet.create({
     color: colors.RED_BORDER,
     fontFamily: fonts.REGULAR,
     fontSize: moderateScale(14),
-    width: "90%",
+    width: '90%',
     marginTop: moderateScale(10),
   },
 
   forgotPasswordContainer: {
-    alignSelf: "flex-end",
-    position: "absolute",
-    top: moderateScale(140),
-    right: moderateScale(20),
+    alignSelf: 'flex-end',
   },
 
   forgotPassword: {
     color: colors.BLACK,
     fontFamily: fonts.REGULAR,
     marginTop: moderateScale(10),
-    alignSelf: "flex-end",
+    alignSelf: 'flex-end',
     fontSize: moderateScale(12),
   },
 
   regContainer: {
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     marginTop: moderateScale(15),
   },
 
@@ -87,4 +86,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { styles };
+export {styles};
