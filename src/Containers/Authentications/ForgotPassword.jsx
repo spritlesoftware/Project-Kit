@@ -1,4 +1,4 @@
-import {View, SafeAreaView} from 'react-native';
+import {View, SafeAreaView, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {styles} from './ForgotPasswordStyles';
@@ -7,7 +7,7 @@ import InputField from '../../Components/TextInput/InputField';
 import {moderateScale} from 'react-native-size-matters';
 import CustomButton from '../../Components/Button/CustomButton';
 import {colors} from '../../Utils/colors';
-import {Button, Text} from 'react-native-paper';
+import {ActivityIndicator, Button, Text} from 'react-native-paper';
 
 const ForgotPassword = ({navigation}) => {
   const [email, setEmail] = useState('');
@@ -58,7 +58,9 @@ const ForgotPassword = ({navigation}) => {
     }
   };
 
-  const sendToken = () => {};
+  const sendToken = () => {
+    setResendClicked(false);
+  };
 
   function renderHeader(title) {
     return (
@@ -159,20 +161,20 @@ const ForgotPassword = ({navigation}) => {
         ) : null}
         {resendClicked ? (
           <ActivityIndicator
-            size="small"
-            color={colors.BLACK}
-            style={{alignItems: 'flex-start', marginTop: 5, marginLeft: 10}}
+            style={{alignSelf: 'flex-start', marginTop: moderateScale(5)}}
+            animating={true}
+            color={colors.APP_PRIMARY}
           />
         ) : (
-          <Text
-            style={[styles.emailInfoText, {marginLeft: 0, fontSize: 14}]}
+          <TouchableOpacity
             onPress={async () => {
               setResendClicked(true);
               await sendToken();
-              setResendClicked(false);
             }}>
-            Resend
-          </Text>
+            <Text style={[styles.emailInfoText, {marginLeft: 0, fontSize: 14}]}>
+              Resend
+            </Text>
+          </TouchableOpacity>
         )}
         <View style={{marginTop: moderateScale(10)}} />
         <Text style={styles.newPassword}>Create a new password</Text>
