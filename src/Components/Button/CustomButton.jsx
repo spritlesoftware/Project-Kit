@@ -32,9 +32,11 @@ const styles = StyleSheet.create({
   btnContent: {
     alignItems: 'center',
     justifyContent: 'center',
+    color: colors.WHITE,
   },
   btnText: {
     fontFamily: fonts.BOLD,
     fontSize: moderateScale(20),
+    color: colors.WHITE,
   },
 });

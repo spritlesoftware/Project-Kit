@@ -30,6 +30,7 @@ const styles = StyleSheet.create({
 
   headerTitle: {
     fontFamily: fonts.BOLD,
+    color: colors.APP_PRIMARY,
   },
 
   divider: {
