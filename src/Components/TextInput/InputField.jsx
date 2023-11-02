@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { Text, TextInput } from "react-native-paper";
-import { StyleSheet } from "react-native";
-import { colors } from "../../Utils/colors";
-import { moderateScale } from "react-native-size-matters";
-import { fonts } from "../../Utils/fonts";
+import {useState} from 'react';
+import {Text, TextInput} from 'react-native-paper';
+import {StyleSheet} from 'react-native';
+import {colors} from '../../Utils/colors';
+import {moderateScale} from 'react-native-size-matters';
+import {fonts} from '../../Utils/fonts';
 
-export default function InputField({ label, ...props }) {
+export default function InputField({label, ...props}) {
   return (
     <>
       <TextInput
@@ -19,16 +19,14 @@ export default function InputField({ label, ...props }) {
         contentStyle={styles.inputText}
         {...props}
       />
-      {props.error ? (
-        <Text style={styles.error}>Enter an email address</Text>
-      ) : null}
+      {props.error ? <Text style={styles.error}>{props.errorMsg}</Text> : null}
     </>
   );
 }
 
 const styles = StyleSheet.create({
   input: {
-    width: "90%",
+    width: '100%',
     marginTop: moderateScale(5),
     fontFamily: fonts.MEDIUM,
   },
@@ -41,9 +39,8 @@ const styles = StyleSheet.create({
     color: colors.RED_BORDER,
     fontFamily: fonts.REGULAR,
     fontSize: moderateScale(12),
-    width: "40%",
-    alignSelf: "flex-start",
+    width: '50%',
+    alignSelf: 'flex-start',
     paddingTop: moderateScale(5),
-    marginLeft: moderateScale(20),
   },
 });
