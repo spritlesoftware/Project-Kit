@@ -1,7 +1,9 @@
-import React from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Login from "../Containers/Authentications/Login";
-import Register from "../Containers/Authentications/Register";
+import React from 'react';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Login from '../Containers/Authentications/Login';
+import Register from '../Containers/Authentications/Register';
+import ForgotPassword from '../Containers/Authentications/ForgotPassword';
+import Logout from '../Containers/Authentications/Logout';
 
 const Stack = createNativeStackNavigator();
 
@@ -11,11 +13,13 @@ const StackNavigator = () => {
       screenOptions={{
         headerShown: false,
         // presentation: 'modal',
-        animationTypeForReplace: "push",
-        animation: "slide_from_right",
+        animationTypeForReplace: 'push',
+        animation: 'slide_from_right',
       }}>
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={Register} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      <Stack.Screen name="Logout" component={Logout} />
     </Stack.Navigator>
   );
 };
