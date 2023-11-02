@@ -29,12 +29,10 @@ const styles = StyleSheet.create({
     borderRadius: moderateScale(30),
     marginTop: moderateScale(20),
   },
-
   btnContent: {
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   btnText: {
     fontFamily: fonts.BOLD,
     fontSize: moderateScale(20),
