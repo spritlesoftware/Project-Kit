@@ -38,6 +38,5 @@ com.kit_box.app-mergeDebugResources-36 /home/gowrishankar/Project-Kitbox/android
 com.kit_box.app-merged_res-37 /home/gowrishankar/Project-Kitbox/android/app/build/intermediates/merged_res/debug
 com.kit_box.app-debug-38 /home/gowrishankar/Project-Kitbox/android/app/src/debug/res
 com.kit_box.app-main-39 /home/gowrishankar/Project-Kitbox/android/app/src/main/res
-com.kit_box.app-packaged_res-40 /home/gowrishankar/Project-Kitbox/node_modules/react-native-gesture-handler/android/build/intermediates/packaged_res/debug
-com.kit_box.app-packaged_res-41 /home/gowrishankar/Project-Kitbox/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
-com.kit_box.app-packaged_res-42 /home/gowrishankar/Project-Kitbox/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug
+com.kit_box.app-packaged_res-40 /home/gowrishankar/Project-Kitbox/node_modules/react-native-safe-area-context/android/build/intermediates/packaged_res/debug
+com.kit_box.app-packaged_res-41 /home/gowrishankar/Project-Kitbox/node_modules/react-native-screens/android/build/intermediates/packaged_res/debug

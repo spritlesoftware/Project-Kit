@@ -8,10 +8,8 @@ MERGED from /home/gowrishankar/Project-Kitbox/android/app/src/main/AndroidManife
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.182.0] /home/gowrishankar/.gradle/caches/transforms-3/e47626a30834dcd66576d826bae55315/transformed/jetified-flipper-network-plugin-0.182.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] /home/gowrishankar/.gradle/caches/transforms-3/927874504f02e490d8ef5fc541319ddd/transformed/jetified-flipper-fresco-plugin-0.182.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper:0.182.0] /home/gowrishankar/.gradle/caches/transforms-3/e13f88164840fe641a466d05cd8edac7/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:8:1-18:12
-MERGED from [:react-native-gesture-handler] /home/gowrishankar/Project-Kitbox/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-safe-area-context] /home/gowrishankar/Project-Kitbox/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-screens] /home/gowrishankar/Project-Kitbox/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-svg] /home/gowrishankar/Project-Kitbox/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:react-android:0.72.6] /home/gowrishankar/.gradle/caches/transforms-3/620147001f23a61fa54dd66c3890cad2/transformed/jetified-react-android-0.72.6-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:hermes-android:0.72.6] /home/gowrishankar/.gradle/caches/transforms-3/82fc49c66eb188cd9d470265c2f5633f/transformed/jetified-hermes-android-0.72.6-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /home/gowrishankar/.gradle/caches/transforms-3/463b085172aadec89519c358dac4e9e6/transformed/jetified-imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:2:1-9:12
@@ -183,14 +181,10 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] /home/gowrishan
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] /home/gowrishankar/.gradle/caches/transforms-3/927874504f02e490d8ef5fc541319ddd/transformed/jetified-flipper-fresco-plugin-0.182.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.182.0] /home/gowrishankar/.gradle/caches/transforms-3/e13f88164840fe641a466d05cd8edac7/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.182.0] /home/gowrishankar/.gradle/caches/transforms-3/e13f88164840fe641a466d05cd8edac7/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:11:5-13:41
-MERGED from [:react-native-gesture-handler] /home/gowrishankar/Project-Kitbox/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-gesture-handler] /home/gowrishankar/Project-Kitbox/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-safe-area-context] /home/gowrishankar/Project-Kitbox/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-safe-area-context] /home/gowrishankar/Project-Kitbox/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-screens] /home/gowrishankar/Project-Kitbox/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-screens] /home/gowrishankar/Project-Kitbox/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-svg] /home/gowrishankar/Project-Kitbox/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-svg] /home/gowrishankar/Project-Kitbox/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:react-android:0.72.6] /home/gowrishankar/.gradle/caches/transforms-3/620147001f23a61fa54dd66c3890cad2/transformed/jetified-react-android-0.72.6-debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:react-android:0.72.6] /home/gowrishankar/.gradle/caches/transforms-3/620147001f23a61fa54dd66c3890cad2/transformed/jetified-react-android-0.72.6-debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:hermes-android:0.72.6] /home/gowrishankar/.gradle/caches/transforms-3/82fc49c66eb188cd9d470265c2f5633f/transformed/jetified-hermes-android-0.72.6-debug/AndroidManifest.xml:5:5-44
