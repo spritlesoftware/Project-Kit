@@ -9,94 +9,185 @@
 9        android:targetSdkVersion="33" />
 10
 11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-11-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/debug/AndroidManifest.xml:5:5-77
-11-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/debug/AndroidManifest.xml:5:22-75
+11-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\debug\AndroidManifest.xml:5:5-77
+11-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\debug\AndroidManifest.xml:5:22-75
 12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:3:5-67
-12-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:3:22-64
-13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-13-->[com.facebook.flipper:flipper:0.182.0] /home/gowrishankar/.gradle/caches/transforms-3/e13f88164840fe641a466d05cd8edac7/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:16:5-76
-13-->[com.facebook.flipper:flipper:0.182.0] /home/gowrishankar/.gradle/caches/transforms-3/e13f88164840fe641a466d05cd8edac7/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:16:22-73
-14
-15    <application
-15-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:5:5-24:19
-16        android:name="com.kit_box.MainApplication"
-16-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:6:7-38
-17        android:allowBackup="false"
-17-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:10:7-34
-18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.7.0] /home/gowrishankar/.gradle/caches/transforms-3/75e4635b66fa4e4e84e71b52579837ce/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
-19        android:debuggable="true"
-20        android:icon="@mipmap/ic_launcher"
-20-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:8:7-41
-21        android:label="@string/app_name"
-21-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:7:7-39
-22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:9:7-52
-23        android:theme="@style/AppTheme"
-23-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:11:7-38
-24        android:usesCleartextTraffic="true" >
-24-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/debug/AndroidManifest.xml:8:9-44
-25        <activity
-25-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/debug/AndroidManifest.xml:11:9-111
-26            android:name="com.facebook.react.devsupport.DevSettingsActivity"
-26-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/debug/AndroidManifest.xml:11:19-83
-27            android:exported="false" />
-27-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/debug/AndroidManifest.xml:11:84-108
-28        <activity
-28-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:12:7-23:18
-29            android:name="com.kit_box.MainActivity"
-29-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:13:9-37
-30            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
-30-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:15:9-118
-31            android:exported="true"
-31-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:18:9-32
-32            android:label="@string/app_name"
-32-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:14:9-41
-33            android:launchMode="singleTask"
-33-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:16:9-40
-34            android:windowSoftInputMode="adjustResize" >
-34-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:17:9-51
-35            <intent-filter>
-35-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:19:9-22:25
-36                <action android:name="android.intent.action.MAIN" />
-36-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:20:13-65
-36-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:20:21-62
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:21:13-73
-38-->/home/gowrishankar/Project-Kit/kit_box/android/app/src/main/AndroidManifest.xml:21:23-70
-39            </intent-filter>
-40        </activity>
-41
-42        <meta-data
-42-->[com.facebook.soloader:soloader:0.10.5] /home/gowrishankar/.gradle/caches/transforms-3/ec3312a013bd7d8a70466a1977a1dba4/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:12:9-14:37
-43            android:name="com.facebook.soloader.enabled"
-43-->[com.facebook.soloader:soloader:0.10.5] /home/gowrishankar/.gradle/caches/transforms-3/ec3312a013bd7d8a70466a1977a1dba4/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:13:13-57
-44            android:value="false" />
-44-->[com.facebook.soloader:soloader:0.10.5] /home/gowrishankar/.gradle/caches/transforms-3/ec3312a013bd7d8a70466a1977a1dba4/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:14:13-34
-45
-46        <provider
-46-->[androidx.emoji2:emoji2:1.0.0] /home/gowrishankar/.gradle/caches/transforms-3/223146ef33e3aa619e8b04649706e145/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
-47            android:name="androidx.startup.InitializationProvider"
-47-->[androidx.emoji2:emoji2:1.0.0] /home/gowrishankar/.gradle/caches/transforms-3/223146ef33e3aa619e8b04649706e145/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
-48            android:authorities="com.kit_box.androidx-startup"
-48-->[androidx.emoji2:emoji2:1.0.0] /home/gowrishankar/.gradle/caches/transforms-3/223146ef33e3aa619e8b04649706e145/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
-49            android:exported="false" >
-49-->[androidx.emoji2:emoji2:1.0.0] /home/gowrishankar/.gradle/caches/transforms-3/223146ef33e3aa619e8b04649706e145/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
-50            <meta-data
-50-->[androidx.emoji2:emoji2:1.0.0] /home/gowrishankar/.gradle/caches/transforms-3/223146ef33e3aa619e8b04649706e145/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
-51                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-51-->[androidx.emoji2:emoji2:1.0.0] /home/gowrishankar/.gradle/caches/transforms-3/223146ef33e3aa619e8b04649706e145/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
-52                android:value="androidx.startup" />
-52-->[androidx.emoji2:emoji2:1.0.0] /home/gowrishankar/.gradle/caches/transforms-3/223146ef33e3aa619e8b04649706e145/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
-53            <meta-data
-53-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/gowrishankar/.gradle/caches/transforms-3/d5d05479173d466a6bd0989b3b3e5ef4/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
-54                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-54-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/gowrishankar/.gradle/caches/transforms-3/d5d05479173d466a6bd0989b3b3e5ef4/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
-55                android:value="androidx.startup" />
-55-->[androidx.lifecycle:lifecycle-process:2.4.0] /home/gowrishankar/.gradle/caches/transforms-3/d5d05479173d466a6bd0989b3b3e5ef4/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
-56        </provider>
-57    </application>
-58
-59</manifest>
+12-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:4:5-67
+12-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:5:5-79
+13-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:5:22-76
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:5-81
+14-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:22-78
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:5-77
+15-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:22-74
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:5-79
+16-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:5-81
+17-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:22-78
+18    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+18-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:10:5-85
+18-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:10:22-82
+19    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+19-->[com.facebook.flipper:flipper:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\e13f88164840fe641a466d05cd8edac7\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
+19-->[com.facebook.flipper:flipper:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\e13f88164840fe641a466d05cd8edac7\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:22-73
+20
+21    <uses-feature
+21-->[org.maplibre.gl:android-sdk:9.6.0] C:\Users\91934\.gradle\caches\transforms-3\c5433a343ef691b08962dcd5a1f74cf4\transformed\jetified-android-sdk-9.6.0\AndroidManifest.xml:9:5-11:35
+22        android:glEsVersion="0x00020000"
+22-->[org.maplibre.gl:android-sdk:9.6.0] C:\Users\91934\.gradle\caches\transforms-3\c5433a343ef691b08962dcd5a1f74cf4\transformed\jetified-android-sdk-9.6.0\AndroidManifest.xml:10:9-41
+23        android:required="true" />
+23-->[org.maplibre.gl:android-sdk:9.6.0] C:\Users\91934\.gradle\caches\transforms-3\c5433a343ef691b08962dcd5a1f74cf4\transformed\jetified-android-sdk-9.6.0\AndroidManifest.xml:11:9-32
+24    <uses-feature
+24-->[org.maplibre.gl:android-sdk:9.6.0] C:\Users\91934\.gradle\caches\transforms-3\c5433a343ef691b08962dcd5a1f74cf4\transformed\jetified-android-sdk-9.6.0\AndroidManifest.xml:12:5-14:36
+25        android:name="android.hardware.wifi"
+25-->[org.maplibre.gl:android-sdk:9.6.0] C:\Users\91934\.gradle\caches\transforms-3\c5433a343ef691b08962dcd5a1f74cf4\transformed\jetified-android-sdk-9.6.0\AndroidManifest.xml:13:9-45
+26        android:required="false" />
+26-->[org.maplibre.gl:android-sdk:9.6.0] C:\Users\91934\.gradle\caches\transforms-3\c5433a343ef691b08962dcd5a1f74cf4\transformed\jetified-android-sdk-9.6.0\AndroidManifest.xml:14:9-33
+27
+28    <application
+28-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:12:5-31:19
+29        android:name="com.kit_box.MainApplication"
+29-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:13:7-38
+30        android:allowBackup="false"
+30-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:17:7-34
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.7.0] C:\Users\91934\.gradle\caches\transforms-3\75e4635b66fa4e4e84e71b52579837ce\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+32        android:debuggable="true"
+33        android:icon="@mipmap/ic_launcher"
+33-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:15:7-41
+34        android:label="@string/app_name"
+34-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:14:7-39
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:16:7-52
+36        android:theme="@style/AppTheme"
+36-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:18:7-38
+37        android:usesCleartextTraffic="true" >
+37-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\debug\AndroidManifest.xml:8:9-44
+38        <activity
+38-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\debug\AndroidManifest.xml:11:9-111
+39            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+39-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\debug\AndroidManifest.xml:11:19-83
+40            android:exported="false" />
+40-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\debug\AndroidManifest.xml:11:84-108
+41        <activity
+41-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:19:7-30:18
+42            android:name="com.kit_box.MainActivity"
+42-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:20:9-37
+43            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+43-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:22:9-118
+44            android:exported="true"
+44-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:25:9-32
+45            android:label="@string/app_name"
+45-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:21:9-41
+46            android:launchMode="singleTask"
+46-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:23:9-40
+47            android:windowSoftInputMode="adjustResize" >
+47-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:24:9-51
+48            <intent-filter>
+48-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:26:9-29:25
+49                <action android:name="android.intent.action.MAIN" />
+49-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:27:13-65
+49-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:27:21-62
+50
+51                <category android:name="android.intent.category.LAUNCHER" />
+51-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:28:13-73
+51-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:28:23-70
+52            </intent-filter>
+53        </activity>
+54
+55        <receiver
+55-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:18:9-29:20
+56            android:name="io.radar.sdk.RadarLocationReceiver"
+56-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:19:13-62
+57            android:enabled="true"
+57-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:20:13-35
+58            android:exported="false" >
+58-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:21:13-37
+59            <intent-filter android:priority="999" >
+59-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:22:13-28:29
+59-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:22:28-50
+60                <action android:name="io.radar.sdk.LocationReceiver.SYNCED_GEOFENCES" />
+60-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:23:17-89
+60-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:23:25-86
+61                <action android:name="io.radar.sdk.LocationReceiver.GEOFENCE" />
+61-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:24:17-81
+61-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:24:25-78
+62                <action android:name="io.radar.sdk.LocationReceiver.LOCATION" />
+62-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:25:17-81
+62-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:25:25-78
+63                <action android:name="io.radar.sdk.LocationReceiver.BEACON" />
+63-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:26:17-79
+63-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:26:25-76
+64                <action android:name="android.intent.action.BOOT_COMPLETED" />
+64-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:27:17-79
+64-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:27:25-76
+65            </intent-filter>
+66        </receiver>
+67
+68        <service
+68-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:31:9-34:72
+69            android:name="io.radar.sdk.RadarJobScheduler"
+69-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:32:13-58
+70            android:exported="true"
+70-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:33:13-36
+71            android:permission="android.permission.BIND_JOB_SERVICE" />
+71-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:34:13-69
+72        <service
+72-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:35:9-37:56
+73            android:name="io.radar.sdk.RadarForegroundService"
+73-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:36:13-63
+74            android:foregroundServiceType="location" />
+74-->[io.radar:sdk:3.8.12] C:\Users\91934\.gradle\caches\transforms-3\fabf473500780686bfefe96e8e6df02c\transformed\jetified-sdk-3.8.12\AndroidManifest.xml:37:13-53
+75
+76        <meta-data
+76-->[com.facebook.soloader:soloader:0.10.5] C:\Users\91934\.gradle\caches\transforms-3\ec3312a013bd7d8a70466a1977a1dba4\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:12:9-14:37
+77            android:name="com.facebook.soloader.enabled"
+77-->[com.facebook.soloader:soloader:0.10.5] C:\Users\91934\.gradle\caches\transforms-3\ec3312a013bd7d8a70466a1977a1dba4\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:13:13-57
+78            android:value="false" />
+78-->[com.facebook.soloader:soloader:0.10.5] C:\Users\91934\.gradle\caches\transforms-3\ec3312a013bd7d8a70466a1977a1dba4\transformed\jetified-soloader-0.10.5\AndroidManifest.xml:14:13-34
+79
+80        <activity
+80-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\91934\.gradle\caches\transforms-3\7bc2107a0f24dde54b783ba4b64ec0fd\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+81            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+81-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\91934\.gradle\caches\transforms-3\7bc2107a0f24dde54b783ba4b64ec0fd\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+82            android:exported="false"
+82-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\91934\.gradle\caches\transforms-3\7bc2107a0f24dde54b783ba4b64ec0fd\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+83            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+83-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\91934\.gradle\caches\transforms-3\7bc2107a0f24dde54b783ba4b64ec0fd\transformed\jetified-play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+84
+85        <meta-data
+85-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\91934\.gradle\caches\transforms-3\bf9b6fb405d2f7fd8250171739588e78\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+86            android:name="com.google.android.gms.version"
+86-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\91934\.gradle\caches\transforms-3\bf9b6fb405d2f7fd8250171739588e78\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+87            android:value="@integer/google_play_services_version" />
+87-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\91934\.gradle\caches\transforms-3\bf9b6fb405d2f7fd8250171739588e78\transformed\jetified-play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+88
+89        <provider
+89-->[androidx.emoji2:emoji2:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+90            android:name="androidx.startup.InitializationProvider"
+90-->[androidx.emoji2:emoji2:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+91            android:authorities="com.kit_box.androidx-startup"
+91-->[androidx.emoji2:emoji2:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+92            android:exported="false" >
+92-->[androidx.emoji2:emoji2:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+93            <meta-data
+93-->[androidx.emoji2:emoji2:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+94                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+94-->[androidx.emoji2:emoji2:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+95                android:value="androidx.startup" />
+95-->[androidx.emoji2:emoji2:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\223146ef33e3aa619e8b04649706e145\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+96            <meta-data
+96-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\91934\.gradle\caches\transforms-3\d5d05479173d466a6bd0989b3b3e5ef4\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+97                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+97-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\91934\.gradle\caches\transforms-3\d5d05479173d466a6bd0989b3b3e5ef4\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+98                android:value="androidx.startup" />
+98-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\91934\.gradle\caches\transforms-3\d5d05479173d466a6bd0989b3b3e5ef4\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+99        </provider>
+100    </application>
+101
+102</manifest>

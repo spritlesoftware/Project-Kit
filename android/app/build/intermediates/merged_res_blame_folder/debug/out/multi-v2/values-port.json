@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.kit_box.app-mergeDebugResources-22:/values-port/values-port.xml",
+            "outputFile": "com.kit_box.app-mergeDebugResources-27:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/home/gowrishankar/.gradle/caches/transforms-3/b14585e0ae3314e7a64bac79062dab1c/transformed/appcompat-1.4.1/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\91934\\.gradle\\caches\\transforms-3\\b14585e0ae3314e7a64bac79062dab1c\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
