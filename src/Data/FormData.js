@@ -37,7 +37,7 @@ export const formData =[
         "label": "Newsletter Subscription",
         "type": "radio",
         "options": ["Yes", "No"],
-        "required": false
+        "required": true
       },
     ]
   
