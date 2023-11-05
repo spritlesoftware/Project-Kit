@@ -1,22 +1,48 @@
-import { View, Text, StyleSheet } from "react-native";
-import InputField from "../Components/InputField";
-import { useState ,useRef} from "react";
-import Buttons from "../Components/Buttons";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
+import InputField from "../Components/TextInput/InputField";
+import { useState, useRef } from "react";
+import CustomButton from "../Components/Button/CustomButton";
 import { formData } from "../Data/FormData";
 import { RadioButton } from "react-native-paper";
 import { Checkbox } from "react-native-paper";
 import SelectDropdown from 'react-native-select-dropdown'
-import {FontAwesome} from "react-native-vector-icons"
-
+import { FontAwesome } from "react-native-vector-icons"
+import { moderateScale } from 'react-native-size-matters';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { colors } from "../Utils/colors";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { fonts } from '../Utils/fonts';
 
 export default function Form() {
+    const [errors, setErrors] = useState({});
     const [formValues, setFormValues] = useState({});
-    const citiesDropdownRef = useRef();
 
     const onInputChange = (fieldId, value) => {
         setFormValues({ ...formValues, [fieldId]: value });
     };
-    console.log("formValues", formValues)
+
+    function onHandleSubmit() {
+        const newErrors = {};
+        formData.forEach((field) => {
+            if (field.required === true) {
+                if (!formValues[field.id]) {
+                    newErrors[field.id] = "This field is required"
+                }
+            }
+        })
+
+        if (Object.keys(newErrors).length === 0) {
+            // Form is valid, submit or perform the desired action
+            setErrors({})
+            setFormValues({})
+            console.log(formValues)
+        } else {
+            setErrors(newErrors);
+        }
+        console.log(errors)
+
+    }
+
     function renderFormFields() {
         return formData.map((field) => {
             switch (field.type) {
@@ -26,6 +52,8 @@ export default function Form() {
                         label={field.label}
                         value={formValues[field.id] || ''}
                         onChangeText={(text) => onInputChange(field.id, text)}
+                        error={errors[field.id]}
+                        errorMsg={errors[field.id]}
                     />)
 
                 case "email":
@@ -34,36 +62,38 @@ export default function Form() {
                         label={field.label}
                         value={formValues[field.id] || ''}
                         onChangeText={(text) => onInputChange(field.id, text)}
+                        error={errors[field.id]}
+                        errorMsg={errors[field.id]}
                     />)
 
                 case "radio":
                     return (
-                        <View key={field.id} style={{ marginBottom: 10 }}>
-                            <Text>{field.label}</Text>
+                        <View key={field.id} style={{ padding: moderateScale(10) }}>
+                            <Text style={{ fontSize: 19, color: "black", marginBottom: moderateScale(15) }}>{field.label}</Text>
                             {field.options.map((option) => {
                                 return (
-                                    <View style={{ display: "flex", flexDirection: "row" }}>
+                                    <View style={{ display: "flex", flexDirection: "row", marginBottom: moderateScale(10) }}>
                                         <RadioButton
                                             key={option}
                                             value={option}
                                             status={formValues[field.id] === option ? 'checked' : 'unchecked'}
                                             onPress={() => onInputChange(field.id, option)}
                                         />
-                                        <Text>{option}</Text>
+                                        <Text style={{ fontSize: 15, color: "black", marginTop: 7 }}>{option}</Text>
                                     </View>
                                 )
                             })}
-
+                            {errors[field.id] ? <Text style={styles.error}>{errors[field.id]}</Text> : null}
                         </View>
                     )
                 case "checkbox":
                     return (
-                        <View key={field.id} style={{ marginBottom: 10 }}>
-                            <Text>{field.label}</Text>
+                        <View key={field.id} style={{ padding: moderateScale(10) }} >
+                            <Text style={{ fontSize: 19, color: "black", marginBottom: moderateScale(15) }}>{field.label}</Text>
                             {
                                 field.options.map((option) => {
                                     return (
-                                        <View style={{ display: "flex", flexDirection: "row" }}>
+                                        <View style={{ display: "flex", flexDirection: "row", marginBottom: moderateScale(10) }}>
                                             <Checkbox
                                                 key={option}
                                                 status={formValues[field.id]?.[option] ? 'checked' : 'unchecked'}
@@ -76,44 +106,33 @@ export default function Form() {
                                                 }
                                                 }
                                             />
-                                            <Text>{option}</Text>
+                                            <Text style={{ fontSize: 15, color: "black", marginTop: 7 }}>{option}</Text>
                                         </View>
                                     )
                                 })
                             }
-
+                            {errors[field.id] ? <Text style={styles.error}>{errors[field.id]}</Text> : null}
                         </View>
                     )
 
                 case "select":
                     return (
-                        <View>
-                            <Text>{field.label}</Text>
+                        <View style={{ padding: moderateScale(10) }}>
+                            <Text style={{ fontSize: 19, marginBottom: moderateScale(20), marginTop: moderateScale(20), color: "black" }}>{field.label}</Text>
                             <SelectDropdown
                                 data={field.options}
-                                ref={citiesDropdownRef}
                                 onSelect={(selectedItem, index) => {
-                                    //console.log(selectedItem, index)
+                                    onInputChange(field.id, selectedItem)
                                 }}
                                 buttonTextAfterSelection={(selectedItem, index) => {
-                                    // text represented after item is selected
-                                    // if data array is an array of objects then return selectedItem.property to render after item is selected
                                     return selectedItem
                                 }}
                                 rowTextForSelection={(item, index) => {
-                                    // text represented for each item in dropdown
-                                    // if data array is an array of objects then return item.property to represent item in dropdown
                                     return item
                                 }}
-                                // buttonStyle={styles.dropdown2BtnStyle}
-                                // buttonTextStyle={styles.dropdown2BtnTxtStyle}
-                                // renderDropdownIcon={isOpened => {
-                                //   return <FontAwesome name={isOpened ? 'chevron-up' : 'chevron-down'} color={'#444'} size={18} />;
-                                // }}
-                                // dropdownStyle={styles.dropdown2DropdownStyle}
-                                // rowStyle={styles.dropdown2RowStyle}
-                                // rowTextStyle={styles.dropdown2RowTxtStyle}
+
                             />
+                            {errors[field.id] ? <Text style={styles.error}>{errors[field.id]}</Text> : null}
                         </View>
                     )
 
@@ -121,28 +140,30 @@ export default function Form() {
         })
     }
     return (
-        <View style={styles.container}>
-            {renderFormFields()}
-            <Buttons btnText={"Submit"} />
-        </View>
+        <SafeAreaView style={styles.container}>
+            <KeyboardAwareScrollView
+                keyboardShouldPersistTaps="handled">
+                <Text style={{ fontFamily: fonts.BOLD, fontSize: 30, padding: 30, textAlign: "center", color: "black" }}>Kitbox - Form</Text>
+                {renderFormFields()}
+                <CustomButton title={'Submit'} onPress={onHandleSubmit} />
+            </KeyboardAwareScrollView>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        padding: 30
+        backgroundColor: colors.WHITE,
+        height: '100%',
+        padding: moderateScale(20),
     },
-    dropdown2BtnStyle: {
-        flex: 1,
-        height: 50,
-        backgroundColor: '#FFF',
-        borderRadius: 8,
-        borderWidth: 1,
-        borderColor: '#444',
-      },
-      dropdown2BtnTxtStyle: {color: '#444', textAlign: 'left'},
-      dropdown2DropdownStyle: {backgroundColor: '#EFEFEF'},
-      dropdown2RowStyle: {backgroundColor: '#EFEFEF', borderBottomColor: '#C5C5C5'},
-      dropdown2RowTxtStyle: {color: '#444', textAlign: 'left'},
+    error: {
+        color: colors.RED_BORDER,
+        fontFamily: fonts.REGULAR,
+        fontSize: moderateScale(12),
+        width: '50%',
+        alignSelf: 'flex-start',
+        paddingTop: moderateScale(5),
+    }
 
 })
