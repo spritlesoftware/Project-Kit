@@ -15,8 +15,11 @@ import java.util.ArrayList;
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-screens
 import com.swmansion.rnscreens.RNScreensPackage;
+<<<<<<< HEAD
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
+=======
+>>>>>>> cb277905d97fe05ecaced705d7eacdf739873291
 
 public class PackageList {
   private Application application;
@@ -63,8 +66,12 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new SafeAreaContextPackage(),
+<<<<<<< HEAD
       new RNScreensPackage(),
       new VectorIconsPackage()
+=======
+      new RNScreensPackage()
+>>>>>>> cb277905d97fe05ecaced705d7eacdf739873291
     ));
   }
 }
