@@ -6,8 +6,11 @@ import {moderateScale} from 'react-native-size-matters';
 import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 import MenuPopup from '../Menu/Menu';
+import {useNavigation} from '@react-navigation/native';
 
-const HeaderWithBackaction = ({navigation, title, openMenu}) => {
+const HeaderWithBackaction = ({title, openMenu}) => {
+  const navigation = useNavigation();
+
   const _goBack = () => navigation.navigate('ChatList');
 
   const _handleSearch = () => console.log('Searching');
@@ -19,7 +22,7 @@ const HeaderWithBackaction = ({navigation, title, openMenu}) => {
       <Appbar.BackAction
         color={colors.WHITE}
         size={30}
-        onPress={() => navigation.navigate('ChatList')}
+        onPress={() => navigation.goBack()}
       />
       <Avatar.Image
         size={35}
