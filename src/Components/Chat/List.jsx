@@ -13,8 +13,7 @@ const Lists = ({items, navigation, groupContact}) => {
   return (
     <TouchableRipple
       style={styles.container}
-      // onPress={() => navigation.navigate('Chat', { Item })}
-    >
+      onPress={() => navigation.navigate('ChatRoom', {Item})}>
       <List.Item
         left={() => (
           <>
