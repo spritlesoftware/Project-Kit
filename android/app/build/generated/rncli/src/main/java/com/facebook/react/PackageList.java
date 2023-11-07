@@ -15,6 +15,10 @@ import java.util.ArrayList;
 import com.mapbox.rctmgl.RCTMGLPackage;
 // react-native-radar
 import io.radar.react.RNRadarPackage;
+// react-native-safe-area-context
+import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
+// react-native-screens
+import com.swmansion.rnscreens.RNScreensPackage;
 
 public class PackageList {
   private Application application;
@@ -61,7 +65,9 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new RCTMGLPackage(),
-      new RNRadarPackage()
+      new RNRadarPackage(),
+      new SafeAreaContextPackage(),
+      new RNScreensPackage()
     ));
   }
 }
