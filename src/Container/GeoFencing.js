@@ -94,7 +94,7 @@ export default function Geofencing({ route }) {
     centerCoordinate: [ 80.1765705 , 13.0669653],
     animationMode: 'flyTo',
     animationDuration: 1000,
-    zoomLevel: 12,
+    zoomLevel: 10,
   });
 
   const onRegionDidChange = (event) => {
@@ -187,7 +187,7 @@ export default function Geofencing({ route }) {
           {/* <Text style={{ color: "gray", fontSize: 8, padding: 7 ,fontWeight:"normal"}}>{displayText}</Text> */}
         </ScrollView>
         {/* s */}
-        <ExampleButton
+        {/* <ExampleButton
           title="getLocation"
           onPress={() => {
             Radar.getLocation()
@@ -198,7 +198,7 @@ export default function Geofencing({ route }) {
                 handlePopulateText("getLocation:" + err);
               });
           }}
-        />
+        /> */}
 
       </View>
     </View>
