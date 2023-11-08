@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
+import {moderateScale} from 'react-native-size-matters';
 
 const FileTransfer = ({filePath}) => {
   var fileType = '';
@@ -21,9 +22,7 @@ const FileTransfer = ({filePath}) => {
           style={{height: 60, width: 60}}
         />
         <View>
-          <Text style={styles.text}>
-            {name.replace('%20', '').replace(' ', '')}
-          </Text>
+          <Text style={styles.text}>{name.replace(/%20| /g, '')}</Text>
           <Text style={styles.textType}>{fileType.toUpperCase()}</Text>
         </View>
       </View>
@@ -46,6 +45,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     marginLeft: 5,
     marginRight: 5,
+    width: moderateScale(220),
   },
   textType: {
     color: 'black',
