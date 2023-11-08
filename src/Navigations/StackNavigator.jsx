@@ -17,7 +17,6 @@ const StackNavigator = () => {
         animationTypeForReplace: 'push',
         animation: 'slide_from_right',
       }}>
-      <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
