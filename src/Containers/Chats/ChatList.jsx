@@ -7,11 +7,13 @@ import HeaderWithSearch from '../../Components/Header/HeaderWithSearch';
 import {Searchbar} from 'react-native-paper';
 import Cancel from 'react-native-vector-icons/MaterialIcons';
 import {moderateScale} from 'react-native-size-matters';
+import DrawerComponent from '../../Components/Drawer/Drawer';
 
 const ChatList = ({navigation}) => {
   const [search, setSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredChat, setFilteredChat] = useState(chatList);
+  const [openDrawer, setOpenDrawer] = useState(false);
   const handleSearch = query => {
     setSearchQuery(query);
 
@@ -24,30 +26,32 @@ const ChatList = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      {search ? (
-        <Searchbar
-          placeholder="Search"
-          onChangeText={handleSearch}
-          value={searchQuery}
-          iconColor={colors.BLACK}
-          right={() => (
-            <Cancel
-              name="cancel"
-              size={25}
-              color={colors.BLACK}
-              style={styles.cancel}
-              onPress={() => {
-                setSearch(false);
-                setSearchQuery('');
-                setFilteredChat(chatList);
-              }}
-            />
-          )}
-          style={styles.searchBar}
-        />
-      ) : (
-        <HeaderWithSearch setSearch={setSearch} />
-      )}
+      <HeaderWithSearch
+        setSearch={setSearch}
+        openDrawer={openDrawer}
+        setOpenDrawer={setOpenDrawer}
+      />
+      <Searchbar
+        placeholder="Search"
+        inputStyle={styles.input}
+        onChangeText={handleSearch}
+        value={searchQuery}
+        iconColor={colors.BLACK}
+        right={() => (
+          <Cancel
+            name="cancel"
+            size={20}
+            color={colors.BLACK}
+            style={styles.cancel}
+            onPress={() => {
+              setSearch(false);
+              setSearchQuery('');
+              setFilteredChat(chatList);
+            }}
+          />
+        )}
+        style={styles.searchBar}
+      />
       <FlatList
         data={filteredChat}
         renderItem={item => <List items={item} navigation={navigation} />}
@@ -65,10 +69,17 @@ const styles = StyleSheet.create({
   },
 
   cancel: {
-    marginRight: moderateScale(20),
+    marginRight: moderateScale(10),
   },
 
   searchBar: {
-    margin: moderateScale(10),
+    margin: moderateScale(15),
+    height: moderateScale(35),
+    backgroundColor: colors.GREY11,
+  },
+
+  input: {
+    alignSelf: 'center',
+    color: colors.BLACK,
   },
 });
