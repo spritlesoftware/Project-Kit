@@ -127,11 +127,13 @@ const styles = StyleSheet.create({
   },
 
   description: {
-    fontFamily: fonts.REGULAR,
+    fontFamily: fonts.MEDIUM,
+    color: colors.BLACK,
   },
 
   date: {
     fontFamily: fonts.MEDIUM,
+    color: colors.GREY20,
   },
 
   notify: {

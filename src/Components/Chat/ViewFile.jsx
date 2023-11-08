@@ -3,6 +3,7 @@ import {Modal, Portal, Text, TouchableRipple, Icon} from 'react-native-paper';
 import {moderateScale} from 'react-native-size-matters';
 import Pdf from 'react-native-pdf';
 import {StyleSheet, View} from 'react-native';
+import {colors} from '../../Utils/colors';
 
 const ViewFile = ({props, visible, onClose}) => {
   const [url, setUrl] = useState(props.currentMessage.file.url);
@@ -12,7 +13,7 @@ const ViewFile = ({props, visible, onClose}) => {
         <View style={styles.container}>
           <Pdf source={{uri: url}} style={{height: '100%', width: '100%'}} />
           <TouchableRipple onPress={onClose} style={styles.buttonCancel}>
-            <Icon source="close" size={30} />
+            <Icon source="close" color={colors.BLACK} size={30} />
           </TouchableRipple>
         </View>
       </Modal>
