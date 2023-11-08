@@ -14,21 +14,11 @@
     "@react-navigation/native-stack": "^6.9.16",
     "react": "18.2.0",
     "react-native": "0.72.6",
-<<<<<<< HEAD
-=======
     "react-native-gesture-handler": "^2.13.4",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
->>>>>>> 584281e2764eb76c8b5aa5b1a92d1c51ba33d661
     "react-native-paper": "^5.11.1",
     "react-native-safe-area-context": "^4.7.4",
-    "react-native-screens": "^3.27.0",
-    "react-native-size-matters": "^0.4.2",
-<<<<<<< HEAD
-=======
-    "react-native-svg": "^13.14.0",
-    "react-native-svg-transformer": "^1.1.0",
->>>>>>> 584281e2764eb76c8b5aa5b1a92d1c51ba33d661
-    "react-native-vector-icons": "^10.0.1"
+    "react-native-screens": "^3.27.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
