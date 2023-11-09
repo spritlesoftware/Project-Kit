@@ -11,10 +11,6 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
-// @maplibre/maplibre-react-native
-import com.mapbox.rctmgl.RCTMGLPackage;
-// react-native-radar
-import io.radar.react.RNRadarPackage;
 // react-native-safe-area-context
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-screens
@@ -64,8 +60,6 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
-      new RCTMGLPackage(),
-      new RNRadarPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage()
     ));

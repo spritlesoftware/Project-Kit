@@ -45,14 +45,15 @@ export default function Geofencing({ route }) {
     console.log("events:", stringify(events));
     setLocation((events[0].geofence.externalId))
     const event = events[0].type
-    setEvent(event)
     if (event == "user.exited_geofence") {
+      setEvent("You have exited the Geofence")
       const time = new Date(events[0].createdAt).toLocaleString();
       const timeSpent = Math.round(events[0].duration)
       setExitedTime(time)
       setTimeSpent(timeSpent)
     }
     if (event == "user.entered_geofence") {
+      setEvent("You have entered the Geofence")
       const time = new Date(events[0].createdAt).toLocaleString();
       setEnteredTime(time)
     }
@@ -79,7 +80,9 @@ export default function Geofencing({ route }) {
         handlePopulateText("requestPermissions:" + err);
       });
 
-    Radar.getLocation()
+      setInterval(()=>{
+              Radar.trackOnce()
+      },1000)
 
     Radar.startTrackingResponsive()
 
@@ -158,31 +161,31 @@ export default function Geofencing({ route }) {
         </MapLibreGL.ShapeSource>
       </Map>
       </View>
-      <View style={{ width: "100%", height: "50%", padding: 20 }}>
+      <View style={{ width: "100%", height: "50%", padding: 20,paddingTop:60 }}>
         <ScrollView>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Current status:</Text>
+            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Current status :</Text>
             <Text style={{ color: "gray", fontSize: 17, padding: 7, fontWeight: "normal" }}>{status}</Text>
           </View>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Geo Fence Area:</Text>
+            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Geo Fence Area :</Text>
             <Text style={{ color: "gray", fontSize: 17, padding: 7, fontWeight: "normal" }}>{location}</Text>
           </View>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Event:</Text>
+            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Event :</Text>
             <Text style={{ color: "gray", fontSize: 17, padding: 7, fontWeight: "normal" }}>{event}</Text>
           </View>
-          <View style={{ display: "flex", flexDirection: "row", marginLeft: 20 }}>
-            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Entered on:</Text>
+          <View style={{ display: "flex", flexDirection: "row" }}>
+            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Entered on :</Text>
             <Text style={{ color: "gray", fontSize: 17, padding: 7, fontWeight: "normal" }}>{enteredTime}</Text>
           </View>
-          <View style={{ display: "flex", flexDirection: "row", marginLeft: 20 }}>
-            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Exited on:</Text>
+          <View style={{ display: "flex", flexDirection: "row" }}>
+            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Exited on :</Text>
             <Text style={{ color: "gray", fontSize: 17, padding: 7, fontWeight: "normal" }}>{exitedTime}</Text>
           </View>
           <View style={{ display: "flex", flexDirection: "row" }}>
-            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Time Spent:</Text>
-            <Text style={{ color: "gray", fontSize: 17, padding: 7, fontWeight: "normal" }}>{timeSpent}mins</Text>
+            <Text style={{ color: "black", fontSize: 17, padding: 7, fontWeight: "bold" }}>Time Spent :</Text>
+            <Text style={{ color: "gray", fontSize: 17, padding: 7, fontWeight: "normal" }}>{timeSpent} {timeSpent ? "mins": null}</Text>
           </View>
           {/* <Text style={{ color: "gray", fontSize: 8, padding: 7 ,fontWeight:"normal"}}>{displayText}</Text> */}
         </ScrollView>
