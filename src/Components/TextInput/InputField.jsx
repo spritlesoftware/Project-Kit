@@ -28,7 +28,7 @@ export default function InputField({label, ...props}) {
 const styles = StyleSheet.create({
   input: {
     width: '100%',
-    marginTop: moderateScale(10),
+    marginTop: moderateScale(5),
     fontFamily: fonts.MEDIUM,
     backgroundColor: colors.WHITE,
 
