@@ -21,6 +21,7 @@ const StackNavigator = () => {
       <Stack.Screen name="SignUp" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="Logout" component={Logout} />
+      <Stack.Screen name="ChatList" component={ChatList} />
     </Stack.Navigator>
   );
 };

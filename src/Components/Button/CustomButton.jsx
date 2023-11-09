@@ -25,7 +25,7 @@ export default CustomButton;
 
 const styles = StyleSheet.create({
   btnContainer: {
-    width: '100%',
+    width: '50%',
     borderRadius: moderateScale(30),
     marginTop: moderateScale(20),
   },
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   btnText: {
     fontFamily: fonts.BOLD,
-    fontSize: moderateScale(17),
+    fontSize: moderateScale(20),
     color: colors.WHITE,
   },
 });
