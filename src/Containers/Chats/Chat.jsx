@@ -1,4 +1,11 @@
-import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  Image,
+  Button,
+} from 'react-native';
 import React, {useCallback, useEffect, useLayoutEffect, useState} from 'react';
 import {colors} from '../../Utils/colors';
 import {GiftedChat, Bubble, Send, InputToolbar} from 'react-native-gifted-chat';
@@ -10,6 +17,7 @@ import {moderateScale} from 'react-native-size-matters';
 import DocumentPicker from 'react-native-document-picker';
 import FileTransfer from '../../Components/Chat/FileTransfer';
 import ViewFile from '../../Components/Chat/ViewFile';
+import Plus from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 const Chat = ({navigation}) => {
@@ -17,114 +25,81 @@ const Chat = ({navigation}) => {
 
   const [messages, setMessages] = useState([]);
   const [visible, setVisible] = React.useState(false);
-
-  // file attachments states
-  const [isAttachImage, setIsAttachImage] = useState(false);
-  const [isAttachFile, setIsAttachFile] = useState(false);
-  const [imagePath, setImagePath] = useState('');
-  const [filePath, setFilePath] = useState('');
-  const [fileURL, setFileURL] = useState('');
-
+  const [attachments, setAttachments] = useState([]);
   const [fileVisible, setFileVisible] = useState(false);
 
   const openMenu = () => setVisible(true);
 
   const closeMenu = () => setVisible(false);
 
-  useEffect(() => {
-    switch (route.params.Item.user_id) {
-      case 1:
-        setMessages(user_1);
-        break;
+  // current time retrieving
+  const currentTime = new Date().toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: 'numeric',
+    hour12: true,
+  });
 
-      case 2:
-        setMessages(user_2);
-        break;
-
-      case 3:
-        setMessages(user_3);
-        break;
-    }
-  }, []);
-
-  // handling on Send function
   const onSend = useCallback(
     (messages = []) => {
+      console.log(messages[0].text);
       const [messageToSend] = messages;
-      if (isAttachImage) {
-        const newMessage = {
-          _id: messages[0]._id + 1,
-          text: messageToSend.text,
+      if (attachments.length > 0) {
+        const newMessages = attachments.map((attachment, index) => ({
+          _id: messageToSend._id + index + 1,
+          text: messages[0].text,
           createdAt: new Date(),
           user: {
             _id: 2,
             avatar: '',
           },
-          image: imagePath,
+          image: attachment.type === 'image' ? attachment.path : '',
           file: {
-            url: '',
+            url: attachment.type === 'file' ? attachment.path : '',
           },
-        };
-        user_1.unshift(newMessage);
-        setImagePath('');
-      } else if (isAttachFile) {
-        const newMessage = {
-          _id: messages[0]._id + 1,
-          text: messageToSend.text,
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            avatar: '',
-          },
-          image: '',
-          file: {
-            url: filePath,
-          },
-        };
-        setFileURL(filePath);
-        user_1.unshift(newMessage);
-        setFilePath('');
+        }));
+
+        setMessages(previousMessages =>
+          GiftedChat.append(previousMessages, newMessages),
+        );
+
+        // Clear selected files after sending
+        setAttachments([]);
       } else {
-        const newMessage = {
-          _id: messages[0]._id + 1,
-          text: messageToSend.text,
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            avatar: '',
-          },
-          image: '',
-          file: {
-            url: '',
-          },
-        };
-        user_1.unshift(newMessage);
+        // Send regular text message
+        setMessages(previousMessages =>
+          GiftedChat.append(previousMessages, messages),
+        );
       }
     },
-    [filePath, imagePath, isAttachFile, isAttachImage, messages],
+    [attachments],
   );
 
   // handling attching docs / images
   const pickDocument = async () => {
     try {
-      const result = await DocumentPicker.pick({
+      const results = await DocumentPicker.pick({
         type: [DocumentPicker.types.allFiles],
         copyTo: 'documentDirectory',
         mode: 'import',
         allowMultiSelection: true,
       });
-      const fileUri = result[0].fileCopyUri;
-      if (!fileUri) {
-        console.log('File URI is undefined or null');
-        return;
-      }
-      if (fileUri.indexOf('.png') !== -1 || fileUri.indexOf('.jpg') !== -1) {
-        setImagePath(fileUri);
-        setIsAttachImage(true);
-      } else {
-        setFilePath(fileUri);
-        setIsAttachFile(true);
-      }
+
+      // Process each selected file or image
+      results.forEach(result => {
+        const fileUri = result.fileCopyUri;
+        if (fileUri) {
+          setAttachments(prevAttachments => [
+            ...prevAttachments,
+            {
+              path: fileUri,
+              type:
+                fileUri.includes('.png') || fileUri.includes('.jpg')
+                  ? 'image'
+                  : 'file',
+            },
+          ]);
+        }
+      });
     } catch (err) {
       if (DocumentPicker.isCancel(err)) {
         console.log('User cancelled file picker');
@@ -135,105 +110,142 @@ const Chat = ({navigation}) => {
     }
   };
 
-  // chat footer
   const renderChatFooter = useCallback(() => {
-    if (imagePath) {
+    if (attachments.length > 0 && attachments[0].path !== undefined) {
       return (
         <View style={styles.chatFooter}>
-          <Image source={{uri: imagePath}} style={{height: 75, width: 75}} />
-          <TouchableOpacity
-            onPress={() => setImagePath('')}
-            style={styles.buttonFooterChatImg}>
-            <Text style={styles.textFooterChat}>X</Text>
-          </TouchableOpacity>
+          {attachments.map((attachment, index) => (
+            <View
+              key={index}
+              style={[
+                styles.fileContainer,
+                {marginRight: attachment.type && moderateScale(10)},
+              ]}>
+              {attachment.type === 'image' && (
+                <View
+                  style={[
+                    styles.innerChatFooter,
+                    {
+                      backgroundColor: colors.WHITE,
+                    },
+                  ]}>
+                  <Image
+                    source={{uri: attachment.path}}
+                    style={{
+                      height: 75,
+                      width: 75,
+                      borderRadius: moderateScale(10),
+                    }}
+                  />
+                  <TouchableOpacity
+                    onPress={() => setImagePath('')}
+                    style={styles.buttonFooterChat}>
+                    <Text style={styles.textFooterChat}>X</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
+              {attachment.type === 'file' && (
+                <FileTransfer
+                  style={{marginTop: -10}}
+                  filePath={attachment.path}
+                  isFooter={true}
+                />
+              )}
+              <TouchableOpacity
+                onPress={() => {
+                  const updatedAttachments = [...attachments];
+                  updatedAttachments.splice(index, 1);
+                  setAttachments(updatedAttachments);
+                }}
+                style={styles.buttonFooterChat}>
+                <Text style={styles.textFooterChat}>X</Text>
+              </TouchableOpacity>
+            </View>
+          ))}
         </View>
       );
+    } else {
+      return null;
     }
-    if (filePath) {
-      return (
-        <View style={styles.chatFooter}>
-          <FileTransfer filePath={filePath} />
-          <TouchableOpacity
-            onPress={() => setFilePath('')}
-            style={styles.buttonFooterChat}>
-            <Text style={styles.textFooterChat}>X</Text>
-          </TouchableOpacity>
-        </View>
-      );
-    }
-    return null;
-  }, [filePath, imagePath]);
+  }, [attachments]);
 
-  // input box functional icons
+  const renderInputToolbar = props => {
+    const modifiedProps = {...props};
+    if (props.text.length === 0 && attachments[0] !== undefined) {
+      modifiedProps.text = ' ';
+    }
+    return <InputToolbar {...modifiedProps} containerStyle={styles.input} />;
+  };
+
   const renderSend = props => {
     return (
       <View style={styles.shareContainer}>
-        <TouchableOpacity onPress={pickDocument} style={styles.fileShare}>
-          <Icon source="paperclip" size={25} color={colors.APP_PRIMARY} />
+        <TouchableOpacity
+          onPress={attachments.length <= 3 ? pickDocument : null}
+          style={styles.fileShare}>
+          <Plus name="pluscircle" color={colors.BLACK} size={25} />
         </TouchableOpacity>
         <Send {...props}>
-          <Icon source="send" size={25} color={colors.APP_PRIMARY} />
+          <Icon source="send" size={25} color={colors.BLACK} />
         </Send>
       </View>
     );
   };
 
-  // renders the each msg we send
   const renderBubble = props => {
     const {currentMessage} = props;
-
-    if (
-      currentMessage.file &&
-      currentMessage.file.url &&
-      currentMessage.file.url !== undefined
-    )
+    if (currentMessage.file && currentMessage.file.url) {
       return (
-        <>
-          <TouchableOpacity
-            style={{
-              ...styles.fileContainer,
-              backgroundColor:
-                props.currentMessage.user._id === 2 ? '#2e64e5' : '#efefef',
-              borderBottomLeftRadius:
-                props.currentMessage.user._id === 2 ? 15 : 5,
-              borderBottomRightRadius:
-                props.currentMessage.user._id === 2 ? 5 : 15,
-            }}
-            onPress={() => setFileVisible(true)}>
-            <FileTransfer
-              style={{marginTop: -10}}
-              filePath={currentMessage.file.url}
-            />
-            <ViewFile
-              props={props}
-              visible={fileVisible}
-              onClose={() => setFileVisible(false)}
-            />
-            <View style={{flexDirection: 'column'}}>
-              <Text
-                style={{
-                  ...styles.fileText,
-                  color: currentMessage.user._id === 2 ? 'white' : 'black',
-                }}>
-                {currentMessage.text}
-              </Text>
-            </View>
-          </TouchableOpacity>
-        </>
+        <TouchableOpacity
+          style={{
+            ...styles.fileContainer,
+            backgroundColor:
+              props.currentMessage.user._id === 2 ? '#2e64e5' : '#efefef',
+            borderBottomLeftRadius:
+              props.currentMessage.user._id === 2 ? 15 : 5,
+            borderBottomRightRadius:
+              props.currentMessage.user._id === 2 ? 5 : 15,
+          }}
+          onPress={() => setFileVisible(true)}>
+          <ViewFile
+            props={props}
+            visible={fileVisible}
+            onClose={() => setFileVisible(false)}
+          />
+          <FileTransfer
+            style={{marginTop: -10}}
+            filePath={currentMessage.file.url}
+          />
+          <View style={{flexDirection: 'column'}}>
+            <Text
+              style={{
+                ...styles.fileText,
+                color: currentMessage.user._id === 2 ? 'white' : 'black',
+              }}>
+              {currentMessage.text}
+            </Text>
+            <Text
+              style={{
+                ...styles.timeText,
+                color: currentMessage.user._id === 2 ? 'white' : 'black',
+              }}>
+              {currentTime}
+            </Text>
+          </View>
+        </TouchableOpacity>
       );
-
+    }
     return (
       <Bubble
         {...props}
         wrapperStyle={{
           right: {
             backgroundColor: '#2e64e5',
-            marginBottom: moderateScale(5),
           },
         }}
         textStyle={{
           right: {
-            color: '#fff',
+            color: '#efefef',
           },
         }}
       />
@@ -253,7 +265,7 @@ const Chat = ({navigation}) => {
         closeMenu={closeMenu}
       />
       <GiftedChat
-        messages={user_1}
+        messages={messages}
         onSend={messages => onSend(messages)}
         user={{
           _id: 2,
@@ -264,6 +276,8 @@ const Chat = ({navigation}) => {
         scrollToBottom
         scrollToBottomComponent={scrollToBottomComponent}
         renderChatFooter={renderChatFooter}
+        renderInputToolbar={renderInputToolbar}
+        messagesContainerStyle={styles.messagesContainer}
       />
     </View>
   );
@@ -292,14 +306,17 @@ const styles = StyleSheet.create({
   },
 
   fileContainer: {
-    flex: 1,
-    maxWidth: moderateScale(300),
+    maxWidth: moderateScale(250),
     borderRadius: 15,
-    marginBottom: moderateScale(5),
+  },
+
+  chatContainer: {
+    flex: 1,
+    maxWidth: moderateScale(250),
+    borderRadius: 15,
   },
 
   fileText: {
-    marginVertical: 5,
     fontSize: 16,
     lineHeight: 20,
     marginLeft: 10,
@@ -311,14 +328,25 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.37,
     shadowRadius: 8,
     shadowOffset: {width: 0, height: 8},
-    elevation: 8,
+    elevation: 2,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     borderWidth: 1,
     borderColor: 'rgba(255, 255, 255, 0.18)',
     flexDirection: 'row',
-    padding: 5,
-    backgroundColor: 'blue',
+    padding: 10,
+    marginTop: moderateScale(5),
+    marginBottom: moderateScale(10),
+  },
+
+  innerChatFooter: {
+    shadowColor: '#1F2687',
+    shadowOpacity: 0.37,
+    shadowRadius: 8,
+    shadowOffset: {width: 0, height: 8},
+    elevation: 2,
+    borderRadius: moderateScale(10),
+    flexDirection: 'row',
   },
 
   buttonFooterChat: {
@@ -341,6 +369,27 @@ const styles = StyleSheet.create({
   },
 
   fileShare: {
-    marginTop: moderateScale(15),
+    marginTop: moderateScale(16),
+  },
+
+  timeText: {
+    fontSize: moderateScale(10),
+    textAlign: 'right',
+    marginRight: moderateScale(10),
+    marginBottom: moderateScale(7),
+  },
+
+  input: {
+    borderRadius: moderateScale(30),
+    backgroundColor: colors.GRAY10,
+    marginBottom: moderateScale(10),
+    borderTopWidth: 0,
+    marginHorizontal: moderateScale(10),
+    marginRight: moderateScale(4),
+    alignItems: 'center',
+  },
+
+  messagesContainer: {
+    paddingBottom: moderateScale(15),
   },
 });
