@@ -7,7 +7,6 @@ import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 
 const ViewFile = ({props, visible, onClose}) => {
-  console.log(props.currentMessage.file);
   const filePath = props.currentMessage.file.url;
   var name = '';
   if (filePath !== undefined) {
