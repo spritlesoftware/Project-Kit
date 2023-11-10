@@ -52,16 +52,17 @@ export default HeaderWithBackaction;
 
 const styles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: colors.LIGHT_GRAY,
+    backgroundColor: colors.WHITE,
     color: colors.BLACK,
-    shadowColor: colors.BLACK,
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 10,
+    borderBottomWidth: 0.5,
+    // shadowColor: colors.BLACK,
+    // shadowOffset: {
+    //   width: 0,
+    //   height: 4,
+    // },
+    // shadowOpacity: 0.25,
+    // shadowRadius: 3.84,
+    // elevation: 10,
     height: moderateScale(45),
   },
 
