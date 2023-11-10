@@ -4,14 +4,28 @@ import {moderateScale} from 'react-native-size-matters';
 import Pdf from 'react-native-pdf';
 import {StyleSheet, View} from 'react-native';
 import {colors} from '../../Utils/colors';
+import {fonts} from '../../Utils/fonts';
 
 const ViewFile = ({props, visible, onClose}) => {
+  console.log(props.currentMessage.file);
+  const filePath = props.currentMessage.file.url;
+  var name = '';
+  if (filePath !== undefined) {
+    name = filePath.split('/').pop();
+  }
   const [url, setUrl] = useState(props.currentMessage.file.url);
   return (
     <Portal>
       <Modal visible={visible} contentContainerStyle={styles.containerStyle}>
+        <Text style={styles.pdfName}>{name}</Text>
         <View style={styles.container}>
-          <Pdf source={{uri: url}} style={{height: '100%', width: '100%'}} />
+          <Pdf
+            source={{uri: url}}
+            style={{
+              height: '100%',
+              width: '100%',
+            }}
+          />
           <TouchableRipple onPress={onClose} style={styles.buttonCancel}>
             <Icon source="close" color={colors.BLACK} size={30} />
           </TouchableRipple>
@@ -33,7 +47,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     borderColor: 'black',
     left: '85%',
-    top: 20,
+    top: moderateScale(-30),
   },
   textBtn: {
     fontSize: 18,
@@ -44,5 +58,14 @@ const styles = StyleSheet.create({
   containerStyle: {
     backgroundColor: 'white',
     height: '100%',
+  },
+
+  pdfName: {
+    // position: 'absolute',
+    paddingTop: moderateScale(50),
+    paddingLeft: moderateScale(20),
+    fontFamily: fonts.BOLD,
+    fontSize: moderateScale(20),
+    backgroundColor: colors.GRAY,
   },
 });
