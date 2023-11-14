@@ -27,6 +27,7 @@ const ChatList = ({navigation}) => {
   return (
     <View style={styles.container}>
       <HeaderWithSearch
+        title={'Chats'}
         setSearch={setSearch}
         openDrawer={openDrawer}
         setOpenDrawer={setOpenDrawer}
