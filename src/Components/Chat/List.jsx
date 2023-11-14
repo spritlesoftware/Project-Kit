@@ -1,13 +1,15 @@
 import {View, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {colors} from '../../Utils/colors';
 import {List, Avatar, TouchableRipple, Icon, Text} from 'react-native-paper';
 import {moderateScale} from 'react-native-size-matters';
 import {fonts} from '../../Utils/fonts';
 import Dot from 'react-native-vector-icons/Octicons';
+import Check from 'react-native-vector-icons/AntDesign';
 
-const Lists = ({items, navigation}) => {
+const Lists = ({items, navigation, groupContact}) => {
   const Item = items.item;
+
   return (
     <TouchableRipple
       style={styles.container}
@@ -25,7 +27,19 @@ const Lists = ({items, navigation}) => {
               }}
               style={styles.avatar}
             />
-            {Item.active ? (
+
+            {groupContact &&
+              groupContact.some(
+                contact => contact.user_id === Item.user_id,
+              ) && (
+                <Check
+                  style={styles.check}
+                  name="checkcircle"
+                  color={colors.STATUS_GREEN}
+                  size={15}
+                />
+              )}
+            {Item.active && Item.active !== undefined ? (
               <View style={styles.active}>
                 <Icon
                   source={() => (
@@ -54,10 +68,12 @@ const Lists = ({items, navigation}) => {
                   )}
                 />
               </View>
-            ) : (
+            ) : Item.active !== undefined ? (
               <View style={styles.status}>
                 <Text style={styles.statusTxt}>{Item.last_seen}</Text>
               </View>
+            ) : (
+              ''
             )}
           </>
         )}
@@ -74,15 +90,15 @@ const Lists = ({items, navigation}) => {
         right={() => (
           <View style={styles.notify}>
             <Text style={styles.date}>{Item.modified_date}</Text>
-            {Item.msg_read ? (
-              ''
-            ) : (
-              <Icon
-                source={() => (
-                  <Dot name="dot-fill" color={colors.RED_HEART} size={20} />
+            {Item.msg_read
+              ? ''
+              : Item.msg_read !== undefined && (
+                  <Icon
+                    source={() => (
+                      <Dot name="dot-fill" color={colors.RED_HEART} size={20} />
+                    )}
+                  />
                 )}
-              />
-            )}
           </View>
         )}
         style={styles.listContainer}
@@ -153,5 +169,11 @@ const styles = StyleSheet.create({
     fontSize: moderateScale(7),
     width: moderateScale(20),
     textAlign: 'center',
+  },
+
+  check: {
+    top: moderateScale(20),
+    marginRight: moderateScale(-12),
+    left: moderateScale(-15),
   },
 });
