@@ -5,6 +5,8 @@ import Register from '../Containers/Authentications/Register';
 import ForgotPassword from '../Containers/Authentications/ForgotPassword';
 import Logout from '../Containers/Authentications/Logout';
 import ChatList from '../Containers/Chats/ChatList';
+import GroupList from '../Containers/Chats/GroupList';
+import Contacts from '../Containers/Chats/Contacts';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +24,8 @@ const StackNavigator = () => {
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="Logout" component={Logout} />
       <Stack.Screen name="ChatList" component={ChatList} />
+      <Stack.Screen name="Groups" component={GroupList} />
+      <Stack.Screen name="Contacts" component={Contacts} />
     </Stack.Navigator>
   );
 };
