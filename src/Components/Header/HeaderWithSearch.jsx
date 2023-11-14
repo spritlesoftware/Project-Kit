@@ -6,9 +6,9 @@ import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 import MenuPopup from '../Menu/Menu';
 
-const HeaderWithSearch = ({setOpenDrawer, openDrawer}) => {
+const HeaderWithSearch = props => {
   const _handleSearch = () => {
-    openDrawer ? setOpenDrawer(false) : setOpenDrawer(true);
+    props.openDrawer ? props.setOpenDrawer(false) : props.setOpenDrawer(true);
   };
 
   const _handleMore = () => console.log('Shown more');
@@ -21,7 +21,7 @@ const HeaderWithSearch = ({setOpenDrawer, openDrawer}) => {
           color={colors.BLACK}
           onPress={_handleSearch}
         />
-        <Appbar.Content title="Chats" titleStyle={styles.title} />
+        <Appbar.Content title={props.title} titleStyle={styles.title} />
 
         {/* <Appbar.Action
           icon="dots-vertical"
