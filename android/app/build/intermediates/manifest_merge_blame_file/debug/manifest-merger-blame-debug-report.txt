@@ -21,17 +21,17 @@
 14-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:3:5-67
 14-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:3:22-64
 15    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-15-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:1-67
-15-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:18-64
+15-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:5-71
+15-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:22-68
 16    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-16-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:1-76
-16-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:18-73
+16-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:5-80
+16-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:22-77
 17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:1-75
-17-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:18-72
+17-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:5-79
+17-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:22-76
 18    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-18-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:1-72
-18-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:18-69
+18-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:5-76
+18-->C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:22-73
 19
 20    <uses-feature android:name="android.hardware.camera" />
 20-->[:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-60

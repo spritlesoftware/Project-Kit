@@ -4,6 +4,8 @@ const twilio = require('twilio');
 const ngrok = require('ngrok')
 const AccessToken = twilio.jwt.AccessToken;
 const VideoGrant = AccessToken.VideoGrant;
+const dotenv = require("dotenv")
+dotenv.config()
 
 const app = express();
 const port = 3000;
@@ -13,12 +15,12 @@ app.get('/getToken', (req, res) => {
     return res.status(400).send('Username parameter is required');
   }
   const accessToken = new AccessToken(
-    "AC277517629d2be7a4fdbf79d1b93455df",
-    "SK72cdcfd21bb8d6e9554082444ae21624",
-    "hSTbkOGC4JDKBKMyt4hmCma9Gd5CHtPF",
-    {identity:"Janani"},
+    process.env.ACCOUNT_SID,
+    process.env.API_KEY_SID,
+    process.env.API_KEY_SECRET,
+    { identity: "Janani" },
   );
-
+  
   // Set the Identity of this token
   accessToken.identity = req.query.userName;
 
