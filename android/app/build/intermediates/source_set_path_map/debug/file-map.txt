@@ -40,8 +40,9 @@ com.kit_box.app-merged_res-38 C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\
 com.kit_box.app-debug-39 C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\debug\res
 com.kit_box.app-main-40 C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\res
 com.kit_box.app-packaged_res-41 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-42 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-43 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-44 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-45 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-46 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-42 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-permissions\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-43 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-44 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-45 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-46 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-47 C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug

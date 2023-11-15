@@ -119,29 +119,29 @@ MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Proje
 	android:name
 		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:4:22-62
 uses-permission#android.permission.RECORD_AUDIO
-ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:1-67
+ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:5-71
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-71
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-71
 	android:name
-		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:18-64
+		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:6:22-68
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
-ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:1-76
+ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:5-80
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:5-80
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:5-80
 MERGED from [com.twilio:video-android:7.6.1] C:\Users\91934\.gradle\caches\transforms-3\fcd1b9c2ccdbcc9d7091ceaa9a40ac6f\transformed\jetified-video-android-7.6.1\AndroidManifest.xml:10:5-80
 MERGED from [com.twilio:video-android:7.6.1] C:\Users\91934\.gradle\caches\transforms-3\fcd1b9c2ccdbcc9d7091ceaa9a40ac6f\transformed\jetified-video-android-7.6.1\AndroidManifest.xml:10:5-80
 	android:name
-		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:18-73
+		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:7:22-77
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:1-75
+ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:5-79
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:5-79
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:5-79
 MERGED from [com.twilio:video-android:7.6.1] C:\Users\91934\.gradle\caches\transforms-3\fcd1b9c2ccdbcc9d7091ceaa9a40ac6f\transformed\jetified-video-android-7.6.1\AndroidManifest.xml:11:5-79
 MERGED from [com.twilio:video-android:7.6.1] C:\Users\91934\.gradle\caches\transforms-3\fcd1b9c2ccdbcc9d7091ceaa9a40ac6f\transformed\jetified-video-android-7.6.1\AndroidManifest.xml:11:5-79
 	android:name
-		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:18-72
+		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:8:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:1-72
+ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:5-76
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\e13f88164840fe641a466d05cd8edac7\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\e13f88164840fe641a466d05cd8edac7\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:16:5-76
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:5-76
@@ -149,7 +149,7 @@ MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\PROJECT_KIT\Proje
 MERGED from [com.twilio:video-android:7.6.1] C:\Users\91934\.gradle\caches\transforms-3\fcd1b9c2ccdbcc9d7091ceaa9a40ac6f\transformed\jetified-video-android-7.6.1\AndroidManifest.xml:12:5-76
 MERGED from [com.twilio:video-android:7.6.1] C:\Users\91934\.gradle\caches\transforms-3\fcd1b9c2ccdbcc9d7091ceaa9a40ac6f\transformed\jetified-video-android-7.6.1\AndroidManifest.xml:12:5-76
 	android:name
-		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:18-69
+		ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:9:22-73
 application
 ADDED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:11:5-30:19
 MERGED from C:\Users\91934\PROJECT_KIT\Project-Kitbox\android\app\src\main\AndroidManifest.xml:11:5-30:19
