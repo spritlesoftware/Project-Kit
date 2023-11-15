@@ -4,7 +4,7 @@ import Login from '../Containers/Authentications/Login';
 import Register from '../Containers/Authentications/Register';
 import ForgotPassword from '../Containers/Authentications/ForgotPassword';
 import Logout from '../Containers/Authentications/Logout';
-import ChatList from '../Containers/Chats/ChatList';
+import { Notifications } from '../Containers/Notifications';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +17,7 @@ const StackNavigator = () => {
         animationTypeForReplace: 'push',
         animation: 'slide_from_right',
       }}>
+        <Stack.Screen name="Notifications" component={Notifications} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
