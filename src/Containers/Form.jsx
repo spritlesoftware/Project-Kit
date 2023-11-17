@@ -6,7 +6,7 @@ import { formData } from "../Data/FormData";
 import { RadioButton } from "react-native-paper";
 import { Checkbox } from "react-native-paper";
 import SelectDropdown from 'react-native-select-dropdown'
-import { FontAwesome } from "react-native-vector-icons"
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { moderateScale } from 'react-native-size-matters';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { colors } from "../Utils/colors";
@@ -69,7 +69,7 @@ export default function Form() {
                 case "radio":
                     return (
                         <View key={field.id} style={{ padding: moderateScale(10) }}>
-                            <Text style={{ fontSize: 19, color: "black", marginBottom: moderateScale(15) }}>{field.label}</Text>
+                            <Text style={{ fontSize: 19, color: "black", marginBottom: moderateScale(15), fontWeight: "bold" }}>{field.label}</Text>
                             {field.options.map((option) => {
                                 return (
                                     <View style={{ display: "flex", flexDirection: "row", marginBottom: moderateScale(10) }}>
@@ -78,6 +78,7 @@ export default function Form() {
                                             value={option}
                                             status={formValues[field.id] === option ? 'checked' : 'unchecked'}
                                             onPress={() => onInputChange(field.id, option)}
+                                            color={colors.APP_PRIMARY}
                                         />
                                         <Text style={{ fontSize: 15, color: "black", marginTop: 7 }}>{option}</Text>
                                     </View>
@@ -89,28 +90,31 @@ export default function Form() {
                 case "checkbox":
                     return (
                         <View key={field.id} style={{ padding: moderateScale(10) }} >
-                            <Text style={{ fontSize: 19, color: "black", marginBottom: moderateScale(15) }}>{field.label}</Text>
-                            {
-                                field.options.map((option) => {
-                                    return (
-                                        <View style={{ display: "flex", flexDirection: "row", marginBottom: moderateScale(10) }}>
-                                            <Checkbox
-                                                key={option}
-                                                status={formValues[field.id]?.[option] ? 'checked' : 'unchecked'}
-                                                onPress={() => {
-                                                    onInputChange(field.id, {
-                                                        ...(formValues[field.id] || {}),
-                                                        [option]: !formValues[field.id]?.[option],
+                            <Text style={{ fontSize: 19, color: "black", marginBottom: moderateScale(15), fontWeight: "bold" }}>{field.label}</Text>
+                            <View style={{ borderWidth: 1, borderColor: "gray", padding: 10, borderRadius: 20 }}>
+                                {
+                                    field.options.map((option) => {
+                                        return (
+                                            <View style={{ display: "flex", flexDirection: "row", marginBottom: moderateScale(10) }}>
+                                                <Checkbox
+                                                    key={option}
+                                                    status={formValues[field.id]?.[option] ? 'checked' : 'unchecked'}
+                                                    onPress={() => {
+                                                        onInputChange(field.id, {
+                                                            ...(formValues[field.id] || {}),
+                                                            [option]: !formValues[field.id]?.[option],
 
-                                                    })
-                                                }
-                                                }
-                                            />
-                                            <Text style={{ fontSize: 15, color: "black", marginTop: 7 }}>{option}</Text>
-                                        </View>
-                                    )
-                                })
-                            }
+                                                        })
+                                                    }
+                                                    }
+                                                    color={colors.APP_PRIMARY}
+                                                />
+                                                <Text style={{ fontSize: 15, color: "black", marginTop: 7 }}>{option}</Text>
+                                            </View>
+                                        )
+                                    })
+                                }
+                            </View>
                             {errors[field.id] ? <Text style={styles.error}>{errors[field.id]}</Text> : null}
                         </View>
                     )
@@ -118,7 +122,7 @@ export default function Form() {
                 case "select":
                     return (
                         <View style={{ padding: moderateScale(10) }}>
-                            <Text style={{ fontSize: 19, marginBottom: moderateScale(20), marginTop: moderateScale(20), color: "black" }}>{field.label}</Text>
+                            <Text style={{ fontSize: 19, marginBottom: moderateScale(20), marginTop: moderateScale(20), color: "black", fontWeight: "bold" }}>{field.label}</Text>
                             <SelectDropdown
                                 data={field.options}
                                 onSelect={(selectedItem, index) => {
@@ -130,6 +134,11 @@ export default function Form() {
                                 rowTextForSelection={(item, index) => {
                                     return item
                                 }}
+                                buttonStyle={{ borderWidth: 1, borderRadius: 20, backgroundColor: "white" }}
+                                renderDropdownIcon={(isOpened) => {
+                                      return <FontAwesome name={isOpened ? "chevron-up" : "chevron-down"} color={"black"} size={18}/>
+                                }}
+                                dropdownIconPosition={'right'}
 
                             />
                             {errors[field.id] ? <Text style={styles.error}>{errors[field.id]}</Text> : null}
