@@ -6,6 +6,7 @@ import ForgotPassword from '../Containers/Authentications/ForgotPassword';
 import Logout from '../Containers/Authentications/Logout';
 import ChatList from '../Containers/Chats/ChatList';
 import Table from '../Containers/Table/Table';
+import NewItem from '../Containers/Table/NewItem';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,6 +20,7 @@ const StackNavigator = () => {
         animation: 'slide_from_right',
       }}>
       <Stack.Screen name="Table" component={Table} />
+      <Stack.Screen name="NewItem" component={NewItem} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
