@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     marginTop: moderateScale(5),
     fontFamily: fonts.MEDIUM,
     backgroundColor: colors.WHITE,
-
   },
 
   inputText: {
