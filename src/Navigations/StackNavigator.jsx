@@ -24,7 +24,7 @@ import {
 export const initialState = {
   isAudioEnabled: true,
   status: 'disconnected',
-  participants: new Map(),
+  participants:[],
   videoTracks: new Map(),
   userName: '',
   roomName: '',
