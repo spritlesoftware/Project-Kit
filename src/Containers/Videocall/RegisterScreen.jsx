@@ -98,18 +98,18 @@ export const RegisterScreen = ({ navigation }) => {
             style={{flex:1,justifyContent:"center",alignItems:"center"}}>
                 <View style={{width:"80%",alignItems:"center"}}>
                     <View style={{width:"100%"}}>
-                        <Text style={{color:"black",textAlign:"left"}}>User Name</Text>
+                        <Text style={{color:"black",textAlign:"left"}}>Enter your Name</Text>
                         <TextInput
-                            style={{color:"black",borderRadius:15,borderWidth:1,marginTop:10,marginBottom:10}}
+                            style={{color:"black", borderColor:"#363737",borderRadius:15,borderWidth:1,marginTop:10,marginBottom:10}}
                             autoCapitalize="none"
                             value={props.userName}
                             onChangeText={(text) => setProps({ ...props, userName: text })}
                         />
                     </View>
                     <View style={{width:"100%"}}>
-                        <Text style={{color:"black",textAlign:"left"}}>Room Name</Text>
+                        <Text style={{color:"black",textAlign:"left"}}>Enter your Room Name</Text>
                         <TextInput
-                            style={{color:"black",borderRadius:15,borderWidth:1,marginTop:10,marginBottom:10}}
+                            style={{color:"black", borderColor:"#363737",borderRadius:15,borderWidth:1,marginTop:10,marginBottom:10}}
                             autoCapitalize="none"
                             value={props.roomName}
                             onChangeText={(text) => setProps({ ...props, roomName: text })}
@@ -118,10 +118,10 @@ export const RegisterScreen = ({ navigation }) => {
                     <View style={{width:"100%",margin:30}}>
                         <TouchableOpacity
                             disabled={false}
-                            style={{padding:15,backgroundColor:"blue",borderRadius:15}}
+                            style={{padding:15,backgroundColor:"#363737",borderRadius:15}}
                             onPress={() => {
                                 _checkPermissions(() => {
-                                    fetch(`https://35e5-113-193-25-170.ngrok-free.app/getToken?userName=${props.userName}`)
+                                    fetch(`https://f49d-113-193-25-170.ngrok-free.app/getToken?userName=${props.userName}`)
                                         .then((response) => {
                                             if (response.ok) {
                                                 response.text().then((jwt) => {
