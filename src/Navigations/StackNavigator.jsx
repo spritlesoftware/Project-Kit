@@ -28,6 +28,10 @@ import Table from '../Containers/Table/Table';
 import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
+import AudioPlayer from '../Containers/AudioPlayer/AudioPlayer';
+import PlayList from '../Containers/AudioPlayer/PlayListGroup';
+import AudioList from '../Containers/AudioPlayer/AudioList';
+import PlayListTracks from '../Containers/AudioPlayer/PlayListTracks';
 
 export const initialState = {
   isAudioEnabled: true,
