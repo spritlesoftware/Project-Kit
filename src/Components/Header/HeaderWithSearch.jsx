@@ -4,10 +4,11 @@ import {Appbar, Button, Menu, Divider, PaperProvider} from 'react-native-paper';
 import {moderateScale} from 'react-native-size-matters';
 import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
+import MenuPopup from '../Menu/Menu';
 
-const HeaderWithSearch = ({setSearch}) => {
+const HeaderWithSearch = props => {
   const _handleSearch = () => {
-    setSearch(true);
+    props.openDrawer ? props.setOpenDrawer(false) : props.setOpenDrawer(true);
   };
 
   const _handleMore = () => console.log('Shown more');
@@ -15,18 +16,20 @@ const HeaderWithSearch = ({setSearch}) => {
   return (
     <>
       <Appbar.Header style={styles.headerContainer}>
-        <Appbar.Content title="Chats" titleStyle={styles.title} />
         <Appbar.Action
-          icon="magnify"
-          color={colors.WHITE}
+          icon="menu"
+          color={colors.BLACK}
           onPress={_handleSearch}
         />
-        <Appbar.Action
+        <Appbar.Content title={props.title} titleStyle={styles.title} />
+
+        {/* <Appbar.Action
           icon="dots-vertical"
           color={colors.WHITE}
           size={25}
           onPress={_handleMore}
-        />
+        /> */}
+        {/* <MenuPopup /> */}
       </Appbar.Header>
     </>
   );
@@ -41,15 +44,23 @@ const styles = StyleSheet.create({
   },
 
   headerContainer: {
-    backgroundColor: colors.APP_PRIMARY,
+    backgroundColor: colors.WHITE,
     color: colors.WHITE,
     height: moderateScale(50),
+    alignItems: 'center',
+    shadowColor: colors.BLACK,
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 10,
   },
 
   title: {
     fontFamily: fonts.BOLD,
-    fontSize: moderateScale(25),
-    marginTop: moderateScale(5),
-    color: colors.WHITE,
+    fontSize: moderateScale(22),
+    color: colors.BLACK,
   },
 });
