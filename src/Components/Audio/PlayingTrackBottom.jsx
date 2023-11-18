@@ -34,12 +34,12 @@ function PlayingTrackBottom({
       onPress={() => navigation.navigate('AudioPlayer')}
       style={styles.controlContainer}>
       <View style={styles.titleContainer}>
-        {/* <Image
+        <Image
           style={styles.coverImage}
           source={currentTrack.cover}
           width={moderateScale(10)}
           height={moderateScale(10)}
-        /> */}
+        />
         <View>
           <Text
             style={{
