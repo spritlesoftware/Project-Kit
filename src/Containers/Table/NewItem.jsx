@@ -31,7 +31,7 @@ export default function NewItem({ route, navigation }) {
                 <CustomButton
                     title={'Save'}
                     onPress={() => {
-                        if (Object.entries(formValues)) {
+                        if (Object.entries(formValues).length) {
                             setTableData([...tableData, formValues])
                             setFormValues({})
                             navigation.navigate("Table")
