@@ -53,5 +53,4 @@ export const colors = {
   SNOW: '#FAFAFA',
   RED_HEART: '#FF0000',
   UNDOBLUE: '#4491D9',
-  CHAT_BLUE: '#0A30F2',
 };
