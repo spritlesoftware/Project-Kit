@@ -1,6 +1,6 @@
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import AllSongs from '../../Containers/AudioPlayer/AllSongs';
-import PlayList from '../../Containers/AudioPlayer/PlayList';
+import PlayList from '../../Containers/AudioPlayer/PlayListGroup';
 import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 import {moderateScale} from 'react-native-size-matters';
