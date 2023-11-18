@@ -1,37 +1,31 @@
-import {View, Text, StyleSheet, FlatList} from 'react-native';
+import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
 import React, {useState} from 'react';
 import {colors} from '../../Utils/colors';
-import List from '../../Components/Chat/List';
-import {chatList} from '../../Data/ChatList';
 import HeaderWithSearch from '../../Components/Header/HeaderWithSearch';
-import {Searchbar} from 'react-native-paper';
-import Cancel from 'react-native-vector-icons/MaterialIcons';
+import {Searchbar, TouchableRipple} from 'react-native-paper';
 import {moderateScale} from 'react-native-size-matters';
-import DrawerComponent from '../../Components/Drawer/Drawer';
+import Cancel from 'react-native-vector-icons/MaterialIcons';
+import Plus from 'react-native-vector-icons/AntDesign';
+import List from '../../Components/Chat/List';
+import {groupChatList} from '../../Data/GroupChatList';
 
-const ChatList = ({navigation}) => {
+const GroupList = ({navigation}) => {
   const [search, setSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [filteredChat, setFilteredChat] = useState(chatList);
-  const [openDrawer, setOpenDrawer] = useState(false);
+  const [filteredGroups, setFilteredGroups] = useState(groupChatList);
+
   const handleSearch = query => {
     setSearchQuery(query);
 
-    const filteredMessages = chatList.filter(message =>
+    const filteredMessages = groupChatList.filter(message =>
       message.name.toLowerCase().includes(query.toLowerCase()),
     );
 
-    setFilteredChat(filteredMessages);
+    setFilteredGroups(filteredMessages);
   };
-
   return (
     <View style={styles.container}>
-      <HeaderWithSearch
-        title={'Chats'}
-        setSearch={setSearch}
-        openDrawer={openDrawer}
-        setOpenDrawer={setOpenDrawer}
-      />
+      <HeaderWithSearch title={'Groups'} />
       <Searchbar
         placeholder="Search"
         inputStyle={styles.input}
@@ -47,21 +41,24 @@ const ChatList = ({navigation}) => {
             onPress={() => {
               setSearch(false);
               setSearchQuery('');
-              setFilteredChat(chatList);
+              setFilteredGroups(chatList);
             }}
           />
         )}
         style={styles.searchBar}
       />
       <FlatList
-        data={filteredChat}
+        data={filteredGroups}
         renderItem={item => <List items={item} navigation={navigation} />}
       />
+      <TouchableOpacity
+        style={styles.addIcon}
+        onPress={() => navigation.navigate('Contacts')}>
+        <Plus name="pluscircle" color={colors.BLACK} size={moderateScale(50)} />
+      </TouchableOpacity>
     </View>
   );
 };
-
-export default ChatList;
 
 const styles = StyleSheet.create({
   container: {
@@ -83,4 +80,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: colors.BLACK,
   },
+
+  addIcon: {
+    position: 'absolute',
+    alignSelf: 'flex-end',
+    right: moderateScale(20),
+    top: '85%',
+  },
 });
+
+export default GroupList;
