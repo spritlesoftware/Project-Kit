@@ -4,6 +4,7 @@ import Login from '../Containers/Authentications/Login';
 import Register from '../Containers/Authentications/Register';
 import ForgotPassword from '../Containers/Authentications/ForgotPassword';
 import Logout from '../Containers/Authentications/Logout';
+import Form from '../Containers/Form';
 import ChatList from '../Containers/Chats/ChatList';
 import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
@@ -19,6 +20,7 @@ const StackNavigator = () => {
         animationTypeForReplace: 'push',
         animation: 'slide_from_right',
       }}>
+      <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="SignUp" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
