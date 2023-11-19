@@ -19,6 +19,7 @@ export default function InputField({label, ...props}) {
         contentStyle={styles.inputText}
         textColor={colors.BLACK}
         {...props}
+        keyboardType={props.type}
       />
       {props.error ? <Text style={styles.error}>{props.errorMsg}</Text> : null}
     </>
