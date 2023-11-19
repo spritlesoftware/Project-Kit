@@ -6,6 +6,7 @@ import { useRef, useState, useContext } from "react";
 import { AppContext } from '../../Navigations/StackNavigator';
 import { fonts } from "../../Utils/fonts";
 import CustomButton from "../../Components/Button/CustomButton";
+import { colors } from "../../Utils/colors";
 
 export default function Table({ navigation }) {
     const { tableData, setTableData } = useContext(AppContext);
@@ -42,7 +43,7 @@ export default function Table({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: "#fff" }}>
             <View style={styles.flexcontainer}>
-                <Text style={{ fontSize: 25, padding: 30, color: "black", fontFamily: fonts.MEDIUM }}>Kitbox - Table</Text>
+                <Text style={{ fontSize: 25, padding: 30, color:colors.APP_PRIMARY, fontFamily: fonts.MEDIUM, }}>Kitbox-Table</Text>
                 <View style={{ marginRight: 20, marginTop: 10 }}>
                     <CustomButton
                         title={'Create'}
