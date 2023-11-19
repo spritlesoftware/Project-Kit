@@ -1,5 +1,6 @@
+// ForgotPassword.js
 import {View, SafeAreaView, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {styles} from './ForgotPasswordStyles';
 import ForgotPassSVG from '../../Assets/images/forgot_password.svg';
@@ -7,62 +8,38 @@ import InputField from '../../Components/TextInput/InputField';
 import {moderateScale} from 'react-native-size-matters';
 import CustomButton from '../../Components/Button/CustomButton';
 import {colors} from '../../Utils/colors';
-import {ActivityIndicator, Button, Text} from 'react-native-paper';
+import {ActivityIndicator, Text} from 'react-native-paper';
+import useForgotPasswordLogic from '../../Functions/ForgotPassword';
 
 const ForgotPassword = ({navigation}) => {
-  const [email, setEmail] = useState('');
-  const [token, setToken] = useState('');
-  const [newPassword, setNewPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [isTokenSent, setIstokenSent] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [resendClicked, setResendClicked] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [invalidToken, setInvalidToken] = useState(false);
-  const [invalidPassword, setInvalidPassword] = useState(false);
-  const [passwordMismatch, setPasswordMismatch] = useState(false);
-  const [error, setError] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const {
+    email,
+    setEmail,
+    token,
+    setToken,
+    newPassword,
+    setNewPassword,
+    confirmPassword,
+    setConfirmPassword,
+    isTokenSent,
+    isLoading,
+    resendClicked,
+    success,
+    invalidToken,
+    setInvalidToken,
+    invalidPassword,
+    setInvalidPassword,
+    passwordMismatch,
+    setPasswordMismatch,
+    error,
+    setError,
+    errorMessage,
+    submitEmailAddress,
+    sendToken,
+    verifyPassword,
+  } = useForgotPasswordLogic(navigation);
 
-  // handling email submit click
-  const submitEmailAddress = async () => {
-    if (!email.trim()) {
-      errorMsg('Please Enter the Email Address');
-    } else {
-      setIsLoading(true);
-      await sendToken();
-      setIsLoading(false);
-      setIstokenSent('123456');
-    }
-  };
-
-  const errorMsg = msg => {
-    setError(true);
-    setErrorMessage(msg);
-  };
-
-  const verifyPassword = () => {
-    if (!token.trim()) {
-      setInvalidToken(true);
-    } else if (
-      !newPassword.trim() ||
-      (newPassword && newPassword.length <= 7)
-    ) {
-      setInvalidPassword(true);
-    } else if (newPassword !== confirmPassword) {
-      setPasswordMismatch(true);
-    } else {
-      setIsLoading(true);
-      navigation.navigate('Login');
-      setIsLoading(false);
-    }
-  };
-
-  const sendToken = () => {
-    setResendClicked(false);
-  };
-
-  function renderHeader(title) {
+  const renderHeader = title => {
     return (
       <>
         <View style={{alignItems: 'center'}}>
@@ -75,7 +52,7 @@ const ForgotPassword = ({navigation}) => {
         </View>
       </>
     );
-  }
+  };
 
   const renderEmailScreen = () => {
     return (
@@ -91,16 +68,14 @@ const ForgotPassword = ({navigation}) => {
             placeholder={'Enter email addeess'}
             textContentType="emailAddress"
             value={email}
-            onChangeText={text => {
-              setEmail(text);
-            }}
+            onChangeText={text => setEmail(text)}
           />
           <Text style={styles.infoText}>
             Enter your registered email address
           </Text>
           <CustomButton
             title={'Submit'}
-            onPress={() => submitEmailAddress()}
+            onPress={submitEmailAddress}
             loading={isLoading}
           />
         </View>
@@ -141,11 +116,9 @@ const ForgotPassword = ({navigation}) => {
           placeholder={'Enter the code'}
           textContentType="password"
           value={token}
-          onChangeText={text => {
-            setInvalidToken(false);
-            setError(false);
-            setToken(text);
-          }}
+          onChangeText={text =>
+            setInvalidToken(false) || setError(false) || setToken(text)
+          }
           keyboardType={'numeric'}
         />
         {invalidToken ? (
@@ -181,12 +154,12 @@ const ForgotPassword = ({navigation}) => {
         <InputField
           placeholder={'New Password'}
           value={newPassword}
-          onChangeText={text => {
-            setError(false);
-            setInvalidPassword(false);
-            setPasswordMismatch(false);
-            setNewPassword(text);
-          }}
+          onChangeText={text =>
+            setError(false) ||
+            setInvalidPassword(false) ||
+            setPasswordMismatch(false) ||
+            setNewPassword(text)
+          }
           keyboardType={'default'}
         />
         {invalidPassword ? (
@@ -204,12 +177,12 @@ const ForgotPassword = ({navigation}) => {
         <InputField
           placeholder={'Confirm Password'}
           value={confirmPassword}
-          onChangeText={text => {
-            setError(false);
-            setPasswordMismatch(false);
-            setInvalidPassword(false);
-            setConfirmPassword(text);
-          }}
+          onChangeText={text =>
+            setError(false) ||
+            setPasswordMismatch(false) ||
+            setInvalidPassword(false) ||
+            setConfirmPassword(text)
+          }
           onSubmitEditing={verifyPassword}
           keyboardType={'default'}
         />
@@ -228,9 +201,7 @@ const ForgotPassword = ({navigation}) => {
           <CustomButton
             style={{alignSelf: 'center', marginTop: moderateScale(40)}}
             title={'Submit'}
-            onPress={() => {
-              verifyPassword();
-            }}
+            onPress={verifyPassword}
             isLoading={isLoading}
           />
         )}
