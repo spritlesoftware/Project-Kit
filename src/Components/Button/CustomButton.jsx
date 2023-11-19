@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   btnText: {
     fontFamily: fonts.BOLD,
-    fontSize: moderateScale(18),
+    fontSize: moderateScale(15),
     color: colors.WHITE,
   },
 });
