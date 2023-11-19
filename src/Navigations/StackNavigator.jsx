@@ -1,5 +1,5 @@
 import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../Containers/Authentications/Login';
 import Register from '../Containers/Authentications/Register';
 import ForgotPassword from '../Containers/Authentications/ForgotPassword';
@@ -12,8 +12,8 @@ import Table from '../Containers/Table/Table'
 import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
-
-
+import Tiles from '../Containers/Tiles/Tiles';
+import Form from '../Containers/Form';
 const Stack = createNativeStackNavigator();
 
 export const AppContext = React.createContext();
@@ -28,12 +28,14 @@ const StackNavigator = () => {
         // presentation: 'modal',
         animationTypeForReplace: 'push',
         animation: 'slide_from_right',
-      }}>
+      }} initialRouteName='Tiles'>
+      <Stack.Screen name="Tiles" component={Tiles} />
       <Stack.Screen name="Table" component={Table} />
       <Stack.Screen name="NewItem" component={NewItem} />
       <Stack.Screen name="EditItem" component={EditItem} />
       <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="SignUp" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="Logout" component={Logout} />
