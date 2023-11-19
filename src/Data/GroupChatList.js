@@ -37,10 +37,10 @@ const dateFormatter = timestamp => {
   return formattedDate;
 };
 
-export const chatList = [
+export const groupChatList = [
   {
     user_id: 1,
-    name: 'Alice Johnson',
+    name: 'Spritle India',
     last_msg: user_1[0].text,
     modified_date: dateFormatter(user_1[0].createdAt),
     profile_pic:
@@ -51,7 +51,7 @@ export const chatList = [
   },
   {
     user_id: 2,
-    name: 'Bob Smith',
+    name: 'General',
     last_msg: user_2[0].text,
     modified_date: dateFormatter(user_2[0].createdAt),
     profile_pic:
@@ -62,7 +62,7 @@ export const chatList = [
   },
   {
     user_id: 3,
-    name: 'Eva Williams',
+    name: 'Life At Spritle',
     last_msg: user_3[0].text,
     modified_date: dateFormatter(user_3[0].createdAt),
     profile_pic:
@@ -73,7 +73,7 @@ export const chatList = [
   },
   {
     user_id: 4,
-    name: 'David Brown',
+    name: 'Spritle Mobile Team',
     last_msg: 'See you later!',
     modified_date: dateFormatter(user_3[0].createdAt),
     profile_pic:
@@ -84,7 +84,7 @@ export const chatList = [
   },
   {
     user_id: 5,
-    name: 'Olivia Davis',
+    name: 'Knowledge Sharing',
     last_msg: "I'm on my way!",
     modified_date: dateFormatter(user_3[0].createdAt),
     profile_pic:
@@ -95,7 +95,7 @@ export const chatList = [
   },
   {
     user_id: 6,
-    name: 'Michael Lee',
+    name: 'Project KitBox',
     last_msg: 'Have a great day!',
     modified_date: dateFormatter(user_3[1].createdAt),
     profile_pic:
@@ -106,7 +106,7 @@ export const chatList = [
   },
   {
     user_id: 7,
-    name: 'Sophia White',
+    name: 'DSJ KOS',
     last_msg: "What's new?",
     modified_date: dateFormatter(user_3[1].createdAt),
     profile_pic:
@@ -117,7 +117,7 @@ export const chatList = [
   },
   {
     user_id: 8,
-    name: 'James Miller',
+    name: 'GEN AI',
     last_msg: "Let's catch up soon!",
     modified_date: dateFormatter(user_3[1].createdAt),
     profile_pic:
@@ -125,27 +125,5 @@ export const chatList = [
     msg_read: true,
     active: false,
     last_seen: '1m',
-  },
-  {
-    user_id: 9,
-    name: 'Emma Harris',
-    last_msg: 'Meeting in 15 minutes',
-    modified_date: dateFormatter(user_3[1].createdAt),
-    profile_pic:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCczoMDFIc77qVeqtnJ26h8Yen0WXNfyLTIg&usqp=CAU',
-    msg_read: true,
-    active: true,
-    last_seen: '',
-  },
-  {
-    user_id: 10,
-    name: 'Daniel Wilson',
-    last_msg: 'See you at the party!',
-    modified_date: dateFormatter(user_3[1].createdAt),
-    profile_pic:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdI3kbxVEj5tgnqz7bTEmLqDOjvsyl-sq27g&usqp=CAU',
-    msg_read: true,
-    active: false,
-    last_seen: '17m',
   },
 ];
