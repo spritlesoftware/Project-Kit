@@ -69,7 +69,7 @@ export default function Form() {
                 case "radio":
                     return (
                         <View key={field.id} style={{ padding: moderateScale(10) }}>
-                            <Text style={{ fontSize: 19, color: "black", marginBottom: moderateScale(15), fontWeight: "bold" }}>{field.label}</Text>
+                            <Text style={styles.title}>{field.label}</Text>
                             {field.options.map((option) => {
                                 return (
                                     <View style={{ display: "flex", flexDirection: "row", marginBottom: moderateScale(10) }}>
@@ -80,7 +80,7 @@ export default function Form() {
                                             onPress={() => onInputChange(field.id, option)}
                                             color={colors.APP_PRIMARY}
                                         />
-                                        <Text style={{ fontSize: 15, color: "black", marginTop: 7 }}>{option}</Text>
+                                        <Text style={styles.options}>{option}</Text>
                                     </View>
                                 )
                             })}
@@ -90,7 +90,7 @@ export default function Form() {
                 case "checkbox":
                     return (
                         <View key={field.id} style={{ padding: moderateScale(10) }} >
-                            <Text style={{ fontSize: 19, color: "black", marginBottom: moderateScale(15), fontWeight: "bold" }}>{field.label}</Text>
+                            <Text style={styles.title}>{field.label}</Text>
                             <View style={{ borderWidth: 1, borderColor: "gray", padding: 10, borderRadius: 20 }}>
                                 {
                                     field.options.map((option) => {
@@ -109,7 +109,7 @@ export default function Form() {
                                                     }
                                                     color={colors.APP_PRIMARY}
                                                 />
-                                                <Text style={{ fontSize: 15, color: "black", marginTop: 7 }}>{option}</Text>
+                                                <Text style={styles.options}>{option}</Text>
                                             </View>
                                         )
                                     })
@@ -136,7 +136,7 @@ export default function Form() {
                                 }}
                                 buttonStyle={{ borderWidth: 1, borderRadius: 20, backgroundColor: "white" }}
                                 renderDropdownIcon={(isOpened) => {
-                                      return <FontAwesome name={isOpened ? "chevron-up" : "chevron-down"} color={"black"} size={18}/>
+                                    return <FontAwesome name={isOpened ? "chevron-up" : "chevron-down"} color={"black"} size={18} />
                                 }}
                                 dropdownIconPosition={'right'}
 
@@ -152,7 +152,7 @@ export default function Form() {
         <SafeAreaView style={styles.container}>
             <KeyboardAwareScrollView
                 keyboardShouldPersistTaps="handled">
-                <Text style={{ fontFamily: fonts.BOLD, fontSize: 30, padding: 30, textAlign: "center", color: "black" }}>Kitbox - Form</Text>
+                <Text style={styles.header}>Kitbox - Form</Text>
                 {renderFormFields()}
                 <CustomButton title={'Submit'} onPress={onHandleSubmit} />
             </KeyboardAwareScrollView>
@@ -173,6 +173,24 @@ const styles = StyleSheet.create({
         width: '50%',
         alignSelf: 'flex-start',
         paddingTop: moderateScale(5),
+    },
+    header: {
+        fontFamily: fonts.BOLD,
+        fontSize: 30,
+        padding: 30,
+        textAlign: "center",
+        color: colors.APP_PRIMARY
+    },
+    title: {
+        fontSize: 19,
+        color: "black",
+        marginBottom: moderateScale(15),
+        fontWeight: "bold"
+    },
+    options: {
+        fontSize: 15,
+        color: "black",
+        marginTop: 7
     }
 
 })
