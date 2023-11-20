@@ -1,59 +1,34 @@
-import {TouchableOpacity, View} from 'react-native';
-import React, {useState} from 'react';
-import {styles} from './LoginStyles';
-import LoginLogo from '../../Assets/images/login_logo.svg';
-import Google from '../../Assets/images/google.svg';
-import Facebook from '../../Assets/images/facebook.svg';
-import CustomButton from '../../Components/Button/CustomButton';
-import InputField from '../../Components/TextInput/InputField';
+// Register.js
+import {View, Text, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {moderateScale} from 'react-native-size-matters';
-import {SafeAreaView} from 'react-native-safe-area-context';
-// import Google from 'react-native-vector-icons/AntDesign';
-import {colors} from '../../Utils/colors';
-import {Divider, Text} from 'react-native-paper';
+import {styles} from './LoginStyles'; // Assuming styles are shared
+import LoginLogo from '../../Assets/images/login_logo.svg';
+import CustomButton from '../../Components/Button/CustomButton';
+import InputField from '../../Components/TextInput/InputField';
+import {Divider} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
-import {fonts} from '../../Utils/fonts';
+import RegisterLogic from '../../Functions/Register';
+import Google from 'react-native-vector-icons/AntDesign';
 
-const Login = ({navigation}) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [invalidEmail, setInvalidEmail] = useState(false);
-  const [invalidPassword, setInvalidPassword] = useState(false);
-  const [invalidConfirmPassword, setInvalidConfirmPassword] = useState(false);
-  const [apiError, setApiError] = useState(false);
-  const [apiErrorMessage, setApiErrorMessage] = useState('');
-  const [isLoading, setisLoading] = useState(false);
-
-  // custom user signup logic
-  const userSignUp = () => {
-    setisLoading(false);
-    navigation.navigate('Login');
-  };
-
-  // handling signin
-  const onPressSignUp = async () => {
-    if (!email.trim()) {
-      setInvalidEmail(true);
-      return;
-    } else if (!password.trim()) {
-      setInvalidEmail(false);
-      setInvalidPassword(true);
-      return;
-    } else if (!confirmPassword.trim()) {
-      setInvalidEmail(false);
-      setInvalidConfirmPassword(true);
-      return;
-    } else {
-      setisLoading(true);
-      setInvalidEmail(false);
-      setInvalidPassword(false);
-      userSignUp();
-    }
-  };
-
-  console.log(email, password);
+const Register = ({navigation}) => {
+  const {
+    email,
+    password,
+    confirmPassword,
+    invalidEmail,
+    invalidPassword,
+    invalidConfirmPassword,
+    apiError,
+    apiErrorMessage,
+    isLoading,
+    onPressSignUp,
+    handleEmailChange,
+    handlePasswordChange,
+    handleConfirmPasswordChange,
+  } = RegisterLogic(navigation);
 
   return (
     <SafeAreaView style={styles.center}>
@@ -80,13 +55,9 @@ const Login = ({navigation}) => {
             placeholder={'Enter username'}
             textContentType="emailAddress"
             value={email}
-            onChangeText={text => {
-              setApiError(false);
-              setInvalidEmail(false);
-              setEmail(text);
-            }}
+            onChangeText={handleEmailChange}
             error={invalidEmail}
-            errorMsg={'Enter a email address'}
+            errorMsg={'Enter an email address'}
           />
           <View style={{marginTop: moderateScale(5)}} />
           <InputField
@@ -95,11 +66,7 @@ const Login = ({navigation}) => {
             textContentType="password"
             secureTextEntry
             value={password}
-            onChangeText={text => {
-              setApiError(false);
-              setInvalidPassword(false);
-              setPassword(text);
-            }}
+            onChangeText={handlePasswordChange}
             error={invalidPassword}
             errorMsg={'Enter a password'}
           />
@@ -110,11 +77,7 @@ const Login = ({navigation}) => {
             textContentType="password"
             secureTextEntry
             value={confirmPassword}
-            onChangeText={text => {
-              setApiError(false);
-              setInvalidConfirmPassword(false);
-              setConfirmPassword(text);
-            }}
+            onChangeText={handleConfirmPasswordChange}
             error={invalidConfirmPassword}
             errorMsg={'Enter a password'}
           />
@@ -126,7 +89,7 @@ const Login = ({navigation}) => {
           <Text style={styles.regText}>Already have an account? Sign In</Text>
         </TouchableOpacity>
         <Divider style={styles.divider} />
-        <Text style={styles.orContainer}>Sign Up with social account</Text>
+        <Text style={styles.orContainer}>Sign Up with a social account</Text>
         <View style={styles.socialContainer}>
           <SocialButton icon={<Google width={30} height={30} />} />
         </View>
@@ -135,4 +98,4 @@ const Login = ({navigation}) => {
   );
 };
 
-export default Login;
+export default Register;
