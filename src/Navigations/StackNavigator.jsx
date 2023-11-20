@@ -13,7 +13,7 @@ import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
 import Tiles from '../Containers/Tiles/Tiles';
-import Form from '../Containers/Form';
+
 const Stack = createNativeStackNavigator();
 
 export const AppContext = React.createContext();
@@ -35,7 +35,6 @@ const StackNavigator = () => {
       <Stack.Screen name="EditItem" component={EditItem} />
       <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="SignUp" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="Logout" component={Logout} />
