@@ -19,6 +19,13 @@ const fonts = {
       thin: 'Montserrat-Thin',
       thinItalic: 'Montserrat-ThinItalic',
     },
+    poppins: {
+      bold: 'Poppins-Bold',
+      light: 'Poppins-Light',
+      medium: 'Poppins-Medium',
+      regular: 'Poppins-Regular',
+      semiBold: 'Poppins-SemiBold',
+    },
   };
   
   export const typography = {
@@ -29,6 +36,6 @@ const fonts = {
     /**
      * The primary font. Used in most places.
      */
-    primary: fonts.montserrat,
+    primary: fonts.poppins,
   };
   
