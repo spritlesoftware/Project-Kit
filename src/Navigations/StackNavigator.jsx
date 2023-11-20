@@ -58,7 +58,6 @@ const StackNavigator = () => {
       <Stack.Screen name="EditItem" component={EditItem} />
       <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Form" component={Form} />
       <Stack.Screen name="SignUp" component={Register} />
       <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       <Stack.Screen name="Logout" component={Logout} />
