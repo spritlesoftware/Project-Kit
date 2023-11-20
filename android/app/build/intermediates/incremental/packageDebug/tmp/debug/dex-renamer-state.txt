@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #Tue Nov 28 20:51:34 IST 2023
 =======
 <<<<<<< HEAD
@@ -11,6 +12,9 @@
 =======
 #Mon Nov 20 10:41:51 IST 2023
 >>>>>>> 94a147d (development rebase)
+=======
+#Mon Nov 20 15:53:50 IST 2023
+>>>>>>> aa26ae2 (styles:font change)
 path.4=7/classes.dex
 path.3=14/classes.dex
 path.2=0/classes.dex
