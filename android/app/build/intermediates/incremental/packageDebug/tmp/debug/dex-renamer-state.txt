@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-#Fri Nov 17 15:47:52 IST 2023
-=======
-#Sat Nov 18 22:47:06 IST 2023
->>>>>>> d38e9de (feat:Skeleton of Tiles)
+#Mon Nov 20 10:41:51 IST 2023
 path.4=7/classes.dex
 path.3=14/classes.dex
 path.2=0/classes.dex
