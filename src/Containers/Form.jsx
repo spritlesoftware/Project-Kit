@@ -122,7 +122,7 @@ export default function Form() {
                 case "select":
                     return (
                         <View style={{ padding: moderateScale(10) }}>
-                            <Text style={{ fontSize: 19, marginBottom: moderateScale(20), marginTop: moderateScale(20), color: "black", fontWeight: "bold" }}>{field.label}</Text>
+                            <Text style={{ fontSize: 19,fontFamily:fonts.BOLD, marginBottom: moderateScale(15), marginTop: moderateScale(20), color: "black" }}>{field.label}</Text>
                             <SelectDropdown
                                 data={field.options}
                                 onSelect={(selectedItem, index) => {
@@ -134,7 +134,7 @@ export default function Form() {
                                 rowTextForSelection={(item, index) => {
                                     return item
                                 }}
-                                buttonStyle={{ borderWidth: 1, borderRadius: 20, backgroundColor: "white" }}
+                                buttonStyle={{ borderWidth: 1, borderRadius: 20, backgroundColor: "white"}}
                                 renderDropdownIcon={(isOpened) => {
                                     return <FontAwesome name={isOpened ? "chevron-up" : "chevron-down"} color={"black"} size={18} />
                                 }}
@@ -185,12 +185,13 @@ const styles = StyleSheet.create({
         fontSize: 19,
         color: "black",
         marginBottom: moderateScale(15),
-        fontWeight: "bold"
+        fontFamily:fonts.BOLD
     },
     options: {
         fontSize: 15,
         color: "black",
-        marginTop: 7
+        marginTop: 7,
+        fontFamily:fonts.REGULAR
     }
 
 })
