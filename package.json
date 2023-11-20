@@ -22,13 +22,18 @@
     "nodemon": "^3.0.1",
     "react": "18.2.0",
     "react-native": "0.72.6",
+<<<<<<< HEAD
     "react-native-dotenv": "^3.4.9",
     "react-native-gesture-handler": "^2.13.4",
+=======
+>>>>>>> ce7483677cf2e3652705e9ff2010e8865bc055ff
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-onesignal": "^5.0.2",
     "react-native-paper": "^5.11.1",
     "react-native-permissions": "^3.10.1",
     "react-native-safe-area-context": "^4.7.4",
     "react-native-screens": "^3.27.0",
+<<<<<<< HEAD
     "react-native-select-dropdown": "^3.4.0",
     "react-native-size-matters": "^0.4.2",
     "react-native-svg": "^13.14.0",
@@ -37,6 +42,11 @@
     "react-native-vector-icons": "^10.0.1",
     "twilio": "^4.19.0",
     "twilio-video": "^2.28.1"
+=======
+    "react-native-size-matters": "^0.4.2",
+    "react-native-svg-transformer": "^1.1.0",
+    "react-native-vector-icons": "^10.0.1"
+>>>>>>> ce7483677cf2e3652705e9ff2010e8865bc055ff
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
