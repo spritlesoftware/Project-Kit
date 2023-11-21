@@ -1,52 +1,34 @@
 import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {moderateScale} from 'react-native-size-matters';
 import {colors} from '../../Utils/colors';
 import HeaderWithSearch from '../../Components/Header/HeaderWithSearch';
 import {Searchbar, TouchableRipple} from 'react-native-paper';
 import List from '../../Components/Chat/List';
 import Cancel from 'react-native-vector-icons/MaterialIcons';
-import {Users} from '../../Data/Users';
-import {fonts} from '../../Utils/fonts';
-import Check from 'react-native-vector-icons/AntDesign';
-import {groupChatList} from '../../Data/GroupChatList';
 import PopupModal from '../../Components/Modal/PopupModal';
+import ContactsLogic from '../../Functions/Contacts';
+import {fonts} from '../../Utils/fonts';
 
-const Contacts = ({navigation}) => {
-  const [search, setSearch] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredContacts, setFilteredContacts] = useState(Users);
-  const [isGroupSelection, setisGroupSelection] = useState(true);
-  const [groupContact, setGroupContact] = useState([]);
-  const [selected, setSelected] = useState(false);
+const Contacts = () => {
+  const {
+    search,
+    setSearch,
+    searchQuery,
+    setSearchQuery,
+    filteredContacts,
+    setFilteredContacts,
+    isGroupSelection,
+    groupContact,
+    setGroupContact,
+    selected,
+    setSelected,
+    handleSearch,
+    HandleGroupSelection,
+    navigation,
+  } = ContactsLogic();
 
-  function HandleGroupSelection(item) {
-    // Create a new Set with the existing groupContact values
-    const updatedGroupContact = new Set(groupContact);
-
-    // Toggle the presence of the item in the Set
-    if (updatedGroupContact.has(item)) {
-      updatedGroupContact.delete(item);
-    } else {
-      updatedGroupContact.add(item);
-    }
-
-    // Convert the Set back to an array and update the state
-    setGroupContact(Array.from(updatedGroupContact));
-  }
-
-  console.log(groupContact);
-
-  const handleSearch = query => {
-    setSearchQuery(query);
-
-    const filteredMessages = groupChatList.filter(message =>
-      message.name.toLowerCase().includes(query.toLowerCase()),
-    );
-
-    setFilteredContacts(filteredMessages);
-  };
-
+  console.log(filteredContacts);
   return (
     <View style={styles.container}>
       <HeaderWithSearch title={'Groups'} />
@@ -77,9 +59,6 @@ const Contacts = ({navigation}) => {
           <Text style={styles.selectedNo}>
             Selected Contacts: {groupContact.length}
           </Text>
-          {/* <TouchableRipple onPress={() => {}}>
-            <Text style={styles.group}>Create Group</Text>
-          </TouchableRipple> */}
         </View>
       )}
       <FlatList
