@@ -4,6 +4,7 @@ import Login from '../Containers/Authentications/Login';
 import Register from '../Containers/Authentications/Register';
 import ForgotPassword from '../Containers/Authentications/ForgotPassword';
 import Logout from '../Containers/Authentications/Logout';
+import Form from '../Containers/Form';
 import ChatList from '../Containers/Chats/ChatList';
 import { Videocall } from '../Containers/Videocall/Videocall';
 import { RegisterScreen } from '../Containers/Videocall/RegisterScreen';
@@ -20,6 +21,13 @@ import {
   ScrollView,
   Dimensions,
 } from 'react-native';
+import NewItem from '../Containers/Table/NewItem';
+import { TableData } from '../Data/TableData';
+import Table from '../Containers/Table/Table'
+import EditItem from '../Containers/Table/EditItem';
+import GroupList from '../Containers/Chats/GroupList';
+import Contacts from '../Containers/Chats/Contacts';
+
 
 export const initialState = {
   isAudioEnabled: true,
@@ -36,46 +44,39 @@ export const AppContext = React.createContext(initialState);
 const dimensions = Dimensions.get('window');
 const Stack = createNativeStackNavigator();
 
+export const AppContext = React.createContext();
+
 const StackNavigator = () => {
   const [props, setProps] = useState(initialState);
+   const [tableData, setTableData] = React.useState(TableData)
 
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <AppContext.Provider value={{ props, setProps }}>
-        <Stack.Navigator screenOptions={{
-          headerShown: false,
-          // presentation: 'modal',
-          animationTypeForReplace: 'push',
-          animation: 'slide_from_right',
-        }}>
-          <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-           <Stack.Screen name="Videocall" component={Videocall} />
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="SignUp" component={Register} />
-          <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-          <Stack.Screen name="Logout" component={Logout} />
-          <Stack.Screen name="ChatList" component={ChatList} />
-        </Stack.Navigator>
-      </AppContext.Provider>
-    </>
+    <AppContext.Provider value={{tableData,setTableData,props, setProps}}>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        // presentation: 'modal',
+        animationTypeForReplace: 'push',
+        animation: 'slide_from_right',
+      }}>
+       <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+      <Stack.Screen name="Videocall" component={Videocall} />
+      <Stack.Screen name="Table" component={Table} />
+      <Stack.Screen name="NewItem" component={NewItem} />
+      <Stack.Screen name="EditItem" component={EditItem} />
+      <Stack.Screen name="Form" component={Form} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="SignUp" component={Register} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      <Stack.Screen name="Logout" component={Logout} />
+      <Stack.Screen name="ChatList" component={ChatList} />
+      <Stack.Screen name="Groups" component={GroupList} />
+      <Stack.Screen name="Contacts" component={Contacts} />
+    </Stack.Navigator>
+    </AppContext.Provider>
+
   );
-  // return (
-  //   <Stack.Navigator
-  //     screenOptions={{
-  //       headerShown: false,
-  //       // presentation: 'modal',
-  //       animationTypeForReplace: 'push',
-  //       animation: 'slide_from_right',
-  //     }}>
-  //     <Stack.Screen name="Videocall" component={Videocall} />
-  //     <Stack.Screen name="Login" component={Login} />
-  //     <Stack.Screen name="SignUp" component={Register} />
-  //     <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-  //     <Stack.Screen name="Logout" component={Logout} />
-  //     <Stack.Screen name="ChatList" component={ChatList} />
-  //   </Stack.Navigator>
-  // );
+  
 };
 
 export default StackNavigator;
