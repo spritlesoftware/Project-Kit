@@ -3,19 +3,11 @@ import {typography} from '../Theme/Typography';
 
 export const fonts = {
   REGULAR:
-    Platform.OS === 'ios'
-      ? typography.fonts.poppins.regular
-      : typography.fonts.poppins.regular, //400
+    Platform.OS === 'ios' ? typography.font1.regular : typography.font1.regular, //400
   MEDIUM:
-    Platform.OS === 'ios'
-      ? typography.fonts.poppins.medium
-      : typography.fonts.poppins.medium, //500
+    Platform.OS === 'ios' ? typography.font1.medium : typography.font1.medium, //500
   BOLD:
-    Platform.OS === 'ios'
-      ? typography.fonts.poppins.bold
-      : typography.fonts.poppins.semiBold, //800
+    Platform.OS === 'ios' ? typography.font1.bold : typography.font1.semiBold, //800
   LIGHT:
-    Platform.OS === 'ios'
-      ? typography.fonts.poppins.light
-      : typography.fonts.poppins.light, //300
+    Platform.OS === 'ios' ? typography.font1.light : typography.font1.light, //300
 };
