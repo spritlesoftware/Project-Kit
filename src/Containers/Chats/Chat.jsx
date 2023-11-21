@@ -19,163 +19,26 @@ import FileTransfer from '../../Components/Chat/FileTransfer';
 import ViewFile from '../../Components/Chat/ViewFile';
 import Plus from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import ChatLogic from '../../Functions/Chat';
 
-const Chat = ({navigation}) => {
+const Chat = () => {
+  const {
+    messages,
+    setMessages,
+    attachments,
+    setAttachments,
+    fileVisible,
+    setFileVisible,
+    isMenuOpen,
+    openMenu,
+    closeMenu,
+    onSend,
+    pickDocument,
+    navigation,
+    currentTime,
+  } = ChatLogic();
+
   const route = useRoute();
-
-  const [messages, setMessages] = useState([]);
-  const [visible, setVisible] = React.useState(false);
-  const [attachments, setAttachments] = useState([]);
-  const [fileVisible, setFileVisible] = useState(false);
-
-  const openMenu = () => setVisible(true);
-
-  const closeMenu = () => setVisible(false);
-
-  // current time retrieving
-  const currentTime = new Date().toLocaleTimeString('en-US', {
-    hour: 'numeric',
-    minute: 'numeric',
-    hour12: true,
-  });
-
-  const onSend = useCallback(
-    (messages = []) => {
-      console.log(messages[0].text);
-      const [messageToSend] = messages;
-      if (attachments.length > 0) {
-        const newMessages = attachments.map((attachment, index) => ({
-          _id: messageToSend._id + index + 1,
-          text: messages[0].text,
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            avatar: '',
-          },
-          image: attachment.type === 'image' ? attachment.path : '',
-          file: {
-            url: attachment.type === 'file' ? attachment.path : '',
-          },
-        }));
-
-        setMessages(previousMessages =>
-          GiftedChat.append(previousMessages, newMessages),
-        );
-
-        // Clear selected files after sending
-        setAttachments([]);
-      } else {
-        // Send regular text message
-        setMessages(previousMessages =>
-          GiftedChat.append(previousMessages, messages),
-        );
-      }
-    },
-    [attachments],
-  );
-
-  // handling attching docs / images
-  const pickDocument = async () => {
-    try {
-      const results = await DocumentPicker.pick({
-        type: [DocumentPicker.types.allFiles],
-        copyTo: 'documentDirectory',
-        mode: 'import',
-        allowMultiSelection: true,
-      });
-
-      // Process each selected file or image
-      results.forEach(result => {
-        const fileUri = result.fileCopyUri;
-        if (fileUri) {
-          setAttachments(prevAttachments => [
-            ...prevAttachments,
-            {
-              path: fileUri,
-              type:
-                fileUri.includes('.png') || fileUri.includes('.jpg')
-                  ? 'image'
-                  : 'file',
-            },
-          ]);
-        }
-      });
-    } catch (err) {
-      if (DocumentPicker.isCancel(err)) {
-        console.log('User cancelled file picker');
-      } else {
-        console.log('DocumentPicker err => ', err);
-        throw err;
-      }
-    }
-  };
-
-  const renderChatFooter = useCallback(() => {
-    if (attachments.length > 0 && attachments[0].path !== undefined) {
-      return (
-        <View style={styles.chatFooter}>
-          {attachments.map((attachment, index) => (
-            <View
-              key={index}
-              style={[
-                styles.fileContainer,
-                {marginRight: attachment.type && moderateScale(10)},
-              ]}>
-              {attachment.type === 'image' && (
-                <View
-                  style={[
-                    styles.innerChatFooter,
-                    {
-                      backgroundColor: colors.WHITE,
-                    },
-                  ]}>
-                  <Image
-                    source={{uri: attachment.path}}
-                    style={{
-                      height: 75,
-                      width: 75,
-                      borderRadius: moderateScale(10),
-                    }}
-                  />
-                  <TouchableOpacity
-                    onPress={() => setImagePath('')}
-                    style={styles.buttonFooterChat}>
-                    <Text style={styles.textFooterChat}>X</Text>
-                  </TouchableOpacity>
-                </View>
-              )}
-              {attachment.type === 'file' && (
-                <FileTransfer
-                  style={{marginTop: -10}}
-                  filePath={attachment.path}
-                  isFooter={true}
-                />
-              )}
-              <TouchableOpacity
-                onPress={() => {
-                  const updatedAttachments = [...attachments];
-                  updatedAttachments.splice(index, 1);
-                  setAttachments(updatedAttachments);
-                }}
-                style={styles.buttonFooterChat}>
-                <Text style={styles.textFooterChat}>X</Text>
-              </TouchableOpacity>
-            </View>
-          ))}
-        </View>
-      );
-    } else {
-      return null;
-    }
-  }, [attachments]);
-
-  const renderInputToolbar = props => {
-    const modifiedProps = {...props};
-    if (props.text.length === 0 && attachments[0] !== undefined) {
-      modifiedProps.text = ' ';
-    }
-    return <InputToolbar {...modifiedProps} containerStyle={styles.input} />;
-  };
 
   const renderSend = props => {
     return (
@@ -256,6 +119,73 @@ const Chat = ({navigation}) => {
     return <FontAwesome name="angle-double-down" size={22} color="#333" />;
   };
 
+  const renderInputToolbar = props => {
+    const modifiedProps = {...props};
+    if (props.text.length === 0 && attachments[0] !== undefined) {
+      modifiedProps.text = ' ';
+    }
+    return <InputToolbar {...modifiedProps} containerStyle={styles.input} />;
+  };
+
+  const renderChatFooter = useCallback(() => {
+    if (attachments.length > 0 && attachments[0].path !== undefined) {
+      return (
+        <View style={styles.chatFooter}>
+          {attachments.map((attachment, index) => (
+            <View
+              key={index}
+              style={[
+                styles.fileContainer,
+                {marginRight: attachment.type && moderateScale(10)},
+              ]}>
+              {attachment.type === 'image' && (
+                <View
+                  style={[
+                    styles.innerChatFooter,
+                    {
+                      backgroundColor: colors.WHITE,
+                    },
+                  ]}>
+                  <Image
+                    source={{uri: attachment.path}}
+                    style={{
+                      height: 75,
+                      width: 75,
+                      borderRadius: moderateScale(10),
+                    }}
+                  />
+                  <TouchableOpacity
+                    onPress={() => setImagePath('')}
+                    style={styles.buttonFooterChat}>
+                    <Text style={styles.textFooterChat}>X</Text>
+                  </TouchableOpacity>
+                </View>
+              )}
+              {attachment.type === 'file' && (
+                <FileTransfer
+                  style={{marginTop: -10}}
+                  filePath={attachment.path}
+                  isFooter={true}
+                />
+              )}
+              <TouchableOpacity
+                onPress={() => {
+                  const updatedAttachments = [...attachments];
+                  updatedAttachments.splice(index, 1);
+                  setAttachments(updatedAttachments);
+                }}
+                style={styles.buttonFooterChat}>
+                <Text style={styles.textFooterChat}>X</Text>
+              </TouchableOpacity>
+            </View>
+          ))}
+        </View>
+      );
+    } else {
+      return null;
+    }
+  }, [attachments]);
+
   return (
     <View style={styles.container}>
       <HeaderWithBackaction
@@ -282,8 +212,6 @@ const Chat = ({navigation}) => {
     </View>
   );
 };
-
-export default Chat;
 
 const styles = StyleSheet.create({
   container: {
@@ -393,3 +321,5 @@ const styles = StyleSheet.create({
     paddingBottom: moderateScale(15),
   },
 });
+
+export default Chat;
