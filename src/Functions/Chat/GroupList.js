@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import {groupChatList} from '../../Data/GroupChatList';
+import {useNavigation} from '@react-navigation/core';
 
 const GroupListLogic = () => {
   const [search, setSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredGroups, setFilteredGroups] = useState(groupChatList);
+  const navigation = useNavigation();
 
   const handleSearch = query => {
     setSearchQuery(query);
@@ -30,6 +32,7 @@ const GroupListLogic = () => {
     filteredGroups,
     handleSearch,
     handleCancelSearch,
+    navigation,
   };
 };
 
