@@ -9,7 +9,7 @@ import {moderateScale} from 'react-native-size-matters';
 import CustomButton from '../../Components/Button/CustomButton';
 import {colors} from '../../Utils/colors';
 import {ActivityIndicator, Text} from 'react-native-paper';
-import useForgotPasswordLogic from '../../Functions/ForgotPassword';
+import ForgotPasswordLogic from '../../Functions/Authentications/ForgotPassword';
 
 const ForgotPassword = ({navigation}) => {
   const {
@@ -37,7 +37,7 @@ const ForgotPassword = ({navigation}) => {
     submitEmailAddress,
     sendToken,
     verifyPassword,
-  } = useForgotPasswordLogic(navigation);
+  } = ForgotPasswordLogic(navigation);
 
   const renderHeader = title => {
     return (

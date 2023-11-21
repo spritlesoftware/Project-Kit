@@ -7,7 +7,7 @@ import Cancel from 'react-native-vector-icons/MaterialIcons';
 import Plus from 'react-native-vector-icons/AntDesign';
 import List from '../../Components/Chat/List';
 import {moderateScale} from 'react-native-size-matters';
-import GroupListLogic from '../../Functions/GroupList';
+import GroupListLogic from '../../Functions/Chat/GroupList';
 
 const GroupListUI = () => {
   const {
