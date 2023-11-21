@@ -6,7 +6,7 @@ import HeaderWithSearch from '../../Components/Header/HeaderWithSearch';
 import {Searchbar} from 'react-native-paper';
 import Cancel from 'react-native-vector-icons/MaterialIcons';
 import {moderateScale} from 'react-native-size-matters';
-import ChatListLogic from '../../Functions/ChatList';
+import ChatListLogic from '../../Functions/Chat/ChatList';
 import {chatList} from '../../Data/ChatList';
 
 const ChatList = () => {

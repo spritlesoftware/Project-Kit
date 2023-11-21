@@ -10,7 +10,7 @@ import CustomButton from '../../Components/Button/CustomButton';
 import InputField from '../../Components/TextInput/InputField';
 import {Divider} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
-import RegisterLogic from '../../Functions/Register';
+import RegisterLogic from '../../Functions/Authentications/Register';
 import Google from 'react-native-vector-icons/AntDesign';
 
 const Register = ({navigation}) => {

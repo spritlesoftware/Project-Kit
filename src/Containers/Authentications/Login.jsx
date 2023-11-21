@@ -11,7 +11,7 @@ import {moderateScale} from 'react-native-size-matters';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {Divider, Text} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
-import LoginLogic from '../../Functions/Login';
+import LoginLogic from '../../Functions/Authentications/Login';
 
 const Login = ({navigation}) => {
   const {
