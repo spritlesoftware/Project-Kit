@@ -6,9 +6,11 @@ import {moderateScale} from 'react-native-size-matters';
 import {fonts} from '../../Utils/fonts';
 import Dot from 'react-native-vector-icons/Octicons';
 import Check from 'react-native-vector-icons/AntDesign';
+import {useNavigation} from '@react-navigation/core';
 
-const Lists = ({items, navigation, groupContact}) => {
+const Lists = ({items, groupContact}) => {
   const Item = items.item;
+  const navigation = useNavigation();
 
   return (
     <TouchableRipple
