@@ -19,7 +19,7 @@ import FileTransfer from '../../Components/Chat/FileTransfer';
 import ViewFile from '../../Components/Chat/ViewFile';
 import Plus from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import ChatLogic from '../../Functions/Chat';
+import ChatLogic from '../../Functions/Chat/Chat';
 
 const Chat = () => {
   const {
