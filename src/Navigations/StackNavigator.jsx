@@ -1,11 +1,26 @@
-import React from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import React, { useState } from 'react';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../Containers/Authentications/Login';
 import Register from '../Containers/Authentications/Register';
 import ForgotPassword from '../Containers/Authentications/ForgotPassword';
 import Logout from '../Containers/Authentications/Logout';
 import Form from '../Containers/Form';
 import ChatList from '../Containers/Chats/ChatList';
+import { Videocall } from '../Containers/Videocall/Videocall';
+import { RegisterScreen } from '../Containers/Videocall/RegisterScreen';
+import {
+  StyleSheet,
+  View,
+  Text,
+  StatusBar,
+  TouchableOpacity,
+  TextInput,
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Dimensions,
+} from 'react-native';
 import NewItem from '../Containers/Table/NewItem';
 import { TableData } from '../Data/TableData';
 import Table from '../Containers/Table/Table'
@@ -14,14 +29,29 @@ import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
 
 
+export const initialState = {
+  isAudioEnabled: true,
+  status: 'disconnected',
+  participants:[],
+  videoTracks: new Map(),
+  userName: '',
+  roomName: '',
+  token: '',
+};
+
+export const AppContext = React.createContext(initialState);
+
+const dimensions = Dimensions.get('window');
 const Stack = createNativeStackNavigator();
 
 export const AppContext = React.createContext();
 
 const StackNavigator = () => {
-  const [tableData, setTableData] = React.useState(TableData)
+  const [props, setProps] = useState(initialState);
+   const [tableData, setTableData] = React.useState(TableData)
+
   return (
-    <AppContext.Provider value={{tableData,setTableData}}>
+    <AppContext.Provider value={{tableData,setTableData,props, setProps}}>
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
@@ -29,6 +59,8 @@ const StackNavigator = () => {
         animationTypeForReplace: 'push',
         animation: 'slide_from_right',
       }}>
+       <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+      <Stack.Screen name="Videocall" component={Videocall} />
       <Stack.Screen name="Table" component={Table} />
       <Stack.Screen name="NewItem" component={NewItem} />
       <Stack.Screen name="EditItem" component={EditItem} />
@@ -42,7 +74,9 @@ const StackNavigator = () => {
       <Stack.Screen name="Contacts" component={Contacts} />
     </Stack.Navigator>
     </AppContext.Provider>
+
   );
+  
 };
 
 export default StackNavigator;
