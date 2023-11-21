@@ -19,6 +19,8 @@ import {
     TwilioVideoParticipantView,
     TwilioVideo,
 } from "react-native-twilio-video-webrtc";
+import { fonts } from "../../Utils/fonts";
+import { colors } from "../../Utils/colors";
 const dimensions = Dimensions.get('window');
 
 export const Videocall = ({ navigation }) => {
@@ -197,7 +199,7 @@ export const Videocall = ({ navigation }) => {
                     style={[styles.optionButton, { backgroundColor: "#363737" }]}
                     onPress={_onMuteButtonPress}
                 >
-                    <Text style={{ fontSize: 12 }}>
+                    <Text style={{ fontSize: 12 ,fontFamily:fonts.REGULAR,color:colors.WHITE}}>
                         {props.isAudioEnabled ? "Mute" : "Unmute"}
                     </Text>
                 </TouchableOpacity>
@@ -205,13 +207,13 @@ export const Videocall = ({ navigation }) => {
                     style={[styles.optionButton, { backgroundColor: "red" }]}
                     onPress={_onEndButtonPress}
                 >
-                    <Text style={{ fontSize: 12, color: "white" }}>End</Text>
+                    <Text style={{ fontSize: 12, color:colors.WHITE,fontFamily:fonts.REGULAR }}>End</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                     style={[styles.optionButton, { backgroundColor: "#363737" }]}
                     onPress={_onFlipButtonPress}
                 >
-                    <Text style={{ fontSize: 12, color: "white" }}>Flip</Text>
+                    <Text style={{ fontSize: 12, color:colors.WHITE ,fontFamily:fonts.REGULAR}}>Flip</Text>
                 </TouchableOpacity>
             </View>
             <TwilioVideo

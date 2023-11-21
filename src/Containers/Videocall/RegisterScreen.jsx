@@ -20,6 +20,8 @@ import {
     ScrollView,
     Dimensions,
   } from 'react-native';
+import { fonts } from '../../Utils/fonts';
+import { colors } from '../../Utils/colors';
 
 export const RegisterScreen = ({ navigation }) => {
     useEffect(() => {
@@ -97,8 +99,9 @@ export const RegisterScreen = ({ navigation }) => {
             // behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
             style={{flex:1,justifyContent:"center",alignItems:"center"}}>
                 <View style={{width:"80%",alignItems:"center"}}>
+                    <Text style={{fontSize:35,padding:20,fontFamily:fonts.BOLD,color:colors.APP_PRIMARY}}>Video chat</Text>
                     <View style={{width:"100%"}}>
-                        <Text style={{color:"black",textAlign:"left"}}>Enter your Name</Text>
+                        <Text style={{color:"black",textAlign:"left",fontFamily:fonts.REGULAR}}>Enter your Name</Text>
                         <TextInput
                             style={{color:"black", borderColor:"#363737",borderRadius:15,borderWidth:1,marginTop:10,marginBottom:10}}
                             autoCapitalize="none"
@@ -107,7 +110,7 @@ export const RegisterScreen = ({ navigation }) => {
                         />
                     </View>
                     <View style={{width:"100%"}}>
-                        <Text style={{color:"black",textAlign:"left"}}>Enter your Room Name</Text>
+                        <Text style={{color:"black",textAlign:"left",fontFamily:fonts.REGULAR}}>Enter your Room Name</Text>
                         <TextInput
                             style={{color:"black", borderColor:"#363737",borderRadius:15,borderWidth:1,marginTop:10,marginBottom:10}}
                             autoCapitalize="none"
@@ -118,10 +121,10 @@ export const RegisterScreen = ({ navigation }) => {
                     <View style={{width:"100%",margin:30}}>
                         <TouchableOpacity
                             disabled={false}
-                            style={{padding:15,backgroundColor:"#363737",borderRadius:15}}
+                            style={{padding:15,backgroundColor:colors.APP_PRIMARY,borderRadius:15}}
                             onPress={() => {
                                 _checkPermissions(() => {
-                                    fetch(`https://f49d-113-193-25-170.ngrok-free.app/getToken?userName=${props.userName}`)
+                                    fetch(`https://1c33-113-193-25-170.ngrok-free.app/getToken?userName=${props.userName}`)
                                         .then((response) => {
                                             if (response.ok) {
                                                 response.text().then((jwt) => {
@@ -142,7 +145,7 @@ export const RegisterScreen = ({ navigation }) => {
                                         });
                                 });
                             }}>
-                            <Text style={{color:"white",textAlign:"center"}}>Connect to Video Call</Text>
+                            <Text style={{color:"white",textAlign:"center",fontFamily:fonts.MEDIUM}}>Connect to Video Call</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
