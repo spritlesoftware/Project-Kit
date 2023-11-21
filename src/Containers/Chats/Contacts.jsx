@@ -7,7 +7,7 @@ import {Searchbar, TouchableRipple} from 'react-native-paper';
 import List from '../../Components/Chat/List';
 import Cancel from 'react-native-vector-icons/MaterialIcons';
 import PopupModal from '../../Components/Modal/PopupModal';
-import ContactsLogic from '../../Functions/Contacts';
+import ContactsLogic from '../../Functions/Chat/Contacts';
 import {fonts} from '../../Utils/fonts';
 
 const Contacts = () => {

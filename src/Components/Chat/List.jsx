@@ -6,15 +6,16 @@ import {moderateScale} from 'react-native-size-matters';
 import {fonts} from '../../Utils/fonts';
 import Dot from 'react-native-vector-icons/Octicons';
 import Check from 'react-native-vector-icons/AntDesign';
+import {useNavigation} from '@react-navigation/core';
 
-const Lists = ({items, navigation, groupContact}) => {
+const Lists = ({items, groupContact}) => {
   const Item = items.item;
+  const navigation = useNavigation();
 
   return (
     <TouchableRipple
       style={styles.container}
-      // onPress={() => navigation.navigate('Chat', { Item })}
-    >
+      onPress={() => navigation.navigate('ChatRoom', {Item})}>
       <List.Item
         left={() => (
           <>
@@ -128,11 +129,13 @@ const styles = StyleSheet.create({
   },
 
   description: {
-    fontFamily: fonts.REGULAR,
+    fontFamily: fonts.MEDIUM,
+    color: colors.BLACK,
   },
 
   date: {
     fontFamily: fonts.MEDIUM,
+    color: colors.GREY20,
   },
 
   notify: {
