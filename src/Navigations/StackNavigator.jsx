@@ -67,6 +67,7 @@ const StackNavigator = () => {
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         <Stack.Screen name="Logout" component={Logout} />
         <Stack.Screen name="ChatList" component={ChatList} />
+        <Stack.Screen name="ChatRoom" component={RealChat} />
         <Stack.Screen name="Groups" component={GroupList} />
         <Stack.Screen name="Contacts" component={Contacts} />
       </Stack.Navigator>
