@@ -1,5 +1,6 @@
 # OSX
 #
+*.env
 .DS_Store
 
 # Xcode
@@ -64,3 +65,5 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
+
+

@@ -1,28 +1,27 @@
-import {View, Text, StyleSheet, FlatList} from 'react-native';
-import React, {useState} from 'react';
+import {View, FlatList, StyleSheet} from 'react-native';
+import React from 'react';
 import {colors} from '../../Utils/colors';
 import List from '../../Components/Chat/List';
-import {chatList} from '../../Data/ChatList';
 import HeaderWithSearch from '../../Components/Header/HeaderWithSearch';
 import {Searchbar} from 'react-native-paper';
 import Cancel from 'react-native-vector-icons/MaterialIcons';
 import {moderateScale} from 'react-native-size-matters';
-import DrawerComponent from '../../Components/Drawer/Drawer';
+import ChatListLogic from '../../Functions/ChatList';
+import {chatList} from '../../Data/ChatList';
 
-const ChatList = ({navigation}) => {
-  const [search, setSearch] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredChat, setFilteredChat] = useState(chatList);
-  const [openDrawer, setOpenDrawer] = useState(false);
-  const handleSearch = query => {
-    setSearchQuery(query);
-
-    const filteredMessages = chatList.filter(message =>
-      message.name.toLowerCase().includes(query.toLowerCase()),
-    );
-
-    setFilteredChat(filteredMessages);
-  };
+const ChatList = () => {
+  const {
+    search,
+    setSearch,
+    searchQuery,
+    setSearchQuery,
+    filteredChat,
+    openDrawer,
+    setOpenDrawer,
+    handleSearch,
+    handleCancelSearch,
+    navigation,
+  } = ChatListLogic();
 
   return (
     <View style={styles.container}>
@@ -32,27 +31,25 @@ const ChatList = ({navigation}) => {
         openDrawer={openDrawer}
         setOpenDrawer={setOpenDrawer}
       />
-      <Searchbar
-        placeholder="Search"
-        inputStyle={styles.input}
-        onChangeText={handleSearch}
-        value={searchQuery}
-        iconColor={colors.BLACK}
-        right={() => (
-          <Cancel
-            name="cancel"
-            size={20}
-            color={colors.BLACK}
-            style={styles.cancel}
-            onPress={() => {
-              setSearch(false);
-              setSearchQuery('');
-              setFilteredChat(chatList);
-            }}
-          />
-        )}
-        style={styles.searchBar}
-      />
+      {search && (
+        <Searchbar
+          placeholder="Search"
+          inputStyle={styles.input}
+          onChangeText={handleSearch}
+          value={searchQuery}
+          iconColor={colors.BLACK}
+          right={() => (
+            <Cancel
+              name="cancel"
+              size={20}
+              color={colors.BLACK}
+              style={styles.cancel}
+              onPress={handleCancelSearch}
+            />
+          )}
+          style={styles.searchBar}
+        />
+      )}
       <FlatList
         data={filteredChat}
         renderItem={item => <List items={item} navigation={navigation} />}

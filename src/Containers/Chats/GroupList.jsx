@@ -1,52 +1,47 @@
-import {View, Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native';
-import React, {useState} from 'react';
+import {View, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
+import React from 'react';
 import {colors} from '../../Utils/colors';
 import HeaderWithSearch from '../../Components/Header/HeaderWithSearch';
-import {Searchbar, TouchableRipple} from 'react-native-paper';
-import {moderateScale} from 'react-native-size-matters';
+import {Searchbar} from 'react-native-paper';
 import Cancel from 'react-native-vector-icons/MaterialIcons';
 import Plus from 'react-native-vector-icons/AntDesign';
 import List from '../../Components/Chat/List';
-import {groupChatList} from '../../Data/GroupChatList';
+import {moderateScale} from 'react-native-size-matters';
+import GroupListLogic from '../../Functions/GroupList';
 
-const GroupList = ({navigation}) => {
-  const [search, setSearch] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredGroups, setFilteredGroups] = useState(groupChatList);
-
-  const handleSearch = query => {
-    setSearchQuery(query);
-
-    const filteredMessages = groupChatList.filter(message =>
-      message.name.toLowerCase().includes(query.toLowerCase()),
-    );
-
-    setFilteredGroups(filteredMessages);
-  };
+const GroupListUI = () => {
+  const {
+    search,
+    setSearch,
+    searchQuery,
+    setSearchQuery,
+    filteredGroups,
+    handleSearch,
+    handleCancelSearch,
+    navigation,
+  } = GroupListLogic();
   return (
     <View style={styles.container}>
       <HeaderWithSearch title={'Groups'} />
-      <Searchbar
-        placeholder="Search"
-        inputStyle={styles.input}
-        onChangeText={handleSearch}
-        value={searchQuery}
-        iconColor={colors.BLACK}
-        right={() => (
-          <Cancel
-            name="cancel"
-            size={20}
-            color={colors.BLACK}
-            style={styles.cancel}
-            onPress={() => {
-              setSearch(false);
-              setSearchQuery('');
-              setFilteredGroups(chatList);
-            }}
-          />
-        )}
-        style={styles.searchBar}
-      />
+      {search && (
+        <Searchbar
+          placeholder="Search"
+          inputStyle={styles.input}
+          onChangeText={handleSearch}
+          value={searchQuery}
+          iconColor={colors.BLACK}
+          right={() => (
+            <Cancel
+              name="cancel"
+              size={20}
+              color={colors.BLACK}
+              style={styles.cancel}
+              onPress={handleCancelSearch}
+            />
+          )}
+          style={styles.searchBar}
+        />
+      )}
       <FlatList
         data={filteredGroups}
         renderItem={item => <List items={item} navigation={navigation} />}
@@ -89,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GroupList;
+export default GroupListUI;
