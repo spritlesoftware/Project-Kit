@@ -8,12 +8,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Icons from 'react-native-vector-icons/Entypo';
 import {useNavigation} from '@react-navigation/native';
 
-function PlayingTrackBottom({
-  onShuffle,
-  currentTrack,
-  favourites,
-  HandleFavourites,
-}) {
+const PlayingTrackBottom = props => {
+  const {onShuffle, currentTrack, favourites, HandleFavourites} = props;
   const navigation = useNavigation();
 
   const playerState = usePlaybackState();
@@ -70,7 +66,7 @@ function PlayingTrackBottom({
       </View>
     </TouchableOpacity>
   );
-}
+};
 
 export default PlayingTrackBottom;
 
