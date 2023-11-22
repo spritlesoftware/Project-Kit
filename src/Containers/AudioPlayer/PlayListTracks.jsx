@@ -1,4 +1,4 @@
-import {View, Text, FlatList} from 'react-native';
+import {View, Text, FlatList, StyleSheet} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import TracklList from '../../Components/Audio/TrackList';
 import TrackPlayer, {
@@ -6,6 +6,8 @@ import TrackPlayer, {
   State,
   useTrackPlayerEvents,
 } from 'react-native-track-player';
+import {colors} from '../../Utils/colors';
+import {moderateScale} from 'react-native-size-matters';
 
 const PlayListTracks = () => {
   const [queue, setQueue] = useState([]);
@@ -48,7 +50,7 @@ const PlayListTracks = () => {
     TrackPlayer.skip(index);
   }
   return (
-    <View>
+    <View style={styles.container}>
       <FlatList
         data={queue}
         renderItem={({item, index}) => (
@@ -63,5 +65,13 @@ const PlayListTracks = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.BLACK,
+    paddingVertical: moderateScale(10),
+  },
+});
 
 export default PlayListTracks;
