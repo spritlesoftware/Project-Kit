@@ -5,13 +5,13 @@ import {fonts} from '../../Utils/fonts';
 import {colors} from '../../Utils/colors';
 import {Text} from 'react-native-paper';
 
-function ConditionChecker(favourites, data) {
-  const favCondition =
-    favourites && favourites.some(audio => audio.id == data.id);
-  return favCondition;
-}
-
 const TracklList = props => {
+  function ConditionChecker(favourites, data) {
+    const favCondition =
+      favourites && favourites.some(audio => audio.id == data.id);
+    return favCondition;
+  }
+
   return (
     <TouchableOpacity
       style={styles.listContainer}
@@ -34,7 +34,7 @@ const TracklList = props => {
         </View>
       </View>
       <View style={styles.iconContainer}>
-        <TouchableOpacity onPress={() => HandleFavourites(data)}>
+        <TouchableOpacity onPress={() => props.HandleFavourites(props.data)}>
           <Icons
             name={
               ConditionChecker(props.favourites, props.data)
