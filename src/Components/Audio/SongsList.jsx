@@ -10,10 +10,10 @@ function SongsList({
   currentTrack,
   favourites,
   loadPlaylist,
-  handleFavourites,
+  HandleFavourites,
   handleItemPress,
+  ConditionChecker,
 }) {
-  console.log(queue);
   return (
     <View style={{flex: 1, justifyContent: 'space-between'}}>
       <View
@@ -25,6 +25,9 @@ function SongsList({
               index={index}
               data={item}
               handleItemPress={handleItemPress}
+              HandleFavourites={HandleFavourites}
+              favourites={favourites}
+              currentTrack={currentTrack}
             />
           )}
         />
@@ -38,7 +41,8 @@ function SongsList({
           <PlayingTrackBottom
             currentTrack={currentTrack}
             favourites={favourites}
-            handleFavourites={handleFavourites}
+            HandleFavourites={HandleFavourites}
+            ConditionChecker={ConditionChecker}
           />
         </View>
       )}
