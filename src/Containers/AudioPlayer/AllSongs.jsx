@@ -15,6 +15,7 @@ function AllSongs() {
   const [queue, setQueue] = useState([]);
   const [currentTrack, setCurrentTrack] = useState([]);
   const [favourites, setFavourites] = useState([]);
+  const [favouriteCondition, setFavouriteCondition] = useState(false);
 
   useEffect(() => {
     async function setup() {
@@ -29,6 +30,17 @@ function AllSongs() {
     }
 
     setup();
+  }, []);
+
+  useEffect(() => {
+    const initPlayer = async () => {
+      const state = await TrackPlayer.getState();
+      if (state === State.Playing) {
+        await TrackPlayer.pause();
+      }
+    };
+
+    initPlayer();
   }, []);
 
   useEffect(() => {
@@ -61,7 +73,7 @@ function AllSongs() {
     }
   });
 
-  function handleFavourites(item) {
+  function HandleFavourites(item) {
     const updatedFavourites = new Set(favourites);
 
     if (updatedFavourites.has(item)) {
@@ -94,7 +106,7 @@ function AllSongs() {
         currentTrack={currentTrack}
         favourites={favourites}
         loadPlaylist={loadPlaylist}
-        handleFavourites={handleFavourites}
+        HandleFavourites={HandleFavourites}
         handleItemPress={handleItemPress}
       />
     </SafeAreaView>
