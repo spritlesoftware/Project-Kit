@@ -69,6 +69,7 @@ const StackNavigator = () => {
         <Stack.Screen name="AudioList" component={AudioList} />
         <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
         <Stack.Screen name="PlayListTracks" component={PlayListTracks} />
+        <Stack.Screen name="firebase" component={Firebase} />
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
         <Stack.Screen name="Videocall" component={Videocall} />
         <Stack.Screen name="Table" component={Table} />

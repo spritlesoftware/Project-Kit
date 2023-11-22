@@ -1,40 +1,36 @@
 import {View, Text, FlatList} from 'react-native';
 import React, {useEffect, useState} from 'react';
-import {firebase} from '../Firebase/firebase';
 import firestore from '@react-native-firebase/firestore';
 
 const Firebase = () => {
   const [user, setUser] = useState([]);
+  const GetData = async () => {
+    const usersCollection = firestore().collection('Users');
+    const usersSnapshot = await usersCollection.get();
 
-  const users = firestore().collection('Users');
-
-  useEffect(async () => {
-    users.onSnapshot(querySnapshot => {
-      const users = [];
-      querySnapshot.forEach(doc => {
-        const {image_url, project_name} = doc.data();
-        users.push({
-          id: doc.id,
-          image_url,
-          project_name,
-        });
-      });
-      setUser(users);
+    const users = usersSnapshot.docs.map(documentSnapshot => {
+      const data = documentSnapshot.data();
+      return {
+        id: documentSnapshot.id,
+        projectName: data.project_name,
+      };
     });
-    console.log(users);
+
+    setUser(users);
+  };
+
+  useEffect(() => {
+    GetData();
   }, []);
 
-  console.log(user);
   return (
     <View>
-      <FlatList
-        data={user}
-        renderItem={item => {
-          <View>
-            <Text>{item.project_name}</Text>
-          </View>;
-        }}
-      />
+      {user.map(user => (
+        <>
+          <Text>{user.projectName}</Text>
+          <Text>{user.id}</Text>
+        </>
+      ))}
     </View>
   );
 };
