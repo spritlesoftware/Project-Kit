@@ -9,6 +9,7 @@ import RealChat from '../Containers/Chats/RealChat';
 import ChatList from '../Containers/Chats/ChatList';
 import {Videocall} from '../Containers/Videocall/Videocall';
 import {RegisterScreen} from '../Containers/Videocall/RegisterScreen';
+import BarcodeScanner from '../Containers/BarcodeScanner/BarcodeScanner';
 import {
   StyleSheet,
   View,
@@ -56,6 +57,7 @@ const StackNavigator = () => {
           animationTypeForReplace: 'push',
           animation: 'slide_from_right',
         }}>
+          <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
         <Stack.Screen name="Videocall" component={Videocall} />
         <Stack.Screen name="Table" component={Table} />
