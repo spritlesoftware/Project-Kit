@@ -9,18 +9,17 @@ import Icons from 'react-native-vector-icons/Entypo';
 import {useNavigation} from '@react-navigation/native';
 
 const PlayingTrackBottom = props => {
-  const {onShuffle, currentTrack, favourites, HandleFavourites} = props;
+  const {
+    onShuffle,
+    currentTrack,
+    favourites,
+    HandleFavourites,
+    handlePlayPress,
+    audioStatus,
+  } = props;
   const navigation = useNavigation();
 
   const playerState = usePlaybackState();
-
-  async function handlePlayPress() {
-    if ((await TrackPlayer.getState()) == State.Playing) {
-      TrackPlayer.pause();
-    } else {
-      TrackPlayer.play();
-    }
-  }
 
   const favCondition =
     favourites && favourites.some(audio => audio.id == currentTrack.id);
@@ -54,15 +53,13 @@ const PlayingTrackBottom = props => {
             size={28}
           />
         </TouchableOpacity>
-        <TouchableOpacity onPress={() => {}}>
-          <Icon.Button
-            style={styles.playButton}
-            name={playerState.state == State.Playing ? 'pause' : 'play'}
-            size={25}
-            backgroundColor={colors.BLACK}
-            onPress={handlePlayPress}
-          />
-        </TouchableOpacity>
+        <Icon.Button
+          style={styles.playButton}
+          name={playerState.state == State.Playing ? 'pause' : 'play'}
+          size={25}
+          backgroundColor={colors.BLACK}
+          onPress={handlePlayPress}
+        />
       </View>
     </TouchableOpacity>
   );
@@ -121,6 +118,7 @@ const styles = StyleSheet.create({
   coverImage: {
     width: moderateScale(45),
     height: moderateScale(45),
+    borderRadius: moderateScale(5),
   },
 
   titleContainer: {
@@ -140,16 +138,23 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-between',
     alignItems: 'center',
+    borderTopWidth: 1,
+    borderTopColor: colors.GREEN,
+    padding: moderateScale(5),
+    backgroundColor: colors.STATUS_GREEN,
   },
 
   controls: {
     flexDirection: 'row',
     alignItems: 'center',
+    width: moderateScale(80),
+    justifyContent: 'space-between',
   },
 
   playButton: {
-    marginLeft: moderateScale(10),
+    // marginLeft: moderateScale(10),
     marginRight: moderateScale(-10),
+    backgroundColor: colors.STATUS_GREEN,
   },
 
   wrapper: {
