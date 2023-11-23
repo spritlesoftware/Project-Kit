@@ -25,7 +25,7 @@ const PlayList = props => {
           </View>
           <View style={styles.infoContainer}>
             <Text variant="headlineSmall" style={styles.playlistName}>
-              Ilaiyaraja Hits
+              Your Playlist
             </Text>
             <Text variant="titleMedium" style={styles.trackCount}>
               12 Tracks
