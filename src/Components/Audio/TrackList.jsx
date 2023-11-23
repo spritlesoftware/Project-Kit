@@ -4,6 +4,8 @@ import Icons from 'react-native-vector-icons/Entypo';
 import {fonts} from '../../Utils/fonts';
 import {colors} from '../../Utils/colors';
 import {Text} from 'react-native-paper';
+import LottieView from 'lottie-react-native';
+import TrackPlayer, {State} from 'react-native-track-player';
 
 const TracklList = props => {
   function ConditionChecker(favourites, data) {
@@ -12,17 +14,35 @@ const TracklList = props => {
     return favCondition;
   }
 
+  function AnimationChecker(currentTrack, data) {
+    const audioChecker = currentTrack.id === data.id;
+    return audioChecker;
+  }
+
   return (
     <TouchableOpacity
       style={styles.listContainer}
       onPress={() => props.handleItemPress(props.index)}>
       <View style={styles.titleContainer}>
-        <Image
-          style={styles.coverImage}
-          source={props.data.cover}
-          width={moderateScale(10)}
-          height={moderateScale(10)}
-        />
+        {AnimationChecker(props.currentTrack, props.data) &&
+        props.audioStatus === 'Playing' ? (
+          <LottieView
+            source={{
+              uri: 'https://lottie.host/f338b6ea-6110-423a-ba4b-73dacd1fd7f9/ZZl5XJH1og.json',
+            }}
+            autoPlay
+            loop
+            speed={0.5}
+            style={{width: moderateScale(40), height: 50}}
+          />
+        ) : (
+          <Image
+            style={styles.coverImage}
+            source={props.data.cover}
+            width={moderateScale(10)}
+            height={moderateScale(10)}
+          />
+        )}
         <View>
           <Text
             style={{
