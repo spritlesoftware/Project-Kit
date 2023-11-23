@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, FlatList} from 'react-native';
-import TrackPlayer from 'react-native-track-player';
+import TrackPlayer, {State} from 'react-native-track-player';
 import {moderateScale} from 'react-native-size-matters';
 import PlayingTrackBottom from '../../Components/Audio/PlayingTrackBottom';
 import TrackList from '../../Components/Audio/TrackList';
+import PlayList from './PlayList';
+import {useNavigation} from '@react-navigation/native';
 
 function SongsList({
   queue,
@@ -14,6 +16,18 @@ function SongsList({
   handleItemPress,
   ConditionChecker,
 }) {
+  const navigation = useNavigation();
+  const [audioStatus, setAudioStatus] = useState();
+  async function handlePlayPress() {
+    if ((await TrackPlayer.getState()) == State.Playing) {
+      TrackPlayer.pause();
+      setAudioStatus('Pause');
+    } else {
+      TrackPlayer.play();
+      setAudioStatus('Playing');
+    }
+  }
+
   return (
     <View style={{flex: 1, justifyContent: 'space-between'}}>
       <View
@@ -28,6 +42,8 @@ function SongsList({
               HandleFavourites={HandleFavourites}
               favourites={favourites}
               currentTrack={currentTrack}
+              handlePlayPress={handlePlayPress}
+              audioStatus={audioStatus}
             />
           )}
         />
@@ -43,6 +59,8 @@ function SongsList({
             favourites={favourites}
             HandleFavourites={HandleFavourites}
             ConditionChecker={ConditionChecker}
+            handlePlayPress={handlePlayPress}
+            audioStatus={audioStatus}
           />
         </View>
       )}
