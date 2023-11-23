@@ -1,3 +1,5 @@
+// AllSongs.js (UI)
+
 import React, {useEffect, useState} from 'react';
 import {SafeAreaView, StyleSheet, ActivityIndicator} from 'react-native';
 import TrackPlayer, {
@@ -5,10 +7,17 @@ import TrackPlayer, {
   State,
   useTrackPlayerEvents,
 } from 'react-native-track-player';
-import {setupPlayer, addTracks} from './AudioPlayerServices';
+import {
+  initPlayer,
+  loadPlaylist,
+  handleFavourites,
+  handleItemPress,
+  playbackTrackChangedListener,
+} from '../../Functions/Audio/AllSongs';
 import {colors} from '../../Utils/colors';
 import {moderateScale} from 'react-native-size-matters';
 import SongsList from '../../Components/Audio/SongsList';
+import {addTracks, setupPlayer} from './AudioPlayerServices';
 
 function AllSongs() {
   const [isPlayerReady, setIsPlayerReady] = useState(false);
@@ -30,41 +39,16 @@ function AllSongs() {
     }
 
     setup();
-  }, []);
-
-  useEffect(() => {
-    const initPlayer = async () => {
-      const state = await TrackPlayer.getState();
-      if (state === State.Playing) {
-        await TrackPlayer.pause();
-      }
-    };
-
     initPlayer();
+    loadPlaylist(setQueue);
   }, []);
 
   useEffect(() => {
-    const playbackTrackChangedListener = TrackPlayer.addEventListener(
-      Event.PlaybackActiveTrackChanged,
-      async event => {
-        if (event.state !== State.Playing) {
-          await TrackPlayer.play(); // Start playing the newly added track
-        }
-      },
-    );
+    const listener = playbackTrackChangedListener(setCurrentTrack);
 
     return () => {
-      playbackTrackChangedListener.remove(); // Remove the listener on component unmount
+      listener.remove();
     };
-  }, []);
-
-  async function loadPlaylist() {
-    const queue = await TrackPlayer.getQueue();
-    setQueue(queue);
-  }
-
-  useEffect(() => {
-    loadPlaylist();
   }, []);
 
   useTrackPlayerEvents([Event.PlaybackTrackChanged], event => {
@@ -74,21 +58,11 @@ function AllSongs() {
   });
 
   function HandleFavourites(item) {
-    const updatedFavourites = new Set(favourites);
-
-    if (updatedFavourites.has(item)) {
-      updatedFavourites.delete(item);
-      console.log('deleting');
-    } else {
-      updatedFavourites.add(item);
-      console.log('Adding');
-    }
-
-    setFavourites(Array.from(updatedFavourites));
+    handleFavourites(item, favourites, setFavourites);
   }
 
-  function handleItemPress(index) {
-    TrackPlayer.skip(index);
+  function handlePress(index) {
+    handleItemPress(index);
   }
 
   if (!isPlayerReady) {
@@ -105,9 +79,9 @@ function AllSongs() {
         queue={queue}
         currentTrack={currentTrack}
         favourites={favourites}
-        loadPlaylist={loadPlaylist}
+        loadPlaylist={() => loadPlaylist(setQueue)}
         HandleFavourites={HandleFavourites}
-        handleItemPress={handleItemPress}
+        handleItemPress={handlePress}
       />
     </SafeAreaView>
   );
