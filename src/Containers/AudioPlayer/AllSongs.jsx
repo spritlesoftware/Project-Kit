@@ -1,5 +1,3 @@
-// AllSongs.js (UI)
-
 import React, {useEffect, useState} from 'react';
 import {SafeAreaView, StyleSheet, ActivityIndicator} from 'react-native';
 import TrackPlayer, {
@@ -9,7 +7,7 @@ import TrackPlayer, {
 } from 'react-native-track-player';
 import {
   initPlayer,
-  loadPlaylist,
+  // loadPlaylist,
   handleFavourites,
   handleItemPress,
   playbackTrackChangedListener,
@@ -28,19 +26,21 @@ function AllSongs() {
 
   useEffect(() => {
     async function setup() {
-      let isSetup = await setupPlayer();
-
-      const queue = await TrackPlayer.getQueue();
-      if (isSetup && queue.length <= 0) {
-        await addTracks();
+      try {
+        let isSetup = await setupPlayer();
+        setIsPlayerReady(isSetup);
+        const queue = await TrackPlayer.getQueue();
+        if (isSetup && queue.length > 0) {
+          // await addTracks();
+          setQueue(queue);
+        }
+      } catch (error) {
+        console.error('Error during setup:', error);
       }
-
-      setIsPlayerReady(isSetup);
     }
 
     setup();
     initPlayer();
-    loadPlaylist(setQueue);
   }, []);
 
   useEffect(() => {
