@@ -5,7 +5,7 @@ import {fonts} from '../../Utils/fonts';
 import {colors} from '../../Utils/colors';
 import {Text} from 'react-native-paper';
 import LottieView from 'lottie-react-native';
-import TrackPlayer, {State} from 'react-native-track-player';
+import TrackPlayer, {State, usePlaybackState} from 'react-native-track-player';
 
 const TracklList = props => {
   function ConditionChecker(favourites, data) {
@@ -15,9 +15,11 @@ const TracklList = props => {
   }
 
   function AnimationChecker(currentTrack, data) {
-    const audioChecker = currentTrack.id === data.id;
+    const audioChecker = currentTrack.id == data.id;
     return audioChecker;
   }
+
+  const playerState = usePlaybackState();
 
   return (
     <TouchableOpacity
@@ -25,7 +27,7 @@ const TracklList = props => {
       onPress={() => props.handleItemPress(props.index)}>
       <View style={styles.titleContainer}>
         {AnimationChecker(props.currentTrack, props.data) &&
-        props.audioStatus === 'Playing' ? (
+        playerState.state === 'playing' ? (
           <LottieView
             source={{
               uri: 'https://lottie.host/f338b6ea-6110-423a-ba4b-73dacd1fd7f9/ZZl5XJH1og.json',
@@ -38,7 +40,7 @@ const TracklList = props => {
         ) : (
           <Image
             style={styles.coverImage}
-            source={props.data.cover}
+            source={require('../../Assets/images/album1.jpeg')}
             width={moderateScale(10)}
             height={moderateScale(10)}
           />
