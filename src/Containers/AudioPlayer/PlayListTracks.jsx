@@ -13,6 +13,11 @@ import {Text} from 'react-native-paper';
 import Back from 'react-native-vector-icons/AntDesign';
 import Menu from 'react-native-vector-icons/Entypo';
 import PlayingTrackBottom from '../../Components/Audio/PlayingTrackBottom';
+import {useAppContext} from '../../Context/ContextProvider';
+import {
+  handleFavourites,
+  handleItemPress,
+} from '../../Functions/Audio/AllSongs';
 
 const PlayListTracks = ({navigation}) => {
   const [queue, setQueue] = useState([]);
@@ -36,24 +41,11 @@ const PlayListTracks = ({navigation}) => {
   });
 
   function HandleFavourites(item) {
-    // Create a new Set with the existing groupContact values
-    const updatedFavourites = new Set(favourites);
-
-    // Toggle the presence of the item in the Set
-    if (updatedFavourites.has(item)) {
-      updatedFavourites.delete(item);
-      console.log('deleting');
-    } else {
-      updatedFavourites.add(item);
-      console.log('Adding');
-    }
-
-    // Convert the Set back to an array and update the state
-    setFavourites(Array.from(updatedFavourites));
+    handleFavourites(item, favourites, setFavourites);
   }
 
-  function handleItemPress(index) {
-    TrackPlayer.skip(index);
+  function HandlePress(index) {
+    handleItemPress(index);
   }
 
   async function handlePlayPress() {
@@ -66,6 +58,8 @@ const PlayListTracks = ({navigation}) => {
     }
   }
 
+  // const {favourites, currentTrack} = useAppContext();
+
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -77,14 +71,8 @@ const PlayListTracks = ({navigation}) => {
           onPress={() => navigation.goBack()}
         />
         <Text variant="headlineSmall" style={styles.headerTitle}>
-          TRACKit
+          Your Playlist
         </Text>
-        <Menu.Button
-          name="dots-three-vertical"
-          color={colors.WHITE}
-          size={moderateScale(20)}
-          style={styles.button}
-        />
       </View>
       <FlatList
         data={queue}
@@ -96,6 +84,8 @@ const PlayListTracks = ({navigation}) => {
             favourites={favourites}
             currentTrack={currentTrack}
             audioStatus={audioStatus}
+            HandleFavourites={HandleFavourites}
+            HandlePress={HandlePress}
           />
         )}
       />
@@ -136,7 +126,6 @@ const styles = StyleSheet.create({
 
   headerContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignContent: 'center',
     backgroundColor: colors.BLACK,
   },
