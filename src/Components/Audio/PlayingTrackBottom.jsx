@@ -31,7 +31,7 @@ const PlayingTrackBottom = props => {
       <View style={styles.titleContainer}>
         <Image
           style={styles.coverImage}
-          source={currentTrack.cover}
+          source={require('../../Assets/images/album1.jpeg')}
           width={moderateScale(10)}
           height={moderateScale(10)}
         />
