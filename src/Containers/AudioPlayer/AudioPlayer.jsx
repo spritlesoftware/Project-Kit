@@ -44,11 +44,7 @@ function AlbumImage(info) {
     <>
       <Image
         style={styles.albumImage}
-        source={{
-          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJQ5xLmSXB-06pRCIcrMTDwPvMZY35tkh3lA&usqp=CAU',
-        }}
-        width={'100%'}
-        height={'60%'}
+        source={require('../../Assets/images/album2.jpeg')}
       />
     </>
   );
@@ -159,13 +155,15 @@ function Controls({onShuffle}) {
           backgroundColor="transparent"
           onPress={() => TrackPlayer.skipToPrevious()}
         />
-        <Icon.Button
+        <Icon
           name={
             playerState.state == State.Playing ? 'pause-circle' : 'play-circle'
           }
-          size={50}
+          size={60}
+          color={colors.WHITE}
           backgroundColor="transparent"
           onPress={handlePlayPress}
+          style={styles.PlayPauseButton}
         />
         <ControlsIcon.Button
           name="stepforward"
@@ -293,11 +291,10 @@ const styles = StyleSheet.create({
 
   controlsContainer: {
     flexDirection: 'row',
-    flexWrap: 'wrap',
     alignItems: 'center',
-    justifyContent: 'flex-end',
-    alignSelf: 'center',
-    width: '100%',
+    justifyContent: 'space-between',
+    alignSelf: 'flex-end',
+    width: '73.2%',
   },
 
   controlsWrapper: {
@@ -306,8 +303,11 @@ const styles = StyleSheet.create({
 
   albumImage: {
     alignSelf: 'center',
-    marginTop: moderateScale(20),
+    marginTop: moderateScale(40),
+    width: '105%',
+    height: '60%',
     borderRadius: moderateScale(10),
+    resizeMode: 'cover',
   },
 
   trackName: {
@@ -318,7 +318,7 @@ const styles = StyleSheet.create({
   },
 
   trackArtist: {
-    fontFamily: fonts.MEDIUM,
+    fontFamily: fonts.REGULAR,
     fontSize: moderateScale(15),
     color: colors.WHITE,
   },
@@ -335,6 +335,14 @@ const styles = StyleSheet.create({
   duration: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+  },
+
+  PlayPauseButton: {
+    borderWidth: 1,
+    borderColor: colors.TRANSPARENT,
+    // marginRight: moderateScale(10),
+    // width: moderateScale(90),
+    // paddingHorizontal: moderateScale(10),
   },
 });
 
