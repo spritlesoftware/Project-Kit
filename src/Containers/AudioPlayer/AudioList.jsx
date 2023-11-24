@@ -15,7 +15,7 @@ const AudioList = () => {
         TRACKit
       </Text>
       <TopTab
-        name1={'AllSongs'}
+        name1={'All Songs'}
         component1={AllSongs}
         name2={'PlayList'}
         component2={PlayList}
