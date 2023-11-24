@@ -24,7 +24,7 @@ const PlayList = props => {
             />
           </View>
           <View style={styles.infoContainer}>
-            <Text variant="headlineSmall" style={styles.playlistName}>
+            <Text variant="titleLarge" style={styles.playlistName}>
               Your Playlist
             </Text>
             <Text variant="titleMedium" style={styles.trackCount}>
