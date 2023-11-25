@@ -1,23 +1,26 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-25:12
-INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-25:12
-INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-25:12
-INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-25:12
-MERGED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-25:12
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-32:12
+INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-32:12
+MERGED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-32:12
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.182.0] /Users/sprintle/.gradle/caches/transforms-3/e47626a30834dcd66576d826bae55315/transformed/jetified-flipper-network-plugin-0.182.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] /Users/sprintle/.gradle/caches/transforms-3/927874504f02e490d8ef5fc541319ddd/transformed/jetified-flipper-fresco-plugin-0.182.0/AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper:0.182.0] /Users/sprintle/.gradle/caches/transforms-3/e13f88164840fe641a466d05cd8edac7/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:8:1-18:12
 MERGED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-46:12
 MERGED from [:react-native-document-picker] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-document-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-gesture-handler] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-permissions] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-hole-view] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-hole-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-pdf] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-permissions] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-reanimated] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-safe-area-context] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-screens] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-svg] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-svg/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-22:12
 MERGED from [:react-native-vector-icons] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-vision-camera] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-vision-camera/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:react-android:0.72.6] /Users/sprintle/.gradle/caches/transforms-3/620147001f23a61fa54dd66c3890cad2/transformed/jetified-react-android-0.72.6-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:hermes-android:0.72.6] /Users/sprintle/.gradle/caches/transforms-3/82fc49c66eb188cd9d470265c2f5633f/transformed/jetified-hermes-android-0.72.6-debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /Users/sprintle/.gradle/caches/transforms-3/463b085172aadec89519c358dac4e9e6/transformed/jetified-imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:2:1-9:12
@@ -26,6 +29,14 @@ MERGED from [androidx.appcompat:appcompat-resources:1.5.0] /Users/sprintle/.grad
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/sprintle/.gradle/caches/transforms-3/da04db25643cb9506bb2398f6610984b/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.5.0] /Users/sprintle/.gradle/caches/transforms-3/8a4582fcf4777cd70591117a23078262/transformed/appcompat-1.5.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/378d88de2fde0e29d92543d12e33b34a/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.mlkit:barcode-scanning-common:17.0.0] /Users/sprintle/.gradle/caches/transforms-3/05e9c78552ffe8fdf3da58c45ca3f786/transformed/jetified-barcode-scanning-common-17.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.mlkit:vision-interfaces:16.2.0] /Users/sprintle/.gradle/caches/transforms-3/a73117d1af8659c91d0b041d2103b65c/transformed/jetified-vision-interfaces-16.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/sprintle/.gradle/caches/transforms-3/e56f2621ef626fd464225cee132f3f36/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/bf9b6fb405d2f7fd8250171739588e78/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
 MERGED from [androidx.fragment:fragment:1.3.6] /Users/sprintle/.gradle/caches/transforms-3/177c698be397eb145127cfb5353a1679/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.5.0] /Users/sprintle/.gradle/caches/transforms-3/24934cef6fcb084e51d280dd4587dc43/transformed/jetified-activity-1.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/f5b38ead8b58b9b276b8ef3b13c0258d/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -62,6 +73,8 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sprintle/.gradle/cac
 MERGED from [androidx.tracing:tracing:1.1.0] /Users/sprintle/.gradle/caches/transforms-3/816103dcaf20cc3449d44e7aef228ddc/transformed/jetified-tracing-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.fresco:middleware:2.6.0] /Users/sprintle/.gradle/caches/transforms-3/64b55a0ad447c9d7608986823ffb3a12/transformed/jetified-middleware-2.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:ui-common:2.6.0] /Users/sprintle/.gradle/caches/transforms-3/c15a7e0a99bb25483d068fddbb8c4f6a/transformed/jetified-ui-common-2.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:15:1-41:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] /Users/sprintle/.gradle/caches/transforms-3/035927df51db2125608e6752bfbdd830/transformed/coordinatorlayout-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite:2.2.0] /Users/sprintle/.gradle/caches/transforms-3/dc58477293179deb391b12c4cba55b48/transformed/sqlite-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/sprintle/.gradle/caches/transforms-3/80a0138e8c60a7516785efaf8dfd795a/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -78,32 +91,37 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sprintle/.gradle
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/9eef969e6025718ac1fde2c52b3066d8/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sprintle/.gradle/caches/transforms-3/a1eec6f4e1f4253fcf428dd43a9fa3cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/c785f2650a4ab9597610a42a5423b6e7/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/sprintle/.gradle/caches/transforms-3/8c01479cd398ae22eccbc8e3819a163b/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/sprintle/.gradle/caches/transforms-3/884291a09db559c4eadb165bdacc623c/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/sprintle/.gradle/caches/transforms-3/4942d3bf37e2f8e197cb40c2278ffbb5/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.0] /Users/sprintle/.gradle/caches/transforms-3/0fab59b68babfc1c516f6d15dc341f56/transformed/lifecycle-runtime-2.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sprintle/.gradle/caches/transforms-3/653d028e3d1b563c6d219d7c9480311d/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.0] /Users/sprintle/.gradle/caches/transforms-3/b5a8f4cf7a5a1a22c362c296ecffd88b/transformed/lifecycle-livedata-core-2.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/sprintle/.gradle/caches/transforms-3/9e963b848f7749309ceb54174b3bfd88/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/6460a1781357398751339b07408c8ffe/transformed/exifinterface-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/be0decce32e871a4b0c6b0b509601ea5/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/3adcfdfbb39880719084168d7663554f/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/8f8cb7fbd9978c41ef281ffd13411d6a/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.facebook.fresco:fbcore:2.6.0] /Users/sprintle/.gradle/caches/transforms-3/6b675b8779f5bce57b5bb10c07a431c5/transformed/jetified-fbcore-2.6.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/sprintle/.gradle/caches/transforms-3/ea88610a3c8be13450373fa73372379b/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.2] /Users/sprintle/.gradle/caches/transforms-3/9b61dc37fa5304f74acb7a87a83cd742/transformed/jetified-relinker-1.4.2/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/sprintle/.gradle/caches/transforms-3/ac89d874c80b6a23779ca03abd9c6ce4/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:2:1-9:12
 INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml:2:1-13:12
 INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml:2:1-13:12
 INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml:2:1-13:12
 	package
 		INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-25:12
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-32:12
 		INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-25:12
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-32:12
 		INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-25:12
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:1-32:12
 		INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -117,18 +135,56 @@ MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox
 MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:14:5-67
 MERGED from [com.twilio:video-android:7.6.1] /Users/sprintle/.gradle/caches/transforms-3/fcd1b9c2ccdbcc9d7091ceaa9a40ac6f/transformed/jetified-video-android-7.6.1/AndroidManifest.xml:9:5-67
 MERGED from [com.twilio:video-android:7.6.1] /Users/sprintle/.gradle/caches/transforms-3/fcd1b9c2ccdbcc9d7091ceaa9a40ac6f/transformed/jetified-video-android-7.6.1/AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:26:5-67
 	android:name
 		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:3:22-64
+uses-permission#android.permission.CAMERA
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:4:6-66
+MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-65
+MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-65
+	android:name
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:4:23-63
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:5:6-71
+MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-71
+MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-71
+	android:name
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:5:23-69
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:6:6-81
+MERGED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:5-80
+MERGED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:5-80
+	android:name
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:6:23-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:7:6-82
+MERGED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:5-81
+MERGED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:5-81
+	android:name
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:7:23-79
 application
-ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:5:5-24:19
-MERGED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:5:5-24:19
-MERGED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:5:5-24:19
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:9:5-31:19
+MERGED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:9:5-31:19
+MERGED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:9:5-31:19
 MERGED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:5-44:19
 MERGED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:34:5-44:19
 MERGED from [com.google.android.material:material:1.9.0] /Users/sprintle/.gradle/caches/transforms-3/dd33cdba76574cd6269c5bd29e434651/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] /Users/sprintle/.gradle/caches/transforms-3/dd33cdba76574cd6269c5bd29e434651/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/sprintle/.gradle/caches/transforms-3/da04db25643cb9506bb2398f6610984b/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /Users/sprintle/.gradle/caches/transforms-3/da04db25643cb9506bb2398f6610984b/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:8:5-24:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/sprintle/.gradle/caches/transforms-3/e56f2621ef626fd464225cee132f3f36/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/sprintle/.gradle/caches/transforms-3/e56f2621ef626fd464225cee132f3f36/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/bf9b6fb405d2f7fd8250171739588e78/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/bf9b6fb405d2f7fd8250171739588e78/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
 MERGED from [com.twilio:video-android:7.6.1] /Users/sprintle/.gradle/caches/transforms-3/fcd1b9c2ccdbcc9d7091ceaa9a40ac6f/transformed/jetified-video-android-7.6.1/AndroidManifest.xml:14:5-20
 MERGED from [com.twilio:video-android:7.6.1] /Users/sprintle/.gradle/caches/transforms-3/fcd1b9c2ccdbcc9d7091ceaa9a40ac6f/transformed/jetified-video-android-7.6.1/AndroidManifest.xml:14:5-20
 MERGED from [com.facebook.soloader:soloader:0.10.5] /Users/sprintle/.gradle/caches/transforms-3/ec3312a013bd7d8a70466a1977a1dba4/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:11:5-15:19
@@ -139,60 +195,72 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/sprintle/.gradle
 MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/sprintle/.gradle/caches/transforms-3/b1c537e6049df5a2dcb1a9b20b1a8868/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sprintle/.gradle/caches/transforms-3/ce16fe979dbb8e21943e6d6fc151e0f0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/sprintle/.gradle/caches/transforms-3/ce16fe979dbb8e21943e6d6fc151e0f0/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:25:5-39:19
 MERGED from [androidx.core:core:1.8.0] /Users/sprintle/.gradle/caches/transforms-3/9623e378e4dfc57c47793d0ffd25ee05/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.8.0] /Users/sprintle/.gradle/caches/transforms-3/9623e378e4dfc57c47793d0ffd25ee05/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sprintle/.gradle/caches/transforms-3/a1eec6f4e1f4253fcf428dd43a9fa3cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sprintle/.gradle/caches/transforms-3/a1eec6f4e1f4253fcf428dd43a9fa3cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/sprintle/.gradle/caches/transforms-3/ac89d874c80b6a23779ca03abd9c6ce4/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/sprintle/.gradle/caches/transforms-3/ac89d874c80b6a23779ca03abd9c6ce4/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:7:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.8.0] /Users/sprintle/.gradle/caches/transforms-3/9623e378e4dfc57c47793d0ffd25ee05/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 	android:label
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:7:7-39
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:7:7-39
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:11:7-39
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:11:7-39
 	tools:ignore
 		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml:10:9-48
 	android:roundIcon
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:9:7-52
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:9:7-52
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:13:7-52
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:13:7-52
 	tools:targetApi
 		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml:9:9-29
 	android:icon
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:8:7-41
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:8:7-41
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:12:7-41
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:12:7-41
 	android:allowBackup
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:10:7-34
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:10:7-34
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:14:7-34
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:14:7-34
 	android:theme
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:11:7-38
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:11:7-38
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:15:7-38
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:15:7-38
 	android:usesCleartextTraffic
 		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml:8:9-44
 	android:name
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:6:7-38
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:6:7-38
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:10:7-38
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:10:7-38
+meta-data#com.google.mlkit.vision.DEPENDENCIES
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:16:7-18:37
+	android:value
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:18:11-34
+	android:name
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:17:11-62
 activity#com.kit_box.MainActivity
-ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:12:7-23:18
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:19:7-30:18
 	android:label
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:14:9-41
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:21:9-41
 	android:launchMode
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:16:9-40
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:23:9-40
 	android:windowSoftInputMode
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:17:9-51
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:24:9-51
 	android:exported
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:18:9-32
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:25:9-32
 	android:configChanges
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:15:9-118
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:22:9-118
 	android:name
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:13:9-37
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:20:9-37
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:19:9-22:25
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:26:9-29:25
 action#android.intent.action.MAIN
-ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:20:13-65
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:27:13-65
 	android:name
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:20:21-62
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:27:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:21:13-73
+ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:28:13-73
 	android:name
-		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:21:23-70
+		ADDED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml:28:23-70
 uses-sdk
 INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/main/AndroidManifest.xml
@@ -209,10 +277,14 @@ MERGED from [:react-native-document-picker] /Users/sprintle/Documents/Kitbox/Pro
 MERGED from [:react-native-document-picker] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-document-picker/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-gesture-handler] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-gesture-handler] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-permissions] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:react-native-permissions] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-hole-view] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-hole-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-hole-view] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-hole-view/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-pdf] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-pdf] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-pdf/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-permissions] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-permissions] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-permissions/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-reanimated] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-reanimated] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-reanimated/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-safe-area-context] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-safe-area-context] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-screens] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-screens/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
@@ -223,6 +295,8 @@ MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox
 MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-vector-icons] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:react-native-vector-icons] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-vector-icons/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-vision-camera] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-vision-camera/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:react-native-vision-camera] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-vision-camera/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:react-android:0.72.6] /Users/sprintle/.gradle/caches/transforms-3/620147001f23a61fa54dd66c3890cad2/transformed/jetified-react-android-0.72.6-debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:react-android:0.72.6] /Users/sprintle/.gradle/caches/transforms-3/620147001f23a61fa54dd66c3890cad2/transformed/jetified-react-android-0.72.6-debug/AndroidManifest.xml:5:5-44
 MERGED from [com.facebook.react:hermes-android:0.72.6] /Users/sprintle/.gradle/caches/transforms-3/82fc49c66eb188cd9d470265c2f5633f/transformed/jetified-hermes-android-0.72.6-debug/AndroidManifest.xml:5:5-44
@@ -239,6 +313,22 @@ MERGED from [androidx.appcompat:appcompat:1.5.0] /Users/sprintle/.gradle/caches/
 MERGED from [androidx.appcompat:appcompat:1.5.0] /Users/sprintle/.gradle/caches/transforms-3/8a4582fcf4777cd70591117a23078262/transformed/appcompat-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/378d88de2fde0e29d92543d12e33b34a/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/378d88de2fde0e29d92543d12e33b34a/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:barcode-scanning-common:17.0.0] /Users/sprintle/.gradle/caches/transforms-3/05e9c78552ffe8fdf3da58c45ca3f786/transformed/jetified-barcode-scanning-common-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:barcode-scanning-common:17.0.0] /Users/sprintle/.gradle/caches/transforms-3/05e9c78552ffe8fdf3da58c45ca3f786/transformed/jetified-barcode-scanning-common-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:6:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.mlkit:vision-interfaces:16.2.0] /Users/sprintle/.gradle/caches/transforms-3/a73117d1af8659c91d0b041d2103b65c/transformed/jetified-vision-interfaces-16.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.mlkit:vision-interfaces:16.2.0] /Users/sprintle/.gradle/caches/transforms-3/a73117d1af8659c91d0b041d2103b65c/transformed/jetified-vision-interfaces-16.2.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/sprintle/.gradle/caches/transforms-3/e56f2621ef626fd464225cee132f3f36/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/sprintle/.gradle/caches/transforms-3/e56f2621ef626fd464225cee132f3f36/transformed/jetified-play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/bf9b6fb405d2f7fd8250171739588e78/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/bf9b6fb405d2f7fd8250171739588e78/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
 MERGED from [androidx.fragment:fragment:1.3.6] /Users/sprintle/.gradle/caches/transforms-3/177c698be397eb145127cfb5353a1679/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] /Users/sprintle/.gradle/caches/transforms-3/177c698be397eb145127cfb5353a1679/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.5.0] /Users/sprintle/.gradle/caches/transforms-3/24934cef6fcb084e51d280dd4587dc43/transformed/jetified-activity-1.5.0/AndroidManifest.xml:20:5-22:41
@@ -311,6 +401,10 @@ MERGED from [com.facebook.fresco:middleware:2.6.0] /Users/sprintle/.gradle/cache
 MERGED from [com.facebook.fresco:middleware:2.6.0] /Users/sprintle/.gradle/caches/transforms-3/64b55a0ad447c9d7608986823ffb3a12/transformed/jetified-middleware-2.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.6.0] /Users/sprintle/.gradle/caches/transforms-3/c15a7e0a99bb25483d068fddbb8c4f6a/transformed/jetified-ui-common-2.6.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:ui-common:2.6.0] /Users/sprintle/.gradle/caches/transforms-3/c15a7e0a99bb25483d068fddbb8c4f6a/transformed/jetified-ui-common-2.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:18:5-20:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] /Users/sprintle/.gradle/caches/transforms-3/035927df51db2125608e6752bfbdd830/transformed/coordinatorlayout-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] /Users/sprintle/.gradle/caches/transforms-3/035927df51db2125608e6752bfbdd830/transformed/coordinatorlayout-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite:2.2.0] /Users/sprintle/.gradle/caches/transforms-3/dc58477293179deb391b12c4cba55b48/transformed/sqlite-2.2.0/AndroidManifest.xml:20:5-22:41
@@ -343,6 +437,12 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/spri
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/sprintle/.gradle/caches/transforms-3/a1eec6f4e1f4253fcf428dd43a9fa3cd/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/c785f2650a4ab9597610a42a5423b6e7/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/c785f2650a4ab9597610a42a5423b6e7/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/sprintle/.gradle/caches/transforms-3/8c01479cd398ae22eccbc8e3819a163b/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:2.2.1] /Users/sprintle/.gradle/caches/transforms-3/8c01479cd398ae22eccbc8e3819a163b/transformed/jetified-transport-api-2.2.1/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/sprintle/.gradle/caches/transforms-3/884291a09db559c4eadb165bdacc623c/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.1.0] /Users/sprintle/.gradle/caches/transforms-3/884291a09db559c4eadb165bdacc623c/transformed/jetified-firebase-components-16.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/sprintle/.gradle/caches/transforms-3/4942d3bf37e2f8e197cb40c2278ffbb5/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:17.1.0] /Users/sprintle/.gradle/caches/transforms-3/4942d3bf37e2f8e197cb40c2278ffbb5/transformed/jetified-firebase-encoders-json-17.1.0/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.0] /Users/sprintle/.gradle/caches/transforms-3/0fab59b68babfc1c516f6d15dc341f56/transformed/lifecycle-runtime-2.5.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.0] /Users/sprintle/.gradle/caches/transforms-3/0fab59b68babfc1c516f6d15dc341f56/transformed/lifecycle-runtime-2.5.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sprintle/.gradle/caches/transforms-3/653d028e3d1b563c6d219d7c9480311d/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
@@ -351,6 +451,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.0] /Users/sprintle/.
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.0] /Users/sprintle/.gradle/caches/transforms-3/b5a8f4cf7a5a1a22c362c296ecffd88b/transformed/lifecycle-livedata-core-2.5.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/sprintle/.gradle/caches/transforms-3/9e963b848f7749309ceb54174b3bfd88/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/sprintle/.gradle/caches/transforms-3/9e963b848f7749309ceb54174b3bfd88/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/6460a1781357398751339b07408c8ffe/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/6460a1781357398751339b07408c8ffe/transformed/exifinterface-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/be0decce32e871a4b0c6b0b509601ea5/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/be0decce32e871a4b0c6b0b509601ea5/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sprintle/.gradle/caches/transforms-3/3adcfdfbb39880719084168d7663554f/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
@@ -363,6 +465,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/sprintle/
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/sprintle/.gradle/caches/transforms-3/ea88610a3c8be13450373fa73372379b/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.2] /Users/sprintle/.gradle/caches/transforms-3/9b61dc37fa5304f74acb7a87a83cd742/transformed/jetified-relinker-1.4.2/AndroidManifest.xml:5:5-43
 MERGED from [com.getkeepsafe.relinker:relinker:1.4.2] /Users/sprintle/.gradle/caches/transforms-3/9b61dc37fa5304f74acb7a87a83cd742/transformed/jetified-relinker-1.4.2/AndroidManifest.xml:5:5-43
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/sprintle/.gradle/caches/transforms-3/ac89d874c80b6a23779ca03abd9c6ce4/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.odml:image:1.0.0-beta1] /Users/sprintle/.gradle/caches/transforms-3/ac89d874c80b6a23779ca03abd9c6ce4/transformed/jetified-image-1.0.0-beta1/AndroidManifest.xml:5:5-44
 INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/sprintle/Documents/Kitbox/Project-Kitbox/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
@@ -401,16 +505,12 @@ MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox
 MERGED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:17:5-79
 MERGED from [com.twilio:video-android:7.6.1] /Users/sprintle/.gradle/caches/transforms-3/fcd1b9c2ccdbcc9d7091ceaa9a40ac6f/transformed/jetified-video-android-7.6.1/AndroidManifest.xml:11:5-79
 MERGED from [com.twilio:video-android:7.6.1] /Users/sprintle/.gradle/caches/transforms-3/fcd1b9c2ccdbcc9d7091ceaa9a40ac6f/transformed/jetified-video-android-7.6.1/AndroidManifest.xml:11:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:25:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:22:5-79
 	android:name
 		ADDED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:22-76
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:5-81
-	android:name
-		ADDED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:26:22-78
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:5-80
-	android:name
-		ADDED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:29:22-77
 uses-permission#android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
 ADDED from [:react-native-blob-util] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-blob-util/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:32:5-88
 	android:name
@@ -445,14 +545,6 @@ ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/
 		ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-41
 	android:required
 		ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:11:9-32
-uses-permission#android.permission.CAMERA
-ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-65
-	android:name
-		ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:13:22-62
-uses-permission#android.permission.RECORD_AUDIO
-ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-71
-	android:name
-		ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:15:22-68
 uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
 ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:16:5-80
 MERGED from [com.twilio:video-android:7.6.1] /Users/sprintle/.gradle/caches/transforms-3/fcd1b9c2ccdbcc9d7091ceaa9a40ac6f/transformed/jetified-video-android-7.6.1/AndroidManifest.xml:10:5-80
@@ -467,6 +559,62 @@ uses-permission#android.permission.BLUETOOTH
 ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:5-68
 	android:name
 		ADDED from [:react-native-twilio-video-webrtc] /Users/sprintle/Documents/Kitbox/Project-Kitbox/node_modules/react-native-twilio-video-webrtc/android/build/intermediates/merged_manifest/debug/AndroidManifest.xml:20:22-65
+service#com.google.mlkit.common.internal.MlKitComponentDiscoveryService
+ADDED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:15:9-23:19
+MERGED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:15:9-23:19
+	android:exported
+		ADDED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:11:13-37
+	tools:targetApi
+		ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:19:13-32
+	android:directBootAware
+		ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:17:13-43
+	android:name
+		ADDED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:10:13-91
+meta-data#com.google.firebase.components:com.google.mlkit.vision.barcode.internal.BarcodeRegistrar
+ADDED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] /Users/sprintle/.gradle/caches/transforms-3/6c6ca2db29f2dd0bb3df728cabfe39f1/transformed/jetified-play-services-mlkit-barcode-scanning-18.3.0/AndroidManifest.xml:13:17-120
+meta-data#com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar
+ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.mlkit:vision-common:17.3.0] /Users/sprintle/.gradle/caches/transforms-3/67a42aeeda448fac1a51cd9dd59e6400/transformed/jetified-vision-common-17.3.0/AndroidManifest.xml:13:17-124
+provider#com.google.mlkit.common.internal.MlKitInitProvider
+ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:9:9-13:38
+	android:authorities
+		ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:11:13-69
+	android:exported
+		ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:12:13-37
+	android:initOrder
+		ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:13:13-35
+	android:name
+		ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:10:13-78
+meta-data#com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar
+ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.mlkit:common:18.9.0] /Users/sprintle/.gradle/caches/transforms-3/c4d4d66f7ffd81f9ef7c75ad54e7dab7/transformed/jetified-common-18.9.0/AndroidManifest.xml:21:17-120
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/7bc2107a0f24dde54b783ba4b64ec0fd/transformed/jetified-play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/bf9b6fb405d2f7fd8250171739588e78/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/bf9b6fb405d2f7fd8250171739588e78/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/sprintle/.gradle/caches/transforms-3/bf9b6fb405d2f7fd8250171739588e78/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
 meta-data#com.facebook.soloader.enabled
 ADDED from [com.facebook.soloader:soloader:0.10.5] /Users/sprintle/.gradle/caches/transforms-3/ec3312a013bd7d8a70466a1977a1dba4/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:12:9-14:37
 	android:value
@@ -499,3 +647,31 @@ ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/sprintle/.gradle/
 		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/sprintle/.gradle/caches/transforms-3/b1c537e6049df5a2dcb1a9b20b1a8868/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
 	android:name
 		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/sprintle/.gradle/caches/transforms-3/b1c537e6049df5a2dcb1a9b20b1a8868/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:30:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:32:13-34:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:34:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:2.3.3] /Users/sprintle/.gradle/caches/transforms-3/e39449332b16abbff71917ad5661bdd3/transformed/jetified-transport-backend-cct-2.3.3/AndroidManifest.xml:33:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:2.2.6] /Users/sprintle/.gradle/caches/transforms-3/5b4aa339182f7c0c9798b03e5e65fdd0/transformed/jetified-transport-runtime-2.2.6/AndroidManifest.xml:33:13-132

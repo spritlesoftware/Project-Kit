@@ -17,10 +17,14 @@ import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 import com.reactnativedocumentpicker.RNDocumentPickerPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
-// react-native-permissions
-import com.zoontek.rnpermissions.RNPermissionsPackage;
+// react-native-hole-view
+import com.ibitcy.react_native_hole_view.RNHoleViewPackage;
 // react-native-pdf
 import org.wonday.pdf.RNPDFPackage;
+// react-native-permissions
+import com.zoontek.rnpermissions.RNPermissionsPackage;
+// react-native-reanimated
+import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-safe-area-context
 import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 // react-native-screens
@@ -31,6 +35,8 @@ import com.horcrux.svg.SvgPackage;
 import com.twiliorn.library.TwilioPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
+// react-native-vision-camera
+import com.mrousavy.camera.CameraPackage;
 
 public class PackageList {
   private Application application;
@@ -79,13 +85,16 @@ public class PackageList {
       new ReactNativeBlobUtilPackage(),
       new RNDocumentPickerPackage(),
       new RNGestureHandlerPackage(),
-      new RNPermissionsPackage(),
+      new RNHoleViewPackage(),
       new RNPDFPackage(),
+      new RNPermissionsPackage(),
+      new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new SvgPackage(),
       new TwilioPackage(),
-      new VectorIconsPackage()
+      new VectorIconsPackage(),
+      new CameraPackage()
     ));
   }
 }
