@@ -4,6 +4,7 @@ import Login from '../Containers/Authentications/Login';
 import Register from '../Containers/Authentications/Register';
 import ForgotPassword from '../Containers/Authentications/ForgotPassword';
 import Logout from '../Containers/Authentications/Logout';
+import { Notifications } from '../Containers/Notifications';
 import Form from '../Containers/Form';
 import RealChat from '../Containers/Chats/RealChat';
 import ChatList from '../Containers/Chats/ChatList';
@@ -28,6 +29,7 @@ import Table from '../Containers/Table/Table';
 import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
+
 
 export const initialState = {
   isAudioEnabled: true,
