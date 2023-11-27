@@ -1,5 +1,5 @@
 import {TouchableOpacity, View} from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {styles} from './LoginStyles';
 import LoginLogo from '../../Assets/images/login_logo.svg';
 import Google from '../../Assets/images/google.svg';
@@ -12,6 +12,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {Divider, Text} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
 import LoginLogic from '../../Functions/Authentications/Login';
+import {GetFirebaseData} from '../Firebase';
 
 const Login = ({navigation}) => {
   const {
@@ -27,6 +28,18 @@ const Login = ({navigation}) => {
     handlePasswordChange,
   } = LoginLogic(navigation);
 
+  const {user} = GetFirebaseData('Authentications');
+
+  // Use state to store the user data
+  const [userData, setUserData] = useState(null);
+
+  useEffect(() => {
+    // Check if the user data is available and set it in the state
+    if (user) {
+      setUserData(user._data);
+    }
+  }, [user]);
+
   return (
     <SafeAreaView style={styles.center}>
       <KeyboardAwareScrollView
@@ -37,7 +50,7 @@ const Login = ({navigation}) => {
         </View>
         <View style={styles.titleContainer}>
           <Text style={styles.headerTitle} variant="displayMedium">
-            Kit Box
+            {userData.app_name === null ? 'app name' : userData.app_name}
           </Text>
           <Text style={styles.headerTitle} variant="headlineSmall">
             Sign In
@@ -81,7 +94,7 @@ const Login = ({navigation}) => {
             </Text>
           </TouchableOpacity>
           <CustomButton
-            title={'Login'}
+            title={userData.login_btn_txt}
             onPress={onPressSignin}
             loading={isLoading}
           />
