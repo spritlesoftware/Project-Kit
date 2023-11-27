@@ -1,36 +1,28 @@
-import {View, FlatList, StyleSheet} from 'react-native';
+import {View, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {colors} from '../../Utils/colors';
-import List from '../../Components/Chat/List';
 import HeaderWithSearch from '../../Components/Header/HeaderWithSearch';
 import {Searchbar} from 'react-native-paper';
 import Cancel from 'react-native-vector-icons/MaterialIcons';
+import Plus from 'react-native-vector-icons/AntDesign';
+import List from '../../Components/Chat/List';
 import {moderateScale} from 'react-native-size-matters';
-import ChatListLogic from '../../Functions/Chat/ChatList';
-import {chatList} from '../../Data/ChatList';
+import GroupListLogic from '../../Functions/Chat/GroupList';
 
-const ChatList = () => {
+const GroupListUI = () => {
   const {
     search,
     setSearch,
     searchQuery,
     setSearchQuery,
-    filteredChat,
-    openDrawer,
-    setOpenDrawer,
+    filteredGroups,
     handleSearch,
     handleCancelSearch,
     navigation,
-  } = ChatListLogic();
-
+  } = GroupListLogic();
   return (
     <View style={styles.container}>
-      <HeaderWithSearch
-        title={'Chats'}
-        setSearch={setSearch}
-        openDrawer={openDrawer}
-        setOpenDrawer={setOpenDrawer}
-      />
+      <HeaderWithSearch title={'Groups'} />
       {search && (
         <Searchbar
           placeholder="Search"
@@ -51,14 +43,17 @@ const ChatList = () => {
         />
       )}
       <FlatList
-        data={filteredChat}
+        data={filteredGroups}
         renderItem={item => <List items={item} navigation={navigation} />}
       />
+      <TouchableOpacity
+        style={styles.addIcon}
+        onPress={() => navigation.navigate('Contacts')}>
+        <Plus name="pluscircle" color={colors.BLACK} size={moderateScale(50)} />
+      </TouchableOpacity>
     </View>
   );
 };
-
-export default ChatList;
 
 const styles = StyleSheet.create({
   container: {
@@ -80,4 +75,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     color: colors.BLACK,
   },
+
+  addIcon: {
+    position: 'absolute',
+    alignSelf: 'flex-end',
+    right: moderateScale(20),
+    top: '85%',
+  },
 });
+
+export default GroupListUI;

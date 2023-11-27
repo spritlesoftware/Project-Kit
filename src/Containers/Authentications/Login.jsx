@@ -9,43 +9,23 @@ import InputField from '../../Components/TextInput/InputField';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {moderateScale} from 'react-native-size-matters';
 import {SafeAreaView} from 'react-native-safe-area-context';
-// import Google from 'react-native-vector-icons/AntDesign';
-import {colors} from '../../Utils/colors';
 import {Divider, Text} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
-import {fonts} from '../../Utils/fonts';
+import LoginLogic from '../../Functions/Authentications/Login';
 
 const Login = ({navigation}) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [invalidEmail, setInvalidEmail] = useState(false);
-  const [invalidPassword, setInvalidPassword] = useState(false);
-  const [apiError, setApiError] = useState(false);
-  const [apiErrorMessage, setApiErrorMessage] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-
-  // custom user login logic
-  const userLogin = () => {
-    setIsLoading(false);
-    navigation.replace('Logout');
-  };
-
-  // handling signin
-  const onPressSignin = async () => {
-    if (!email.trim()) {
-      setInvalidEmail(true);
-      return;
-    } else if (!password.trim()) {
-      setInvalidEmail(false);
-      setInvalidPassword(true);
-      return;
-    } else {
-      setIsLoading(true);
-      setInvalidEmail(false);
-      setInvalidPassword(false);
-      userLogin();
-    }
-  };
+  const {
+    email,
+    password,
+    invalidEmail,
+    invalidPassword,
+    apiError,
+    apiErrorMessage,
+    isLoading,
+    onPressSignin,
+    handleEmailChange,
+    handlePasswordChange,
+  } = LoginLogic(navigation);
 
   return (
     <SafeAreaView style={styles.center}>
@@ -72,13 +52,9 @@ const Login = ({navigation}) => {
             placeholder={'Enter username'}
             textContentType="emailAddress"
             value={email}
-            onChangeText={text => {
-              setApiError(false);
-              setInvalidEmail(false);
-              setEmail(text);
-            }}
+            onChangeText={handleEmailChange}
             error={invalidEmail}
-            errorMsg={'Enter a email address'}
+            errorMsg={'Enter an email address'}
           />
           <View style={{marginTop: moderateScale(5)}} />
           <InputField
@@ -87,11 +63,7 @@ const Login = ({navigation}) => {
             textContentType="password"
             secureTextEntry
             value={password}
-            onChangeText={text => {
-              setApiError(false);
-              setInvalidPassword(false);
-              setPassword(text);
-            }}
+            onChangeText={handlePasswordChange}
             error={invalidPassword}
             errorMsg={'Enter a password'}
           />
@@ -120,8 +92,9 @@ const Login = ({navigation}) => {
           <Text style={styles.regText}>Don't have an account? Register</Text>
         </TouchableOpacity>
         <Divider style={styles.divider} />
-        <Text style={styles.orContainer}>Sign in with social account</Text>
+        <Text style={styles.orContainer}>Sign in with a social account</Text>
         <View style={styles.socialContainer}>
+          {/* You may need to modify the SocialButton component based on your implementation */}
           <SocialButton icon={<Google width={30} height={30} />} />
         </View>
       </KeyboardAwareScrollView>
