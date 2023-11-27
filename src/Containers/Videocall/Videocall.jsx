@@ -1,132 +1,5 @@
-// App.js
 
-
-// import React, { useState, useRef, useEffect, useContext } from 'react';
-// import { AppContext } from '../../Navigations/StackNavigator';
-// import {
-//     StyleSheet,
-//     View,
-//     Text,
-//     StatusBar,
-//     TouchableOpacity,
-//     TextInput,
-//     Alert,
-//     KeyboardAvoidingView,
-//     Platform,
-//     ScrollView,
-//     Dimensions,
-//   } from 'react-native';
-//   import {
-//     TwilioVideoLocalView,
-//     TwilioVideoParticipantView,
-//     TwilioVideo,
-// } from "react-native-twilio-video-webrtc";
-
-// export const Videocall = ({navigation}) => {
- 
-    // const twilioVideo = useRef(null);
-    // const {props, setProps} = useContext(AppContext);
-      
-//     console.log("props",props)
-//       const _onMuteButtonPress = () => {
-//         twilioVideo.current
-//           .setLocalAudioEnabled(!props.isAudioEnabled)
-//           .then((isEnabled) => setProps({...props, isAudioEnabled: isEnabled}));
-//       };
-    
-//       const _onFlipButtonPress = () => {
-//         twilioVideo.current.flipCamera();
-//       };
-//       const _onEndButtonPress = () => {
-//        twilioVideo.current.disconnect();
-//         setProps(initialState);
-//       };
-
-//       useEffect(() => {
-//          twilioVideo.current.connect({
-//           roomName: props.roomName,
-//           accessToken: props.token,
-//         });
-//         setProps({...props, status: 'connecting'});
-//         // return () => {
-//         //   _onEndButtonPress();
-//         // };
-//       }, []);
-      
-//       return(<View style={styles.container}>
-//       {(props.status === 'connected' || props.status === 'connecting') && (
-//         <View style={styles.callContainer}>
-//           {props.status === 'connected' && (
-//             <View style={styles.remoteGrid}>
-//               {Array.from(props.videoTracks, ([trackSid, trackIdentifier]) => (
-//                 <TwilioVideoParticipantView
-//                   style={styles.remoteVideo}
-//                   key={trackSid}
-//                   trackIdentifier={trackIdentifier}
-//                 />
-//               ))}
-//             </View>
-//           )}
-//         </View>
-//       )}
-//        <View style={{height:40,display:"flex",flexDirection:"row"}}>
-//         <TouchableOpacity style={{height:20,width:50}} onPress={_onEndButtonPress}>
-//           <Text style={{color:"black"}}>End</Text>
-//         </TouchableOpacity>
-//         <TouchableOpacity style={{height:20,width:50}} onPress={_onMuteButtonPress}>
-//           <Text style={{color:"black"}}>
-//             {props.isAudioEnabled ? 'Mute' : 'Unmute'}
-//           </Text>
-//         </TouchableOpacity>
-//         <TouchableOpacity style={{height:20,width:50}} onPress={_onFlipButtonPress}>
-//           <Text style={{color:"black"}}>Flip</Text>
-//         </TouchableOpacity>
-//         <TwilioVideo
-//         style={{height:300,width:300}}
-//         ref={twilioVideo}
-//         onRoomDidConnect={() => {
-//           setProps({...props, status: 'connected'});
-//         }}
-//         onRoomDidDisconnect={() => {
-//           setProps({...props, status: 'disconnected'});
-//           navigation.goBack();
-//         }}
-//         onRoomDidFailToConnect={(error) => {
-//           console.log(error)
-//           Alert.alert('Error', error.error);
-//           setProps({...props, status: 'disconnected'});
-//           navigation.goBack();
-//         }}
-//         onParticipantAddedVideoTrack={({participant, track}) => {
-//           if (track.enabled) {
-//             setProps({
-//               ...props,
-//               videoTracks: new Map([
-//                 ...props.videoTracks,
-//                 [
-//                   track.trackSid,
-//                   {
-//                     participantSid: participant.sid,
-//                     videoTrackSid: track.trackSid,
-//                   },
-//                 ],
-//               ]),
-//             });
-//           }
-//         }}
-//         onParticipantRemovedVideoTrack={({track}) => {
-//           const videoTracks = props.videoTracks;
-//           videoTracks.delete(track.trackSid);
-//           setProps({...props, videoTracks});
-//         }}
-//       />
-//       </View>
-//       </View>
-       
-//      )
-// }
-
-import React, { useState, useRef, useEffect,useContext} from "react";
+import React, { useState, useRef, useEffect, useContext } from "react";
 import {
     AppRegistry,
     StyleSheet,
@@ -137,6 +10,8 @@ import {
     PermissionsAndroid,
     Platform,
     TouchableOpacity,
+    Dimensions,
+    Image
 } from "react-native";
 import { AppContext } from '../../Navigations/StackNavigator';
 import {
@@ -144,23 +19,18 @@ import {
     TwilioVideoParticipantView,
     TwilioVideo,
 } from "react-native-twilio-video-webrtc";
-import { initialState } from '../../Navigations/StackNavigator';
+import { fonts } from "../../Utils/fonts";
+import { colors } from "../../Utils/colors";
+const dimensions = Dimensions.get('window');
 
-export const Videocall = ({navigation}) => {
-
-  const twilioVideo = useRef(null);
-  const {props, setProps} = useContext(AppContext);
-    // const [isAudioEnabled, setIsAudioEnabled] = useState(true);
-    // const [isVideoEnabled, setIsVideoEnabled] = useState(true);
-    // const [isScreenShareEnabled, setIsScreenShareEnabled] = useState(false);
-    // const [status, setStatus] = useState("disconnected");
-    // const [participants, setParticipants] = useState(new Map());
-    // const [videoTracks, setVideoTracks] = useState(new Map());
-    // const [token, setToken] = useState("");
-    useEffect(()=>{
-      _onConnectButtonPress()
-    },[])
-   console.log("props:",props)
+export const Videocall = ({ navigation }) => {
+    const twilioVideo = useRef(null);
+    const { props, setProps } = useContext(AppContext);
+    useEffect(() => {
+        _onConnectButtonPress()
+    }, [])
+    console.log("props:", props)
+    console.log("parrr:",props.participants)
     const _onConnectButtonPress = async () => {
         if (Platform.OS === "android") {
             await _requestAudioPermission();
@@ -172,8 +42,8 @@ export const Videocall = ({navigation}) => {
             enableNetworkQualityReporting: true,
             dominantSpeakerEnabled: true,
         });
-        setProps({...props, status: 'connecting'});
-        
+        setProps({ ...props, status: 'connecting' });
+
     };
 
     const _onEndButtonPress = () => {
@@ -182,18 +52,14 @@ export const Videocall = ({navigation}) => {
     };
 
     const _onMuteButtonPress = () => {
-        // twilioVideo.current
-        //     .setLocalAudioEnabled(!isAudioEnabled)
-        //     .then((isEnabled) => setIsAudioEnabled(isEnabled));
-
-            twilioVideo.current
-                      .setLocalAudioEnabled(!props.isAudioEnabled)
-                      .then((isEnabled) => setProps({...props, isAudioEnabled: isEnabled}));
+        twilioVideo.current
+            .setLocalAudioEnabled(!props.isAudioEnabled)
+            .then((isEnabled) => setProps({ ...props, isAudioEnabled: isEnabled }));
     };
 
     const _onShareButtonPressed = () => {
         twilioVideo.current.toggleScreenSharing(!isSharing);
-        //setIsSharing(!isSharing);
+
     };
 
     const _onFlipButtonPress = () => {
@@ -201,69 +67,51 @@ export const Videocall = ({navigation}) => {
     };
 
     const _onRoomDidConnect = () => {
-      setProps({...props, status: 'connected'});
+        setProps({ ...props, status: 'connected' });
     };
 
     const _onRoomDidDisconnect = ({ error }) => {
         console.log("ERROR: ", error);
 
-        setProps({...props, status: 'disconnected'});
+        setProps({ ...props, status: 'disconnected' });
     };
 
     const _onRoomDidFailToConnect = (error) => {
         console.log("ERROR: ", error);
 
-        setProps({...props, status: 'disconnected'});
+        setProps({ ...props, status: 'disconnected' });
     };
 
     const _onParticipantAddedVideoTrack = ({ participant, track }) => {
         console.log("onParticipantAddedVideoTrack: ", participant, track);
 
+        
         if (track.enabled) {
-                      setProps({
-                        ...props,
-                        videoTracks: new Map([
-                          ...props.videoTracks,
-                          [
-                            track.trackSid,
-                            {
-                              participantSid: participant.sid,
-                              videoTrackSid: track.trackSid,
-                            },
-                          ],
-                        ]),
-                      });
-                    }
-                  }
-              
-      //   setProps({...props, videoTracks:(originalVideoTracks) => {
-      //     originalVideoTracks.set(track.trackSid, {
-      //         participantSid: participant.sid,
-      //         videoTrackSid: track.trackSid,
-      //     });
-      //     return new Map(originalVideoTracks);
-      // }})
-
-        // setVideoTracks((originalVideoTracks) => {
-        //     originalVideoTracks.set(track.trackSid, {
-        //         participantSid: participant.sid,
-        //         videoTrackSid: track.trackSid,
-        //     });
-        //     return new Map(originalVideoTracks);
-        // });
-
+            setProps({
+                ...props,
+                videoTracks: new Map([
+                    ...props.videoTracks,
+                    [
+                        track.trackSid,
+                        {
+                            participantSid: participant.sid,
+                            videoTrackSid: track.trackSid,
+                        },
+                    ],
+                ]),
+                participants: [
+                    props.participants, participant
+                ]
+            });
+        }
+    }
 
     const _onParticipantRemovedVideoTrack = ({ participant, track }) => {
         console.log("onParticipantRemovedVideoTrack: ", participant, track);
 
         const videoTracks = props.videoTracks;
-                  videoTracks.delete(track.trackSid);
-                  setProps({...props, videoTracks});
-
-        // setVideoTracks((originalVideoTracks) => {
-        //     originalVideoTracks.delete(track.trackSid);
-        //     return new Map(originalVideoTracks);
-        // });
+        videoTracks.delete(track.trackSid);
+        setProps({ ...props, videoTracks });
     };
 
     const _onNetworkLevelChanged = ({ participant, isLocalUser, quality }) => {
@@ -308,75 +156,66 @@ export const Videocall = ({navigation}) => {
             buttonPositive: "OK",
         });
     };
-
     return (
         <View style={styles.container}>
-            {/* {status === "disconnected" && (
-                <View>
-                    <Text style={styles.welcome}>React Native Twilio Video</Text>
-                    <TextInput
-                        style={styles.input}
-                        autoCapitalize="none"
-                        value={token}
-                        onChangeText={(text) => setToken(text)}
-                    ></TextInput>
-                    <Button
-                        title="Connect"
-                        style={styles.button}
-                        onPress={_onConnectButtonPress}
-                    ></Button>
-                </View>
-            )} */}
-
             {(props.status === "connected" || props.status === "connecting") && (
                 <View style={styles.callContainer}>
-                    {props.status === "connected" && (
+                    {(props.status === "connected" && props.participants.length > 1) ? (
                         <View style={styles.remoteGrid}>
                             {Array.from(props.videoTracks, ([trackSid, trackIdentifier]) => {
                                 return (
                                     <TwilioVideoParticipantView
-                                        style={styles.remoteVideo}
+                                        style={{
+                                            width: dimensions.width,
+                                            height: dimensions.height / 2
+                                            // position: 'absolute',
+                                            // top: 0,
+                                            // left: 0,
+                                            // right: 0,
+                                            // bottom: 0,
+                                        }}
                                         key={trackSid}
                                         trackIdentifier={trackIdentifier}
                                     />
                                 );
                             })}
                         </View>
+                    ) : (
+                        <View style={styles.remoteGrid}>
+                            <View style={{ backgroundColor: "#363737", width: dimensions.width, height: dimensions.height / 2, flex: 1, justifyContent: "center", alignItems: "center" }}>
+                                <Image source={require("../../Assets/images/avata.png")} style={{ height: 150, width: 150 }} />
+                            </View>
+                        </View>
                     )}
-                    <View style={styles.optionsContainer}>
-                        <TouchableOpacity
-                            style={styles.optionButton}
-                            onPress={_onEndButtonPress}
-                        >
-                            <Text style={{ fontSize: 12 }}>End</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionButton}
-                            onPress={_onMuteButtonPress}
-                        >
-                            <Text style={{ fontSize: 12 }}>
-                                {props.isAudioEnabled ? "Mute" : "Unmute"}
-                            </Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionButton}
-                            onPress={_onFlipButtonPress}
-                        >
-                            <Text style={{ fontSize: 12 }}>Flip</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            style={styles.optionButton}
-                            onPress={_onShareButtonPressed}
-                        >
-                            <Text style={{ fontSize: 12 }}>
-                                {/* {isSharing ? "Stop Sharing" : "Start Sharing"} */}
-                            </Text>
-                        </TouchableOpacity>
-                        <TwilioVideoLocalView enabled={true} style={styles.localVideo} />
-                    </View>
-                </View>
-            )}
+                </View>)
+            }
 
+            < TwilioVideoLocalView style={{
+                width: dimensions.width,
+                height: dimensions.height / 2,
+            }} />
+            <View style={styles.optionsContainer}>
+                <TouchableOpacity
+                    style={[styles.optionButton, { backgroundColor: "#363737" }]}
+                    onPress={_onMuteButtonPress}
+                >
+                    <Text style={{ fontSize: 12 ,fontFamily:fonts.REGULAR,color:colors.WHITE}}>
+                        {props.isAudioEnabled ? "Mute" : "Unmute"}
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={[styles.optionButton, { backgroundColor: "red" }]}
+                    onPress={_onEndButtonPress}
+                >
+                    <Text style={{ fontSize: 12, color:colors.WHITE,fontFamily:fonts.REGULAR }}>End</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={[styles.optionButton, { backgroundColor: "#363737" }]}
+                    onPress={_onFlipButtonPress}
+                >
+                    <Text style={{ fontSize: 12, color:colors.WHITE ,fontFamily:fonts.REGULAR}}>Flip</Text>
+                </TouchableOpacity>
+            </View>
             <TwilioVideo
                 ref={twilioVideo}
                 onRoomDidConnect={_onRoomDidConnect}
@@ -387,19 +226,22 @@ export const Videocall = ({navigation}) => {
                 onNetworkQualityLevelsChanged={_onNetworkLevelChanged}
                 onDominantSpeakerDidChange={_onDominantSpeakerDidChange}
             />
-        </View>
+        </View >
     );
 };
+
 
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "white",
+        position: "relative",
+
     },
     callContainer: {
+
         flex: 1,
-        position: "absolute",
         bottom: 0,
         top: 0,
         left: 0,
@@ -409,7 +251,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         textAlign: "center",
         paddingTop: 40,
-        color:"black"
+        color: "black"
     },
     input: {
         height: 50,
@@ -419,46 +261,47 @@ const styles = StyleSheet.create({
         marginTop: 50,
         textAlign: "center",
         backgroundColor: "white",
-        color:"black"
+        color: "black"
     },
     button: {
         marginTop: 100,
     },
     localVideo: {
-        flex: 1,
-        width: 150,
-        height: 250,
         position: "absolute",
+        flex: 1,
+        bottom: 100,
         right: 10,
-        bottom: 10,
+        width: 150,
+        height: 200,
+
+    },
+    bigLocalVideo: {
+        width: dimensions.width,
+        height: dimensions.height,
+        flex: 1
     },
     remoteGrid: {
         flex: 1,
-        flexDirection: "row",
-        flexWrap: "wrap",
+        flexDirection: "row"
     },
     remoteVideo: {
-        marginTop: 20,
-        marginLeft: 10,
-        marginRight: 10,
-        width: 350,
-        height: 420,
+        width: dimensions.width,
+        height: dimensions.height,
     },
     optionsContainer: {
         position: "absolute",
-        left: 0,
         bottom: 0,
         right: 0,
         height: 100,
-        backgroundColor: "blue",
+        left: 45,
         flexDirection: "row",
         alignItems: "center",
     },
     optionButton: {
         width: 60,
         height: 60,
-        marginLeft: 10,
-        marginRight: 10,
+        marginLeft: 20,
+        marginRight: 20,
         borderRadius: 100 / 2,
         backgroundColor: "grey",
         justifyContent: "center",
