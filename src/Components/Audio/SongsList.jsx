@@ -6,16 +6,10 @@ import PlayingTrackBottom from '../../Components/Audio/PlayingTrackBottom';
 import TrackList from '../../Components/Audio/TrackList';
 import PlayList from './PlayList';
 import {useNavigation} from '@react-navigation/native';
+import {useAppContext} from '../../Context/ContextProvider';
 
-function SongsList({
-  queue,
-  currentTrack,
-  favourites,
-  loadPlaylist,
-  HandleFavourites,
-  handleItemPress,
-  ConditionChecker,
-}) {
+function SongsList({HandleFavourites, handleItemPress, ConditionChecker}) {
+  const {queue, favourites, currentTrack} = useAppContext();
   const navigation = useNavigation();
   const [audioStatus, setAudioStatus] = useState();
   async function handlePlayPress() {
