@@ -13,17 +13,23 @@ import {Text} from 'react-native-paper';
 import Back from 'react-native-vector-icons/AntDesign';
 import Menu from 'react-native-vector-icons/Entypo';
 import PlayingTrackBottom from '../../Components/Audio/PlayingTrackBottom';
-import {useAppContext} from '../../Context/ContextProvider';
 import {
   handleFavourites,
   handleItemPress,
-} from '../../Functions/Audio/AllSongs';
+} from '../../Functions/Audio/AudioMethods';
+import {useAppContext} from '../../Context/ContextProvider';
 
 const PlayListTracks = ({navigation}) => {
-  const [queue, setQueue] = useState([]);
-  const [currentTrack, setCurrentTrack] = useState([]);
-  const [favourites, setFavourites] = useState([]);
   const [audioStatus, setAudioStatus] = useState();
+
+  const {
+    queue,
+    setQueue,
+    favourites,
+    setFavourites,
+    currentTrack,
+    setCurrentTrack,
+  } = useAppContext();
 
   async function loadPlaylist() {
     const queue = await TrackPlayer.getQueue();
@@ -57,8 +63,6 @@ const PlayListTracks = ({navigation}) => {
       setAudioStatus('Playing');
     }
   }
-
-  // const {favourites, currentTrack} = useAppContext();
 
   return (
     <View style={styles.container}>
