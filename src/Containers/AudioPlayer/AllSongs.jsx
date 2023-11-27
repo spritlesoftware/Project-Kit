@@ -11,29 +11,31 @@ import {
   handleFavourites,
   handleItemPress,
   playbackTrackChangedListener,
-} from '../../Functions/Audio/AllSongs';
+  loadPlaylist,
+} from '../../Functions/Audio/AudioMethods';
 import {colors} from '../../Utils/colors';
 import {moderateScale} from 'react-native-size-matters';
 import SongsList from '../../Components/Audio/SongsList';
 import {addTracks, setupPlayer} from './AudioPlayerServices';
+import {useAppContext} from '../../Context/ContextProvider';
 
 function AllSongs() {
   const [isPlayerReady, setIsPlayerReady] = useState(false);
-  const [queue, setQueue] = useState([]);
-  const [currentTrack, setCurrentTrack] = useState([]);
-  const [favourites, setFavourites] = useState([]);
-  const [favouriteCondition, setFavouriteCondition] = useState(false);
+
+  const {
+    queue,
+    setQueue,
+    favourites,
+    setFavourites,
+    currentTrack,
+    setCurrentTrack,
+  } = useAppContext();
 
   useEffect(() => {
     async function setup() {
       try {
         let isSetup = await setupPlayer();
         setIsPlayerReady(isSetup);
-        const queue = await TrackPlayer.getQueue();
-        if (isSetup && queue.length > 0) {
-          // await addTracks();
-          setQueue(queue);
-        }
       } catch (error) {
         console.error('Error during setup:', error);
       }
@@ -42,6 +44,23 @@ function AllSongs() {
     setup();
     initPlayer();
   }, []);
+
+  async function AddTracks() {
+    const queues = await TrackPlayer.getQueue();
+    if (queues.length >= 0) {
+      await addTracks();
+      setQueue(queues);
+    }
+  }
+
+  useEffect(() => {
+    loadPlaylist();
+  }, []);
+
+  useEffect(() => {
+    AddTracks();
+    console.log('rendered');
+  }, [isPlayerReady]);
 
   useEffect(() => {
     const listener = playbackTrackChangedListener(setCurrentTrack);
