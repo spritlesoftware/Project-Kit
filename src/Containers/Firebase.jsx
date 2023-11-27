@@ -2,37 +2,18 @@ import {View, Text, FlatList} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import firestore from '@react-native-firebase/firestore';
 
-const Firebase = () => {
+export function GetFirebaseData(docID) {
   const [user, setUser] = useState([]);
   const GetData = async () => {
-    const usersCollection = firestore().collection('Users');
+    const usersCollection = firestore().collection('Users').doc(docID);
     const usersSnapshot = await usersCollection.get();
 
-    const users = usersSnapshot.docs.map(documentSnapshot => {
-      const data = documentSnapshot.data();
-      return {
-        id: documentSnapshot.id,
-        projectName: data.project_name,
-      };
-    });
-
-    setUser(users);
+    setUser(usersSnapshot);
   };
 
   useEffect(() => {
     GetData();
-  }, []);
+  }, [docID]);
 
-  return (
-    <View>
-      {user.map(user => (
-        <>
-          <Text>{user.projectName}</Text>
-          <Text>{user.id}</Text>
-        </>
-      ))}
-    </View>
-  );
-};
-
-export default Firebase;
+  return {user};
+}
