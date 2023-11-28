@@ -36,6 +36,7 @@ export const initialState = {
 
 export const AppContext = React.createContext(initialState);
 
+const dimensions = Dimensions.get('window');
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
@@ -43,34 +44,28 @@ const StackNavigator = () => {
   const [tableData, setTableData] = React.useState(TableData);
 
   return (
-    <AppContext.Provider value={{tableData, setTableData, props, setProps}}>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          // presentation: 'modal',
-          animationTypeForReplace: 'push',
-          animation: 'slide_from_right',
-        }}>
-          <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
-          <Stack.Screen name="BarcodeOutput" component={BarcodeOutput} />
-        <Stack.Screen name="AudioList" component={AudioList} />
-        <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
-        <Stack.Screen name="PlayListTracks" component={PlayListTracks} />
-        <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-        <Stack.Screen name="Videocall" component={Videocall} />
-        <Stack.Screen name="Table" component={Table} />
-        <Stack.Screen name="NewItem" component={NewItem} />
-        <Stack.Screen name="EditItem" component={EditItem} />
-        <Stack.Screen name="Form" component={Form} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="SignUp" component={Register} />
-        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-        <Stack.Screen name="Logout" component={Logout} />
-        <Stack.Screen name="ChatList" component={ChatList} />
-        <Stack.Screen name="ChatRoom" component={RealChat} />
-        <Stack.Screen name="Groups" component={GroupList} />
-        <Stack.Screen name="Contacts" component={Contacts} />
-      </Stack.Navigator>
+    <AppContext.Provider value={{tableData,setTableData,props, setProps}}>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        // presentation: 'modal',
+        animationTypeForReplace: 'push',
+        animation: 'slide_from_right',
+      }} initialRouteName='Tiles'>
+      <Stack.Screen name="Tiles" component={Tiles} />
+      <Stack.Screen name="Table" component={Table} />
+      <Stack.Screen name="NewItem" component={NewItem} />
+      <Stack.Screen name="EditItem" component={EditItem} />
+      <Stack.Screen name="Form" component={Form} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="Form" component={Form} />
+      <Stack.Screen name="SignUp" component={Register} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      <Stack.Screen name="Logout" component={Logout} />
+      <Stack.Screen name="ChatList" component={ChatList} />
+      <Stack.Screen name="Groups" component={GroupList} />
+      <Stack.Screen name="Contacts" component={Contacts} />
+    </Stack.Navigator>
     </AppContext.Provider>
   );
 };
