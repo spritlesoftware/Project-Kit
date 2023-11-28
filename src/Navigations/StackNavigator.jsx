@@ -29,6 +29,10 @@ import Table from '../Containers/Table/Table';
 import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
+import AudioPlayer from '../Containers/AudioPlayer/AudioPlayer';
+import PlayList from '../Containers/AudioPlayer/PlayListGroup';
+import AudioList from '../Containers/AudioPlayer/AudioList';
+import PlayListTracks from '../Containers/AudioPlayer/PlayListTracks';
 
 
 export const initialState = {
@@ -58,6 +62,9 @@ const StackNavigator = () => {
           animationTypeForReplace: 'push',
           animation: 'slide_from_right',
         }}>
+        <Stack.Screen name="AudioList" component={AudioList} />
+        <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
+        <Stack.Screen name="PlayListTracks" component={PlayListTracks} />
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
         <Stack.Screen name="Videocall" component={Videocall} />
         <Stack.Screen name="Table" component={Table} />
