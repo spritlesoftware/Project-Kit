@@ -1,4 +1,4 @@
-import {View, FlatList, StyleSheet} from 'react-native';
+import {View, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import TracklList from '../../Components/Audio/TrackList';
 import TrackPlayer, {
@@ -11,7 +11,6 @@ import {moderateScale} from 'react-native-size-matters';
 import {fonts} from '../../Utils/fonts';
 import {Text} from 'react-native-paper';
 import Back from 'react-native-vector-icons/AntDesign';
-import Menu from 'react-native-vector-icons/Entypo';
 import PlayingTrackBottom from '../../Components/Audio/PlayingTrackBottom';
 import {
   handleFavourites,
@@ -66,18 +65,19 @@ const PlayListTracks = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.headerContainer}>
-        <Back.Button
+      <TouchableOpacity
+        onPress={() => navigation.goBack()}
+        style={styles.headerContainer}>
+        <Back
           name="left"
           color={colors.WHITE}
           size={moderateScale(20)}
           style={styles.button}
-          onPress={() => navigation.goBack()}
         />
         <Text variant="headlineSmall" style={styles.headerTitle}>
           Your Playlist
         </Text>
-      </View>
+      </TouchableOpacity>
       <FlatList
         data={queue}
         renderItem={({item, index}) => (
@@ -125,18 +125,18 @@ const styles = StyleSheet.create({
     fontFamily: fonts.BOLD,
     paddingLeft: moderateScale(10),
     paddingTop: moderateScale(-10),
-    paddingVertical: moderateScale(10),
+    marginVertical: moderateScale(10),
   },
 
   headerContainer: {
     flexDirection: 'row',
     alignContent: 'center',
+    alignItems: 'center',
     backgroundColor: colors.BLACK,
   },
 
   button: {
     backgroundColor: colors.BLACK,
-    paddingBottom: moderateScale(20),
   },
 });
 
