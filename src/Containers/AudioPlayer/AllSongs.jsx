@@ -18,6 +18,7 @@ import {moderateScale} from 'react-native-size-matters';
 import SongsList from '../../Components/Audio/SongsList';
 import {addTracks, setupPlayer} from './AudioPlayerServices';
 import {useAppContext} from '../../Context/ContextProvider';
+import {AudioData} from '../../Data/AudioData';
 
 function AllSongs() {
   const [isPlayerReady, setIsPlayerReady] = useState(false);
@@ -51,6 +52,7 @@ function AllSongs() {
       await addTracks();
       setQueue(queues);
     }
+    setQueue(AudioData);
   }
 
   useEffect(() => {
