@@ -10,19 +10,8 @@ import RealChat from '../Containers/Chats/RealChat';
 import ChatList from '../Containers/Chats/ChatList';
 import {Videocall} from '../Containers/Videocall/Videocall';
 import {RegisterScreen} from '../Containers/Videocall/RegisterScreen';
-import {
-  StyleSheet,
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity,
-  TextInput,
-  Alert,
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
+import BarcodeScanner from '../Containers/BarcodeScanner/BarcodeScanner';
+import BarcodeOutput from '../Containers/BarcodeScanner/BarcodeOutput';
 import NewItem from '../Containers/Table/NewItem';
 import {TableData} from '../Data/TableData';
 import Table from '../Containers/Table/Table';
@@ -62,6 +51,8 @@ const StackNavigator = () => {
           animationTypeForReplace: 'push',
           animation: 'slide_from_right',
         }}>
+          <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
+          <Stack.Screen name="BarcodeOutput" component={BarcodeOutput} />
         <Stack.Screen name="AudioList" component={AudioList} />
         <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
         <Stack.Screen name="PlayListTracks" component={PlayListTracks} />
