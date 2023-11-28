@@ -1,5 +1,5 @@
 // Register.js
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -8,7 +8,7 @@ import {styles} from './LoginStyles'; // Assuming styles are shared
 import LoginLogo from '../../Assets/images/login_logo.svg';
 import CustomButton from '../../Components/Button/CustomButton';
 import InputField from '../../Components/TextInput/InputField';
-import {Divider} from 'react-native-paper';
+import {Divider, Text} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
 import RegisterLogic from '../../Functions/Authentications/Register';
 import Google from 'react-native-vector-icons/AntDesign';
