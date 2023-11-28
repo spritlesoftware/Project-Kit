@@ -2,7 +2,7 @@
   "name": "kit_box",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
+"scripts": {
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -55,7 +55,6 @@
     "react-native-vision-camera": "^3.6.10",
     "twilio": "^4.19.0",
     "twilio-video": "^2.28.1"
-    "react-native-size-matters": "^0.4.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
