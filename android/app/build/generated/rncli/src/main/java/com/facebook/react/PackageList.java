@@ -11,6 +11,8 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+// lottie-react-native
+import com.airbnb.android.react.lottie.LottiePackage;
 // react-native-blob-util
 import com.ReactNativeBlobUtil.ReactNativeBlobUtilPackage;
 // react-native-document-picker
@@ -19,6 +21,10 @@ import com.reactnativedocumentpicker.RNDocumentPickerPackage;
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-hole-view
 import com.ibitcy.react_native_hole_view.RNHoleViewPackage;
+// react-native-onesignal
+import com.onesignal.rnonesignalandroid.ReactNativeOneSignalPackage;
+// react-native-pager-view
+import com.reactnativepagerview.PagerViewPackage;
 // react-native-pdf
 import org.wonday.pdf.RNPDFPackage;
 // react-native-permissions
@@ -31,6 +37,8 @@ import com.th3rdwave.safeareacontext.SafeAreaContextPackage;
 import com.swmansion.rnscreens.RNScreensPackage;
 // react-native-svg
 import com.horcrux.svg.SvgPackage;
+// react-native-track-player
+import com.doublesymmetry.trackplayer.TrackPlayer;
 // react-native-twilio-video-webrtc
 import com.twiliorn.library.TwilioPackage;
 // react-native-vector-icons
@@ -82,16 +90,20 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new LottiePackage(),
       new ReactNativeBlobUtilPackage(),
       new RNDocumentPickerPackage(),
       new RNGestureHandlerPackage(),
       new RNHoleViewPackage(),
+      new ReactNativeOneSignalPackage(),
+      new PagerViewPackage(),
       new RNPDFPackage(),
       new RNPermissionsPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),
       new RNScreensPackage(),
       new SvgPackage(),
+      new TrackPlayer(),
       new TwilioPackage(),
       new VectorIconsPackage(),
       new CameraPackage()

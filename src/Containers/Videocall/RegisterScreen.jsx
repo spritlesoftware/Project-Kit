@@ -124,7 +124,7 @@ export const RegisterScreen = ({ navigation }) => {
                             style={{padding:15,backgroundColor:colors.APP_PRIMARY,borderRadius:15}}
                             onPress={() => {
                                 _checkPermissions(() => {
-                                    fetch(`https://1c33-113-193-25-170.ngrok-free.app/getToken?userName=${props.userName}`)
+                                    fetch(`https://6d18-113-193-25-170.ngrok-free.app/getToken?userName=${props.userName}`)
                                         .then((response) => {
                                             if (response.ok) {
                                                 response.text().then((jwt) => {
