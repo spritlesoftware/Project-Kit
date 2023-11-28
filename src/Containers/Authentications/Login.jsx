@@ -37,7 +37,7 @@ const Login = ({navigation}) => {
         </View>
         <View style={styles.titleContainer}>
           <Text style={styles.headerTitle} variant="displayMedium">
-            Kit Box
+            KitBox
           </Text>
           <Text style={styles.headerTitle} variant="headlineSmall">
             Sign In

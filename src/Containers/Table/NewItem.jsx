@@ -6,7 +6,7 @@ import { AppContext } from '../../Navigations/StackNavigator';
 import { fonts } from "../../Utils/fonts";
 
 export default function NewItem({ route, navigation }) {
-    const { tableData, setTableData } = useContext(AppContext);
+    const { tableData, setTableData,fonts } = useContext(AppContext);
     const [formValues, setFormValues] = useState({});
 
     console.log(formValues)
@@ -17,7 +17,7 @@ export default function NewItem({ route, navigation }) {
     return (
         <View style={styles.container}>
             <View style={{width:"80%",marginRight:"auto",marginLeft:"auto"}}>
-                <Text style={styles.header}>New Item</Text>
+                <Text style={[styles.header,{fontFamily:fonts.BOLD}]}>New Item</Text>
                 {route.params.titles.map((each, index) => {
                     return (
                             <InputField
@@ -52,6 +52,6 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         padding: 30,
         color: "black",
-        fontFamily:fonts.BOLD
+      
     }
 })

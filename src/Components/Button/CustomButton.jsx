@@ -26,8 +26,9 @@ export default CustomButton;
 const styles = StyleSheet.create({
   btnContainer: {
     width: '100%',
-    borderRadius: moderateScale(30),
+    borderRadius: moderateScale(15),
     marginTop: moderateScale(20),
+    padding:moderateScale(1)
   },
   btnContent: {
     alignItems: 'center',

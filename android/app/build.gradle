@@ -82,6 +82,12 @@ android {
         versionName "1.0"
     }
     signingConfigs {
+    release {
+      storeFile file('Janani.keystore')
+      storePassword 'Janani@19'
+      keyAlias 'Raveena'
+      keyPassword 'Janani@19'
+    }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
@@ -91,6 +97,7 @@ android {
     }
     buildTypes {
         debug {
+            signingConfig signingConfigs.release
             signingConfig signingConfigs.debug
         }
         release {

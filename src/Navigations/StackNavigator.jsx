@@ -36,6 +36,7 @@ import PlayListTracks from '../Containers/AudioPlayer/PlayListTracks';
 import BarcodeScanner from '../Containers/BarcodeScanner/BarcodeScanner';
 import BarcodeOutput from '../Containers/BarcodeScanner/BarcodeOutput'
 import Tiles from '../Containers/Tiles/Tiles';
+import Chat from '../Containers/Chats/Chat';
 
 export const initialState = {
   isAudioEnabled: true,
@@ -48,8 +49,8 @@ export const initialState = {
 };
 
 const dimensions = Dimensions.get('window');
-const Stack = createNativeStackNavigator(initialState);
-export const AppContext = createContext()
+const Stack = createNativeStackNavigator();
+export const AppContext = createContext(initialState)
 
 const StackNavigator = () => {
   const [props, setProps] = useState(initialState);
@@ -91,8 +92,10 @@ const StackNavigator = () => {
         <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
         <Stack.Screen name="Logout" component={Logout} />
         <Stack.Screen name="ChatList" component={ChatList} />
+        <Stack.Screen name="Chat" component={Chat} />
         <Stack.Screen name="Groups" component={GroupList} />
         <Stack.Screen name="Contacts" component={Contacts} />
+        <Stack.Screen name="ChatRoom" component={RealChat} />
       </Stack.Navigator>
     </AppContext.Provider>
   );

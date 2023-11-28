@@ -4,12 +4,11 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import BottomSheet from "react-native-gesture-bottom-sheet";
 import { useRef, useState, useContext } from "react";
 import { AppContext } from '../../Navigations/StackNavigator';
-import { fonts } from "../../Utils/fonts";
 import CustomButton from "../../Components/Button/CustomButton";
 import { colors } from "../../Utils/colors";
 
 export default function Table({ navigation }) {
-    const { tableData, setTableData } = useContext(AppContext);
+    const { tableData,fonts, setTableData } = useContext(AppContext);
     const headings = Object.keys(tableData[0])
     const bottomSheet = useRef();
     const [isClickedId, setIsClickedId] = useState("")
@@ -43,7 +42,7 @@ export default function Table({ navigation }) {
     return (
         <View style={{ flex: 1, backgroundColor: "#fff" }}>
             <View style={styles.flexcontainer}>
-                <Text style={{ fontSize: 25, padding: 30, color:colors.APP_PRIMARY, fontFamily: fonts.BOLD, }}>Kitbox-Table</Text>
+                <Text style={{ fontSize: 25, padding: 30, color:colors.APP_PRIMARY, fontFamily: fonts.BOLD, }}>KitBox - Table</Text>
                 <View style={{ marginRight: 20, marginTop: 10 }}>
                     <CustomButton
                         title={'Create'}

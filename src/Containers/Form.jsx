@@ -197,7 +197,7 @@ export default function Form() {
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView keyboardShouldPersistTaps="handled">
-        <Text style={styles.header}>Kitbox - Form</Text>
+        <Text style={styles.header}>KitBox - Form</Text>
         {renderFormFields()}
         <CustomButton title={'Submit'} onPress={onHandleSubmit} />
       </KeyboardAwareScrollView>
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
   header: {
     fontFamily: fonts.BOLD,
     fontSize: 30,
-    padding: 30,
+    padding: 20,
     textAlign: 'center',
     color: colors.APP_PRIMARY,
   },
