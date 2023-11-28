@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     marginTop: moderateScale(5),
     paddingVertical: moderateScale(10),
     fontSize: moderateScale(25),
+    alignSelf: 'center',
   },
 });
 
