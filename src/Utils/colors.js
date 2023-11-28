@@ -4,6 +4,7 @@ export const colors = {
   BLACK: '#000000',
   TRANSPARENT_BLACK: '#00000055',
   TRANSPARENT_BLACK1: '#00000040',
+  TRANSPARENT: '#FFFFFF00',
   RED_BORDER: '#D66A67',
   RED: '#DB5454',
   VIBRANT_RED: '#FF0000',
@@ -53,5 +54,4 @@ export const colors = {
   SNOW: '#FAFAFA',
   RED_HEART: '#FF0000',
   UNDOBLUE: '#4491D9',
-  CHAT_BLUE: '#0A30F2',
 };
