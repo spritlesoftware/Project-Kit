@@ -4,6 +4,7 @@ import Login from '../Containers/Authentications/Login';
 import Register from '../Containers/Authentications/Register';
 import ForgotPassword from '../Containers/Authentications/ForgotPassword';
 import Logout from '../Containers/Authentications/Logout';
+import { Notifications } from '../Containers/Notifications';
 import Form from '../Containers/Form';
 import RealChat from '../Containers/Chats/RealChat';
 import ChatList from '../Containers/Chats/ChatList';
@@ -17,6 +18,11 @@ import Table from '../Containers/Table/Table';
 import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
+import AudioPlayer from '../Containers/AudioPlayer/AudioPlayer';
+import PlayList from '../Containers/AudioPlayer/PlayListGroup';
+import AudioList from '../Containers/AudioPlayer/AudioList';
+import PlayListTracks from '../Containers/AudioPlayer/PlayListTracks';
+
 
 export const initialState = {
   isAudioEnabled: true,
@@ -47,6 +53,9 @@ const StackNavigator = () => {
         }}>
           <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
           <Stack.Screen name="BarcodeOutput" component={BarcodeOutput} />
+        <Stack.Screen name="AudioList" component={AudioList} />
+        <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
+        <Stack.Screen name="PlayListTracks" component={PlayListTracks} />
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
         <Stack.Screen name="Videocall" component={Videocall} />
         <Stack.Screen name="Table" component={Table} />
