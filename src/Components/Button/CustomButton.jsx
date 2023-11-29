@@ -4,8 +4,9 @@ import {Button} from 'react-native-paper';
 import {colors} from '../../Utils/colors';
 import {moderateScale} from 'react-native-size-matters';
 import {fonts} from '../../Utils/fonts';
-
+import { useAppContext } from '../../Context/ContextProvider';
 const CustomButton = props => {
+  const {fonts} = useAppContext()
   return (
     <Button
       mode="elevated"
@@ -13,7 +14,7 @@ const CustomButton = props => {
       dark
       contentStyle={styles.btnContent}
       labelStyle={styles.btnText}
-      style={styles.btnContainer}
+      style={[styles.btnContainer, {fontFamily: fonts.BOLD}]}
       {...props}>
       {props.icon}
       {props.title}
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     color: colors.WHITE,
   },
   btnText: {
-    fontFamily: fonts.BOLD,
+   
     fontSize: moderateScale(15),
     color: colors.WHITE,
   },

@@ -3,10 +3,10 @@ import InputField from "../../Components/TextInput/InputField";
 import { useState, useContext } from "react";
 import CustomButton from "../../Components/Button/CustomButton";
 import { AppContext } from '../../Navigations/StackNavigator';
-import { fonts } from "../../Utils/fonts";
+import { useAppContext } from "../../Context/ContextProvider";
 
 export default function NewItem({ route, navigation }) {
-    const { tableData, setTableData,fonts } = useContext(AppContext);
+    const { tableData, setTableData,fonts } = useAppContext();
     const [formValues, setFormValues] = useState({});
 
     console.log(formValues)

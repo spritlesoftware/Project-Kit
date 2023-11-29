@@ -27,11 +27,11 @@ const AudioList = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.BLACK,
+    backgroundColor: colors.WHITE,
   },
 
   headerTitle: {
-    color: colors.WHITE,
+    color: colors.BLACK,
     fontFamily: fonts.BOLD,
     marginLeft: moderateScale(10),
     marginTop: moderateScale(5),

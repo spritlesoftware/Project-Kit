@@ -10,21 +10,7 @@ import RealChat from '../Containers/Chats/RealChat';
 import ChatList from '../Containers/Chats/ChatList';
 import { Videocall } from '../Containers/Videocall/Videocall';
 import { RegisterScreen } from '../Containers/Videocall/RegisterScreen';
-import {
-  StyleSheet,
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity,
-  TextInput,
-  Alert,
-  KeyboardAvoidingView,
-  Platform,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
 import NewItem from '../Containers/Table/NewItem';
-import {TableData} from '../Data/TableData';
 import Table from '../Containers/Table/Table';
 import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';
@@ -38,34 +24,11 @@ import BarcodeOutput from '../Containers/BarcodeScanner/BarcodeOutput'
 import Tiles from '../Containers/Tiles/Tiles';
 import Chat from '../Containers/Chats/Chat';
 
-export const initialState = {
-  isAudioEnabled: true,
-  status: 'disconnected',
-  participants: [],
-  videoTracks: new Map(),
-  userName: '',
-  roomName: '',
-  token: '',
-};
-
-const dimensions = Dimensions.get('window');
 const Stack = createNativeStackNavigator();
-export const AppContext = createContext(initialState)
 
 const StackNavigator = () => {
-  const [props, setProps] = useState(initialState);
-  const [tableData, setTableData] = React.useState(TableData);
-  const [fonts, setFont] = useState({
-    BOLD: 'Poppins-SemiBold',
-    LIGHT: 'Poppins-Light',
-    MEDIUM: 'Poppins-Medium',
-    REGULAR: 'Poppins-Regular',
-    SEMIBOLD: 'Poppins-SemiBold',
-  });
 
   return (
-    <AppContext.Provider
-      value={{tableData, setTableData, props, setProps, fonts, setFont}}>
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
@@ -97,7 +60,6 @@ const StackNavigator = () => {
         <Stack.Screen name="Contacts" component={Contacts} />
         <Stack.Screen name="ChatRoom" component={RealChat} />
       </Stack.Navigator>
-    </AppContext.Provider>
   );
 };
 

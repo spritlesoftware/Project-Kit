@@ -13,7 +13,6 @@ import {
     Dimensions,
     Image
 } from "react-native";
-import { AppContext } from '../../Navigations/StackNavigator';
 import {
     TwilioVideoLocalView,
     TwilioVideoParticipantView,
@@ -21,11 +20,12 @@ import {
 } from "react-native-twilio-video-webrtc";
 import { fonts } from "../../Utils/fonts";
 import { colors } from "../../Utils/colors";
+import { useAppContext } from "../../Context/ContextProvider";
 const dimensions = Dimensions.get('window');
 
 export const Videocall = ({ navigation }) => {
     const twilioVideo = useRef(null);
-    const { props, setProps } = useContext(AppContext);
+    const { props, setProps } = useAppContext()
     useEffect(() => {
         _onConnectButtonPress()
     }, [])

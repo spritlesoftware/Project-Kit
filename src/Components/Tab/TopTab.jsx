@@ -12,10 +12,10 @@ const TopTab = props => {
     <Tab.Navigator
       screenOptions={{
         tabBarStyle: {
-          backgroundColor: colors.BLACK,
+          backgroundColor: colors.WHITE,
         },
         tabBarLabelStyle: {
-          color: colors.WHITE,
+          color: colors.BLACK,
           fontFamily: fonts.BOLD,
           fontSize: moderateScale(15),
         },

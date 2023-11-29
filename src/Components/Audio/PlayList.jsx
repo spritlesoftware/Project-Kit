@@ -43,7 +43,7 @@ const PlayList = props => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.BLACK,
+    backgroundColor: colors.WHITE,
   },
 
   playlistContainer: {
@@ -62,13 +62,13 @@ const styles = StyleSheet.create({
 
   playlistName: {
     fontFamily: fonts.BOLD,
-    color: colors.WHITE,
+    color: colors.BLACK,
     paddingHorizontal: moderateScale(15),
   },
 
   trackCount: {
-    color: colors.WHITE,
-    fontFamily: fonts.MEDIUM,
+    color: colors.BLACK,
+    fontFamily: fonts.BOLD,
     paddingHorizontal: moderateScale(15),
     paddingVertical: moderateScale(5),
   },

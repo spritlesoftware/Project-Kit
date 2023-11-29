@@ -6,9 +6,10 @@ import { useRef, useState, useContext } from "react";
 import { AppContext } from '../../Navigations/StackNavigator';
 import CustomButton from "../../Components/Button/CustomButton";
 import { colors } from "../../Utils/colors";
+import { useAppContext } from "../../Context/ContextProvider";
 
 export default function Table({ navigation }) {
-    const { tableData,fonts, setTableData } = useContext(AppContext);
+    const { tableData,fonts, setTableData } = useAppContext();
     const headings = Object.keys(tableData[0])
     const bottomSheet = useRef();
     const [isClickedId, setIsClickedId] = useState("")
@@ -58,7 +59,7 @@ export default function Table({ navigation }) {
                 <DataTable.Header>
                     {
                         headings.map((each, index) => {
-                            return <DataTable.Title key={index}><Text style={[styles.header,key={index}, { fontFamily: fonts.BOLD }]}>{each}</Text></DataTable.Title>
+                            return <DataTable.Title key={index}><Text style={[styles.header, { fontFamily: fonts.BOLD }]} key={index}>{each}</Text></DataTable.Title>
                         })
                     }
                 </DataTable.Header>
@@ -67,10 +68,10 @@ export default function Table({ navigation }) {
                         return (
                             <TouchableOpacity onPress={() => onClicked(each)}>
                                 <DataTable.Row key={each.id}>
-                                    <DataTable.Cell key={each.id} ><Text style={[styles.row]}>{each.id}</Text></DataTable.Cell>
-                                    <DataTable.Cell key={each.name} ><Text style={[styles.row]}>{each.name}</Text></DataTable.Cell>
-                                    <DataTable.Cell key={each.age} ><Text style={styles.row}>{each.age}</Text></DataTable.Cell>
-                                    <DataTable.Cell key={each.city} ><Text style={styles.row}>{each.city}</Text></DataTable.Cell>
+                                    <DataTable.Cell key={each.id} ><Text style={[styles.row,{fontFamily:fonts.REGULAR}]}>{each.id}</Text></DataTable.Cell>
+                                    <DataTable.Cell key={each.name} ><Text style={[styles.row,{fontFamily:fonts.REGULAR}]}>{each.name}</Text></DataTable.Cell>
+                                    <DataTable.Cell key={each.age} ><Text style={[styles.row,{fontFamily:fonts.REGULAR}]}>{each.age}</Text></DataTable.Cell>
+                                    <DataTable.Cell key={each.city} ><Text style={[styles.row,{fontFamily:fonts.REGULAR}]}>{each.city}</Text></DataTable.Cell>
                                 </DataTable.Row>
                             </TouchableOpacity>
                         )
@@ -101,9 +102,9 @@ const styles = StyleSheet.create({
         justifyContent: "space-between"
     },
 
-    header: { fontSize: 15, textAlign: "center", padding: 10, color: "black",fontWeight:"bold" },
+    header: { fontSize: 15, textAlign: "center", padding: 10, color: "black"},
 
-    row: { fontSize: 15, padding: 2, color: "black",fontFamily:'Poppins-Regular' },
+    row: { fontSize: 15, padding: 2, color: "black" },
 
     icon: { padding: 20, marginLeft: 20 },
 

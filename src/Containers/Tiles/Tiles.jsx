@@ -10,15 +10,14 @@ import {
   ScrollView,
 } from 'react-native';
 import {colors} from '../../Utils/colors';
-import {Button} from 'react-native-paper';
 import {useContext, useRef, useState} from 'react';
 import Feather from 'react-native-vector-icons/Feather';
-import {AppContext} from '../../Navigations/StackNavigator';
 import {components} from './Components.js'
 import Themes from './Themes.jsx';
+import { useAppContext } from '../../Context/ContextProvider.js';
 
 export default function Tiles({navigation}) {
-  const {fonts, setFont} = useContext(AppContext);
+  const {fonts} = useAppContext();
   
   const drawer = useRef(null);
   
@@ -35,47 +34,28 @@ export default function Tiles({navigation}) {
         ref={drawer}
         drawerWidth={300}
         renderNavigationView={navigationView}>
-        <View style={{display: 'flex', flexDirection: 'row', padding: 10}}>
+        <View style={{display: 'flex', flexDirection: 'row', padding:5}}>
           <TouchableOpacity
             onPress={() => {
               drawer.current.openDrawer();
             }}>
             <Feather
               name="menu"
-              size={35}
-              style={{marginTop: 35, marginLeft:25}}
+              size={27}
+              style={{marginTop:30, marginLeft:25}}
               color={colors.GRAY4}
             />
           </TouchableOpacity>
           <Text
-            style={{
-              color: colors.APP_PRIMARY,
-              fontSize: 35,
-              fontFamily: fonts.BOLD,
-              padding:10,
-              textAlign: 'center',
-              width: '75%',
-              marginTop: 10,
-            }}>
+            style={[styles.header, {fontFamily: fonts.BOLD}]}>
             KitBox
           </Text>
         </View>
         <ScrollView>
           <View
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              columnGap: 20,
-              flexWrap: 'wrap',
-              rowGap: 20,
-              paddingRight: 20,
-              paddingLeft: 20,
-              justifyContent: 'center',
-              padding:10,
-            }}>
+            style={styles.tileflexcontainer}>
               {
                 components.map(({name,navigation,image})=>{
-                  console.log(image)
                   return(
                     <TouchableOpacity
                     onPress={()=>{onClickTile(navigation)}}
@@ -85,15 +65,13 @@ export default function Tiles({navigation}) {
                       style={styles.image}
                       source={image}
                     />
-                    <Text style={[styles.tiletext, {fontFamily: fonts.MEDIUM}]}>
+                    <Text style={[styles.tiletext, {fontFamily: fonts.REGULAR}]}>
                       {name}
                     </Text>
                   </TouchableOpacity>
                   )
                 })
-              }
-           
-            
+              }        
           </View>
         </ScrollView>
       </DrawerLayoutAndroid>
@@ -106,11 +84,18 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  header:{
+    color: colors.APP_PRIMARY,
+    fontSize: 35,
+    padding:8,
+    textAlign: 'center',
+    width: '75%',
+    marginTop: 7,
+  },
   tilecontainer: {
-    // borderRadius: 15,
     padding: 10,
-    width: '44%',
-    height: 160,
+    width: '43%',
+    height: 140,
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 5,
@@ -118,18 +103,30 @@ const styles = StyleSheet.create({
     borderRadius: 15,
   },
   tiletext: {
-    color: colors.GRAY7,
+    color: colors.BLACK,
     textAlign: 'left',
-    padding:4,
+    padding:0,
     borderRadius: 10,
     position: 'absolute',
-    top: 120,
+    top: 100,
     fontSize:14,
-    marginTop:13,
+    marginTop:15,
+    letterSpacing:.5
   },
   image: {
     width: '100%',
-    height: '70%',
+    height: '65%',
     borderWidth: 10,
   },
+  tileflexcontainer:{
+    display: 'flex',
+    flexDirection: 'row',
+    columnGap: 20,
+    flexWrap: 'wrap',
+    rowGap: 20,
+    paddingRight: 20,
+    paddingLeft:20,
+    padding:10,
+    justifyContent:"center"
+  }
 });

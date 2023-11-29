@@ -116,12 +116,12 @@ const PlayListTracks = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.BLACK,
+    backgroundColor: colors.WHITE,
     paddingVertical: moderateScale(10),
   },
 
   headerTitle: {
-    color: colors.WHITE,
+    color: colors.BLACK,
     fontFamily: fonts.BOLD,
     paddingLeft: moderateScale(10),
     paddingTop: moderateScale(-10),
@@ -132,11 +132,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.BLACK,
+    backgroundColor: colors.WHITE,
   },
 
   button: {
-    backgroundColor: colors.BLACK,
+    backgroundColor: colors.WHITE,
   },
 });
 

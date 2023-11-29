@@ -1,39 +1,41 @@
-const font1 = {
-  bold: 'Inter-Bold',
-  light: 'Inter-Light',
-  medium: 'Inter-Medium',
-  regular: 'Inter-Regular',
-  semiBold: 'Inter-SemiBold',
+export const Inter = {
+  BOLD: 'Inter-Bold',
+  LIGHT: 'Inter-Light',
+   MEDIUM: 'Inter-Medium',
+   REGULAR: 'Inter-Regular',
+   SEMIBOLD: 'Inter-SemiBold',
 };
 
-const font2 = {
-  black: 'Montserrat-Black',
-  blackItalic: 'Montserrat-BlackItalic',
-  bold: 'Montserrat-Bold',
-  boldItalic: 'Montserrat-BoldItalic',
-  extraBold: 'Montserrat-ExtraBold',
-  extraBoldItalic: 'Montserrat-ExtraBoldItalic',
-  extraLight: 'Montserrat-ExtraLight',
-  extraLightItalic: 'Montserrat-ExtraLightItalic',
-  italic: 'Montserrat-Italic',
-  light: 'Montserrat-Light',
-  lightItalic: 'Montserrat-LightItalic',
-  medium: 'Montserrat-Medium',
-  mediumItalic: 'Montserrat-MediumItalic',
-  regular: 'Montserrat-Regular',
+export const Montserrat = {
+  BOLD: 'Montserrat-Bold',
+  LIGHT: 'Montserrat-Light',
+  MEDIUM: 'Montserrat-Medium',
+  REGULAR: 'Montserrat-Regular',
   semiBold: 'Montserrat-SemiBold',
-  semiBoldItalic: 'Montserrat-SemiBoldItalic',
-  thin: 'Montserrat-Thin',
-  thinItalic: 'Montserrat-ThinItalic',
 };
 
-const font3 = {
-  bold: 'Poppins-Bold',
-  light: 'Poppins-Light',
-  medium: 'Poppins-Medium',
-  regular: 'Poppins-Regular',
-  semiBold: 'Poppins-SemiBold',
+export const Poppins = {
+  BOLD: 'Poppins-Bold',
+  LIGHT: 'Poppins-Light',
+  MEDIUM: 'Poppins-Medium',
+  REGULAR: 'Poppins-Regular',
+  SEMIBOLD: 'Poppins-SemiBold',
 };
+const font1 = {
+  BOLD: 'Poppins-Bold',
+  LIGHT: 'Poppins-Light',
+  MEDIUM: 'Poppins-Medium',
+  REGULAR: 'Poppins-Regular',
+  SEMIBOLD: 'Poppins-SemiBold',
+};
+
+export const DMSans = {
+  BOLD: 'DMSans-SemiBold',
+  LIGHT: 'DMSans-Light',
+  MEDIUM: 'DMSans-Medium',
+  REGULAR: 'DMSans-Regular',
+  SEMIBOLD: 'DMSans-SemiBold',
+}
 
 export const typography = {
   font1,

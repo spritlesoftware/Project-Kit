@@ -66,12 +66,12 @@ const TracklList = props => {
             color={
               ConditionChecker(props.favourites, props.data)
                 ? colors.RED_HEART
-                : colors.WHITE
+                : colors.BLACK
             }
             size={25}
           />
         </TouchableOpacity>
-        <Icons name="dots-three-vertical" color={colors.WHITE} size={20} />
+        <Icons name="dots-three-vertical" color={colors.BLACK} size={20} />
       </View>
     </TouchableOpacity>
   );
@@ -79,7 +79,7 @@ const TracklList = props => {
 
 const styles = StyleSheet.create({
   listContainer: {
-    borderWidth: 1,
+    borderBottomWidth: 1,
     padding: moderateScale(5),
     flexDirection: 'row',
     alignItems: 'center',
@@ -99,12 +99,12 @@ const styles = StyleSheet.create({
   playlistItem: {
     fontFamily: fonts.BOLD,
     fontSize: moderateScale(15),
-    color: colors.WHITE,
+    color: colors.BLACK,
     marginLeft: moderateScale(10),
   },
 
   artistName: {
-    color: colors.WHITE,
+    color: colors.BLACK,
     fontFamily: fonts.MEDIUM,
     fontSize: moderateScale(12),
     marginLeft: moderateScale(10),

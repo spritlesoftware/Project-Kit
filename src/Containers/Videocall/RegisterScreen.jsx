@@ -22,12 +22,13 @@ import {
   } from 'react-native';
 import { fonts } from '../../Utils/fonts';
 import { colors } from '../../Utils/colors';
+import { useAppContext } from '../../Context/ContextProvider';
 
 export const RegisterScreen = ({ navigation }) => {
     useEffect(() => {
         _checkPermissions();
     }, []);
-    const { props, setProps } = useContext(AppContext);
+    const { props, setProps } = useAppContext()
     const _checkPermissions = (callback) => {
         const iosPermissions = [PERMISSIONS.IOS.CAMERA, PERMISSIONS.IOS.MICROPHONE];
         const androidPermissions = [

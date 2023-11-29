@@ -12,10 +12,12 @@ import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {colors} from '../Utils/colors';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {fonts} from '../Utils/fonts';
+import { useAppContext } from '../Context/ContextProvider';
 
 export default function Form() {
   const [errors, setErrors] = useState({});
   const [formValues, setFormValues] = useState({});
+  const {fonts} = useAppContext()
 
   const onInputChange = (fieldId, value) => {
     setFormValues({...formValues, [fieldId]: value});
@@ -197,7 +199,7 @@ export default function Form() {
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView keyboardShouldPersistTaps="handled">
-        <Text style={styles.header}>KitBox - Form</Text>
+        <Text style={[styles.header,{fontFamily:fonts.BOLD}]}>KitBox - Form</Text>
         {renderFormFields()}
         <CustomButton title={'Submit'} onPress={onHandleSubmit} />
       </KeyboardAwareScrollView>

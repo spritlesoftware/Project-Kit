@@ -3,10 +3,11 @@ import InputField from "../../Components/TextInput/InputField";
 import { useState, useContext } from "react";
 import CustomButton from "../../Components/Button/CustomButton";
 import { AppContext } from '../../Navigations/StackNavigator';
-import { fonts } from "../../Utils/fonts";
+import { useAppContext } from "../../Context/ContextProvider";
+import { colors } from "../../Utils/colors";
 
 export default function EditItem({ route, navigation }) {
-    const { tableData, setTableData } = useContext(AppContext);
+    const { tableData,fonts, setTableData } = useAppContext();
     const [formValues, setFormValues] = useState({});
 
     // console.log(formValues)
@@ -26,7 +27,7 @@ export default function EditItem({ route, navigation }) {
     return (
         <View style={styles.container}>
             <View style={{ width: "80%", marginRight: "auto", marginLeft: "auto" }}>
-                <Text style={styles.header}>Edit Item</Text>
+                <Text style={[styles.header,{fontFamily:fonts.BOLD}]}>Edit Item</Text>
                 {
                     Object.entries(route.params.item).map(([key, value]) => {
                         return (
@@ -57,9 +58,6 @@ const styles = StyleSheet.create({
         fontSize: 25,
         textAlign: 'center',
         padding: 30,
-        color: "black",
-        fontFamily: fonts.BOLD
+        color: colors.BLACK,
     }
 })
-
-//typeof(value) == "number" ? JSON.stringify(value)
