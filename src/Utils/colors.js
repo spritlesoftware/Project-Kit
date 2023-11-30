@@ -1,5 +1,6 @@
+//#00A8E8
 export const colors = {
-  APP_PRIMARY: '#00A8E8',
+  APP_PRIMARY: '#0C2461',
   WHITE: '#FFFFFF',
   BLACK: '#000000',
   TRANSPARENT_BLACK: '#00000055',

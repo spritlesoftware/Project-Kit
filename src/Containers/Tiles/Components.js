@@ -25,7 +25,7 @@ export const components = [
         navigation:'RegisterScreen'
       },
       {
-        name: 'QRcodeScanner',
+        name: 'QRScanner',
         image:require('../../Assets/images/barcode.png'),
         navigation:'BarcodeScanner'
       },

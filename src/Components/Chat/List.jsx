@@ -11,7 +11,9 @@ import {useNavigation} from '@react-navigation/core';
 const Lists = ({items, groupContact}) => {
   const Item = items.item;
   const navigation = useNavigation();
-
+  const bold = {fontFamily:fonts.BOLD}
+  const medium = {fontFamily:fonts.MEDIUM}
+  const regular = {fontFamily:fonts.REGULAR}
   return (
     <TouchableRipple
       style={styles.container}
@@ -63,15 +65,15 @@ const Lists = ({items, groupContact}) => {
                         bottom: moderateScale(10),
                       }}
                       name="dot-fill"
-                      color={colors.RED_BORDER}
+                      color={colors.APP_PRIMARY}
                       size={20}
                     />
                   )}
                 />
               </View>
             ) : Item.active !== undefined ? (
-              <View style={styles.status}>
-                <Text style={styles.statusTxt}>{Item.last_seen}</Text>
+              <View style={[styles.status]}>
+                <Text style={[styles.statusTxt]}>{Item.last_seen}</Text>
               </View>
             ) : (
               ''
@@ -96,7 +98,7 @@ const Lists = ({items, groupContact}) => {
               : Item.msg_read !== undefined && (
                   <Icon
                     source={() => (
-                      <Dot name="dot-fill" color={colors.RED_HEART} size={20} />
+                      <Dot name="dot-fill" color={colors.APP_PRIMARY} size={20} />
                     )}
                   />
                 )}
@@ -164,7 +166,7 @@ const styles = StyleSheet.create({
   },
 
   statusTxt: {
-    backgroundColor: colors.GRAY,
+    backgroundColor: colors.APP_PRIMARY,
     borderRadius: moderateScale(10),
     marginLeft: moderateScale(8),
     marginRight: moderateScale(8),

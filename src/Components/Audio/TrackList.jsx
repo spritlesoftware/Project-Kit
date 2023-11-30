@@ -6,8 +6,13 @@ import {colors} from '../../Utils/colors';
 import {Text} from 'react-native-paper';
 import LottieView from 'lottie-react-native';
 import TrackPlayer, {State, usePlaybackState} from 'react-native-track-player';
+import { useAppContext } from '../../Context/ContextProvider';
 
 const TracklList = props => {
+  const {fonts} = useAppContext()
+  const bold = {fontFamily:fonts.BOLD}
+  const medium = {fontFamily:fonts.MEDIUM}
+  const regular = {fontFamily:fonts.REGULAR}
   function ConditionChecker(favourites, data) {
     const favCondition =
       favourites && favourites.some(audio => audio.id == data.id);
@@ -47,12 +52,12 @@ const TracklList = props => {
         )}
         <View>
           <Text
-            style={{
+            style={[{
               ...styles.playlistItem,
-            }}>
+            },bold]}>
             {props.data.title}
           </Text>
-          <Text style={styles.artistName}>{props.data.artist}</Text>
+          <Text style={[styles.artistName,medium]}>{props.data.artist}</Text>
         </View>
       </View>
       <View style={styles.iconContainer}>
@@ -79,7 +84,8 @@ const TracklList = props => {
 
 const styles = StyleSheet.create({
   listContainer: {
-    borderBottomWidth: 1,
+    borderBottomWidth:.5,
+    borderBottomColor:colors.GRAY10,
     padding: moderateScale(5),
     flexDirection: 'row',
     alignItems: 'center',

@@ -1,5 +1,6 @@
 import React, {createContext, useContext, useMemo, useState} from 'react';
 import { TableData } from '../Data/TableData';
+import { DMSans } from '../Theme/Typography';
 const AppContext = createContext();
 
 export const useAppContext = () => {
@@ -16,19 +17,15 @@ export const initialState = {
 };
 
 const ContextProvider = ({children}) => {
-  const poppins = {
-    BOLD: 'Poppins-SemiBold',
-    LIGHT: 'Poppins-Light',
-    MEDIUM: 'Poppins-Medium',
-    REGULAR: 'Poppins-Regular',
-    SEMIBOLD: 'Poppins-SemiBold',
-  }
+
   const [queue, setQueue] = useState([]);
   const [currentTrack, setCurrentTrack] = useState([]);
   const [favourites, setFavourites] = useState([]);
   const [props, setProps] = useState(initialState);
   const [tableData, setTableData] = useState(TableData);
-  const [fonts, setFont] = useState(poppins);
+  const [fonts, setFont] = useState(DMSans);
+  const [errors, setErrors] = useState({});
+  const [formValues, setFormValues] = useState({});
 
   const data = useMemo(() => {
     return {
@@ -42,9 +39,13 @@ const ContextProvider = ({children}) => {
       tableData,
       setTableData,
       fonts,
-      setFont
+      setFont,
+      errors,
+      setErrors,
+      formValues,
+      setFormValues
     };
-  }, [queue, currentTrack, favourites,tableData,props,fonts]);
+  }, [queue, currentTrack, favourites,tableData,props,fonts,errors,formValues]);
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
 };

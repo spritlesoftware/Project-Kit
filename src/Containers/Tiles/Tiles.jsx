@@ -94,13 +94,14 @@ const styles = StyleSheet.create({
   },
   tilecontainer: {
     padding: 10,
-    width: '43%',
-    height: 140,
+    width: '30%',
+    height: 110,
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 5,
     backgroundColor: '#fff',
     borderRadius: 15,
+    // borderWidth:1
   },
   tiletext: {
     color: colors.BLACK,
@@ -108,24 +109,23 @@ const styles = StyleSheet.create({
     padding:0,
     borderRadius: 10,
     position: 'absolute',
-    top: 100,
-    fontSize:14,
+    top:75,
+    fontSize:11,
     marginTop:15,
-    letterSpacing:.5
   },
   image: {
     width: '100%',
-    height: '65%',
+    height: '78%',
     borderWidth: 10,
   },
   tileflexcontainer:{
     display: 'flex',
     flexDirection: 'row',
-    columnGap: 20,
+    columnGap:13,
     flexWrap: 'wrap',
     rowGap: 20,
-    paddingRight: 20,
-    paddingLeft:20,
+    paddingRight: 15,
+    paddingLeft:15,
     padding:10,
     justifyContent:"center"
   }

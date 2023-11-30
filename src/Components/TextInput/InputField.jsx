@@ -3,7 +3,6 @@ import {Text, TextInput} from 'react-native-paper';
 import {StyleSheet} from 'react-native';
 import {colors} from '../../Utils/colors';
 import {moderateScale} from 'react-native-size-matters';
-import {fonts} from '../../Utils/fonts';
 import { useAppContext } from '../../Context/ContextProvider';
 
 export default function InputField({label, ...props}) {
@@ -32,7 +31,6 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     marginTop: moderateScale(5),
-    fontFamily: fonts.MEDIUM,
     backgroundColor: colors.WHITE,
   },
   error: {

@@ -26,7 +26,7 @@ export default function EditItem({ route, navigation }) {
 
     return (
         <View style={styles.container}>
-            <View style={{ width: "80%", marginRight: "auto", marginLeft: "auto" }}>
+            <View style={styles.innercontainer}>
                 <Text style={[styles.header,{fontFamily:fonts.BOLD}]}>Edit Item</Text>
                 {
                     Object.entries(route.params.item).map(([key, value]) => {
@@ -53,6 +53,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#fff"
+    },
+    innercontainer:{
+         width: "80%", 
+         marginRight: "auto", 
+         marginLeft: "auto" 
     },
     header: {
         fontSize: 25,

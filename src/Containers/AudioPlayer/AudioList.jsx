@@ -7,12 +7,14 @@ import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 import {moderateScale} from 'react-native-size-matters';
 import {Text} from 'react-native-paper';
+import { useAppContext } from '../../Context/ContextProvider';
 
 const AudioList = () => {
+  const {fonts} = useAppContext()
   return (
     <View style={styles.container}>
-      <Text variant="bodyLarge" style={styles.headerTitle}>
-        TRACKit
+      <Text variant="bodyLarge" style={[styles.headerTitle,{ fontFamily: fonts.BOLD,}]}>
+        Audio Player
       </Text>
       <TopTab
         name1={'All Songs'}
@@ -31,11 +33,10 @@ const styles = StyleSheet.create({
   },
 
   headerTitle: {
-    color: colors.BLACK,
-    fontFamily: fonts.BOLD,
+    color: colors.APP_PRIMARY,
     marginLeft: moderateScale(10),
     marginTop: moderateScale(5),
-    paddingVertical: moderateScale(10),
+    paddingVertical: moderateScale(25),
     fontSize: moderateScale(25),
     alignSelf: 'center',
   },

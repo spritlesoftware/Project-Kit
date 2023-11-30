@@ -7,26 +7,26 @@ export const Inter = {
 };
 
 export const Montserrat = {
-  BOLD: 'Montserrat-Bold',
+  BOLD: 'Montserrat-SemiBold',
   LIGHT: 'Montserrat-Light',
   MEDIUM: 'Montserrat-Medium',
   REGULAR: 'Montserrat-Regular',
-  semiBold: 'Montserrat-SemiBold',
+  SEMIBOLD: 'Montserrat-SemiBold',
 };
 
 export const Poppins = {
-  BOLD: 'Poppins-Bold',
+  BOLD: 'Poppins-SemiBold',
   LIGHT: 'Poppins-Light',
   MEDIUM: 'Poppins-Medium',
   REGULAR: 'Poppins-Regular',
   SEMIBOLD: 'Poppins-SemiBold',
 };
 const font1 = {
-  BOLD: 'Poppins-Bold',
-  LIGHT: 'Poppins-Light',
-  MEDIUM: 'Poppins-Medium',
-  REGULAR: 'Poppins-Regular',
-  SEMIBOLD: 'Poppins-SemiBold',
+  bold: 'Poppins-SemiBold',
+  light: 'Poppins-Light',
+  medium: 'Poppins-Medium',
+  regular: 'Poppins-Regular',
+  semibold: 'Poppins-SemiBold',
 };
 
 export const DMSans = {

@@ -12,8 +12,10 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {Divider, Text} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
 import LoginLogic from '../../Functions/Authentications/Login';
+import { useAppContext } from '../../Context/ContextProvider';
 
 const Login = ({navigation}) => {
+  const {fonts} = useAppContext()
   const {
     email,
     password,
@@ -27,6 +29,10 @@ const Login = ({navigation}) => {
     handlePasswordChange,
   } = LoginLogic(navigation);
 
+  const bold = {fontFamily:fonts.BOLD}
+  const medium = {fontFamily:fonts.MEDIUM}
+  const regular = {fontFamily:fonts.REGULAR}
+
   return (
     <SafeAreaView style={styles.center}>
       <KeyboardAwareScrollView
@@ -36,16 +42,16 @@ const Login = ({navigation}) => {
           <LoginLogo width={200} height={200} />
         </View>
         <View style={styles.titleContainer}>
-          <Text style={styles.headerTitle} variant="displayMedium">
+          <Text style={[styles.headerTitle,medium]} variant="displayMedium">
             KitBox
           </Text>
-          <Text style={styles.headerTitle} variant="headlineSmall">
+          <Text style={[styles.headerTitle,medium]} variant="headlineSmall">
             Sign In
           </Text>
         </View>
         <View style={styles.inputContainer}>
           {!apiError ? (
-            <Text style={styles.apiErrorStyle}>{apiErrorMessage}</Text>
+            <Text style={[styles.apiErrorStyle,regular]}>{apiErrorMessage}</Text>
           ) : null}
           <InputField
             label={'Username'}
@@ -75,7 +81,7 @@ const Login = ({navigation}) => {
                 styles.forgotPassword,
                 {
                   bottom: invalidPassword ? moderateScale(25) : '',
-                },
+                },regular
               ]}>
               Forgot your password?
             </Text>
@@ -84,15 +90,17 @@ const Login = ({navigation}) => {
             title={'Login'}
             onPress={onPressSignin}
             loading={isLoading}
+            width="100%"
+            height="130"
           />
         </View>
         <TouchableOpacity
           style={styles.regContainer}
           onPress={() => navigation.navigate('SignUp')}>
-          <Text style={styles.regText}>Don't have an account? Register</Text>
+          <Text style={[styles.regText,regular]}>Don't have an account? Register</Text>
         </TouchableOpacity>
         <Divider style={styles.divider} />
-        <Text style={styles.orContainer}>Sign in with a social account</Text>
+        <Text style={[styles.orContainer,regular]}>Sign in with a social account</Text>
         <View style={styles.socialContainer}>
           {/* You may need to modify the SocialButton component based on your implementation */}
           <SocialButton icon={<Google width={30} height={30} />} />

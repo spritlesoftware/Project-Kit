@@ -20,7 +20,6 @@ import {
     ScrollView,
     Dimensions,
   } from 'react-native';
-import { fonts } from '../../Utils/fonts';
 import { colors } from '../../Utils/colors';
 import { useAppContext } from '../../Context/ContextProvider';
 
@@ -28,7 +27,7 @@ export const RegisterScreen = ({ navigation }) => {
     useEffect(() => {
         _checkPermissions();
     }, []);
-    const { props, setProps } = useAppContext()
+    const { props, setProps,fonts} = useAppContext()
     const _checkPermissions = (callback) => {
         const iosPermissions = [PERMISSIONS.IOS.CAMERA, PERMISSIONS.IOS.MICROPHONE];
         const androidPermissions = [
@@ -125,7 +124,7 @@ export const RegisterScreen = ({ navigation }) => {
                             style={{padding:15,backgroundColor:colors.APP_PRIMARY,borderRadius:15}}
                             onPress={() => {
                                 _checkPermissions(() => {
-                                    fetch(`https://6d18-113-193-25-170.ngrok-free.app/getToken?userName=${props.userName}`)
+                                    fetch(`https://9d95-113-193-25-170.ngrok-free.app/getToken?userName=${props.userName}`)
                                         .then((response) => {
                                             if (response.ok) {
                                                 response.text().then((jwt) => {

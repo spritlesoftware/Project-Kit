@@ -139,9 +139,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     borderTopWidth: 1,
-    borderTopColor: colors.GREEN,
+    borderTopColor: colors.APP_PRIMARY,
     padding: moderateScale(5),
-    backgroundColor: colors.STATUS_GREEN,
+    backgroundColor: colors.APP_PRIMARY,
   },
 
   controls: {
@@ -154,7 +154,7 @@ const styles = StyleSheet.create({
   playButton: {
     // marginLeft: moderateScale(10),
     marginRight: moderateScale(-10),
-    backgroundColor: colors.STATUS_GREEN,
+    backgroundColor: colors.APP_PRIMARY,
   },
 
   wrapper: {
