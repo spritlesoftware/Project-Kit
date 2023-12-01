@@ -20,6 +20,7 @@ MERGED from [:react-native-permissions] C:\Users\91934\Documents\Kit\Project-Kit
 MERGED from [:react-native-reanimated] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-reanimated\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-safe-area-context] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-screens] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-splash-screen] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-svg] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-track-player] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-25:12
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-22:12
@@ -212,6 +213,8 @@ MERGED from [:react-native-safe-area-context] C:\Users\91934\Documents\Kit\Proje
 MERGED from [:react-native-safe-area-context] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-safe-area-context\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-screens] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-screens] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-screens\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-splash-screen] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-splash-screen] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-splash-screen\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-svg] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-svg] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-track-player] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44

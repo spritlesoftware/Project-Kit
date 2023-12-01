@@ -1,4 +1,4 @@
-import React, {createContext, useContext, useMemo, useState} from 'react';
+import React, {createContext, useContext,useRef, useMemo, useState} from 'react';
 import { TableData } from '../Data/TableData';
 import { DMSans } from '../Theme/Typography';
 const AppContext = createContext();
@@ -26,6 +26,7 @@ const ContextProvider = ({children}) => {
   const [fonts, setFont] = useState(DMSans);
   const [errors, setErrors] = useState({});
   const [formValues, setFormValues] = useState({});
+  const drawer = useRef(null);
 
   const data = useMemo(() => {
     return {
@@ -43,7 +44,8 @@ const ContextProvider = ({children}) => {
       errors,
       setErrors,
       formValues,
-      setFormValues
+      setFormValues,
+      drawer
     };
   }, [queue, currentTrack, favourites,tableData,props,fonts,errors,formValues]);
 

@@ -96,7 +96,7 @@ export default function Themes() {
               <Text
                 style={{
                   fontFamily: fonts.REGULAR,
-                  color: isSelected == name ? colors.APP_PRIMARY : colors.GRAY6,
+                  color: isSelected == name ? colors.APP_PRIMARY : colors.BLACK,
                   fontSize: 15,
                   padding: 12,
                   marginLeft: 38,

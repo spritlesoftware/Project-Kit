@@ -8,7 +8,7 @@ import Cancel from 'react-native-vector-icons/MaterialIcons';
 import {moderateScale} from 'react-native-size-matters';
 import ChatListLogic from '../../Functions/Chat/ChatList';
 import {chatList} from '../../Data/ChatList';
-import { useAppContext } from '../../Context/ContextProvider';
+import {useAppContext} from '../../Context/ContextProvider';
 
 const ChatList = () => {
   const {
@@ -23,7 +23,6 @@ const ChatList = () => {
     handleCancelSearch,
     navigation,
   } = ChatListLogic();
-  
 
   return (
     <View style={styles.container}>

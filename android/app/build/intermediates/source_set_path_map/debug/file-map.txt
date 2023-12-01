@@ -71,8 +71,9 @@ com.kit_box.app-packaged_res-69 C:\Users\91934\Documents\Kit\Project-Kitbox\node
 com.kit_box.app-packaged_res-70 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-reanimated\android\build\intermediates\packaged_res\debug
 com.kit_box.app-packaged_res-71 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
 com.kit_box.app-packaged_res-72 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-73 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-74 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-75 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-76 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug
-com.kit_box.app-packaged_res-77 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vision-camera\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-73 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-splash-screen\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-74 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-75 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-76 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-77 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug
+com.kit_box.app-packaged_res-78 C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vision-camera\android\build\intermediates\packaged_res\debug

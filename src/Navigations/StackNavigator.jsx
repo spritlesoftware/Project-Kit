@@ -7,8 +7,8 @@ import Logout from '../Containers/Authentications/Logout';
 import Form from '../Containers/Forms/Form';
 import RealChat from '../Containers/Chats/RealChat';
 import ChatList from '../Containers/Chats/ChatList';
-import { Videocall } from '../Containers/Videocall/Videocall';
-import { RegisterScreen } from '../Containers/Videocall/RegisterScreen';
+import {Videocall} from '../Containers/Videocall/Videocall';
+import {RegisterScreen} from '../Containers/Videocall/RegisterScreen';
 import NewItem from '../Containers/Table/NewItem';
 import Table from '../Containers/Table/Table';
 import EditItem from '../Containers/Table/EditItem';
@@ -19,15 +19,24 @@ import PlayList from '../Containers/AudioPlayer/PlayListGroup';
 import AudioList from '../Containers/AudioPlayer/AudioList';
 import PlayListTracks from '../Containers/AudioPlayer/PlayListTracks';
 import BarcodeScanner from '../Containers/BarcodeScanner/BarcodeScanner';
-import BarcodeOutput from '../Containers/BarcodeScanner/BarcodeOutput'
+import BarcodeOutput from '../Containers/BarcodeScanner/BarcodeOutput';
 import Tiles from '../Containers/Tiles/Tiles';
 import Chat from '../Containers/Chats/Chat';
+import {useAppContext} from '../Context/ContextProvider';
+import { DrawerLayoutAndroid } from 'react-native';
+import Themes from '../Containers/Tiles/Themes';
 
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
+  const navigationView = () => <Themes />;
+  const {drawer} = useAppContext();
 
   return (
+    <DrawerLayoutAndroid
+      ref={drawer}
+      drawerWidth={300}
+      renderNavigationView={navigationView}>
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
@@ -59,6 +68,7 @@ const StackNavigator = () => {
         <Stack.Screen name="Contacts" component={Contacts} />
         <Stack.Screen name="ChatRoom" component={RealChat} />
       </Stack.Navigator>
+    </DrawerLayoutAndroid>
   );
 };
 
