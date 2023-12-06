@@ -3,6 +3,9 @@
 *.env
 .DS_Store
 
+# Ignore build artifacts
+android/build/
+ios/build/
 # Xcode
 #
 build/
