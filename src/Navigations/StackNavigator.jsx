@@ -25,6 +25,8 @@ import {
 import NewItem from '../Containers/Table/NewItem';
 import {TableData} from '../Data/TableData';
 import Table from '../Containers/Table/Table';
+import {TableData} from '../Data/TableData';
+import Table from '../Containers/Table/Table';
 import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';
 import Contacts from '../Containers/Chats/Contacts';
