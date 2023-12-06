@@ -61,9 +61,7 @@ const Login = ({navigation}) => {
             textContentType="emailAddress"
             value={email}
             onChangeText={handleEmailChange}
-            onChangeText={handleEmailChange}
             error={invalidEmail}
-            errorMsg={'Enter an email address'}
             errorMsg={'Enter an email address'}
           />
           <View style={{marginTop: moderateScale(5)}} />
@@ -73,7 +71,6 @@ const Login = ({navigation}) => {
             textContentType="password"
             secureTextEntry
             value={password}
-            onChangeText={handlePasswordChange}
             onChangeText={handlePasswordChange}
             error={invalidPassword}
             errorMsg={'Enter a password'}
