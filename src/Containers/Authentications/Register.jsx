@@ -29,6 +29,22 @@ const Register = ({navigation}) => {
     handlePasswordChange,
     handleConfirmPasswordChange,
   } = RegisterLogic(navigation);
+const Register = ({navigation}) => {
+  const {
+    email,
+    password,
+    confirmPassword,
+    invalidEmail,
+    invalidPassword,
+    invalidConfirmPassword,
+    apiError,
+    apiErrorMessage,
+    isLoading,
+    onPressSignUp,
+    handleEmailChange,
+    handlePasswordChange,
+    handleConfirmPasswordChange,
+  } = RegisterLogic(navigation);
 
   return (
     <SafeAreaView style={styles.center}>
@@ -67,6 +83,7 @@ const Register = ({navigation}) => {
             secureTextEntry
             value={password}
             onChangeText={handlePasswordChange}
+            onChangeText={handlePasswordChange}
             error={invalidPassword}
             errorMsg={'Enter a password'}
           />
@@ -77,6 +94,7 @@ const Register = ({navigation}) => {
             textContentType="password"
             secureTextEntry
             value={confirmPassword}
+            onChangeText={handleConfirmPasswordChange}
             onChangeText={handleConfirmPasswordChange}
             error={invalidConfirmPassword}
             errorMsg={'Enter a password'}
@@ -90,6 +108,7 @@ const Register = ({navigation}) => {
         </TouchableOpacity>
         <Divider style={styles.divider} />
         <Text style={styles.orContainer}>Sign Up with a social account</Text>
+        <Text style={styles.orContainer}>Sign Up with a social account</Text>
         <View style={styles.socialContainer}>
           <SocialButton icon={<Google width={30} height={30} />} />
         </View>
@@ -98,4 +117,5 @@ const Register = ({navigation}) => {
   );
 };
 
+export default Register;
 export default Register;

@@ -2,6 +2,7 @@
 // ForgotPassword.js
 import {View, SafeAreaView, TouchableOpacity} from 'react-native';
 import React from 'react';
+import React from 'react';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
 import {styles} from './ForgotPasswordStyles';
 import ForgotPassSVG from '../../Assets/images/forgot_password.svg';
@@ -9,7 +10,8 @@ import InputField from '../../Components/TextInput/InputField';
 import {moderateScale} from 'react-native-size-matters';
 import CustomButton from '../../Components/Button/CustomButton';
 import {colors} from '../../Utils/colors';
-import {ActivityIndicator, Button, Text} from 'react-native-paper';
+import {ActivityIndicator, Text} from 'react-native-paper';
+import useForgotPasswordLogic from '../../Functions/ForgotPassword';
 
 const ForgotPassword = ({navigation}) => {
   const {
@@ -69,6 +71,7 @@ const ForgotPassword = ({navigation}) => {
             placeholder={'Enter email addeess'}
             textContentType="emailAddress"
             value={email}
+            onChangeText={text => setEmail(text)}
             onChangeText={text => setEmail(text)}
           />
           <Text style={styles.infoText}>
