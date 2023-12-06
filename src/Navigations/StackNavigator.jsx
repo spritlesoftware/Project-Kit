@@ -44,6 +44,8 @@ import Themes from '../Containers/Tiles/Themes';
 
 const Stack = createNativeStackNavigator();
 
+export const AppContext = React.createContext();
+
 const StackNavigator = () => {
   const navigationView = () => <Themes />;
   const {drawer} = useAppContext();

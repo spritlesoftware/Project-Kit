@@ -1,4 +1,5 @@
 // ForgotPassword.js
+// ForgotPassword.js
 import {View, SafeAreaView, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -8,8 +9,7 @@ import InputField from '../../Components/TextInput/InputField';
 import {moderateScale} from 'react-native-size-matters';
 import CustomButton from '../../Components/Button/CustomButton';
 import {colors} from '../../Utils/colors';
-import {ActivityIndicator, Text} from 'react-native-paper';
-import ForgotPasswordLogic from '../../Functions/Authentications/ForgotPassword';
+import {ActivityIndicator, Button, Text} from 'react-native-paper';
 
 const ForgotPassword = ({navigation}) => {
   const {
@@ -53,6 +53,7 @@ const ForgotPassword = ({navigation}) => {
       </>
     );
   };
+  };
 
   const renderEmailScreen = () => {
     return (
@@ -75,6 +76,7 @@ const ForgotPassword = ({navigation}) => {
           </Text>
           <CustomButton
             title={'Submit'}
+            onPress={submitEmailAddress}
             onPress={submitEmailAddress}
             loading={isLoading}
           />
@@ -119,6 +121,9 @@ const ForgotPassword = ({navigation}) => {
           onChangeText={text =>
             setInvalidToken(false) || setError(false) || setToken(text)
           }
+          onChangeText={text =>
+            setInvalidToken(false) || setError(false) || setToken(text)
+          }
           keyboardType={'numeric'}
         />
         {invalidToken ? (
@@ -160,6 +165,12 @@ const ForgotPassword = ({navigation}) => {
             setPasswordMismatch(false) ||
             setNewPassword(text)
           }
+          onChangeText={text =>
+            setError(false) ||
+            setInvalidPassword(false) ||
+            setPasswordMismatch(false) ||
+            setNewPassword(text)
+          }
           keyboardType={'default'}
         />
         {invalidPassword ? (
@@ -177,6 +188,12 @@ const ForgotPassword = ({navigation}) => {
         <InputField
           placeholder={'Confirm Password'}
           value={confirmPassword}
+          onChangeText={text =>
+            setError(false) ||
+            setPasswordMismatch(false) ||
+            setInvalidPassword(false) ||
+            setConfirmPassword(text)
+          }
           onChangeText={text =>
             setError(false) ||
             setPasswordMismatch(false) ||
@@ -201,6 +218,7 @@ const ForgotPassword = ({navigation}) => {
           <CustomButton
             style={{alignSelf: 'center', marginTop: moderateScale(40)}}
             title={'Submit'}
+            onPress={verifyPassword}
             onPress={verifyPassword}
             isLoading={isLoading}
           />

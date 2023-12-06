@@ -11,9 +11,9 @@ import {useNavigation} from '@react-navigation/core';
 const Lists = ({items, groupContact}) => {
   const Item = items.item;
   const navigation = useNavigation();
-  const bold = {fontFamily:fonts.BOLD}
-  const medium = {fontFamily:fonts.MEDIUM}
-  const regular = {fontFamily:fonts.REGULAR}
+  const bold = {fontFamily: fonts.BOLD};
+  const medium = {fontFamily: fonts.MEDIUM};
+  const regular = {fontFamily: fonts.REGULAR};
   return (
     <TouchableRipple
       style={styles.container}
@@ -98,7 +98,11 @@ const Lists = ({items, groupContact}) => {
               : Item.msg_read !== undefined && (
                   <Icon
                     source={() => (
-                      <Dot name="dot-fill" color={colors.APP_PRIMARY} size={20} />
+                      <Dot
+                        name="dot-fill"
+                        color={colors.APP_PRIMARY}
+                        size={20}
+                      />
                     )}
                   />
                 )}

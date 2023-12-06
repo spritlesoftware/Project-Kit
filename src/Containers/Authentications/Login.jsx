@@ -12,10 +12,10 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {Divider, Text} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
 import LoginLogic from '../../Functions/Authentications/Login';
-import { useAppContext } from '../../Context/ContextProvider';
+import {useAppContext} from '../../Context/ContextProvider';
 
 const Login = ({navigation}) => {
-  const {fonts} = useAppContext()
+  const {fonts} = useAppContext();
   const {
     email,
     password,
@@ -29,9 +29,9 @@ const Login = ({navigation}) => {
     handlePasswordChange,
   } = LoginLogic(navigation);
 
-  const bold = {fontFamily:fonts.BOLD}
-  const medium = {fontFamily:fonts.MEDIUM}
-  const regular = {fontFamily:fonts.REGULAR}
+  const bold = {fontFamily: fonts.BOLD};
+  const medium = {fontFamily: fonts.MEDIUM};
+  const regular = {fontFamily: fonts.REGULAR};
 
   return (
     <SafeAreaView style={styles.center}>
@@ -42,16 +42,18 @@ const Login = ({navigation}) => {
           <LoginLogo width={200} height={200} />
         </View>
         <View style={styles.titleContainer}>
-          <Text style={[styles.headerTitle,medium]} variant="displayMedium">
+          <Text style={[styles.headerTitle, medium]} variant="displayMedium">
             KitBox
           </Text>
-          <Text style={[styles.headerTitle,medium]} variant="headlineSmall">
+          <Text style={[styles.headerTitle, medium]} variant="headlineSmall">
             Sign In
           </Text>
         </View>
         <View style={styles.inputContainer}>
           {!apiError ? (
-            <Text style={[styles.apiErrorStyle,regular]}>{apiErrorMessage}</Text>
+            <Text style={[styles.apiErrorStyle, regular]}>
+              {apiErrorMessage}
+            </Text>
           ) : null}
           <InputField
             label={'Username'}
@@ -59,7 +61,9 @@ const Login = ({navigation}) => {
             textContentType="emailAddress"
             value={email}
             onChangeText={handleEmailChange}
+            onChangeText={handleEmailChange}
             error={invalidEmail}
+            errorMsg={'Enter an email address'}
             errorMsg={'Enter an email address'}
           />
           <View style={{marginTop: moderateScale(5)}} />
@@ -69,6 +73,7 @@ const Login = ({navigation}) => {
             textContentType="password"
             secureTextEntry
             value={password}
+            onChangeText={handlePasswordChange}
             onChangeText={handlePasswordChange}
             error={invalidPassword}
             errorMsg={'Enter a password'}
@@ -81,7 +86,8 @@ const Login = ({navigation}) => {
                 styles.forgotPassword,
                 {
                   bottom: invalidPassword ? moderateScale(25) : '',
-                },regular
+                },
+                regular,
               ]}>
               Forgot your password?
             </Text>
@@ -97,11 +103,16 @@ const Login = ({navigation}) => {
         <TouchableOpacity
           style={styles.regContainer}
           onPress={() => navigation.navigate('SignUp')}>
-          <Text style={[styles.regText,regular]}>Don't have an account? Register</Text>
+          <Text style={[styles.regText, regular]}>
+            Don't have an account? Register
+          </Text>
         </TouchableOpacity>
         <Divider style={styles.divider} />
-        <Text style={[styles.orContainer,regular]}>Sign in with a social account</Text>
+        <Text style={[styles.orContainer, regular]}>
+          Sign in with a social account
+        </Text>
         <View style={styles.socialContainer}>
+          {/* You may need to modify the SocialButton component based on your implementation */}
           {/* You may need to modify the SocialButton component based on your implementation */}
           <SocialButton icon={<Google width={30} height={30} />} />
         </View>
