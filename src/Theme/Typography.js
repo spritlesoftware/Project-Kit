@@ -1,9 +1,9 @@
 export const Inter = {
   BOLD: 'Inter-Bold',
   LIGHT: 'Inter-Light',
-   MEDIUM: 'Inter-Medium',
-   REGULAR: 'Inter-Regular',
-   SEMIBOLD: 'Inter-SemiBold',
+  MEDIUM: 'Inter-Medium',
+  REGULAR: 'Inter-Regular',
+  SEMIBOLD: 'Inter-SemiBold',
 };
 
 export const Montserrat = {
@@ -35,7 +35,7 @@ export const DMSans = {
   MEDIUM: 'DMSans-Medium',
   REGULAR: 'DMSans-Regular',
   SEMIBOLD: 'DMSans-SemiBold',
-}
+};
 
 export const typography = {
   font1,

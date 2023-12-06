@@ -23,7 +23,7 @@ import BarcodeOutput from '../Containers/BarcodeScanner/BarcodeOutput';
 import Tiles from '../Containers/Tiles/Tiles';
 import Chat from '../Containers/Chats/Chat';
 import {useAppContext} from '../Context/ContextProvider';
-import { DrawerLayoutAndroid } from 'react-native';
+import {DrawerLayoutAndroid} from 'react-native';
 import Themes from '../Containers/Tiles/Themes';
 
 const Stack = createNativeStackNavigator();

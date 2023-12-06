@@ -45,7 +45,7 @@ export default function Table({navigation}) {
           style={{
             fontSize: 25,
             padding: 30,
-            marginTop:10,
+            marginTop: 10,
             color: colors.APP_PRIMARY,
             fontFamily: fonts.BOLD,
           }}>

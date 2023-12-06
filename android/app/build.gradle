@@ -82,12 +82,6 @@ android {
         versionName "1.0"
     }
     signingConfigs {
-    release {
-      storeFile file('Janani.keystore')
-      storePassword 'Janani@19'
-      keyAlias 'Raveena'
-      keyPassword 'Janani@19'
-    }
         debug {
             storeFile file('debug.keystore')
             storePassword 'android'
@@ -97,7 +91,6 @@ android {
     }
     buildTypes {
         debug {
-            signingConfig signingConfigs.release
             signingConfig signingConfigs.debug
         }
         release {
@@ -113,7 +106,6 @@ android {
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
-    // implementation (':react-native-splash-screen')
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
     debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
