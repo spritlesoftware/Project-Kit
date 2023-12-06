@@ -9,7 +9,21 @@ import RealChat from '../Containers/Chats/RealChat';
 import ChatList from '../Containers/Chats/ChatList';
 import {Videocall} from '../Containers/Videocall/Videocall';
 import {RegisterScreen} from '../Containers/Videocall/RegisterScreen';
+import {
+  StyleSheet,
+  View,
+  Text,
+  StatusBar,
+  TouchableOpacity,
+  TextInput,
+  Alert,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+  Dimensions,
+} from 'react-native';
 import NewItem from '../Containers/Table/NewItem';
+import {TableData} from '../Data/TableData';
 import Table from '../Containers/Table/Table';
 import EditItem from '../Containers/Table/EditItem';
 import GroupList from '../Containers/Chats/GroupList';

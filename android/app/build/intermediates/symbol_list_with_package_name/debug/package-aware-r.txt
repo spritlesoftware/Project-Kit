@@ -1247,6 +1247,9 @@ attr triggerId
 attr triggerReceiver
 attr triggerSlack
 attr ttcIndex
+attr tviMirror
+attr tviOverlaySurface
+attr tviScaleType
 attr useCompatPadding
 attr useDrawerArrowDrawable
 attr useMaterialThemeColors
@@ -3075,6 +3078,7 @@ id autofill_inline_suggestion_end_icon
 id autofill_inline_suggestion_start_icon
 id autofill_inline_suggestion_subtitle
 id autofill_inline_suggestion_title
+id balanced
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3158,6 +3162,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id fit
 id fitBottomStart
 id fitCenter
 id fitEnd
@@ -5147,6 +5152,8 @@ styleable Tooltip android_textAppearance android_textColor android_padding andro
 styleable Transform android_transformPivotX android_transformPivotY android_translationX android_translationY android_scaleX android_scaleY android_rotation android_rotationX android_rotationY android_translationZ android_elevation
 styleable Transition android_id autoTransition constraintSetEnd constraintSetStart duration layoutDuringTransition motionInterpolator pathMotionArc staggered transitionDisable transitionFlags
 styleable Variant constraints region_heightLessThan region_heightMoreThan region_widthLessThan region_widthMoreThan
+styleable VideoTextureView tviMirror tviScaleType
+styleable VideoView tviMirror tviOverlaySurface tviScaleType
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation

@@ -8909,7 +8909,11 @@ prompts@^2.0.1, prompts@^2.3.2, prompts@^2.4.0:
     sisteransi "^1.0.5"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 prop-types@*, prop-types@^15.5.10, prop-types@^15.5.6, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.7.x, prop-types@^15.8.1:
+=======
+prop-types@*, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+>>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
 =======
 prop-types@*, prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
 >>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
@@ -9076,6 +9080,7 @@ react-is@^17.0.1:
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 react-is@^18.0.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react-is/-/react-is-18.2.0.tgz"
@@ -9115,6 +9120,8 @@ react-native-document-picker@^9.0.1:
 
 =======
 >>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
+=======
+>>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
 react-native-dotenv@^3.4.9:
   version "3.4.9"
   resolved "https://registry.npmjs.org/react-native-dotenv/-/react-native-dotenv-3.4.9.tgz"
@@ -9123,7 +9130,10 @@ react-native-dotenv@^3.4.9:
     dotenv "^16.3.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
 react-native-drawer-layout@^3.2.2:
   version "3.2.2"
   resolved "https://registry.npmjs.org/react-native-drawer-layout/-/react-native-drawer-layout-3.2.2.tgz"
@@ -9131,6 +9141,9 @@ react-native-drawer-layout@^3.2.2:
   dependencies:
     use-latest-callback "^0.1.5"
 
+<<<<<<< HEAD
+>>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
+=======
 >>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
 react-native-drawer@^2.5.1:
   version "2.5.1"
@@ -9146,7 +9159,11 @@ react-native-gesture-bottom-sheet@^1.1.0:
   integrity sha512-1kF6wwtN9cPOav9iNC1hZ9gdpILucQ4vTgUYjyCHGc100WTgm6j7QDclT3a12Ge8X4PTsZF1PRZreGGIkGJKUg==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 react-native-gesture-handler@^2.13.4:
+=======
+react-native-gesture-handler@^2.13.4, "react-native-gesture-handler@>= 1.0.0":
+>>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
 =======
 react-native-gesture-handler@^2.13.4, "react-native-gesture-handler@>= 1.0.0":
 >>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
@@ -9246,6 +9263,7 @@ react-native-permissions@^3.10.1:
   integrity sha512-Gc5BxxpjZn4QNUDiVeHOO0vXh3AH7ToolmwTJozqC6DsxV7NAf3ttap+8BSmzDR8WxuAM3Cror+YNiBhHJx7/w==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 react-native-qrcode-scanner@^1.5.5:
   version "1.5.5"
   resolved "https://registry.npmjs.org/react-native-qrcode-scanner/-/react-native-qrcode-scanner-1.5.5.tgz"
@@ -9256,6 +9274,9 @@ react-native-qrcode-scanner@^1.5.5:
     react-native-permissions "^2.0.2"
 
 react-native-reanimated@^3.5.4:
+=======
+"react-native-reanimated@>= 1.0.0":
+>>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
 =======
 "react-native-reanimated@>= 1.0.0":
 >>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
@@ -9354,12 +9375,16 @@ react-native-vector-icons@*, react-native-vector-icons@^10.0.1:
     yargs "^16.1.1"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 react-native-vision-camera@^3.6.11:
   version "3.6.11"
   resolved "https://registry.npmjs.org/react-native-vision-camera/-/react-native-vision-camera-3.6.11.tgz"
   integrity sha512-NDmOEAFeFPbG+ypziv1SL/3I4P3jXabF7MNdcHE3qXvyAw/WxlXDAPLrnK3njZ96tDem8y31jAtTreVQ3racew==
 
 react-native@*, "react-native@^0.0.0-0 || >=0.60 <1.0", react-native@>=0.42.0, react-native@>=0.46, react-native@>=0.48.4, react-native@>=0.57.0, react-native@>=0.59.0, react-native@>=0.60.0, react-native@>=0.60.0-rc.2, react-native@>=0.61.0, react-native@>=0.61.5, react-native@>=0.63.3, react-native@0.72.6:
+=======
+react-native@*, react-native@>=0.42.0, react-native@>=0.48.4, react-native@>=0.59.0, react-native@>=0.63.3, react-native@0.72.6:
+>>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
 =======
 react-native@*, react-native@>=0.42.0, react-native@>=0.48.4, react-native@>=0.59.0, react-native@>=0.63.3, react-native@0.72.6:
 >>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
@@ -9427,7 +9452,11 @@ react-test-renderer@18.2.0:
     scheduler "^0.23.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@>=16.13.1, react@>=16.3.0, react@>=16.8, react@>=16.8.0, react@>=16.8.6, react@>=16.9.0, react@>=17.0.0, react@18.2.0:
+=======
+react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@>=16.13.1, react@>=16.3.0, react@>=16.8, react@>=17.0.0, react@18.2.0:
+>>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
 =======
 react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@>=16.13.1, react@>=16.3.0, react@>=16.8, react@>=17.0.0, react@18.2.0:
 >>>>>>> 60209ce0ffb3cb9053fdaab149234c63bc1f4165
