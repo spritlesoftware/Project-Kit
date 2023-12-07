@@ -7,7 +7,7 @@ export const fonts = {
   MEDIUM:
     Platform.OS === 'ios' ? typography.font1.medium : typography.font1.medium, //500
   BOLD:
-    Platform.OS === 'ios' ? typography.font1.bold : typography.font1.semiBold, //800
+    Platform.OS === 'ios' ? typography.font1.bold : typography.font1.semibold, //800
   LIGHT:
     Platform.OS === 'ios' ? typography.font1.light : typography.font1.light, //300
 };

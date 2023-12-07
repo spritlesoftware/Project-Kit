@@ -7,9 +7,9 @@ import { AppContext } from '../../Navigations/StackNavigator';
 import { fonts } from "../../Utils/fonts";
 import CustomButton from "../../Components/Button/CustomButton";
 import { colors } from "../../Utils/colors";
-
+import {useAppContext} from '../../Context/ContextProvider';
 export default function Table({ navigation }) {
-    const { tableData, setTableData } = useContext(AppContext);
+    const { tableData, setTableData } = useAppContext();
     const headings = Object.keys(tableData[0])
     const bottomSheet = useRef();
     const [isClickedId, setIsClickedId] = useState("")
