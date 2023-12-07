@@ -19,7 +19,7 @@ const MenuPopup = props => {
       onDismiss={closeMenu}
       anchor={
         <Button onPress={() => openMenu()}>
-          <MenuIcon name="dots-three-vertical" color={colors.BLACK} size={15} />
+          <MenuIcon name="dots-three-vertical" color={colors.WHITE} size={15} />
         </Button>
       }>
       <Menu.Item onPress={() => {}} title="Item 1" />
