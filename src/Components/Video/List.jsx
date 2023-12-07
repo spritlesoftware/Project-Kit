@@ -1,17 +1,22 @@
 import {View, TouchableOpacity, Image} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import {moderateScale} from 'react-native-size-matters';
 import {styles} from './ListStyle';
 import {Text} from 'react-native-paper';
 import Menu from 'react-native-vector-icons/Entypo';
 import {colors} from '../../Utils/colors';
+import {useNavigation} from '@react-navigation/native';
+import BottomDrawer from '../Drawer/BottomDrawer';
 
 const List = props => {
   const {item, index} = props.item;
-  console.log(props);
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container} key={index}>
-      <TouchableOpacity style={styles.listContainer}>
+      <TouchableOpacity
+        style={styles.listContainer}
+        onPress={() => navigation.navigate('VideoCarousel')}>
         <View style={styles.thumbnailContainer}>
           <Image
             source={{
@@ -29,7 +34,9 @@ const List = props => {
           </Text>
           <Text style={styles.quality}>{item.quality}</Text>
         </View>
-        <TouchableOpacity style={styles.menuContainer}>
+        <TouchableOpacity
+          style={styles.menuContainer}
+          onPress={() => props.handleDrawerToggle()}>
           <Menu
             name="dots-three-vertical"
             color={colors.BLACK}
