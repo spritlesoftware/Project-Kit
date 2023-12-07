@@ -1,34 +1,44 @@
-const fonts = {
-    montserrat: {
-      black: 'Montserrat-Black',
-      blackItalic: 'Montserrat-BlackItalic',
-      bold: 'Montserrat-Bold',
-      boldItalic: 'Montserrat-BoldItalic',
-      extraBold: 'Montserrat-ExtraBold',
-      extraBoldItalic: 'Montserrat-ExtraBoldItalic',
-      extraLight: 'Montserrat-ExtraLight',
-      extraLightItalic: 'Montserrat-ExtraLightItalic',
-      italic: 'Montserrat-Italic',
-      light: 'Montserrat-Light',
-      lightItalic: 'Montserrat-LightItalic',
-      medium: 'Montserrat-Medium',
-      mediumItalic: 'Montserrat-MediumItalic',
-      regular: 'Montserrat-Regular',
-      semiBold: 'Montserrat-SemiBold',
-      semiBoldItalic: 'Montserrat-SemiBoldItalic',
-      thin: 'Montserrat-Thin',
-      thinItalic: 'Montserrat-ThinItalic',
-    },
-  };
-  
-  export const typography = {
-    /**
-     * The fonts are available to use, but prefer using the semantic name.
-     */
-    fonts,
-    /**
-     * The primary font. Used in most places.
-     */
-    primary: fonts.montserrat,
-  };
+export const Inter = {
+  BOLD: 'Inter-Bold',
+  LIGHT: 'Inter-Light',
+  MEDIUM: 'Inter-Medium',
+  REGULAR: 'Inter-Regular',
+  SEMIBOLD: 'Inter-SemiBold',
+};
+
+export const Montserrat = {
+  BOLD: 'Montserrat-SemiBold',
+  LIGHT: 'Montserrat-Light',
+  MEDIUM: 'Montserrat-Medium',
+  REGULAR: 'Montserrat-Regular',
+  SEMIBOLD: 'Montserrat-SemiBold',
+};
+
+export const Poppins = {
+  BOLD: 'Poppins-SemiBold',
+  LIGHT: 'Poppins-Light',
+  MEDIUM: 'Poppins-Medium',
+  REGULAR: 'Poppins-Regular',
+  SEMIBOLD: 'Poppins-SemiBold',
+};
+const font1 = {
+  bold: 'Poppins-SemiBold',
+  light: 'Poppins-Light',
+  medium: 'Poppins-Medium',
+  regular: 'Poppins-Regular',
+  semibold: 'Poppins-SemiBold',
+};
+
+export const DMSans = {
+  BOLD: 'DMSans-SemiBold',
+  LIGHT: 'DMSans-Light',
+  MEDIUM: 'DMSans-Medium',
+  REGULAR: 'DMSans-Regular',
+  SEMIBOLD: 'DMSans-SemiBold',
+};
+
+export const typography = {
+  font1,
+};
+
   
