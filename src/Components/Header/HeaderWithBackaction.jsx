@@ -9,7 +9,7 @@ import MenuPopup from '../Menu/Menu';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const HeaderWithBackaction = ({title, openMenu}) => {
+const HeaderWithBackaction = ({title, openMenu, isChat}) => {
   const navigation = useNavigation();
 
   const _goBack = () => navigation.navigate('ChatList');
@@ -21,28 +21,34 @@ const HeaderWithBackaction = ({title, openMenu}) => {
   return (
     <Appbar.Header style={styles.headerContainer}>
       <Appbar.BackAction
-        color={colors.BLACK}
+        color={colors.WHITE}
         size={25}
         onPress={() => navigation.goBack()}
       />
-      <Avatar.Image
-        size={30}
-        source={require('../../Assets/images/avatar.png')}
-      />
+      {isChat && (
+        <Avatar.Image
+          size={30}
+          source={require('../../Assets/images/avatar.png')}
+        />
+      )}
       <Appbar.Content
         title={title !== '' ? title : 'title'}
         titleStyle={styles.title}
       />
-      <Appbar.Action
-        style={[styles.connection, {left: moderateScale(20)}]}
-        icon={() => <Icon name="video" color={colors.BLACK} size={20} />}
-        onPress={() => {}}
-      />
-      <Appbar.Action
-        style={[styles.connection, {left: moderateScale(20)}]}
-        icon={() => <Icon name="phone" color={colors.BLACK} size={18} />}
-        onPress={() => {}}
-      />
+      {isChat && (
+        <>
+          <Appbar.Action
+            style={[styles.connection, {left: moderateScale(20)}]}
+            icon={() => <Icon name="video" color={colors.BLACK} size={20} />}
+            onPress={() => {}}
+          />
+          <Appbar.Action
+            style={[styles.connection, {left: moderateScale(20)}]}
+            icon={() => <Icon name="phone" color={colors.BLACK} size={18} />}
+            onPress={() => {}}
+          />
+        </>
+      )}
       <MenuPopup />
     </Appbar.Header>
   );
@@ -52,7 +58,7 @@ export default HeaderWithBackaction;
 
 const styles = StyleSheet.create({
   headerContainer: {
-    backgroundColor: colors.WHITE,
+    backgroundColor: colors.APP_PRIMARY,
     color: colors.BLACK,
     borderBottomWidth: 0.5,
     // shadowColor: colors.BLACK,
@@ -70,7 +76,7 @@ const styles = StyleSheet.create({
     fontFamily: fonts.BOLD,
     fontSize: moderateScale(16),
     marginLeft: moderateScale(10),
-    color: colors.BLACK,
+    color: colors.WHITE,
   },
 
   connection: {
