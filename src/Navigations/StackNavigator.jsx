@@ -27,6 +27,8 @@ import {useAppContext} from '../Context/ContextProvider';
 import {DrawerLayoutAndroid} from 'react-native';
 import Themes from '../Containers/Tiles/Themes';
 import Chat from '../Containers/Chats/Chat';
+import VideoList from '../Containers/VideoPlayer/VideoList';
+import VideoCarousel from '../Components/Video/VideoCarousel';
 
 export const initialState = {
   isAudioEnabled: true,
@@ -60,6 +62,8 @@ const StackNavigator = () => {
         }}
         initialRouteName="Tiles">
         <Stack.Screen name="Tiles" component={Tiles} />
+        <Stack.Screen name="VideoList" component={VideoList} />
+        <Stack.Screen name="VideoCarousel" component={VideoCarousel} />
         <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
         <Stack.Screen name="BarcodeOutput" component={BarcodeOutput} />
         <Stack.Screen name="AudioList" component={AudioList} />
