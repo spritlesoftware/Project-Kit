@@ -1,15 +1,32 @@
-import React, {createContext, useContext, useMemo, useState} from 'react';
-
+import React, {createContext, useContext,useRef, useMemo, useState} from 'react';
+import { TableData } from '../Data/TableData';
+import { DMSans } from '../Theme/Typography';
 const AppContext = createContext();
 
 export const useAppContext = () => {
   return useContext(AppContext);
 };
+export const initialState = {
+  isAudioEnabled: true,
+  status: 'disconnected',
+  participants: [],
+  videoTracks: new Map(),
+  userName: '',
+  roomName: '',
+  token: '',
+};
 
 const ContextProvider = ({children}) => {
+
   const [queue, setQueue] = useState([]);
   const [currentTrack, setCurrentTrack] = useState([]);
   const [favourites, setFavourites] = useState([]);
+  const [props, setProps] = useState(initialState);
+  const [tableData, setTableData] = useState(TableData);
+  const [fonts, setFont] = useState(DMSans);
+  const [errors, setErrors] = useState({});
+  const [formValues, setFormValues] = useState({});
+  const drawer = useRef(null);
 
   const data = useMemo(() => {
     return {
@@ -19,8 +36,18 @@ const ContextProvider = ({children}) => {
       setCurrentTrack,
       favourites,
       setFavourites,
+      props,setProps,
+      tableData,
+      setTableData,
+      fonts,
+      setFont,
+      errors,
+      setErrors,
+      formValues,
+      setFormValues,
+      drawer
     };
-  }, [queue, currentTrack, favourites]);
+  }, [queue, currentTrack, favourites,tableData,props,fonts,errors,formValues]);
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
 };

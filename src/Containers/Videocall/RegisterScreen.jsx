@@ -6,7 +6,7 @@ import {
     PERMISSIONS,
     RESULTS,
 } from 'react-native-permissions';
-import { AppContext } from '../../Navigations/StackNavigator';
+import { useAppContext } from '../../Context/ContextProvider';
 import {
     StyleSheet,
     View,
@@ -27,7 +27,7 @@ export const RegisterScreen = ({ navigation }) => {
     useEffect(() => {
         _checkPermissions();
     }, []);
-    const { props, setProps } = useContext(AppContext);
+    const { props, setProps } = useAppContext();
     const _checkPermissions = (callback) => {
         const iosPermissions = [PERMISSIONS.IOS.CAMERA, PERMISSIONS.IOS.MICROPHONE];
         const androidPermissions = [
