@@ -6,17 +6,8 @@ import {
   PanResponder,
   StatusBar,
 } from 'react-native';
-import Video from 'react-native-video';
 import Orientation from 'react-native-orientation-locker';
-import Slider from '@react-native-community/slider';
-import {moderateScale} from 'react-native-size-matters';
-import {Text} from 'react-native-paper';
-import {styles} from './VideoCarouselStyle';
-import {colors} from '../../Utils/colors';
-import HeaderWithBackaction from '../Header/HeaderWithBackaction';
-import Heart from 'react-native-vector-icons/AntDesign';
 import {useRoute} from '@react-navigation/native';
-import Loader from '../Loader/Loader';
 import {GetFirebaseData} from '../../Containers/Firebase';
 
 const VideoCarouselLogic = () => {
