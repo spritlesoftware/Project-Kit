@@ -1,123 +1,41 @@
-import React, {useRef, useState, useEffect} from 'react';
-import {
-  View,
-  TouchableOpacity,
-  Image,
-  StyleSheet,
-  ScrollView,
-  PanResponder,
-  StatusBar,
-} from 'react-native';
-import Video from 'react-native-video';
-import Orientation from 'react-native-orientation-locker';
-import Slider from '@react-native-community/slider';
+import React from 'react';
+import {ScrollView, View, Text, Image, TouchableOpacity} from 'react-native';
 import {moderateScale} from 'react-native-size-matters';
-import {Text} from 'react-native-paper';
-import {styles} from './VideoPlayerStyle';
-import {colors} from '../../Utils/colors';
-import HeaderWithBackaction from '../../Components/Header/HeaderWithBackaction';
+import VideoCarouselLogic from '../../Functions/Video/VideoPlayer';
 import Heart from 'react-native-vector-icons/AntDesign';
-import {useRoute} from '@react-navigation/native';
+import HeaderWithBackaction from '../../Components/Header/HeaderWithBackaction';
 import Loader from '../../Components/Loader/Loader';
-import {GetFirebaseData} from '../Firebase';
+import {styles} from './VideoPlayerStyle';
+import Video from 'react-native-video';
+import {colors} from '../../Utils/colors';
+import Slider from '@react-native-community/slider';
 
 const VideoPlayer = () => {
-  const [paused, setPaused] = useState(true);
-  const [progress, setProgress] = useState({
-    currentTime: 0,
-    seekableDuration: 0,
-  });
-  const [fullScreen, setFullScreen] = useState(false);
-  const [controlsVisible, setControlsVisible] = useState(true);
-  const route = useRoute();
-  const {id, title} = route.params;
-
-  const controlsTimeout = useRef(null);
-  const ref = useRef();
-
-  const format = seconds => {
-    let mins = parseInt(seconds / 60)
-      .toString()
-      .padStart(2, '0');
-    let secs = (Math.trunc(seconds) % 60).toString().padStart(2, '0');
-    return `${mins}:${secs}`;
-  };
-
-  const resetControlsTimeout = () => {
-    if (controlsTimeout.current) {
-      clearTimeout(controlsTimeout.current);
-    }
-
-    // Set a timeout to hide controls after 5000 milliseconds
-    controlsTimeout.current = setTimeout(() => {
-      setControlsVisible(false);
-    }, 5000);
-  };
-
-  useEffect(() => {
-    resetControlsTimeout();
-  }, [controlsVisible]);
-
-  const toggleControlsVisibility = () => {
-    setControlsVisible(!controlsVisible);
-    resetControlsTimeout();
-  };
-
-  // Use state to store the user data
-  const [video, setVideo] = useState({
-    id: null, // initialize with null
-    video_url: '',
-  });
-  const [isLoading, setIsLoading] = useState(true); // set initial loading state to true
-  const {user} = GetFirebaseData('Video-Player');
-
-  useEffect(() => {
-    // Check if the user data is available and set it in the state
-    if (user?._data) {
-      const targetObject = user._data.data.find(item => item.id === id);
-      setVideo(targetObject || {}); // handle case where targetObject is undefined
-      if (targetObject?.video_url) {
-        setIsLoading(false);
-      }
-    }
-  }, [user, route.params]);
-
-  useEffect(() => {
-    console.log('currentTime:', progress.currentTime);
-    console.log('seekableDuration:', progress.seekableDuration);
-  }, [progress]);
-
-  const panResponder = PanResponder.create({
-    onStartShouldSetPanResponder: () => true,
-    onPanResponderMove: (evt, gestureState) => {
-      const newProgress = Math.max(
-        0,
-        Math.min(
-          progress.seekableDuration,
-          progress.currentTime + gestureState.dx,
-        ),
-      );
-      setProgress({...progress, currentTime: newProgress});
-      ref.current.seek(newProgress);
-    },
-  });
-
-  const handleFullScreenToggle = () => {
-    if (fullScreen) {
-      Orientation.lockToPortrait();
-      StatusBar.setHidden(false); // Show the status bar when exiting full screen
-    } else {
-      Orientation.lockToLandscape();
-      StatusBar.setHidden(true); // Hide the status bar when entering full screen
-    }
-    setFullScreen(!fullScreen);
-  };
-
-  console.log(progress);
+  const {
+    paused,
+    setPaused,
+    progress,
+    setProgress,
+    fullScreen,
+    setFullScreen,
+    controlsVisible,
+    setControlsVisible,
+    route,
+    ref,
+    format,
+    resetControlsTimeout,
+    toggleControlsVisibility,
+    video,
+    isLoading,
+    panResponder,
+    handleFullScreenToggle,
+    onSliderTap,
+    onSliderLayout,
+  } = VideoCarouselLogic();
 
   return (
     <View style={styles.container}>
-      {!fullScreen && <HeaderWithBackaction title={title} />}
+      {!fullScreen && <HeaderWithBackaction title={video.title} />}
       {isLoading ? (
         <Loader />
       ) : (
@@ -241,7 +159,10 @@ const VideoPlayer = () => {
                       />
                     </TouchableOpacity>
                   </View>
-                  <View style={styles.sliderContainer}>
+                  <View
+                    style={styles.sliderContainer}
+                    onTouchStart={onSliderTap}
+                    onLayout={onSliderLayout}>
                     <Text style={styles.timerText}>
                       {format(progress.currentTime)}
                     </Text>
@@ -266,7 +187,6 @@ const VideoPlayer = () => {
               </View>
             )}
           </TouchableOpacity>
-          {/* info container */}
           <ScrollView style={styles.infoContainer}>
             <Text variant="headlineSmall" style={styles.title}>
               {video.title}

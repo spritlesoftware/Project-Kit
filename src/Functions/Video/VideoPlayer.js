@@ -71,11 +71,6 @@ const VideoCarouselLogic = () => {
     }
   }, [user, route.params]);
 
-  useEffect(() => {
-    console.log('currentTime:', progress.currentTime);
-    console.log('seekableDuration:', progress.seekableDuration);
-  }, [progress]);
-
   const panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onPanResponderMove: (evt, gestureState) => {
@@ -102,6 +97,25 @@ const VideoCarouselLogic = () => {
     setFullScreen(!fullScreen);
   };
 
+  const [sliderWidth, setSliderWidth] = useState(0);
+
+  const onSliderLayout = event => {
+    setSliderWidth(event.nativeEvent.layout.width);
+  };
+
+  const onSliderTap = event => {
+    if (sliderWidth === 0) {
+      return; // Handle the case where layout information is not available yet
+    }
+
+    const position = event.nativeEvent.locationX;
+    const percentage = position / sliderWidth;
+    const newProgress = percentage * progress.seekableDuration;
+
+    setProgress({...progress, currentTime: newProgress});
+    ref.current.seek(newProgress);
+  };
+
   return {
     paused,
     setPaused,
@@ -120,6 +134,8 @@ const VideoCarouselLogic = () => {
     isLoading,
     panResponder,
     handleFullScreenToggle,
+    onSliderTap,
+    onSliderLayout,
   };
 };
 
