@@ -29,6 +29,7 @@ import Themes from '../Containers/Tiles/Themes';
 import Chat from '../Containers/Chats/Chat';
 import VideoList from '../Containers/VideoPlayer/VideoList';
 import VideoPlayer from '../Containers/VideoPlayer/VideoPlayer';
+import TopTabNavigator from './Tab/TopTabNavigator';
 
 export const initialState = {
   isAudioEnabled: true,
@@ -62,6 +63,7 @@ const StackNavigator = () => {
         }}
         initialRouteName="Tiles">
         <Stack.Screen name="Tiles" component={Tiles} />
+        <Stack.Screen name="Tabs" component={TopTabNavigator} />
         <Stack.Screen name="VideoList" component={VideoList} />
         <Stack.Screen name="VideoCarousel" component={VideoPlayer} />
         <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
