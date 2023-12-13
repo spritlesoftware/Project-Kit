@@ -5,18 +5,25 @@ import {styles} from './ListStyle';
 import {Text} from 'react-native-paper';
 import Menu from 'react-native-vector-icons/Entypo';
 import {colors} from '../../Utils/colors';
-import {useNavigation} from '@react-navigation/native';
-import BottomDrawer from '../Drawer/BottomDrawer';
+
+function handleToggle(handleDrawerToggle, setCurrent, title) {
+  handleDrawerToggle();
+  setCurrent(title);
+}
 
 const List = props => {
-  const {item, index} = props.item;
-  const navigation = useNavigation();
+  const {item, index, handleDrawerToggle} = props.item;
 
   return (
     <View style={styles.container} key={index}>
       <TouchableOpacity
         style={styles.listContainer}
-        onPress={() => navigation.navigate('VideoCarousel')}>
+        onPress={() =>
+          props.navigation.navigate('VideoCarousel', {
+            id: item.id,
+            title: item.title,
+          })
+        }>
         <View style={styles.thumbnailContainer}>
           <Image
             source={{
@@ -36,7 +43,9 @@ const List = props => {
         </View>
         <TouchableOpacity
           style={styles.menuContainer}
-          onPress={() => props.handleDrawerToggle()}>
+          onPress={() =>
+            handleToggle(props.handleDrawerToggle, props.setCurrent, item.title)
+          }>
           <Menu
             name="dots-three-vertical"
             color={colors.BLACK}

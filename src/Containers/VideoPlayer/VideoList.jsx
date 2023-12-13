@@ -1,52 +1,54 @@
+import React from 'react';
 import {
   View,
-  Text,
   StyleSheet,
   FlatList,
-  Animated,
   TouchableWithoutFeedback,
 } from 'react-native';
-import React, {useState} from 'react';
 import {colors} from '../../Utils/colors';
 import List from '../../Components/Video/List';
 import HeaderWithBackaction from '../../Components/Header/HeaderWithBackaction';
-import {videoData} from '../../Data/VideoData';
-import BottomDrawer from '../../Components/Drawer/BottomDrawer';
+import Loader from '../../Components/Loader/Loader';
+import BottomSheetModal from '../../Components/Drawer/BottomSheetModal';
+import VideoListLogic from '../../Functions/Video/VideoList';
 
-const VideoList = () => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const drawerAnimation = new Animated.Value(0);
-
-  const handleDrawerToggle = () => {
-    setDrawerOpen(!drawerOpen);
-
-    Animated.timing(drawerAnimation, {
-      toValue: drawerOpen ? 0 : 1,
-      duration: 300,
-      useNativeDriver: true,
-    }).start();
-  };
+const VideoList = ({navigation}) => {
+  const {
+    videoData,
+    isLoading,
+    current,
+    setCurrent,
+    drawerOpen,
+    handleDrawerToggle,
+  } = VideoListLogic();
 
   return (
     <View style={styles.container}>
       <HeaderWithBackaction title="Videos" />
-      <TouchableWithoutFeedback onPress={() => handleDrawerToggle()}>
-        <FlatList
-          data={videoData}
-          renderItem={item => (
-            <List
-              item={item}
-              handleDrawerToggle={handleDrawerToggle}
-              drawerOpen={drawerOpen}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <TouchableWithoutFeedback onPress={handleDrawerToggle}>
+            <FlatList
+              data={videoData}
+              renderItem={({item, index}) => (
+                <List
+                  item={{item, index}}
+                  handleDrawerToggle={handleDrawerToggle}
+                  navigation={navigation}
+                  setCurrent={setCurrent}
+                />
+              )}
             />
-          )}
-        />
-      </TouchableWithoutFeedback>
-      <BottomDrawer
-        status={drawerOpen}
-        handleDrawerToggle={handleDrawerToggle}
-      />
+          </TouchableWithoutFeedback>
+          <BottomSheetModal
+            title={current}
+            isVisible={drawerOpen}
+            handleDrawerToggle={handleDrawerToggle}
+          />
+        </>
+      )}
     </View>
   );
 };

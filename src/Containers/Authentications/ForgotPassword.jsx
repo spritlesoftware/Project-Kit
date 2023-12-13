@@ -10,6 +10,7 @@ import CustomButton from '../../Components/Button/CustomButton';
 import {colors} from '../../Utils/colors';
 import {ActivityIndicator, Text} from 'react-native-paper';
 import ForgotPasswordLogic from '../../Functions/Authentications/ForgotPassword';
+import {useRoute} from '@react-navigation/core';
 
 const ForgotPassword = ({navigation}) => {
   const {
@@ -39,6 +40,9 @@ const ForgotPassword = ({navigation}) => {
     verifyPassword,
   } = ForgotPasswordLogic(navigation);
 
+  const route = useRoute();
+  const {reset_title, new_password_title, submit_btn_txt} = route.params;
+
   const renderHeader = title => {
     return (
       <>
@@ -47,7 +51,7 @@ const ForgotPassword = ({navigation}) => {
         </View>
         <View style={styles.titleContainer}>
           <Text style={styles.headerTitle} variant="headlineMedium">
-            {title}
+            {reset_title}
           </Text>
         </View>
       </>
@@ -74,7 +78,7 @@ const ForgotPassword = ({navigation}) => {
             Enter your registered email address
           </Text>
           <CustomButton
-            title={'Submit'}
+            title={submit_btn_txt}
             onPress={submitEmailAddress}
             loading={isLoading}
           />
@@ -86,7 +90,7 @@ const ForgotPassword = ({navigation}) => {
   const renderTokenScreen = () => {
     return (
       <>
-        {renderHeader('Password Reset')}
+        {renderHeader(new_password_title)}
         {error ? (
           <Text
             style={[

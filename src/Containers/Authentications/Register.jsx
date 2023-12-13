@@ -12,6 +12,7 @@ import {Divider, Text} from 'react-native-paper';
 import SocialButton from '../../Components/Button/SocialButton';
 import RegisterLogic from '../../Functions/Authentications/Register';
 import Google from 'react-native-vector-icons/AntDesign';
+import {useRoute} from '@react-navigation/core';
 
 const Register = ({navigation}) => {
   const {
@@ -30,6 +31,9 @@ const Register = ({navigation}) => {
     handleConfirmPasswordChange,
   } = RegisterLogic(navigation);
 
+  const route = useRoute();
+  const {app_name, signup_btn_txt} = route.params;
+
   return (
     <SafeAreaView style={styles.center}>
       <KeyboardAwareScrollView
@@ -40,7 +44,7 @@ const Register = ({navigation}) => {
         </View>
         <View style={styles.titleContainer}>
           <Text style={styles.headerTitle} variant="displayMedium">
-            Kit Box
+            {app_name}
           </Text>
           <Text style={styles.headerTitle} variant="headlineSmall">
             Sign Up
@@ -81,7 +85,7 @@ const Register = ({navigation}) => {
             error={invalidConfirmPassword}
             errorMsg={'Enter a password'}
           />
-          <CustomButton title={'Register'} onPress={onPressSignUp} />
+          <CustomButton title={signup_btn_txt} onPress={onPressSignUp} />
         </View>
         <TouchableOpacity
           style={styles.regContainer}

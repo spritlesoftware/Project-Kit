@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
-import {View, Text, StyleSheet, Animated, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {View, Text, TouchableOpacity, StyleSheet} from 'react-native';
+import Modal from 'react-native-modal';
 import Icon from 'react-native-vector-icons/AntDesign';
 import MenuIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {colors} from '../../Utils/colors';
@@ -29,53 +30,51 @@ const menuData = [
   },
 ];
 
-const BottomDrawer = ({status, handleDrawerToggle}) => {
+const BottomSheetModal = ({isVisible, handleDrawerToggle, title}) => {
   return (
-    <>
-      {status ? (
-        <View style={styles.container}>
-          <View style={styles.drawerContainer}>
-            <Animated.View style={[styles.drawerContent]}>
-              <View style={styles.drawerHeader}>
-                <Text style={styles.drawerHeaderText}>Kaala Paani</Text>
-                <TouchableOpacity onPress={handleDrawerToggle}>
-                  <Icon name="close" size={24} color={colors.WHITE} />
+    <Modal
+      isVisible={isVisible}
+      onBackdropPress={handleDrawerToggle}
+      style={styles.modal}>
+      <View style={styles.container}>
+        <View style={styles.drawerContainer}>
+          <View style={styles.drawerContent}>
+            <View style={styles.drawerHeader}>
+              <Text style={styles.drawerHeaderText}>{title}</Text>
+              <TouchableOpacity onPress={handleDrawerToggle}>
+                <Icon name="close" size={24} color={colors.WHITE} />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.drawerBody}>
+              {menuData.map(item => (
+                <TouchableOpacity key={item.id} style={styles.menuContainer}>
+                  <MenuIcon
+                    name={item.icon}
+                    color={colors.WHITE}
+                    size={moderateScale(22)}
+                  />
+                  <Text style={styles.menuText}>{item.name}</Text>
                 </TouchableOpacity>
-              </View>
-              <View style={styles.drawerBody}>
-                {menuData.map(item => (
-                  <TouchableOpacity key={item.id} style={styles.menuContainer}>
-                    <MenuIcon
-                      name={item.icon}
-                      color={colors.WHITE}
-                      size={moderateScale(22)}
-                    />
-                    <Text style={styles.menuText}>{item.name}</Text>
-                  </TouchableOpacity>
-                ))}
-              </View>
-            </Animated.View>
+              ))}
+            </View>
           </View>
         </View>
-      ) : (
-        ''
-      )}
-    </>
+      </View>
+    </Modal>
   );
 };
 
 const styles = StyleSheet.create({
+  modal: {
+    margin: 0,
+  },
+
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    justifyContent: 'flex-end',
   },
 
   drawerContainer: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: 300,
     backgroundColor: colors.APP_PRIMARY,
     borderTopLeftRadius: 16,
     borderTopRightRadius: 16,
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
   },
 
   drawerContent: {
-    height: '100%',
+    height: 300,
   },
 
   drawerHeader: {
@@ -120,4 +119,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default BottomDrawer;
+export default BottomSheetModal;

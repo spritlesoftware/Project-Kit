@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
   controlsContainer: {
     ...StyleSheet.absoluteFillObject,
     backgroundColor: 'rgba(0,0,0,.5)',
+    alignSelf: 'center',
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: 20,
@@ -42,7 +43,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-start',
     justifyContent: 'flex-end',
-    // bottom: moderateScale(50),
   },
 
   fullScreenButton: {
@@ -111,7 +111,6 @@ export const styles = StyleSheet.create({
   },
 
   cast: {
-    marginVertical: moderateScale(5),
     marginHorizontal: moderateScale(8),
     borderRadius: moderateScale(8),
     padding: moderateScale(10),
@@ -139,16 +138,16 @@ export const styles = StyleSheet.create({
 
   like: {
     bottom: moderateScale(12),
-    left: moderateScale(5),
+    left: moderateScale(10),
   },
 
   detailsContainer: {
     backgroundColor: colors.APP_PRIMARY,
     borderRadius: moderateScale(10),
+    marginBottom: moderateScale(10),
   },
 
   videoContainer: {
     width: '100%',
-    padding: moderateScale(5),
   },
 });

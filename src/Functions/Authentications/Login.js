@@ -51,6 +51,7 @@ const LoginLogic = navigation => {
     apiError,
     apiErrorMessage,
     isLoading,
+    setIsLoading,
     onPressSignin,
     handleEmailChange,
     handlePasswordChange,
