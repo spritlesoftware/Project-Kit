@@ -45,8 +45,13 @@ export const components = [
     navigation: 'VideoList',
   },
   {
-    name: 'Top Navigator',
+    name: 'Bottom Tab',
     image: require('../../Assets/images/tabs.png'),
-    navigation: 'Tabs',
+    navigation: 'BottomTab',
+  },
+  {
+    name: 'Top Tab',
+    image: require('../../Assets/images/tabs.png'),
+    navigation: 'TopTab',
   },
 ];
