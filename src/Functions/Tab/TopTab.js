@@ -1,11 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
 import {GetFirebaseData} from '../../Containers/Firebase';
 import {useEffect, useState} from 'react';
 
-function BottomTabLogic() {
+function TopTabLogic() {
   const [tabData, setTabData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const {user} = GetFirebaseData('Bottom-Tab');
+  const {user} = GetFirebaseData('Top Tab');
 
   useEffect(() => {
     if (user._data) {
@@ -26,4 +25,4 @@ function BottomTabLogic() {
   };
 }
 
-export default BottomTabLogic;
+export default TopTabLogic;
