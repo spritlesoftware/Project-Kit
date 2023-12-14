@@ -29,6 +29,7 @@ import Themes from '../Containers/Tiles/Themes';
 import Chat from '../Containers/Chats/Chat';
 import VideoList from '../Containers/VideoPlayer/VideoList';
 import VideoPlayer from '../Containers/VideoPlayer/VideoPlayer';
+import BottomTabNavigator from './Tab/BottomTabNavigator';
 import TopTabNavigator from './Tab/TopTabNavigator';
 
 export const initialState = {
@@ -63,7 +64,8 @@ const StackNavigator = () => {
         }}
         initialRouteName="Tiles">
         <Stack.Screen name="Tiles" component={Tiles} />
-        <Stack.Screen name="Tabs" component={TopTabNavigator} />
+        <Stack.Screen name="TopTab" component={TopTabNavigator} />
+        <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
         <Stack.Screen name="VideoList" component={VideoList} />
         <Stack.Screen name="VideoCarousel" component={VideoPlayer} />
         <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
