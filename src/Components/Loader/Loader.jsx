@@ -5,7 +5,7 @@ import {colors} from '../../Utils/colors';
 const Loader = props => {
   return (
     <View style={[styles.loadingView, props.customStyle]}>
-      <ActivityIndicator size="large" color={colors.RED_BORDER} />
+      <ActivityIndicator size="large" color={colors.APP_PRIMARY} />
     </View>
   );
 };
