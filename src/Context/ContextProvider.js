@@ -27,6 +27,8 @@ const ContextProvider = ({children}) => {
   const [errors, setErrors] = useState({});
   const [formValues, setFormValues] = useState({});
   const drawer = useRef(null);
+  const [events, setEvents] = useState([]);
+  const [isMarkedDate, setIsMarkedDate] = useState([]);
 
   const data = useMemo(() => {
     return {
@@ -45,9 +47,14 @@ const ContextProvider = ({children}) => {
       setErrors,
       formValues,
       setFormValues,
-      drawer
+      drawer,
+      events,
+      setEvents,
+      isMarkedDate,
+      setIsMarkedDate,
+
     };
-  }, [queue, currentTrack, favourites,tableData,props,fonts,errors,formValues]);
+  }, [queue, currentTrack,isMarkedDate, favourites,tableData,props,fonts,errors,formValues,events]);
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
 };
