@@ -1043,6 +1043,7 @@ attr sb_handlerColor
 attr sb_horizontal
 attr sb_indicatorColor
 attr sb_indicatorTextColor
+attr scalableType
 attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
@@ -3357,8 +3358,12 @@ id cancel_action
 id cancel_button
 id catalyst_redbox_title
 id center
+id centerBottom
+id centerBottomCrop
 id centerCrop
 id centerInside
+id centerTop
+id centerTopCrop
 id center_horizontal
 id center_vertical
 id chain
@@ -3422,6 +3427,7 @@ id elastic
 id embed
 id enabled
 id end
+id endInside
 id endToStart
 id end_padder
 id enterAlways
@@ -3535,7 +3541,13 @@ id labeled
 id labelled_by
 id layout
 id left
+id leftBottom
+id leftBottomCrop
+id leftCenter
+id leftCenterCrop
 id leftToRight
+id leftTop
+id leftTopCrop
 id legacy
 id light
 id line1
@@ -3656,7 +3668,13 @@ id restart
 id reverse
 id reverseSawtooth
 id right
+id rightBottom
+id rightBottomCrop
+id rightCenter
+id rightCenterCrop
 id rightToLeft
+id rightTop
+id rightTopCrop
 id right_icon
 id right_side
 id rn_frame_file
@@ -3733,6 +3751,7 @@ id src_over
 id standard
 id start
 id startHorizontal
+id startInside
 id startToEnd
 id startVertical
 id staticLayout
@@ -4044,6 +4063,7 @@ plurals exo_controls_fastforward_by_amount_description
 plurals exo_controls_rewind_by_amount_description
 plurals mtrl_badge_content_description
 raw consumer_onesignal_keep
+raw firebase_common_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -4200,6 +4220,11 @@ string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
 string fcm_fallback_notification_channel_label
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string header_description
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
@@ -4327,6 +4352,7 @@ string permission_not_available_title
 string play
 string playback_channel_name
 string progressbar_description
+string project_id
 string radiogroup_description
 string rn_tab_description
 string rntp_temporary_channel_id
@@ -5679,6 +5705,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+styleable scaleStyle scalableType
 xml image_share_filepaths
 xml provider_paths
 xml rn_dev_preferences

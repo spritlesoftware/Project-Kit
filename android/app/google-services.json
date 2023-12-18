@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "799535661322",
+    "project_id": "kitbox-4d7bd",
+    "storage_bucket": "kitbox-4d7bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799535661322:android:b5ffc5c53d149f95f6faf3",
+        "android_client_info": {
+          "package_name": "com.kit_box"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnebO8-W5HlOJDe8d1lBM4rNnu63Y5BfI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -11,6 +11,12 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+// @react-native-community/slider
+import com.reactnativecommunity.slider.ReactSliderPackage;
+// @react-native-firebase/app
+import io.invertase.firebase.app.ReactNativeFirebaseAppPackage;
+// @react-native-firebase/firestore
+import io.invertase.firebase.firestore.ReactNativeFirebaseFirestorePackage;
 // lottie-react-native
 import com.airbnb.android.react.lottie.LottiePackage;
 // react-native-blob-util
@@ -23,6 +29,8 @@ import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 import com.ibitcy.react_native_hole_view.RNHoleViewPackage;
 // react-native-onesignal
 import com.onesignal.rnonesignalandroid.ReactNativeOneSignalPackage;
+// react-native-orientation-locker
+import org.wonday.orientation.OrientationPackage;
 // react-native-pager-view
 import com.reactnativepagerview.PagerViewPackage;
 // react-native-pdf
@@ -45,6 +53,8 @@ import com.doublesymmetry.trackplayer.TrackPlayer;
 import com.twiliorn.library.TwilioPackage;
 // react-native-vector-icons
 import com.oblador.vectoricons.VectorIconsPackage;
+// react-native-video
+import com.brentvatne.react.ReactVideoPackage;
 // react-native-vision-camera
 import com.mrousavy.camera.CameraPackage;
 
@@ -92,12 +102,16 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new ReactSliderPackage(),
+      new ReactNativeFirebaseAppPackage(),
+      new ReactNativeFirebaseFirestorePackage(),
       new LottiePackage(),
       new ReactNativeBlobUtilPackage(),
       new RNDocumentPickerPackage(),
       new RNGestureHandlerPackage(),
       new RNHoleViewPackage(),
       new ReactNativeOneSignalPackage(),
+      new OrientationPackage(),
       new PagerViewPackage(),
       new RNPDFPackage(),
       new RNPermissionsPackage(),
@@ -109,6 +123,7 @@ public class PackageList {
       new TrackPlayer(),
       new TwilioPackage(),
       new VectorIconsPackage(),
+      new ReactVideoPackage(),
       new CameraPackage()
     ));
   }
