@@ -5,33 +5,19 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import {colors} from '../../Utils/colors';
 import {TouchableRipple} from 'react-native-paper';
 import {useAppContext} from '../../Context/ContextProvider';
-const RANGE = 24;
-const initialDate = '2023-12-15';
+
+const RANGE = 20;
 
 function CalendarComponent({navigation}) {
   const horizontalView = true;
-  const [selected, setSelected] = useState(initialDate);
-  const {isMarkedDate} = useAppContext();
+  const [selected, setSelected] = useState();
+  const {isMarkedDate, events} = useAppContext();
 
   function markedDates() {
-    console.log(isMarkedDate);
-    // return isMarkedDate.map(markedDate => {
-    //   return {
-    //     [markedDate]: {
-    //       selected: selected === markedDate,
-    //       selectedTextColor: 'white',
-    //       marked: true,
-    //       dotColor: colors.APP_PRIMARY,
-    //       selectedColor: colors.APP_PRIMARY,
-    // //     },
-    //   };
-    // });
     const result = {};
 
     for (let i = 0; i < isMarkedDate.length; i++) {
       const date = isMarkedDate[i];
-
-      // Customize the object creation based on your requirements
       result[date] = {
         selected: selected === date,
         selectedTextColor: 'white',
@@ -55,12 +41,16 @@ function CalendarComponent({navigation}) {
       ...markedDates(),
     };
   }, [selected, isMarkedDate]);
-  console.log(markedDates(), 'markedDates');
-  console.log(marked, 'marked');
 
   const onDayPress = useCallback(day => {
     setSelected(day.dateString);
   }, []);
+  const dateObject = new Date(selected);
+  const formattedDate = dateObject?.toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
 
   return (
     <View style={{backgroundColor: '#fff', flex: 1}}>
@@ -75,18 +65,19 @@ function CalendarComponent({navigation}) {
           borderRadius: 10,
         }}>
         <View>
-          <Text style={{color: colors.BLACK}}>Selected Date: {selected}</Text>
+          <Text style={{color: colors.BLACK}}>
+            Selected Date : {selected && formattedDate}
+          </Text>
         </View>
         <TouchableRipple
           onPress={() => {
-            navigation.navigate('NewEvent', {selectedDate: selected});
+            selected &&
+              navigation.navigate('NewEvent', {selectedDate: selected , formattedDate:formattedDate});
           }}>
           <AntDesign name="pluscircle" color={'#0C2461'} size={25} />
         </TouchableRipple>
       </View>
       <CalendarList
-            //testID={{CONTAINER: 'calendarList'}}
-        // current={initialDate}
         pastScrollRange={RANGE}
         futureScrollRange={RANGE}
         onDayPress={onDayPress}
@@ -96,13 +87,15 @@ function CalendarComponent({navigation}) {
         theme={theme}
         horizontal={horizontalView}
         pagingEnabled={true}
-        staticHeader={horizontalView}
+        staticHeader={true}
+        showScrollIndicator={false}
       />
     </View>
   );
 }
 
 const theme = {
+  arrowColor: colors.APP_PRIMARY,
   stylesheet: {
     calendar: {
       header: {
@@ -115,10 +108,12 @@ const theme = {
   },
   'stylesheet.day.basic': {
     today: {
-      todayTextColor:"red"
+      color: colors.APP_PRIMARY,
+      borderWidth: 0.4,
+      borderRadius: 25,
     },
     todayText: {
-      selectedColor:"red"
+      color: colors.APP_PRIMARY,
     },
   },
 };

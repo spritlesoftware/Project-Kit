@@ -7,18 +7,19 @@ import {moderateScale} from 'react-native-size-matters';
 import {Text} from 'react-native-paper';
 import DatePicker from './DatePicker';
 import CalendarComponent from './Calendar';
+import EventList from './EventList';
 
 const DatePickerHome= () => {
   return (
     <View style={styles.container}>
       <Text variant="bodyLarge" style={styles.headerTitle}>
-         Calendar
+        Event Calendar
       </Text>
       <TopTab
         name1={'Calendar'}
         component1={CalendarComponent}
         name2={'Events'}
-        component2={DatePicker}
+        component2={EventList}
       />
     </View>
   );
@@ -38,6 +39,7 @@ const styles = StyleSheet.create({
     paddingVertical: moderateScale(10),
     fontSize: moderateScale(25),
     alignSelf: 'center',
+    paddingTop:20
   },
 });
 

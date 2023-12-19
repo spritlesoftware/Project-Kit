@@ -33,6 +33,7 @@ import CalendarComponent from '../Containers/DatePicker/Calendar';
 import DatePickerHome from '../Containers/DatePicker/DatePickerHome';
 import DatePicker from '../Containers/DatePicker/DatePicker';
 import NewEvent from '../Containers/DatePicker/NewEvent';
+import EventList from '../Containers/DatePicker/EventList';
 
 export const initialState = {
   isAudioEnabled: true,
@@ -64,9 +65,9 @@ const StackNavigator = () => {
           animationTypeForReplace: 'push',
           animation: 'slide_from_right',
         }}
-        initialRouteName="">
-        <Stack.Screen name="DatePickerHome" component={DatePickerHome} />
+        initialRouteName="Tiles">
         <Stack.Screen name="Tiles" component={Tiles} />
+        <Stack.Screen name="DatePickerHome" component={DatePickerHome} />
         <Stack.Screen name="VideoList" component={VideoList} />
         <Stack.Screen name="VideoCarousel" component={VideoPlayer} />
         <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
@@ -92,6 +93,7 @@ const StackNavigator = () => {
         <Stack.Screen name="CalendarComponent" component={CalendarComponent} />
         <Stack.Screen name="DatePicker" component={DatePicker} />
         <Stack.Screen name="NewEvent" component={NewEvent} />
+        <Stack.Screen name="EventList" component={EventList} />
       </Stack.Navigator>
     </DrawerLayoutAndroid>
   );
