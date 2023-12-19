@@ -10,9 +10,7 @@ export default function NewEvent({route, navigation}) {
   const [event, setEvent] = useState('');
   const [description, setDescription] = useState('');
   const {events , setEvents , setIsMarkedDate , isMarkedDate} = useAppContext()
- 
-  console.log(events);
-  console.log(isMarkedDate)
+
   function onHandleSave() {
     setIsMarkedDate(()=>{if(isMarkedDate?.includes(route.params.selectedDate)){
         return[...isMarkedDate ]
@@ -35,6 +33,7 @@ export default function NewEvent({route, navigation}) {
     <View style={styles.container}>
       <View style={{width: '80%', marginRight: 'auto', marginLeft: 'auto'}}>
         <Text style={styles.header}>New Event</Text>
+        <Text style={{color:colors.GRAY7,fontSize:15,paddingBottom:30,textAlign:"center",}}>on {route.params.formattedDate}</Text>
         <InputField
           label={'event'}
           value={event}
@@ -65,8 +64,8 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 25,
     textAlign: 'center',
-    padding: 30,
     color: 'black',
     fontFamily: fonts.BOLD,
+    paddingTop:30
   },
 });
