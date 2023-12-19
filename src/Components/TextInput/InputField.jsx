@@ -1,9 +1,10 @@
 import {useState} from 'react';
 import {Text, TextInput} from 'react-native-paper';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, TouchableOpacity} from 'react-native';
 import {colors} from '../../Utils/colors';
 import {moderateScale} from 'react-native-size-matters';
 import {fonts} from '../../Utils/fonts';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 export default function InputField({label, ...props}) {
   return (
@@ -20,8 +21,14 @@ export default function InputField({label, ...props}) {
         textColor={colors.BLACK}
         {...props}
         keyboardType={props.type}
+        onFocus={props.onFocus}
       />
       {props.error ? <Text style={styles.error}>{props.errorMsg}</Text> : null}
+      {props.icon && (
+        <TouchableOpacity onPress={props.onPressIcon} style={{position:"absolute", right:20,top:150}}>
+          <AntDesign name={props.icon} color={'#0C2461'} size={20} />
+        </TouchableOpacity>
+      )}
     </>
   );
 }
