@@ -47,72 +47,107 @@ export default function EventList() {
   }
   return (
     <ScrollView style={{backgroundColor: colors.WHITE, flex: 1}}>
-        {events.length > 0 ? (
-          events.map((each_event, index) => {
-            const dateObject = new Date(each_event.date);
-            const formattedDate = dateObject.toLocaleDateString('en-US', {
-              month: 'short',
-              day: 'numeric',
-              year: 'numeric',
-            });
-            return (
-              <View style={{marginTop: 5, margin: 8}} key={index}>
+      {events.length > 0 ? (
+        events.map((each_event, index) => {
+          const dateObject = new Date(each_event.date);
+          const formattedDate = dateObject.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric',
+          });
+          return (
+            <View style={{marginTop: 5, margin: 8}} key={index}>
+              <View
+                style={{
+                  borderBottomWidth: 0.4,
+                  padding: 3,
+                  borderColor: colors.GRAY3,
+                  borderRadius: 15,
+                }}>
                 <View
                   style={{
-                    borderBottomWidth: 0.4,
-                    padding: 3,
-                    borderColor: colors.GRAY3,
-                    borderRadius: 15,
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
                   }}>
-                  <View
+                  <Text style={{color: colors.BLACK, fontSize: 20, padding: 5}}>
+                    {each_event.event}
+                  </Text>
+                  <TouchableOpacity
                     style={{
-                      display: 'flex',
-                      flexDirection: 'row',
-                      justifyContent: 'space-between',
+                      top: 20,
+                      right: 10,
+                    }}
+                    onPress={() => {
+                      onHandleDelete(each_event);
                     }}>
-                    <Text
-                      style={{color: colors.BLACK, fontSize: 20, padding: 5}}>
-                      {each_event.event}
-                    </Text>
-                    <TouchableOpacity
-                      style={{
-                        top: 20,
-                        right: 10,
-                      }}
-                      onPress={() => {
-                        onHandleDelete(each_event);
-                      }}>
-                      <AntDesign name="delete" color={'#0C2461'} size={20} />
-                    </TouchableOpacity>
+                    <AntDesign name="delete" color={'#0C2461'} size={20} />
+                  </TouchableOpacity>
+                </View>
+                <Text style={{color: colors.GRAY7, padding: 7}}>
+                  {each_event.description
+                    ? each_event.description
+                    : 'No description'}
+                </Text>
+                <View
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'space-between',
+                  }}>
+                  <View>
+                    {each_event.time && (
+                      <View style={{display:"flex",flexDirection:"row"}}>
+                        <AntDesign
+                          name="clockcircleo"
+                          color={colors.GRAY2}
+                          size={15}
+                          style={{marginLeft:5, marginTop: 2}}
+                        />
+                        <Text
+                          style={{
+                            color: colors.GRAY2,
+                            textAlign: 'right',
+                            marginLeft:5,
+                          }}>
+                          {each_event.time}
+                        </Text>
+                      </View>
+                    )}
                   </View>
-                  <Text style={{color: colors.GRAY7, padding: 7}}>
-                    {each_event.description
-                      ? each_event.description
-                      : 'No description'}
-                  </Text>
-                  <Text
-                    style={{
-                      color: colors.GRAY2,
-                      textAlign: 'right',
-                      marginRight: 10,
-                    }}>
-                    {formattedDate}
-                  </Text>
+
+                  <View style={{display: 'flex', flexDirection: 'row'}}>
+                    <AntDesign
+                      name="calendar"
+                      color={colors.GRAY2}
+                      size={15}
+                      style={{marginRight: 5, marginTop: 2}}
+                    />
+                    <Text
+                      style={{
+                        color: colors.GRAY2,
+                        textAlign: 'right',
+                        marginRight: 10,
+                      }}>
+                      {formattedDate}
+                    </Text>
+                  </View>
                 </View>
               </View>
-            );
-          })
-        ) : (
-          <View
-            style={{
-              flex: 1,
-              justifyContent: 'center',
-              alignItems: 'center',
-              padding: 50,
-            }}>
-            <Text style={{color: colors.GRAY7, fontSize: 25}}>No Events</Text>
-          </View>
-        )}
+            </View>
+          );
+        })
+      ) : (
+        <View
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 50,
+          }}>
+          <Text style={{color: colors.GRAY7, fontSize: 25}}>No Events</Text>
+        </View>
+      )}
     </ScrollView>
   );
 }
