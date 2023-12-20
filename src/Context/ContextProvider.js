@@ -29,6 +29,7 @@ const ContextProvider = ({children}) => {
   const drawer = useRef(null);
   const [events, setEvents] = useState([]);
   const [isMarkedDate, setIsMarkedDate] = useState([]);
+  const [selectedDate, setSelectedDate] = useState();
 
   const data = useMemo(() => {
     return {
@@ -52,9 +53,11 @@ const ContextProvider = ({children}) => {
       setEvents,
       isMarkedDate,
       setIsMarkedDate,
+      selectedDate,
+      setSelectedDate
 
     };
-  }, [queue, currentTrack,isMarkedDate, favourites,tableData,props,fonts,errors,formValues,events]);
+  }, [queue,selectedDate,currentTrack,isMarkedDate, favourites,tableData,props,fonts,errors,formValues,events]);
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
 };

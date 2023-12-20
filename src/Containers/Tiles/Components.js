@@ -44,4 +44,9 @@ export const components = [
     image: require('../../Assets/images/videoplayer.jpg'),
     navigation: 'VideoList',
   },
+  // {
+  //   name: 'Post & Polls',
+  //   image: require('../../Assets/images/post.jpg'),
+  //   navigation: 'VideoList',
+  // },
 ];
