@@ -34,6 +34,8 @@ import DatePickerHome from '../Containers/EventCalendar/DatePickerHome';
 import DatePicker from '../Containers/EventCalendar/DatePicker';
 import NewEvent from '../Containers/EventCalendar/NewEvent';
 import EventList from '../Containers/EventCalendar/EventList';
+import BottomTabNavigator from './Tab/BottomTabNavigator';
+import TopTabNavigator from './Tab/TopTabNavigator';
 
 export const initialState = {
   isAudioEnabled: true,
@@ -68,6 +70,8 @@ const StackNavigator = () => {
         initialRouteName="Tiles">
         <Stack.Screen name="Tiles" component={Tiles} />
         <Stack.Screen name="DatePickerHome" component={DatePickerHome} />
+        <Stack.Screen name="TopTab" component={TopTabNavigator} />
+        <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
         <Stack.Screen name="VideoList" component={VideoList} />
         <Stack.Screen name="VideoCarousel" component={VideoPlayer} />
         <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />

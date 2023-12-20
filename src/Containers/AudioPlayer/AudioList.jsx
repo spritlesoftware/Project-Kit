@@ -7,19 +7,16 @@ import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 import {moderateScale} from 'react-native-size-matters';
 import {Text} from 'react-native-paper';
+import {AllSongsLogic} from '../../Functions/Audio/AllSongs';
 
 const AudioList = () => {
+  const {tabData, isLoading} = AllSongsLogic();
   return (
     <View style={styles.container}>
       <Text variant="bodyLarge" style={styles.headerTitle}>
         TRACKit
       </Text>
-      <TopTab
-        name1={'All Songs'}
-        component1={AllSongs}
-        name2={'PlayList'}
-        component2={PlayList}
-      />
+      <TopTab data={tabData} isLoading={isLoading} />
     </View>
   );
 };

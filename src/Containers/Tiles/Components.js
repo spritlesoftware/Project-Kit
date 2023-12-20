@@ -49,4 +49,14 @@ export const components = [
   //   image: require('../../Assets/images/post.jpg'),
   //   navigation: 'VideoList',
   // },
+  {
+    name: 'Bottom Tab',
+    image: require('../../Assets/images/tabs.png'),
+    navigation: 'BottomTab',
+  },
+  {
+    name: 'Top Tab',
+    image: require('../../Assets/images/tabs.png'),
+    navigation: 'TopTab',
+  },
 ];
