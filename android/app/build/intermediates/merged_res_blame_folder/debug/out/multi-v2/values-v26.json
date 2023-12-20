@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.kit_box.app-mergeDebugResources-56:/values-v26/values-v26.xml",
+            "outputFile": "com.kit_box.app-mergeDebugResources-60:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\91934\\.gradle\\caches\\transforms-3\\9063f6ea8f14a1308661cc5fa127b2c6\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\91934\\.gradle\\caches\\transforms-3\\bd655aed37aee454bc87227186967374\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

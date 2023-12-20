@@ -29,6 +29,11 @@ import Themes from '../Containers/Tiles/Themes';
 import Chat from '../Containers/Chats/Chat';
 import VideoList from '../Containers/VideoPlayer/VideoList';
 import VideoPlayer from '../Containers/VideoPlayer/VideoPlayer';
+import CalendarComponent from '../Containers/EventCalendar/Calendar';
+import DatePickerHome from '../Containers/EventCalendar/DatePickerHome';
+import DatePicker from '../Containers/EventCalendar/DatePicker';
+import NewEvent from '../Containers/EventCalendar/NewEvent';
+import EventList from '../Containers/EventCalendar/EventList';
 import BottomTabNavigator from './Tab/BottomTabNavigator';
 import TopTabNavigator from './Tab/TopTabNavigator';
 
@@ -64,6 +69,7 @@ const StackNavigator = () => {
         }}
         initialRouteName="Tiles">
         <Stack.Screen name="Tiles" component={Tiles} />
+        <Stack.Screen name="DatePickerHome" component={DatePickerHome} />
         <Stack.Screen name="TopTab" component={TopTabNavigator} />
         <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
         <Stack.Screen name="VideoList" component={VideoList} />
@@ -88,6 +94,10 @@ const StackNavigator = () => {
         <Stack.Screen name="ChatRoom" component={RealChat} />
         <Stack.Screen name="Groups" component={GroupList} />
         <Stack.Screen name="Contacts" component={Contacts} />
+        <Stack.Screen name="CalendarComponent" component={CalendarComponent} />
+        <Stack.Screen name="DatePicker" component={DatePicker} />
+        <Stack.Screen name="NewEvent" component={NewEvent} />
+        <Stack.Screen name="EventList" component={EventList} />
       </Stack.Navigator>
     </DrawerLayoutAndroid>
   );

@@ -34,16 +34,21 @@ export const components = [
     image: require('../../Assets/images/track.png'),
     navigation: 'AudioList',
   },
-  // {
-  //   name: 'Calendar',
-  //   image: require('../../Assets/images/calendar.jpg'),
-  //   navigation: 'AudioList',
-  // },
+  {
+    name: 'Calendar',
+    image: require('../../Assets/images/calendar.jpg'),
+    navigation: 'DatePickerHome',
+  },
   {
     name: 'Video Player',
     image: require('../../Assets/images/videoplayer.jpg'),
     navigation: 'VideoList',
   },
+  // {
+  //   name: 'Post & Polls',
+  //   image: require('../../Assets/images/post.jpg'),
+  //   navigation: 'VideoList',
+  // },
   {
     name: 'Bottom Tab',
     image: require('../../Assets/images/tabs.png'),

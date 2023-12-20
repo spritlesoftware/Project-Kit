@@ -1,86 +1,46 @@
 [
     {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-hdpi\\ic_launcher_round.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\drawable_rn_edit_text_material.xml.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\drawable\\rn_edit_text_material.xml"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-hdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-hdpi\\ic_launcher.png"
+        "merged": "com.kit_box.app-merged_res-62:/drawable_rn_edit_text_material.xml.flat",
+        "source": "com.kit_box.app-main-64:/drawable/rn_edit_text_material.xml"
     },
     {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-mdpi\\ic_launcher_round.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-xxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-hdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-hdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-mdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-merged_res-58:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\91934\\.gradle\\daemon\\8.0.1\\com.kit_box.app-main-60:\\mipmap-xxxhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "com.kit_box.app-merged_res-58:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "com.kit_box.app-main-60:/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "com.kit_box.app-merged_res-62:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.kit_box.app-main-64:/mipmap-xxxhdpi/ic_launcher.png"
     }
 ]

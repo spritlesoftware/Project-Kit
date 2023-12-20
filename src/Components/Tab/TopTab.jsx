@@ -62,10 +62,10 @@ const TopTab = props => {
         <Tab.Navigator
           screenOptions={{
             tabBarStyle: {
-              backgroundColor: colors.APP_PRIMARY,
+              backgroundColor:colors.WHITE,
             },
             tabBarIndicatorStyle: {
-              backgroundColor: colors.WHITE,
+              backgroundColor:colors.APP_PRIMARY ,
             },
           }}
           tabBarPosition="top">
@@ -78,7 +78,7 @@ const TopTab = props => {
                 tabBarShowLabel: true,
                 tabBarLabel: tab.name,
                 tabBarLabelStyle: {
-                  color: colors.WHITE,
+                  color: colors.BLACK,
                   fontFamily: fonts.BOLD,
                   fontSize: moderateScale(15),
                   textTransform: 'none',
