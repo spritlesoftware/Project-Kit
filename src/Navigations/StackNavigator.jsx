@@ -34,6 +34,8 @@ import DatePickerHome from '../Containers/EventCalendar/DatePickerHome';
 import DatePicker from '../Containers/EventCalendar/DatePicker';
 import NewEvent from '../Containers/EventCalendar/NewEvent';
 import EventList from '../Containers/EventCalendar/EventList';
+import BottomTabNavigator from './Tab/BottomTabNavigator';
+import TopTabNavigator from './Tab/TopTabNavigator';
 
 export const initialState = {
   isAudioEnabled: true,
