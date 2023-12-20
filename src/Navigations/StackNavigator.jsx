@@ -29,13 +29,11 @@ import Themes from '../Containers/Tiles/Themes';
 import Chat from '../Containers/Chats/Chat';
 import VideoList from '../Containers/VideoPlayer/VideoList';
 import VideoPlayer from '../Containers/VideoPlayer/VideoPlayer';
-import CalendarComponent from '../Containers/DatePicker/Calendar';
-import DatePickerHome from '../Containers/DatePicker/DatePickerHome';
-import DatePicker from '../Containers/DatePicker/DatePicker';
-import NewEvent from '../Containers/DatePicker/NewEvent';
-import EventList from '../Containers/DatePicker/EventList';
-import BottomTabNavigator from './Tab/BottomTabNavigator';
-import TopTabNavigator from './Tab/TopTabNavigator';
+import CalendarComponent from '../Containers/EventCalendar/Calendar';
+import DatePickerHome from '../Containers/EventCalendar/DatePickerHome';
+import DatePicker from '../Containers/EventCalendar/DatePicker';
+import NewEvent from '../Containers/EventCalendar/NewEvent';
+import EventList from '../Containers/EventCalendar/EventList';
 
 export const initialState = {
   isAudioEnabled: true,
