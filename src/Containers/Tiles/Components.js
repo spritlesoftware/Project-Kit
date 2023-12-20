@@ -35,15 +35,16 @@ export const components = [
     navigation: 'AudioList',
   },
   {
-    name: 'Calendar',
-    image: require('../../Assets/images/calendar.jpg'),
-    navigation: 'DatePickerHome',
-  },
-  {
     name: 'Video Player',
     image: require('../../Assets/images/videoplayer.jpg'),
     navigation: 'VideoList',
   },
+  {
+    name: 'Calendar',
+    image: require('../../Assets/images/calendar.jpg'),
+    navigation: 'DatePickerHome',
+  },
+
   // {
   //   name: 'Post & Polls',
   //   image: require('../../Assets/images/post.jpg'),
@@ -56,7 +57,7 @@ export const components = [
   },
   {
     name: 'Top Tab',
-    image: require('../../Assets/images/tabs.png'),
+    image: require('../../Assets/images/toptab.png'),
     navigation: 'TopTab',
   },
 ];

@@ -7,19 +7,16 @@ import {moderateScale} from 'react-native-size-matters';
 import {Text} from 'react-native-paper';
 import CalendarComponent from './Calendar';
 import EventList from './EventList';
+import { DatePickerTopTab } from '../../Functions/EventCalendar/DatepickerTopTab';
 
 const DatePickerHome= () => {
+  const {tabData , isLoading} = DatePickerTopTab()
   return (
     <View style={styles.container}>
       <Text variant="bodyLarge" style={styles.headerTitle}>
         Event Calendar
       </Text>
-      <TopTab
-        name1={'Calendar'}
-        component1={CalendarComponent}
-        name2={'Events'}
-        component2={EventList}
-      />
+      <TopTab data={tabData} isLoading={isLoading} />
     </View>
   );
 };

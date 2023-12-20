@@ -6,7 +6,8 @@ import Loader from '../Loader/Loader';
 import {Text, View} from 'react-native';
 import AllSongs from '../../Containers/AudioPlayer/AllSongs';
 import PlayList from '../Audio/PlayList';
-
+import EventList from '../../Containers/EventCalendar/EventList'
+import CalendarComponent from '../../Containers/EventCalendar/Calendar';
 const Tab = createMaterialTopTabNavigator();
 
 const ChatsScreen = () => {
@@ -49,6 +50,10 @@ const TopTab = props => {
         return AllSongs;
       case 'PlayList':
         return PlayList;
+      case 'CalendarComponent':
+        return CalendarComponent
+      case 'EventList':
+        return EventList;    
       default:
         return ChatsScreen;
     }
