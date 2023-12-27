@@ -56,50 +56,50 @@ const StackNavigator = () => {
   const {drawer} = useAppContext();
 
   return (
-    <DrawerLayoutAndroid
-      ref={drawer}
-      drawerWidth={300}
-      renderNavigationView={navigationView}>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-          // presentation: 'modal',
-          animationTypeForReplace: 'push',
-          animation: 'slide_from_right',
-        }}
-        initialRouteName="Tiles">
-        <Stack.Screen name="Tiles" component={Tiles} />
-        <Stack.Screen name="DatePickerHome" component={DatePickerHome} />
-        <Stack.Screen name="TopTab" component={TopTabNavigator} />
-        <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
-        <Stack.Screen name="VideoList" component={VideoList} />
-        <Stack.Screen name="VideoCarousel" component={VideoPlayer} />
-        <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
-        <Stack.Screen name="BarcodeOutput" component={BarcodeOutput} />
-        <Stack.Screen name="AudioList" component={AudioList} />
-        <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
-        <Stack.Screen name="PlayListTracks" component={PlayListTracks} />
-        <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
-        <Stack.Screen name="Videocall" component={Videocall} />
-        <Stack.Screen name="Table" component={Table} />
-        <Stack.Screen name="NewItem" component={NewItem} />
-        <Stack.Screen name="EditItem" component={EditItem} />
-        <Stack.Screen name="Form" component={Form} />
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="SignUp" component={Register} />
-        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
-        <Stack.Screen name="Logout" component={Logout} />
-        <Stack.Screen name="Chat" component={Chat} />
-        <Stack.Screen name="ChatList" component={ChatList} />
-        <Stack.Screen name="ChatRoom" component={RealChat} />
-        <Stack.Screen name="Groups" component={GroupList} />
-        <Stack.Screen name="Contacts" component={Contacts} />
-        <Stack.Screen name="CalendarComponent" component={CalendarComponent} />
-        <Stack.Screen name="DatePicker" component={DatePicker} />
-        <Stack.Screen name="NewEvent" component={NewEvent} />
-        <Stack.Screen name="EventList" component={EventList} />
-      </Stack.Navigator>
-    </DrawerLayoutAndroid>
+    // <DrawerLayoutAndroid
+    //   ref={drawer}
+    //   drawerWidth={300}
+    //   renderNavigationView={navigationView}>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+        // presentation: 'modal',
+        animationTypeForReplace: 'push',
+        animation: 'slide_from_right',
+      }}
+      initialRouteName="Tiles">
+      <Stack.Screen name="Tiles" component={Tiles} />
+      <Stack.Screen name="DatePickerHome" component={DatePickerHome} />
+      <Stack.Screen name="TopTab" component={TopTabNavigator} />
+      <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
+      <Stack.Screen name="VideoList" component={VideoList} />
+      <Stack.Screen name="VideoCarousel" component={VideoPlayer} />
+      <Stack.Screen name="BarcodeScanner" component={BarcodeScanner} />
+      <Stack.Screen name="BarcodeOutput" component={BarcodeOutput} />
+      <Stack.Screen name="AudioList" component={AudioList} />
+      <Stack.Screen name="AudioPlayer" component={AudioPlayer} />
+      <Stack.Screen name="PlayListTracks" component={PlayListTracks} />
+      <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+      <Stack.Screen name="Videocall" component={Videocall} />
+      <Stack.Screen name="Table" component={Table} />
+      <Stack.Screen name="NewItem" component={NewItem} />
+      <Stack.Screen name="EditItem" component={EditItem} />
+      <Stack.Screen name="Form" component={Form} />
+      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen name="SignUp" component={Register} />
+      <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      <Stack.Screen name="Logout" component={Logout} />
+      <Stack.Screen name="Chat" component={Chat} />
+      <Stack.Screen name="ChatList" component={ChatList} />
+      <Stack.Screen name="ChatRoom" component={RealChat} />
+      <Stack.Screen name="Groups" component={GroupList} />
+      <Stack.Screen name="Contacts" component={Contacts} />
+      <Stack.Screen name="CalendarComponent" component={CalendarComponent} />
+      <Stack.Screen name="DatePicker" component={DatePicker} />
+      <Stack.Screen name="NewEvent" component={NewEvent} />
+      <Stack.Screen name="EventList" component={EventList} />
+    </Stack.Navigator>
+    // </DrawerLayoutAndroid>
   );
 };
 
