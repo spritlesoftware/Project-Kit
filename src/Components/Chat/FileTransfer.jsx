@@ -57,6 +57,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     marginLeft: 5,
     marginRight: 5,
+    width: moderateScale(130),
   },
   textType: {
     color: 'black',
