@@ -171,8 +171,9 @@ const VideoPlayer = () => {
                       value={progress.currentTime}
                       minimumValue={0}
                       maximumValue={progress.seekableDuration}
-                      minimumTrackTintColor="#FFFFFF"
-                      maximumTrackTintColor="#fff"
+                      minimumTrackTintColor={colors.WHITE}
+                      maximumTrackTintColor={colors.WHITE}
+                      thumbTintColor={colors.WHITE}
                       onValueChange={x => {
                         ref.current.seek(x);
                         setProgress({...progress, currentTime: x});
