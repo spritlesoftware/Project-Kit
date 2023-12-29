@@ -36,6 +36,8 @@ import NewEvent from '../Containers/EventCalendar/NewEvent';
 import EventList from '../Containers/EventCalendar/EventList';
 import BottomTabNavigator from './Tab/BottomTabNavigator';
 import TopTabNavigator from './Tab/TopTabNavigator';
+import Post from '../Containers/Posts/Post';
+import NewPost from '../Containers/Posts/NewPost'
 
 export const initialState = {
   isAudioEnabled: true,
@@ -98,6 +100,8 @@ const StackNavigator = () => {
         <Stack.Screen name="DatePicker" component={DatePicker} />
         <Stack.Screen name="NewEvent" component={NewEvent} />
         <Stack.Screen name="EventList" component={EventList} />
+        <Stack.Screen name="Post" component={Post} />
+        <Stack.Screen name="NewPost" component={NewPost} />
       </Stack.Navigator>
     </DrawerLayoutAndroid>
   );

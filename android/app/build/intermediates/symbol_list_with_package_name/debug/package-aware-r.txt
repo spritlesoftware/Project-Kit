@@ -5707,5 +5707,6 @@ styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable scaleStyle scalableType
 xml image_share_filepaths
+xml imagepicker_provider_paths
 xml provider_paths
 xml rn_dev_preferences

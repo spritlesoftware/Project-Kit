@@ -16,6 +16,7 @@ MERGED from [:react-native-blob-util] C:\Users\91934\Documents\Kit\Project-Kitbo
 MERGED from [:react-native-document-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-document-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-gesture-handler] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-hole-view] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-hole-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-19:12
 MERGED from [:react-native-onesignal] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-onesignal\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-orientation-locker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-orientation-locker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-pager-view] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-pager-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
@@ -122,6 +123,7 @@ MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\91934\.gradle\caches\transfo
 MERGED from [androidx.lifecycle:lifecycle-process:2.5.1] C:\Users\91934\.gradle\caches\transforms-3\55172fdf7e5beaf313ebd219400fac6a\transformed\jetified-lifecycle-process-2.5.1\AndroidManifest.xml:17:1-37:12
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\91934\.gradle\caches\transforms-3\6fbb08bb6fb5455db09d1bc33b99352b\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
 MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\91934\.gradle\caches\transforms-3\5307f32fdbe729377ababa6c2960f046\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\91934\.gradle\caches\transforms-3\a1f010ddc3a46ccf6048844398eecac7\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\91934\.gradle\caches\transforms-3\4ff0d6ef6810d8260575181fe601e8c4\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\91934\.gradle\caches\transforms-3\7c9fefab173149a37e5c88ab839a9a74\transformed\jetified-firebase-components-17.1.5\AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\f4fedd7d1db6ce975728d7433706f7a6\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -147,7 +149,6 @@ MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\91934\.gradle\cach
 MERGED from [com.google.android.datatransport:transport-api:3.1.0] C:\Users\91934\.gradle\caches\transforms-3\45c5f9c6b9c57e5a0cf5adb9e348bb7a\transformed\jetified-transport-api-3.1.0\AndroidManifest.xml:15:1-20:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\7d84ecb63b3c3f96ba368516ceaaa2c9\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\d4bfb505a16a675091950706772be26b\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\91934\.gradle\caches\transforms-3\a1f010ddc3a46ccf6048844398eecac7\transformed\exifinterface-1.3.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.test.services:storage:1.4.0] C:\Users\91934\.gradle\caches\transforms-3\7c0fa0bb547b502bd5dcb05cc0d06585\transformed\jetified-storage-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.test:monitor:1.4.0] C:\Users\91934\.gradle\caches\transforms-3\5b818706c9d3e1bbd578af888e478c93\transformed\monitor-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\91934\.gradle\caches\transforms-3\4f48c9e95a751201532ce167eef3255b\transformed\sqlite-2.2.0\AndroidManifest.xml:17:1-24:12
@@ -222,6 +223,8 @@ MERGED from [:react-native-gesture-handler] C:\Users\91934\Documents\Kit\Project
 MERGED from [:react-native-gesture-handler] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-gesture-handler\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-hole-view] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-hole-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-hole-view] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-hole-view\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-onesignal] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-onesignal\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-onesignal] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-onesignal\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-orientation-locker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-orientation-locker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
@@ -434,6 +437,8 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\91934\.gradle\cach
 MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\91934\.gradle\caches\transforms-3\6fbb08bb6fb5455db09d1bc33b99352b\transformed\jetified-startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\91934\.gradle\caches\transforms-3\5307f32fdbe729377ababa6c2960f046\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.tracing:tracing:1.1.0] C:\Users\91934\.gradle\caches\transforms-3\5307f32fdbe729377ababa6c2960f046\transformed\jetified-tracing-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\91934\.gradle\caches\transforms-3\a1f010ddc3a46ccf6048844398eecac7\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\91934\.gradle\caches\transforms-3\a1f010ddc3a46ccf6048844398eecac7\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\91934\.gradle\caches\transforms-3\4ff0d6ef6810d8260575181fe601e8c4\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] C:\Users\91934\.gradle\caches\transforms-3\4ff0d6ef6810d8260575181fe601e8c4\transformed\localbroadcastmanager-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-components:17.1.5] C:\Users\91934\.gradle\caches\transforms-3\7c9fefab173149a37e5c88ab839a9a74\transformed\jetified-firebase-components-17.1.5\AndroidManifest.xml:18:5-44
@@ -484,8 +489,6 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\91934\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\7d84ecb63b3c3f96ba368516ceaaa2c9\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\d4bfb505a16a675091950706772be26b\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\91934\.gradle\caches\transforms-3\d4bfb505a16a675091950706772be26b\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\91934\.gradle\caches\transforms-3\a1f010ddc3a46ccf6048844398eecac7\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] C:\Users\91934\.gradle\caches\transforms-3\a1f010ddc3a46ccf6048844398eecac7\transformed\exifinterface-1.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.test.services:storage:1.4.0] C:\Users\91934\.gradle\caches\transforms-3\7c0fa0bb547b502bd5dcb05cc0d06585\transformed\jetified-storage-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.test.services:storage:1.4.0] C:\Users\91934\.gradle\caches\transforms-3\7c0fa0bb547b502bd5dcb05cc0d06585\transformed\jetified-storage-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.test:monitor:1.4.0] C:\Users\91934\.gradle\caches\transforms-3\5b818706c9d3e1bbd578af888e478c93\transformed\monitor-1.4.0\AndroidManifest.xml:20:5-22:41
@@ -608,6 +611,8 @@ MERGED from [:react-native-firebase_app] C:\Users\91934\Documents\Kit\Project-Ki
 MERGED from [:react-native-firebase_app] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-28:19
 MERGED from [:react-native-blob-util] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-blob-util\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:5-44:19
 MERGED from [:react-native-blob-util] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-blob-util\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:5-44:19
+MERGED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-17:19
+MERGED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:7:5-17:19
 MERGED from [:react-native-track-player] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-23:19
 MERGED from [:react-native-track-player] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-23:19
 MERGED from [com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0] C:\Users\91934\.gradle\caches\transforms-3\36167749904439f43b8d34cb18fb0eea\transformed\jetified-play-services-mlkit-barcode-scanning-18.3.0\AndroidManifest.xml:8:5-16:19
@@ -870,6 +875,16 @@ ADDED from [:react-native-blob-util] C:\Users\91934\Documents\Kit\Project-Kitbox
 		ADDED from [:react-native-blob-util] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-blob-util\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:17-55
 	android:name
 		ADDED from [:react-native-blob-util] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-blob-util\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:17-67
+provider#com.imagepicker.ImagePickerProvider
+ADDED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:9-16:20
+	android:grantUriPermissions
+		ADDED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-47
+	android:authorities
+		ADDED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:13-71
+	android:exported
+		ADDED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-37
+	android:name
+		ADDED from [:react-native-image-picker] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-image-picker\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:9:13-63
 uses-permission#android.permission.FOREGROUND_SERVICE
 ADDED from [:react-native-track-player] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:8:5-77
 MERGED from [androidx.work:work-runtime:2.7.1] C:\Users\91934\.gradle\caches\transforms-3\31ba2af0f7b6f31d546ea0b46ee382d1\transformed\work-runtime-2.7.1\AndroidManifest.xml:28:5-77

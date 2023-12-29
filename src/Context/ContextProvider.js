@@ -1,6 +1,13 @@
-import React, {createContext, useContext,useRef, useMemo, useState} from 'react';
-import { TableData } from '../Data/TableData';
-import { DMSans } from '../Theme/Typography';
+import React, {
+  createContext,
+  useContext,
+  useRef,
+  useMemo,
+  useState,
+} from 'react';
+import {TableData} from '../Data/TableData';
+import {DMSans} from '../Theme/Typography';
+import { postdata } from '../Data/PostData';
 const AppContext = createContext();
 
 export const useAppContext = () => {
@@ -17,7 +24,6 @@ export const initialState = {
 };
 
 const ContextProvider = ({children}) => {
-
   const [queue, setQueue] = useState([]);
   const [currentTrack, setCurrentTrack] = useState([]);
   const [favourites, setFavourites] = useState([]);
@@ -30,6 +36,7 @@ const ContextProvider = ({children}) => {
   const [events, setEvents] = useState([]);
   const [isMarkedDate, setIsMarkedDate] = useState([]);
   const [selectedDate, setSelectedDate] = useState();
+  const [post, setPost] = useState(postdata);
 
   const data = useMemo(() => {
     return {
@@ -39,7 +46,8 @@ const ContextProvider = ({children}) => {
       setCurrentTrack,
       favourites,
       setFavourites,
-      props,setProps,
+      props,
+      setProps,
       tableData,
       setTableData,
       fonts,
@@ -54,10 +62,24 @@ const ContextProvider = ({children}) => {
       isMarkedDate,
       setIsMarkedDate,
       selectedDate,
-      setSelectedDate
-
+      setSelectedDate,
+      setPost,
+      post,
     };
-  }, [queue,selectedDate,currentTrack,isMarkedDate, favourites,tableData,props,fonts,errors,formValues,events]);
+  }, [
+    queue,
+    selectedDate,
+    currentTrack,
+    isMarkedDate,
+    post,
+    favourites,
+    tableData,
+    props,
+    fonts,
+    errors,
+    formValues,
+    events,
+  ]);
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;
 };
