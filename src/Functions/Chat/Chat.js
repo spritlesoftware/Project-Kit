@@ -155,12 +155,12 @@ const ChatLogic = navigation => {
   };
 
   // voice message
-  const [recordSecs, setRecordSecs] = useState(0);
-  const [recordTime, setRecordTime] = useState('00:00:00');
   const [currentPositionSec, setCurrentPositionSec] = useState(0);
   const [currentDurationSec, setCurrentDurationSec] = useState(0);
-  const [playTime, setPlayTime] = useState('00:00:00');
-  const [duration, setDuration] = useState('00:00:00');
+  const [currentAudioId, setCurrentAudioId] = useState(null);
+
+  const {position, duration} = useProgress(0);
+  const {state} = usePlaybackState();
 
   const intervalIdRef = useRef(null);
 
@@ -184,7 +184,6 @@ const ChatLogic = navigation => {
   }, []);
 
   let startTime = null;
-  let intervalId = null;
   let updateInterval = 100;
 
   const StartTimer = () => {
@@ -304,6 +303,34 @@ const ChatLogic = navigation => {
     return `${mins}:${secs}`;
   };
 
+  const playAudio = message => {
+    TrackPlayer.add({
+      id: message._id,
+      url: message.audio.url,
+      title: message.text,
+    });
+    TrackPlayer.play();
+    setPlayingAudio(true);
+    setCurrentAudioId(message._id);
+  };
+
+  const TogglePlayback = message => {
+    if (state === 'playing') {
+      TrackPlayer.pause();
+      setPlayingAudio(false);
+      setCurrentAudioId(null);
+    } else {
+      playAudio(message);
+    }
+  };
+
+  const onSliderValueChange = useCallback(
+    _.debounce(value => {
+      TrackPlayer.seekTo(value);
+    }, 300), // Adjust the debounce delay as needed
+    [],
+  );
+
   return {
     messages,
     setMessages,
@@ -334,6 +361,18 @@ const ChatLogic = navigation => {
     playingAudio,
     setPlayingAudio,
     Format,
+    position,
+    duration,
+    state,
+    currentAudioId,
+    setCurrentAudioId,
+    currentDurationSec,
+    setCurrentDurationSec,
+    currentPositionSec,
+    setCurrentPositionSec,
+    playAudio,
+    TogglePlayback,
+    onSliderValueChange,
   };
 };
 
