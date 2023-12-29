@@ -21,89 +21,41 @@ import {usePlaybackState} from 'react-native-track-player';
 import _ from 'lodash';
 import Wave from 'react-native-vector-icons/MaterialIcons';
 
-const Chat = () => {
+const Chat = data => {
   const {
     messages,
-    setMessages,
     attachments,
     setAttachments,
     fileVisible,
     setFileVisible,
-    isMenuOpen,
     openMenu,
     closeMenu,
     onSend,
     pickDocument,
     navigation,
     currentTime,
-    setAudioURL,
     audioURL,
     recordingActive,
-    setRecordingActive,
     time,
-    setTime,
     StartRecording,
-    StopRecording,
     DeleteRecording,
-    isRecordingPaused,
-    toggleRecording,
     playingAudio,
     setPlayingAudio,
     Format,
+    position,
+    duration,
+    currentAudioId,
+    TogglePlayback,
+    onSliderValueChange,
   } = ChatLogic();
 
-  // voice message player
-  const {position, duration} = useProgress(0);
-
-  const [currentPositionSec, setCurrentPositionSec] = useState(0);
-  const [currentDurationSec, setCurrentDurationSec] = useState(null);
-  const [currentAudioId, setCurrentAudioId] = useState(null);
-
-  const {state} = usePlaybackState();
-
   useEffect(() => {
-    TrackPlayer.setupPlayer();
-  }, []);
-
-  useEffect(() => {
-    // console.log(position, duration, ' ]]]]');
-    setCurrentPositionSec(position);
-    setCurrentDurationSec(duration);
-
     if (position == duration) {
       TrackPlayer.seekTo(0);
       TrackPlayer.pause();
       setPlayingAudio(false);
     }
   }, [position, duration]);
-
-  const playAudio = message => {
-    TrackPlayer.add({
-      id: message._id,
-      url: message.audio.url,
-      title: message.text,
-    });
-    TrackPlayer.play();
-    setPlayingAudio(true);
-    setCurrentAudioId(message._id);
-  };
-
-  const TogglePlayback = message => {
-    if (state === 'playing') {
-      TrackPlayer.pause();
-      setPlayingAudio(false);
-      setCurrentAudioId(null);
-    } else {
-      playAudio(message);
-    }
-  };
-
-  const onSliderValueChange = useCallback(
-    _.debounce(value => {
-      TrackPlayer.seekTo(value);
-    }, 300), // Adjust the debounce delay as needed
-    [],
-  );
 
   const route = useRoute();
 
@@ -390,6 +342,8 @@ const Chat = () => {
         navigation={navigation}
         openMenu={openMenu}
         closeMenu={closeMenu}
+        isChat={true}
+        profile_pic={route.params?.Item.profile_pic}
       />
       <GiftedChat
         messages={messages}
@@ -517,9 +471,8 @@ const styles = StyleSheet.create({
     borderTopWidth: 0,
     marginHorizontal: moderateScale(10),
     marginRight: moderateScale(60),
-    alignItems: 'center',
-    marginBottom: moderateScale(5),
-    width: moderateScale(280),
+    width: moderateScale(290),
+    paddingBottom: moderateScale(5),
   },
 
   messagesContainer: {
@@ -538,7 +491,6 @@ const styles = StyleSheet.create({
     width: moderateScale(50),
     height: moderateScale(52),
     borderRadius: moderateScale(30),
-    bottom: moderateScale(5),
   },
 
   inputWrapper: {
