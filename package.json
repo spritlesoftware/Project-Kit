@@ -43,6 +43,7 @@
     "react-native-gesture-handler": "^2.13.4",
     "react-native-gifted-chat": "^2.4.0",
     "react-native-hole-view": "^3.0.0-alpha3",
+    "react-native-image-picker": "^7.1.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-modal": "^13.0.1",
     "react-native-onesignal": "^5.0.2",

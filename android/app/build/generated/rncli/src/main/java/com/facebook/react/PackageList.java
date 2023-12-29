@@ -27,6 +27,8 @@ import com.reactnativedocumentpicker.RNDocumentPickerPackage;
 import com.swmansion.gesturehandler.RNGestureHandlerPackage;
 // react-native-hole-view
 import com.ibitcy.react_native_hole_view.RNHoleViewPackage;
+// react-native-image-picker
+import com.imagepicker.ImagePickerPackage;
 // react-native-onesignal
 import com.onesignal.rnonesignalandroid.ReactNativeOneSignalPackage;
 // react-native-orientation-locker
@@ -110,6 +112,7 @@ public class PackageList {
       new RNDocumentPickerPackage(),
       new RNGestureHandlerPackage(),
       new RNHoleViewPackage(),
+      new ImagePickerPackage(),
       new ReactNativeOneSignalPackage(),
       new OrientationPackage(),
       new PagerViewPackage(),
