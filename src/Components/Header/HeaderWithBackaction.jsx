@@ -9,7 +9,7 @@ import MenuPopup from '../Menu/Menu';
 import {useNavigation} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const HeaderWithBackaction = ({title, openMenu, isChat, profile}) => {
+const HeaderWithBackaction = ({title, openMenu, isChat, profile_pic}) => {
   const navigation = useNavigation();
 
   const _goBack = () => navigation.navigate('ChatList');
@@ -17,6 +17,8 @@ const HeaderWithBackaction = ({title, openMenu, isChat, profile}) => {
   const _handleSearch = () => console.log('Searching');
 
   const _handleMore = () => openMenu();
+
+  console.log(profile_pic, ' pp');
 
   return (
     <Appbar.Header
@@ -32,7 +34,7 @@ const HeaderWithBackaction = ({title, openMenu, isChat, profile}) => {
         size={20}
         onPress={() => navigation.goBack()}
       />
-      {isChat && <Avatar.Image size={30} source={{uri: profile}} />}
+      {isChat && <Avatar.Image size={30} source={{uri: profile_pic}} />}
       <Appbar.Content
         title={title !== '' ? title : 'title'}
         titleStyle={styles.title}
@@ -62,7 +64,8 @@ const styles = StyleSheet.create({
   headerContainer: {
     backgroundColor: colors.APP_PRIMARY,
     color: colors.BLACK,
-    shadowColor: colors.APP_PRIMARY,
+    borderBottomWidth: 0.5,
+    shadowColor: colors.BLACK,
     shadowOffset: {
       width: 0,
       height: 4,
@@ -70,6 +73,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 10,
+    height: moderateScale(45),
   },
 
   title: {
