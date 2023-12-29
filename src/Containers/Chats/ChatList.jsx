@@ -1,5 +1,5 @@
 import {View, FlatList, StyleSheet} from 'react-native';
-import React from 'react';
+import React, {useEffect} from 'react';
 import {colors} from '../../Utils/colors';
 import List from '../../Components/Chat/List';
 import HeaderWithSearch from '../../Components/Header/HeaderWithSearch';
@@ -8,6 +8,7 @@ import Cancel from 'react-native-vector-icons/MaterialIcons';
 import {moderateScale} from 'react-native-size-matters';
 import ChatListLogic from '../../Functions/Chat/ChatList';
 import {chatList} from '../../Data/ChatList';
+import TrackPlayer from 'react-native-track-player';
 
 const ChatList = () => {
   const {
@@ -22,6 +23,14 @@ const ChatList = () => {
     handleCancelSearch,
     navigation,
   } = ChatListLogic();
+
+  useEffect(() => {
+    const setupPlayer = async () => {
+      await TrackPlayer.setupPlayer();
+      console.log('Player is initialized');
+    };
+    setupPlayer();
+  }, []);
 
   return (
     <View style={styles.container}>
