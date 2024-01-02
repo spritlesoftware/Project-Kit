@@ -18,7 +18,7 @@ const HeaderWithSearch = props => {
       <Appbar.Header style={styles.headerContainer}>
         <Appbar.Action
           icon="menu"
-          color={colors.BLACK}
+          color={colors.WHITE}
           onPress={_handleSearch}
         />
         <Appbar.Content title={props.title} titleStyle={styles.title} />
@@ -44,9 +44,9 @@ const styles = StyleSheet.create({
   },
 
   headerContainer: {
-    backgroundColor: colors.WHITE,
+    backgroundColor: colors.APP_PRIMARY,
     color: colors.WHITE,
-    height: moderateScale(50),
+    height: moderateScale(45),
     alignItems: 'center',
     shadowColor: colors.BLACK,
     shadowOffset: {
@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: fonts.BOLD,
     fontSize: moderateScale(22),
-    color: colors.BLACK,
+    fontWeight: 'bold',
+    color: colors.WHITE,
   },
 });

@@ -22,7 +22,7 @@ const HeaderWithBackaction = ({title, openMenu, isChat}) => {
     <Appbar.Header style={styles.headerContainer}>
       <Appbar.BackAction
         color={colors.WHITE}
-        size={25}
+        size={20}
         onPress={() => navigation.goBack()}
       />
       {isChat && (
@@ -75,8 +75,10 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: fonts.BOLD,
     fontSize: moderateScale(16),
+    fontWeight: 'bold',
     marginLeft: moderateScale(10),
     color: colors.WHITE,
+
   },
 
   connection: {
