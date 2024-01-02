@@ -35,7 +35,7 @@ const CallsScreen = () => {
 };
 
 const TopTab = props => {
-  const {data, isLoading, isAudioPlayer} = props;
+  const {data, isLoading} = props;
 
   // Function to map component_name to actual screen component
   const mapComponentToScreen = componentName => {
