@@ -200,13 +200,16 @@ const Chat = () => {
     }
   }, [attachments]);
 
+
   return (
     <View style={styles.container}>
       <HeaderWithBackaction
         title={route.params.Item.name}
+        profile={route.params.Item.profile_pic}
         navigation={navigation}
         openMenu={openMenu}
         closeMenu={closeMenu}
+        isChat={true}
       />
       <GiftedChat
         messages={messages}
