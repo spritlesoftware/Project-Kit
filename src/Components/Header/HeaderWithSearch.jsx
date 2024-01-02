@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.APP_PRIMARY,
     color: colors.WHITE,
     height: moderateScale(45),
+    marginTop: moderateScale(-40),
     alignItems: 'center',
     shadowColor: colors.BLACK,
     shadowOffset: {
