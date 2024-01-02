@@ -4,16 +4,18 @@ import StackNavigator, {AppContext} from './src/Navigations/StackNavigator';
 import ContextProvider from './src/Context/ContextProvider';
 import {StatusBar, Text, View} from 'react-native';
 import {colors} from './src/Utils/colors';
+import { moderateScale } from 'react-native-size-matters';
 
 function App() {
   // Used when generating any kind of tokens
   // To set up environmental variables, see http://twil.io/secure
   return (
     <ContextProvider>
+      <View style={{backgroundColor: colors.APP_PRIMARY, height: moderateScale(47)}}>
       <StatusBar
-        backgroundColor={colors.APP_PRIMARY}
         barStyle="light-content"
       />
+      </View>
       <NavigationContainer>
         <StackNavigator />
       </NavigationContainer>
