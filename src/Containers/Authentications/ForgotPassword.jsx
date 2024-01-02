@@ -62,7 +62,7 @@ const ForgotPassword = ({navigation}) => {
     return (
       <>
         {renderHeader('Password Reset')}
-        <View style={{alignItems: 'center'}}>
+        <View style={styles.inputContainer}>
           {error ? (
             <Text style={styles.errorStyleWithLarge}>{errorMessage}</Text>
           ) : null}
@@ -115,6 +115,7 @@ const ForgotPassword = ({navigation}) => {
             Enter the verification code send to your email address.
           </Text>
         )}
+        <View style={styles.newPassContainer}>
         <InputField
           label={''}
           placeholder={'Enter the code'}
@@ -203,12 +204,12 @@ const ForgotPassword = ({navigation}) => {
         ) : null}
         {resendClicked ? null : (
           <CustomButton
-            style={{alignSelf: 'center', marginTop: moderateScale(40)}}
             title={'Submit'}
             onPress={verifyPassword}
             isLoading={isLoading}
           />
         )}
+         </View>
       </>
     );
   };

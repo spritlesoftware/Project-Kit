@@ -85,18 +85,19 @@ export default function Themes() {
       </TouchableRipple>
 
       <View style={{display: isOpen ? 'flex' : 'none'}}>
-        {fontTypes.map(({name, font}) => {
+        {fontTypes.map((item, index) => {
           return (
             <TouchableRipple
+              key={index}
               onPress={() => {
-                setIsSelected(name);
-                setFont(font);
+                setIsSelected(item.name);
+                setFont(item.font);
               }}
               rippleColor="rgba(12,36,97, .32)">
               <Text
                 style={{
                   fontFamily: fonts.REGULAR,
-                  color: isSelected == name ? colors.APP_PRIMARY : colors.BLACK,
+                  color: isSelected == item.name ? colors.APP_PRIMARY : colors.BLACK,
                   fontSize: 15,
                   padding: 12,
                   marginLeft: 38,
@@ -105,7 +106,7 @@ export default function Themes() {
                   // isSelected == name ? colors.APP_PRIMARY : null,
                   // borderRadius: 15,
                 }}>
-                {name}
+                {item.name}
               </Text>
             </TouchableRipple>
           );
