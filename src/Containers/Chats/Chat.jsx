@@ -16,12 +16,12 @@ import {fonts} from '../../Utils/fonts';
 import PlayPause from 'react-native-vector-icons/AntDesign';
 import Delete from 'react-native-vector-icons/MaterialCommunityIcons';
 import Slider from '@react-native-community/slider';
-import TrackPlayer, {useProgress} from 'react-native-track-player';
-import {usePlaybackState} from 'react-native-track-player';
+import TrackPlayer from 'react-native-track-player';
 import _ from 'lodash';
 import Wave from 'react-native-vector-icons/MaterialIcons';
+import Share from 'react-native-share';
 
-const Chat = data => {
+const Chat = () => {
   const {
     messages,
     attachments,
@@ -93,7 +93,7 @@ const Chat = data => {
 
   const renderBubble = props => {
     const {currentMessage} = props;
-
+    console.log(currentMessage.image, 'ff');
     if (currentMessage.file && currentMessage.file.url) {
       return (
         <TouchableOpacity
@@ -110,7 +110,7 @@ const Chat = data => {
           }}
           onPress={() => setFileVisible(true)}>
           <ViewFile
-            props={props}
+            props={currentMessage}
             visible={fileVisible}
             onClose={() => setFileVisible(false)}
           />
@@ -140,7 +140,7 @@ const Chat = data => {
       const audioDurationString = currentMessage.audio.duration || '0:00';
       const [minutes, seconds] = audioDurationString.split(':');
       const audioDuration = parseInt(minutes, 10) * 60 + parseInt(seconds, 10);
-      // console.log(audioDuration, ' 00');
+
       return (
         <TouchableOpacity
           style={{
@@ -190,9 +190,135 @@ const Chat = data => {
                 : currentMessage.audio.duration}
             </Text>
           </View>
+          <View style={styles.timeContainer}>
+            <Text
+              style={{
+                ...styles.fileText,
+                color: currentMessage.user._id === 2 ? 'white' : 'black',
+              }}>
+              {currentMessage.text}
+            </Text>
+            <Text
+              style={{
+                ...styles.timeText,
+                color: currentMessage.user._id === 2 ? 'white' : 'black',
+              }}>
+              {currentTime}
+            </Text>
+          </View>
+        </TouchableOpacity>
+      );
+    } else if (currentMessage.image && currentMessage.image !== '') {
+      return (
+        <TouchableOpacity
+          style={{
+            ...styles.audioBubble,
+            backgroundColor:
+              props.currentMessage.user._id === 2
+                ? colors.APP_PRIMARY
+                : '#efefef',
+            borderBottomLeftRadius:
+              props.currentMessage.user._id === 2 ? 15 : 5,
+            borderBottomRightRadius:
+              props.currentMessage.user._id === 2 ? 5 : 15,
+            borderTopLeftRadius: props.currentMessage.user._id === 2 ? 15 : 5,
+          }}>
+          <View>
+            <TouchableOpacity onPress={() => setFileVisible(true)}>
+              {/* {console.log(currentMessage.image, ' 1')} */}
+              <ViewFile
+                props={currentMessage}
+                visible={fileVisible}
+                onClose={() => setFileVisible(false)}
+                isImage={true}
+              />
+              {/* {console.log(currentMessage.image, ' 2')} */}
+              <Image
+                source={{uri: currentMessage.image}}
+                width={moderateScale(200)}
+                height={moderateScale(200)}
+                style={styles.renderImage}
+              />
+            </TouchableOpacity>
+            <View style={styles.timeContainer}>
+              <Text
+                style={{
+                  ...styles.fileText,
+                  color: currentMessage.user._id === 2 ? 'white' : 'black',
+                }}>
+                {currentMessage.text}
+              </Text>
+              <Text
+                style={{
+                  ...styles.timeText,
+                  color: currentMessage.user._id === 2 ? 'white' : 'black',
+                }}>
+                {currentTime}
+              </Text>
+            </View>
+          </View>
+        </TouchableOpacity>
+      );
+    } else if (currentMessage.video && currentMessage.video.url !== '') {
+      const handleVideoClick = async () => {
+        try {
+          const options = {
+            dialogTitle: 'Choose a video player',
+          };
+          await Share.open(
+            {url: currentMessage.video.url, failOnCancel: false},
+            options,
+          );
+        } catch (error) {
+          console.error('Error sharing video:', error);
+        }
+      };
+
+      // console.log(currentMessage.video.url, ' video');
+      return (
+        <TouchableOpacity
+          style={{
+            ...styles.audioBubble,
+            backgroundColor:
+              props.currentMessage.user._id === 2
+                ? colors.APP_PRIMARY
+                : '#efefef',
+            borderBottomLeftRadius:
+              props.currentMessage.user._id === 2 ? 15 : 5,
+            borderBottomRightRadius:
+              props.currentMessage.user._id === 2 ? 5 : 15,
+            borderTopLeftRadius: props.currentMessage.user._id === 2 ? 15 : 5,
+          }}>
+          <View>
+            <TouchableOpacity
+              style={{marginTop: moderateScale(-5)}}
+              onPress={handleVideoClick}>
+              <FileTransfer
+                style={{marginTop: -10}}
+                filePath={currentMessage.video.url}
+              />
+            </TouchableOpacity>
+            <View style={styles.timeContainer}>
+              <Text
+                style={{
+                  ...styles.fileText,
+                  color: currentMessage.user._id === 2 ? 'white' : 'black',
+                }}>
+                {currentMessage.text}
+              </Text>
+              <Text
+                style={{
+                  ...styles.timeText,
+                  color: currentMessage.user._id === 2 ? 'white' : 'black',
+                }}>
+                {currentTime}
+              </Text>
+            </View>
+          </View>
         </TouchableOpacity>
       );
     }
+
     return (
       <Bubble
         {...props}
@@ -287,6 +413,29 @@ const Chat = data => {
                   filePath={attachment.path}
                   isFooter={true}
                 />
+              )}
+              {attachment.type === 'video' && (
+                <View
+                  style={[
+                    styles.innerChatFooter,
+                    {
+                      backgroundColor: colors.WHITE,
+                    },
+                  ]}>
+                  <Image
+                    source={require('../../Assets/images/video.png')}
+                    style={{
+                      height: 75,
+                      width: 75,
+                      borderRadius: moderateScale(10),
+                    }}
+                  />
+                  <TouchableOpacity
+                    onPress={() => setImagePath('')}
+                    style={styles.buttonFooterChat}>
+                    <Text style={styles.textFooterChat}>X</Text>
+                  </TouchableOpacity>
+                </View>
               )}
               <TouchableOpacity
                 onPress={() => {
@@ -543,7 +692,7 @@ const styles = StyleSheet.create({
 
   audioBubble: {
     flexDirection: 'row',
-    padding: moderateScale(10),
+    padding: moderateScale(5),
     justifyContent: 'center',
     alignItems: 'center',
     maxWidth: moderateScale(250),
@@ -563,6 +712,16 @@ const styles = StyleSheet.create({
   PlayPauseButton: {
     paddingTop: moderateScale(1),
     paddingHorizontal: moderateScale(1),
+  },
+
+  renderImage: {
+    borderRadius: moderateScale(10),
+  },
+
+  timeContainer: {
+    marginTop: moderateScale(10),
+    marginBottom: moderateScale(-5),
+    marginRight: moderateScale(-5),
   },
 });
 
