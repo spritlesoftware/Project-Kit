@@ -2,29 +2,39 @@ import React, {useState} from 'react';
 import {Modal, Portal, Text, TouchableRipple, Icon} from 'react-native-paper';
 import {moderateScale} from 'react-native-size-matters';
 import Pdf from 'react-native-pdf';
-import {StyleSheet, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 
-const ViewFile = ({props, visible, onClose}) => {
-  const filePath = props.currentMessage.file.url;
+const ViewFile = ({props, visible, onClose, isImage}) => {
+  const filePath = props.file.url || props.image;
   var name = '';
   if (filePath !== undefined) {
     name = filePath.split('/').pop();
   }
-  const [url, setUrl] = useState(props.currentMessage.file.url);
+  const [url, setUrl] = useState(filePath);
   return (
     <Portal>
       <Modal visible={visible} contentContainerStyle={styles.containerStyle}>
         <Text style={styles.pdfName}>{name}</Text>
         <View style={styles.container}>
-          <Pdf
-            source={{uri: url}}
-            style={{
-              height: '100%',
-              width: '100%',
-            }}
-          />
+          {!isImage && (
+            <Pdf
+              source={{uri: filePath}}
+              style={{
+                height: '100%',
+                width: '100%',
+              }}
+            />
+          )}
+          {isImage && (
+            <Image
+              style={styles.viewImage}
+              source={{uri: filePath}}
+              width="100%"
+              height="90%"
+            />
+          )}
           <TouchableRipple onPress={onClose} style={styles.buttonCancel}>
             <Icon source="close" color={colors.BLACK} size={30} />
           </TouchableRipple>
@@ -66,5 +76,10 @@ const styles = StyleSheet.create({
     fontFamily: fonts.BOLD,
     fontSize: moderateScale(20),
     backgroundColor: colors.GRAY,
+  },
+
+  viewImage: {
+    alignSelf: 'center',
+    resizeMode: 'contain',
   },
 });
