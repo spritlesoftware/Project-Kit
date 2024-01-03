@@ -58,6 +58,9 @@ const ChatLogic = navigation => {
           file: {
             url: attachment.type === 'file' ? attachment.path : '',
           },
+          video: {
+            url: attachment.type === 'video' ? attachment.path : '',
+          },
         }));
 
         setMessages(previousMessages =>
@@ -129,7 +132,9 @@ const ChatLogic = navigation => {
               type:
                 fileUri.includes('.png') || fileUri.includes('.jpg')
                   ? 'image'
-                  : 'file',
+                  : fileUri.includes('pdf')
+                  ? 'file'
+                  : 'video',
             },
           ]);
         }
