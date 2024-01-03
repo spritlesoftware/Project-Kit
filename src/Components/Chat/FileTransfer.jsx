@@ -25,7 +25,7 @@ const FileTransfer = props => {
           source={
             fileType === 'pdf'
               ? require('../../Assets/images/pdf.png')
-              : require('../../Assets/images/png.png')
+              : require('../../Assets/images/video.png')
           }
           style={{height: 60, width: 60}}
         />
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     marginLeft: 5,
     marginRight: 5,
-    width: moderateScale(130),
+    maxWidth: moderateScale(175),
   },
   textType: {
     color: 'black',
