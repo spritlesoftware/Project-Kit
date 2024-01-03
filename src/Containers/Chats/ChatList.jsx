@@ -7,7 +7,6 @@ import {Searchbar} from 'react-native-paper';
 import Cancel from 'react-native-vector-icons/MaterialIcons';
 import {moderateScale} from 'react-native-size-matters';
 import ChatListLogic from '../../Functions/Chat/ChatList';
-import {chatList} from '../../Data/ChatList';
 import TrackPlayer from 'react-native-track-player';
 
 const ChatList = () => {
