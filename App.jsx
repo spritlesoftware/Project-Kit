@@ -2,7 +2,7 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import StackNavigator, {AppContext} from './src/Navigations/StackNavigator';
 import ContextProvider from './src/Context/ContextProvider';
-import {StatusBar} from 'react-native';
+import {StatusBar, Text, View} from 'react-native';
 import {colors} from './src/Utils/colors';
 
 function App() {
