@@ -29,9 +29,11 @@ export default function NewPost({route,navigation}) {
           title={'Post'}
           onPress={() => {
             setPost([{
-                username:"user0",
+                username:"myusername",
                 image: `${route.params.image}`,
                 caption:caption,
+                isLiked:false,
+                comments:[],
                 avatar:"https://cdn.iconscout.com/icon/free/png-256/free-avatar-human-man-profile-auto-user-30483.png"
             },...post])
             navigation.navigate('Post');
