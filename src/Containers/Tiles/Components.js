@@ -46,7 +46,7 @@ export const components = [
   },
 
   {
-    name: 'Post & Polls',
+    name: 'Posts',
     image: require('../../Assets/images/post.jpg'),
     navigation: 'Post',
   },

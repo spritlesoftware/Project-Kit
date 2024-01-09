@@ -79,6 +79,7 @@ const ContextProvider = ({children}) => {
     errors,
     formValues,
     events,
+    
   ]);
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;

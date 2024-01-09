@@ -21,7 +21,7 @@ export default function InputField({label, ...props}) {
         textColor={colors.BLACK}
         {...props}
         keyboardType={props.type}
-        onFocus={props.onFocus}
+        autoFocus={props.autoFocus}
       />
       {props.error ? <Text style={styles.error}>{props.errorMsg}</Text> : null}
       {props.icon && (
