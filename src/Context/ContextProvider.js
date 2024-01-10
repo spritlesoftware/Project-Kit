@@ -37,6 +37,7 @@ const ContextProvider = ({children}) => {
   const [isMarkedDate, setIsMarkedDate] = useState([]);
   const [selectedDate, setSelectedDate] = useState();
   const [post, setPost] = useState(postdata);
+  const [comments, setComments] = useState();
 
   const data = useMemo(() => {
     return {
@@ -65,6 +66,9 @@ const ContextProvider = ({children}) => {
       setSelectedDate,
       setPost,
       post,
+  comments,
+  setComments
+     
     };
   }, [
     queue,
@@ -79,7 +83,7 @@ const ContextProvider = ({children}) => {
     errors,
     formValues,
     events,
-    
+    comments
   ]);
 
   return <AppContext.Provider value={data}>{children}</AppContext.Provider>;

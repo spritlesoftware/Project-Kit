@@ -5,6 +5,7 @@ import CustomButton from '../../Components/Button/CustomButton';
 import { useState } from 'react';
 import { useAppContext } from '../../Context/ContextProvider';
 import InputField from '../../Components/TextInput/InputField'
+import uuid from 'react-native-uuid';
 
 export default function NewPost({route,navigation}) {
     const[caption , setCaption] = useState('')
@@ -34,6 +35,7 @@ export default function NewPost({route,navigation}) {
                 caption:caption,
                 isLiked:false,
                 comments:[],
+                id:uuid.v4(),
                 avatar:"https://cdn.iconscout.com/icon/free/png-256/free-avatar-human-man-profile-auto-user-30483.png"
             },...post])
             navigation.navigate('Post');
