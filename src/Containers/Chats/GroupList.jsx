@@ -42,14 +42,25 @@ const GroupListUI = () => {
           style={styles.searchBar}
         />
       )}
-      <FlatList
-        data={filteredGroups}
-        renderItem={item => <List items={item} navigation={navigation} />}
-      />
+      <View style={{flex: 1}}>
+        <FlatList
+          data={filteredGroups}
+          renderItem={item => <List items={item} navigation={navigation} />}
+        />
+      </View>
       <TouchableOpacity
         style={styles.addIcon}
         onPress={() => navigation.navigate('Contacts')}>
-        <Plus name="pluscircle" color={colors.BLACK} size={moderateScale(50)} />
+        <Plus
+          name="pluscircle"
+          color={colors.APP_PRIMARY}
+          size={moderateScale(50)}
+          style={{
+            paddingVertical: moderateScale(5),
+            backgroundColor: colors.WHITE,
+            borderRadius: moderateScale(50),
+          }}
+        />
       </TouchableOpacity>
     </View>
   );
@@ -78,9 +89,10 @@ const styles = StyleSheet.create({
 
   addIcon: {
     position: 'absolute',
-    alignSelf: 'flex-end',
-    right: moderateScale(20),
-    top: '85%',
+    width: moderateScale(55),
+    left: moderateScale(280),
+    bottom: moderateScale(50),
+    borderRadius: moderateScale(40),
   },
 });
 
