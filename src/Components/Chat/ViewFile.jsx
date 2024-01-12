@@ -6,19 +6,19 @@ import {Image, StyleSheet, View} from 'react-native';
 import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 
-const ViewFile = ({props, visible, onClose, isImage}) => {
+const ViewFile = ({props, visible, onClose, isImage, isVideo}) => {
   const filePath = props.file.url || props.image;
   var name = '';
   if (filePath !== undefined) {
     name = filePath.split('/').pop();
   }
-  const [url, setUrl] = useState(filePath);
+
   return (
     <Portal>
       <Modal visible={visible} contentContainerStyle={styles.containerStyle}>
         <Text style={styles.pdfName}>{name}</Text>
         <View style={styles.container}>
-          {!isImage && (
+          {!isImage && !isVideo && (
             <Pdf
               source={{uri: filePath}}
               style={{
@@ -36,7 +36,7 @@ const ViewFile = ({props, visible, onClose, isImage}) => {
             />
           )}
           <TouchableRipple onPress={onClose} style={styles.buttonCancel}>
-            <Icon source="close" color={colors.BLACK} size={30} />
+            <Icon source="close" color={colors.BLACK} size={20} />
           </TouchableRipple>
         </View>
       </Modal>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     position: 'absolute',
     borderColor: 'black',
-    left: '85%',
+    left: '88%',
     top: moderateScale(-30),
   },
   textBtn: {
@@ -73,9 +73,9 @@ const styles = StyleSheet.create({
     // position: 'absolute',
     paddingTop: moderateScale(50),
     paddingLeft: moderateScale(20),
-    fontFamily: fonts.BOLD,
-    fontSize: moderateScale(20),
-    backgroundColor: colors.GRAY,
+    fontFamily: fonts.MEDIUM,
+    fontSize: moderateScale(12),
+    maxWidth: moderateScale(320),
   },
 
   viewImage: {
