@@ -3,7 +3,7 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {colors} from '../../Utils/colors';
 import {GiftedChat, Bubble, Send, InputToolbar} from 'react-native-gifted-chat';
 import HeaderWithBackaction from '../../Components/Header/HeaderWithBackaction';
-import {useRoute} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import {Icon} from 'react-native-paper';
 import {moderateScale} from 'react-native-size-matters';
 import FileTransfer from '../../Components/Chat/FileTransfer';
@@ -32,7 +32,6 @@ const Chat = () => {
     closeMenu,
     onSend,
     pickDocument,
-    navigation,
     currentTime,
     audioURL,
     recordingActive,
@@ -48,6 +47,8 @@ const Chat = () => {
     TogglePlayback,
     onSliderValueChange,
   } = ChatLogic();
+
+  const navigation = useNavigation();
 
   useEffect(() => {
     if (position == duration) {
@@ -93,7 +94,6 @@ const Chat = () => {
 
   const renderBubble = props => {
     const {currentMessage} = props;
-    console.log(currentMessage.image, 'ff');
     if (currentMessage.file && currentMessage.file.url) {
       return (
         <TouchableOpacity
@@ -225,14 +225,12 @@ const Chat = () => {
           }}>
           <View>
             <TouchableOpacity onPress={() => setFileVisible(true)}>
-              {/* {console.log(currentMessage.image, ' 1')} */}
               <ViewFile
                 props={currentMessage}
                 visible={fileVisible}
                 onClose={() => setFileVisible(false)}
                 isImage={true}
               />
-              {/* {console.log(currentMessage.image, ' 2')} */}
               <Image
                 source={{uri: currentMessage.image}}
                 width={moderateScale(200)}
@@ -274,7 +272,6 @@ const Chat = () => {
         }
       };
 
-      // console.log(currentMessage.video.url, ' video');
       return (
         <TouchableOpacity
           style={{
@@ -292,7 +289,12 @@ const Chat = () => {
           <View>
             <TouchableOpacity
               style={{marginTop: moderateScale(-5)}}
-              onPress={handleVideoClick}>
+              // onPress={handleVideoClick}
+              onPress={() =>
+                navigation.navigate('ChatVideoPlayer', {
+                  url: currentMessage.video.url,
+                })
+              }>
               <FileTransfer
                 style={{marginTop: -10}}
                 filePath={currentMessage.video.url}
