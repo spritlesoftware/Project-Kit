@@ -19,7 +19,7 @@ const ContactsLogic = () => {
     setFilteredContacts(filteredMessages);
   };
 
-  const HandleGroupSelection = item => {
+  const handleGroupSelection = item => {
     const updatedGroupContact = new Set(groupContact);
 
     if (updatedGroupContact.has(item)) {
@@ -45,7 +45,7 @@ const ContactsLogic = () => {
     selected,
     setSelected,
     handleSearch,
-    HandleGroupSelection,
+    handleGroupSelection,
   };
 };
 
