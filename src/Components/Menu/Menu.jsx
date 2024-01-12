@@ -22,9 +22,19 @@ const MenuPopup = props => {
           <MenuIcon name="dots-three-vertical" color={colors.WHITE} size={15} />
         </Button>
       }>
-      <Menu.Item onPress={() => {}} title="Item 1" />
-      <Menu.Item onPress={() => {}} title="Item 2" />
-      <Divider />
+      {props.check && (
+        <>
+          <Menu.Item
+            onPress={() => {
+              navigation.navigate('Groups');
+              setVisible(false);
+            }}
+            title="Create Group"
+          />
+          <Menu.Item onPress={() => {}} title="Settings" />
+          <Divider />
+        </>
+      )}
       <Menu.Item onPress={() => navigation.replace('Login')} title="Logout" />
     </Menu>
   );
