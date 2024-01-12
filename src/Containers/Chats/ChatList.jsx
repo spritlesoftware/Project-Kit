@@ -38,6 +38,7 @@ const ChatList = () => {
         setSearch={setSearch}
         openDrawer={openDrawer}
         setOpenDrawer={setOpenDrawer}
+        isChatList={true}
       />
       {search && (
         <Searchbar
