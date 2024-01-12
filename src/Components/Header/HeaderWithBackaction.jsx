@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Platform} from 'react-native';
 import React from 'react';
 import {Appbar} from 'react-native-paper';
 import {Avatar} from 'react-native-paper';
@@ -19,18 +19,20 @@ const HeaderWithBackaction = ({title, openMenu, isChat, profile}) => {
   const _handleMore = () => openMenu();
 
   return (
-    <Appbar.Header style={styles.headerContainer}>
+    <Appbar.Header
+      style={[
+        styles.headerContainer,
+        {
+          height: Platform.OS === 'ios' ? moderateScale(20) : moderateScale(45),
+          marginTop: Platform.OS === 'ios' ? moderateScale(-35) : 0,
+        },
+      ]}>
       <Appbar.BackAction
         color={colors.WHITE}
         size={20}
         onPress={() => navigation.goBack()}
       />
-      {isChat && (
-        <Avatar.Image
-          size={30}
-          source={{ uri: profile }}
-        />
-      )}
+      {isChat && <Avatar.Image size={30} source={{uri: profile}} />}
       <Appbar.Content
         title={title !== '' ? title : 'title'}
         titleStyle={styles.title}
@@ -68,8 +70,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 10,
-    height: moderateScale(20),
-    marginTop: moderateScale(-35)
   },
 
   title: {
@@ -79,7 +79,6 @@ const styles = StyleSheet.create({
     marginLeft: moderateScale(10),
     bottom: moderateScale(3),
     color: colors.WHITE,
-
   },
 
   connection: {

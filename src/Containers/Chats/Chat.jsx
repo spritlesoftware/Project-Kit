@@ -132,9 +132,9 @@ const Chat = () => {
           styles.input,
           {
             marginBottom:
-              Platform.OS === 'ios' ? moderateScale(30) : moderateScale(0),
+              Platform.OS === 'ios' ? moderateScale(30) : moderateScale(10),
             marginRight:
-              Platform.OS === 'ios' ? moderateScale(10) : moderateScale(0),
+              Platform.OS === 'ios' ? moderateScale(10) : moderateScale(10),
           },
         ]}
       />
@@ -199,7 +199,6 @@ const Chat = () => {
       return null;
     }
   }, [attachments]);
-
 
   return (
     <View style={styles.container}>
