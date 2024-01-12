@@ -33,7 +33,7 @@ const HeaderWithSearch = props => {
           size={25}
           onPress={_handleMore}
         /> */}
-        {/* <MenuPopup /> */}
+        <MenuPopup check={props.isChatList} />
       </Appbar.Header>
     </>
   );
