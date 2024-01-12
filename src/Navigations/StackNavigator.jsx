@@ -36,6 +36,7 @@ import NewEvent from '../Containers/EventCalendar/NewEvent';
 import EventList from '../Containers/EventCalendar/EventList';
 import BottomTabNavigator from './Tab/BottomTabNavigator';
 import TopTabNavigator from './Tab/TopTabNavigator';
+import DrawerNavigator from './Drawer/DrawerNavigator';
 
 export const initialState = {
   isAudioEnabled: true,
@@ -68,7 +69,7 @@ const StackNavigator = () => {
         animation: 'slide_from_right',
       }}
       initialRouteName="Tiles">
-      <Stack.Screen name="Tiles" component={Tiles} />
+      <Stack.Screen name="Tiles" component={DrawerNavigator} />
       <Stack.Screen name="DatePickerHome" component={DatePickerHome} />
       <Stack.Screen name="TopTab" component={TopTabNavigator} />
       <Stack.Screen name="BottomTab" component={BottomTabNavigator} />

@@ -44,7 +44,7 @@ function AlbumImage(info) {
     <>
       <Image
         style={styles.albumImage}
-        source={require('../../Assets/images/album2.jpeg')}
+        source={require('../../Assets/images/album.jpeg')}
       />
     </>
   );
@@ -78,7 +78,7 @@ const TrackProgress = ({info, position, duration}) => {
   }
 
   return (
-    <View>
+    <View style={styles.trackProgressContainer}>
       <Text variant="headlineSmall" style={styles.trackName}>
         {info.title}
       </Text>
@@ -287,6 +287,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     alignSelf: 'flex-start',
+    marginHorizontal: moderateScale(10)
   },
 
   controlsContainer: {
@@ -299,15 +300,18 @@ const styles = StyleSheet.create({
 
   controlsWrapper: {
     justifyContent: 'flex-end',
+    // paddingHorizontal: moderateScale(10)
   },
 
   albumImage: {
     alignSelf: 'center',
     marginTop: moderateScale(40),
-    width: '105%',
+    width: '95%',
     height: '60%',
     borderRadius: moderateScale(10),
     resizeMode: 'cover',
+    borderWidth: 3,
+    borderColor: colors.WHITE
   },
 
   trackName: {
@@ -344,6 +348,10 @@ const styles = StyleSheet.create({
     // width: moderateScale(90),
     // paddingHorizontal: moderateScale(10),
   },
+
+  trackProgressContainer: {
+    marginHorizontal: moderateScale(10)
+  }
 });
 
 export default App;

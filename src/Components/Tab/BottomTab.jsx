@@ -1,5 +1,5 @@
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import {StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import {moderateScale} from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import BottomTabLogic from '../../Functions/Tab/BottomTab';
@@ -11,7 +11,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const HomeScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Home Screen</Text>
     </View>
   );
@@ -19,7 +19,7 @@ const HomeScreen = () => {
 
 const NotificationScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Notification Screen</Text>
     </View>
   );
@@ -27,7 +27,7 @@ const NotificationScreen = () => {
 
 const AccountScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Account Screen</Text>
     </View>
   );
@@ -51,7 +51,7 @@ function BottomTab() {
   };
 
   return (
-    <View style={styles.container}>
+    <>
       {isLoading ? (
         <Loader />
       ) : (
@@ -60,7 +60,7 @@ function BottomTab() {
             headerShown: false,
             tabBarHideOnKeyboard: true,
             tabBarStyle: {
-              height: moderateScale(60),
+              height: Platform.OS === 'ios' ? moderateScale(80) : moderateScale(60),
               backgroundColor: colors.APP_PRIMARY,
               borderTopLeftRadius: moderateScale(30),
               borderTopRightRadius: moderateScale(30),
@@ -107,7 +107,7 @@ function BottomTab() {
           ))}
         </Tab.Navigator>
       )}
-    </View>
+    </>
   );
 }
 
@@ -117,5 +117,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.WHITE,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });

@@ -23,6 +23,7 @@ const TracklList = props => {
 
   return (
     <TouchableOpacity
+      key={props.index}
       style={styles.listContainer}
       onPress={() => props.handleItemPress(props.index)}>
       <View style={styles.titleContainer}>

@@ -81,7 +81,7 @@ const Lists = ({items, groupContact}) => {
         title={Item.name}
         titleStyle={[
           styles.title,
-          {fontFamily: Item.msg_read ? fonts.MEDIUM : fonts.BOLD},
+          {fontFamily: Item.msg_read ? fonts.MEDIUM : fonts.BOLD, fontWeight: Item.msg_read ? 500 : 'bold',},
         ]}
         description={Item.last_msg}
         descriptionStyle={[
@@ -135,6 +135,7 @@ const styles = StyleSheet.create({
 
   date: {
     fontFamily: fonts.MEDIUM,
+    fontSize: moderateScale(10),
     color: colors.GREY20,
   },
 

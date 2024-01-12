@@ -69,6 +69,7 @@ export const styles = StyleSheet.create({
     fontSize: moderateScale(10),
     alignSelf: 'flex-start',
     color: colors.RED_BORDER,
+    marginHorizontal: moderateScale(10)
   },
   headerTitle: {
     fontFamily: fonts.BOLD,
@@ -82,4 +83,16 @@ export const styles = StyleSheet.create({
     color: colors.BLACK,
     width: '100%',
   },
+
+  titleContainer: {
+    marginHorizontal: moderateScale(10)
+  },
+
+  inputContainer: {
+    marginHorizontal: moderateScale(10)
+  },
+
+  newPassContainer: {
+    marginHorizontal: moderateScale(10)
+  }
 });
