@@ -23,11 +23,11 @@ const FileTransfer = props => {
       <View style={styles.frame}>
         <Image
           source={
-            fileType === 'pdf'
+            fileType === 'pdf' || fileType === 'PDF'
               ? require('../../Assets/images/pdf.png')
               : require('../../Assets/images/video.png')
           }
-          style={{height: 60, width: 60}}
+          style={{height: 60, width: 50}}
         />
         {props.isFooter ? (
           ''
