@@ -7,11 +7,12 @@ import {fonts} from '../../Utils/fonts';
 import Next from 'react-native-vector-icons/AntDesign';
 
 const PlayList = props => {
+  console.log(props.screenName, " --")
   return (
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.playlistContainer}
-        onPress={() => props.navigation.navigate(props.screenName)}>
+        onPress={() => props.navigation.navigate('PlayListTracks')}>
         <View style={styles.innerContainer}>
           <View>
             <Image

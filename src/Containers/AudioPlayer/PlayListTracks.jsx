@@ -1,4 +1,4 @@
-import {View, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
+import {View, FlatList, StyleSheet, TouchableOpacity, Platform, StatusBar} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import TracklList from '../../Components/Audio/TrackList';
 import TrackPlayer, {
@@ -97,7 +97,7 @@ const PlayListTracks = ({navigation}) => {
         <View
           style={{
             justifyContent: 'center',
-            padding: moderateScale(10),
+            marginBottom: moderateScale(35)
           }}>
           <PlayingTrackBottom
             currentTrack={currentTrack}
@@ -116,13 +116,14 @@ const PlayListTracks = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.BLACK,
-    paddingVertical: moderateScale(10),
+    backgroundColor: colors.WHITE,
   },
 
   headerTitle: {
     color: colors.WHITE,
     fontFamily: fonts.BOLD,
+    fontSize: moderateScale(18),
+    fontWeight: 'bold',
     paddingLeft: moderateScale(10),
     paddingTop: moderateScale(-10),
     marginVertical: moderateScale(10),
@@ -132,12 +133,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.BLACK,
+    backgroundColor: colors.APP_PRIMARY,
   },
 
   button: {
-    backgroundColor: colors.BLACK,
+    backgroundColor: colors.APP_PRIMARY,
+    marginLeft: moderateScale(10)
   },
+
+  statusBar: {
+    backgroundColor: colors.APP_PRIMARY,
+    width: '100%',
+    height: moderateScale(47),
+  }
 });
 
 export default PlayListTracks;

@@ -58,7 +58,7 @@ const Login = ({navigation}) => {
         <KeyboardAwareScrollView
           style={styles.keyboard}
           keyboardShouldPersistTaps="handled">
-          <View style={{alignItems: 'center', marginTop: moderateScale(-30)}}>
+          <View style={{alignItems: 'center', marginTop: moderateScale(-50)}}>
             <LoginLogo width={200} height={200} />
           </View>
           <View style={styles.titleContainer}>

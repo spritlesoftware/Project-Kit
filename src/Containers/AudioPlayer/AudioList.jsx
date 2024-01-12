@@ -1,4 +1,4 @@
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Platform, StatusBar} from 'react-native';
 import React from 'react';
 import TopTab from '../../Components/Tab/TopTab';
 import AllSongs from './AllSongs';
@@ -28,14 +28,22 @@ const styles = StyleSheet.create({
   },
 
   headerTitle: {
-    color: colors.BLACK,
+    color: colors.WHITE,
+    backgroundColor: colors.APP_PRIMARY,
+    width: '100%',
+    textAlign: 'center',
     fontFamily: fonts.BOLD,
-    marginLeft: moderateScale(10),
-    marginTop: moderateScale(5),
+    fontWeight: 'bold',
     paddingVertical: moderateScale(10),
     fontSize: moderateScale(25),
     alignSelf: 'center',
   },
+
+  statusBar: {
+    backgroundColor: colors.APP_PRIMARY,
+    width: '100%',
+    height: moderateScale(47),
+  }
 });
 
 export default AudioList;
