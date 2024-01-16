@@ -24,7 +24,7 @@ const Contacts = () => {
     selected,
     setSelected,
     handleSearch,
-    HandleGroupSelection,
+    handleGroupSelection,
     navigation,
   } = ContactsLogic();
 
@@ -47,13 +47,13 @@ const Contacts = () => {
             onPress={() => {
               setSearch(false);
               setSearchQuery('');
-              setFilteredContacts(chatList);
+              // setFilteredContacts(chatList);
             }}
           />
         )}
         style={styles.searchBar}
       />
-      <PopupModal selectedCount={groupContact.length} />
+      <PopupModal selectedCount={groupContact.length} navigation={navigation} />
       {isGroupSelection && (
         <View style={styles.groupContainer}>
           <Text style={styles.selectedNo}>
@@ -64,18 +64,12 @@ const Contacts = () => {
       <FlatList
         data={filteredContacts}
         renderItem={item => (
-          <TouchableOpacity
-            style={styles.listContainer}
-            onLongPress={() => HandleGroupSelection(item.item)}
-            onPress={() =>
-              groupContact.length > 0 && HandleGroupSelection(item.item)
-            }>
-            <List
-              items={item}
-              navigation={navigation}
-              groupContact={groupContact}
-            />
-          </TouchableOpacity>
+          <List
+            items={item}
+            navigation={navigation}
+            groupContact={groupContact}
+            handleGroupSelection={handleGroupSelection}
+          />
         )}
       />
     </View>

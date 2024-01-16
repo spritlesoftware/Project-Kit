@@ -33,7 +33,7 @@ const HeaderWithSearch = props => {
           size={25}
           onPress={_handleMore}
         /> */}
-        {/* <MenuPopup /> */}
+        <MenuPopup check={props.isChatList} />
       </Appbar.Header>
     </>
   );
@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
   title: {
     fontFamily: fonts.BOLD,
     fontSize: moderateScale(22),
-    fontWeight: 'bold',
     color: colors.WHITE,
   },
 });

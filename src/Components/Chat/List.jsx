@@ -8,14 +8,19 @@ import Dot from 'react-native-vector-icons/Octicons';
 import Check from 'react-native-vector-icons/AntDesign';
 import {useNavigation} from '@react-navigation/core';
 
-const Lists = ({items, groupContact}) => {
+const Lists = ({items, groupContact, handleGroupSelection}) => {
   const Item = items.item;
   const navigation = useNavigation();
 
   return (
     <TouchableRipple
       style={styles.container}
-      onPress={() => navigation.navigate('ChatRoom', {Item})}>
+      onLongPress={() => handleGroupSelection(Item)}
+      onPress={() =>
+        groupContact?.length > 0
+          ? handleGroupSelection(Item)
+          : navigation.navigate('ChatRoom', {Item})
+      }>
       <List.Item
         left={() => (
           <>
@@ -112,6 +117,7 @@ export default Lists;
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     backgroundColor: colors.WHITE,
     marginBottom: moderateScale(-12),
   },

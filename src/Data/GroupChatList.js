@@ -1,6 +1,6 @@
 import {user_1, user_2, user_3} from './ChatRoom';
 
-const dateFormatter = timestamp => {
+export const dateFormatter = timestamp => {
   const date = new Date(timestamp);
 
   const today = new Date(); // Get the current date.
@@ -114,6 +114,50 @@ export const groupChatList = [
     msg_read: true,
     active: false,
     last_seen: '2m',
+  },
+  {
+    user_id: 8,
+    name: 'GEN AI',
+    last_msg: "Let's catch up soon!",
+    modified_date: dateFormatter(user_3[1].createdAt),
+    profile_pic:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9EWJXakOBhOQvhl8k0GCRsakU9RxV2m-qiQ&usqp=CAU',
+    msg_read: true,
+    active: false,
+    last_seen: '1m',
+  },
+  {
+    user_id: 8,
+    name: 'GEN AI',
+    last_msg: "Let's catch up soon!",
+    modified_date: dateFormatter(user_3[1].createdAt),
+    profile_pic:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9EWJXakOBhOQvhl8k0GCRsakU9RxV2m-qiQ&usqp=CAU',
+    msg_read: true,
+    active: false,
+    last_seen: '1m',
+  },
+  {
+    user_id: 8,
+    name: 'GEN AI',
+    last_msg: "Let's catch up soon!",
+    modified_date: dateFormatter(user_3[1].createdAt),
+    profile_pic:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9EWJXakOBhOQvhl8k0GCRsakU9RxV2m-qiQ&usqp=CAU',
+    msg_read: true,
+    active: false,
+    last_seen: '1m',
+  },
+  {
+    user_id: 8,
+    name: 'GEN AI',
+    last_msg: "Let's catch up soon!",
+    modified_date: dateFormatter(user_3[1].createdAt),
+    profile_pic:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9EWJXakOBhOQvhl8k0GCRsakU9RxV2m-qiQ&usqp=CAU',
+    msg_read: true,
+    active: false,
+    last_seen: '1m',
   },
   {
     user_id: 8,
