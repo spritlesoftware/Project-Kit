@@ -1,7 +1,7 @@
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, Platform} from 'react-native';
 import React, {useState} from 'react';
 import {Appbar, Button, Menu, Divider, PaperProvider} from 'react-native-paper';
-import {moderateScale} from 'react-native-size-matters';
+import {moderateScale, verticalScale} from 'react-native-size-matters';
 import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 import MenuPopup from '../Menu/Menu';
@@ -15,7 +15,11 @@ const HeaderWithSearch = props => {
 
   return (
     <>
-      <Appbar.Header style={styles.headerContainer}>
+      <Appbar.Header
+        style={[
+          styles.headerContainer,
+          {marginTop: Platform.OS === 'ios' && verticalScale(-40)},
+        ]}>
         <Appbar.Action
           icon="menu"
           color={colors.WHITE}
@@ -47,7 +51,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.APP_PRIMARY,
     color: colors.WHITE,
     height: moderateScale(45),
-    marginTop: moderateScale(-40),
     alignItems: 'center',
     shadowColor: colors.BLACK,
     shadowOffset: {
