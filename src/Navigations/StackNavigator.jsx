@@ -36,6 +36,7 @@ import NewEvent from '../Containers/EventCalendar/NewEvent';
 import EventList from '../Containers/EventCalendar/EventList';
 import BottomTabNavigator from './Tab/BottomTabNavigator';
 import TopTabNavigator from './Tab/TopTabNavigator';
+import Poll from '../Containers/Polls/Poll';
 
 export const initialState = {
   isAudioEnabled: true,
@@ -56,10 +57,10 @@ const StackNavigator = () => {
   const {drawer} = useAppContext();
 
   return (
-    // <DrawerLayoutAndroid
-    //   ref={drawer}
-    //   drawerWidth={300}
-    //   renderNavigationView={navigationView}>
+    <DrawerLayoutAndroid
+      ref={drawer}
+      drawerWidth={300}
+      renderNavigationView={navigationView}>
     <Stack.Navigator
       screenOptions={{
         headerShown: false,
@@ -69,6 +70,7 @@ const StackNavigator = () => {
       }}
       initialRouteName="Tiles">
       <Stack.Screen name="Tiles" component={Tiles} />
+      <Stack.Screen name="Poll" component={Poll} />
       <Stack.Screen name="DatePickerHome" component={DatePickerHome} />
       <Stack.Screen name="TopTab" component={TopTabNavigator} />
       <Stack.Screen name="BottomTab" component={BottomTabNavigator} />
@@ -99,7 +101,7 @@ const StackNavigator = () => {
       <Stack.Screen name="NewEvent" component={NewEvent} />
       <Stack.Screen name="EventList" component={EventList} />
     </Stack.Navigator>
-    // </DrawerLayoutAndroid>
+    </DrawerLayoutAndroid>
   );
 };
 

@@ -60,4 +60,9 @@ export const components = [
     image: require('../../Assets/images/toptab.png'),
     navigation: 'TopTab',
   },
+  {
+    name: 'Polls',
+    image: require('../../Assets/images/polls.png'),
+    navigation: 'Poll',
+  },
 ];

@@ -11,6 +11,8 @@ import com.facebook.react.shell.MainReactPackage;
 import java.util.Arrays;
 import java.util.ArrayList;
 
+// react-native-vector-icons
+import com.oblador.vectoricons.VectorIconsPackage;
 // @react-native-community/slider
 import com.reactnativecommunity.slider.ReactSliderPackage;
 // @react-native-firebase/app
@@ -51,8 +53,6 @@ import com.horcrux.svg.SvgPackage;
 import com.doublesymmetry.trackplayer.TrackPlayer;
 // react-native-twilio-video-webrtc
 import com.twiliorn.library.TwilioPackage;
-// react-native-vector-icons
-import com.oblador.vectoricons.VectorIconsPackage;
 // react-native-video
 import com.brentvatne.react.ReactVideoPackage;
 // react-native-vision-camera
@@ -102,6 +102,7 @@ public class PackageList {
   public ArrayList<ReactPackage> getPackages() {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
+      new VectorIconsPackage(),
       new ReactSliderPackage(),
       new ReactNativeFirebaseAppPackage(),
       new ReactNativeFirebaseFirestorePackage(),
@@ -122,7 +123,6 @@ public class PackageList {
       new SvgPackage(),
       new TrackPlayer(),
       new TwilioPackage(),
-      new VectorIconsPackage(),
       new ReactVideoPackage(),
       new CameraPackage()
     ));

@@ -8,6 +8,7 @@ MERGED from C:\Users\91934\Documents\Kit\Project-Kitbox\android\app\src\main\And
 MERGED from [com.facebook.flipper:flipper-network-plugin:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\2ccb59e5daa9cc6215b09dc8b1205700\transformed\jetified-flipper-network-plugin-0.182.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\86b8419bdc24c6b3c80f46a2a27c0e9e\transformed\jetified-flipper-fresco-plugin-0.182.0\AndroidManifest.xml:8:1-15:12
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\426f122c987f1f036bd238635db2dd0e\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:8:1-18:12
+MERGED from [:react-native-vector-icons] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-community_slider] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\@react-native-community\slider\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-firebase_firestore] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\@react-native-firebase\firestore\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-firebase_app] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\@react-native-firebase\app\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-30:12
@@ -28,7 +29,6 @@ MERGED from [:react-native-splash-screen] C:\Users\91934\Documents\Kit\Project-K
 MERGED from [:react-native-svg] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-svg\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-track-player] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-25:12
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-22:12
-MERGED from [:react-native-vector-icons] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-video] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:react-native-vision-camera] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vision-camera\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [com.facebook.react:react-android:0.72.6] C:\Users\91934\.gradle\caches\transforms-3\b33fd76d1773f349d676cfa9f5e16d8a\transformed\jetified-react-android-0.72.6-debug\AndroidManifest.xml:2:1-7:12
@@ -206,6 +206,8 @@ MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\91934\
 MERGED from [com.facebook.flipper:flipper-fresco-plugin:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\86b8419bdc24c6b3c80f46a2a27c0e9e\transformed\jetified-flipper-fresco-plugin-0.182.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\426f122c987f1f036bd238635db2dd0e\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:11:5-13:41
 MERGED from [com.facebook.flipper:flipper:0.182.0] C:\Users\91934\.gradle\caches\transforms-3\426f122c987f1f036bd238635db2dd0e\transformed\jetified-flipper-0.182.0\AndroidManifest.xml:11:5-13:41
+MERGED from [:react-native-vector-icons] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-vector-icons] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-community_slider] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\@react-native-community\slider\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-community_slider] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\@react-native-community\slider\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-firebase_firestore] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\@react-native-firebase\firestore\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
@@ -246,8 +248,6 @@ MERGED from [:react-native-track-player] C:\Users\91934\Documents\Kit\Project-Ki
 MERGED from [:react-native-track-player] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-track-player\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-twilio-video-webrtc] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-twilio-video-webrtc\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:react-native-vector-icons] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
-MERGED from [:react-native-vector-icons] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vector-icons\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-video] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-video] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-video\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:react-native-vision-camera] C:\Users\91934\Documents\Kit\Project-Kitbox\node_modules\react-native-vision-camera\android\build\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-44
