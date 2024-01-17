@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   Image,
   Button,
+  Platform,
 } from 'react-native';
 import React, {useCallback, useEffect, useLayoutEffect, useState} from 'react';
 import {colors} from '../../Utils/colors';
@@ -124,7 +125,20 @@ const Chat = () => {
     if (props.text.length === 0 && attachments[0] !== undefined) {
       modifiedProps.text = ' ';
     }
-    return <InputToolbar {...modifiedProps} containerStyle={styles.input} />;
+    return (
+      <InputToolbar
+        {...modifiedProps}
+        containerStyle={[
+          styles.input,
+          {
+            marginBottom:
+              Platform.OS === 'ios' ? moderateScale(30) : moderateScale(10),
+            marginRight:
+              Platform.OS === 'ios' ? moderateScale(10) : moderateScale(10),
+          },
+        ]}
+      />
+    );
   };
 
   const renderChatFooter = useCallback(() => {
@@ -190,9 +204,11 @@ const Chat = () => {
     <View style={styles.container}>
       <HeaderWithBackaction
         title={route.params.Item.name}
+        profile={route.params.Item.profile_pic}
         navigation={navigation}
         openMenu={openMenu}
         closeMenu={closeMenu}
+        isChat={true}
       />
       <GiftedChat
         messages={messages}
@@ -207,7 +223,10 @@ const Chat = () => {
         scrollToBottomComponent={scrollToBottomComponent}
         renderChatFooter={renderChatFooter}
         renderInputToolbar={renderInputToolbar}
-        messagesContainerStyle={styles.messagesContainer}
+        messagesContainerStyle={{
+          paddingBottom:
+            Platform.OS === 'ios' ? moderateScale(40) : moderateScale(15),
+        }}
       />
     </View>
   );

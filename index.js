@@ -7,6 +7,7 @@ import {name as appName} from './app.json';
 import {PaperProvider} from 'react-native-paper';
 import TrackPlayer from 'react-native-track-player';
 import {playbackService} from './src/Containers/AudioPlayer/AudioPlayerServices';
+import 'react-native-gesture-handler';
 
 export default function Main() {
   return (

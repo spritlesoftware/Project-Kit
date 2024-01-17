@@ -3,7 +3,7 @@ import {colors} from '../../Utils/colors';
 import {fonts} from '../../Utils/fonts';
 import {moderateScale} from 'react-native-size-matters';
 import Loader from '../Loader/Loader';
-import {Text, View} from 'react-native';
+import {Platform, StatusBar, StyleSheet, Text, View} from 'react-native';
 import AllSongs from '../../Containers/AudioPlayer/AllSongs';
 import PlayList from '../Audio/PlayList';
 import EventList from '../../Containers/EventCalendar/EventList'
@@ -12,7 +12,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const ChatsScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Chats Screen</Text>
     </View>
   );
@@ -20,7 +20,7 @@ const ChatsScreen = () => {
 
 const StatusScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Status Screen</Text>
     </View>
   );
@@ -28,7 +28,7 @@ const StatusScreen = () => {
 
 const CallsScreen = () => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Calls Screen</Text>
     </View>
   );
@@ -67,10 +67,11 @@ const TopTab = props => {
         <Tab.Navigator
           screenOptions={{
             tabBarStyle: {
-              backgroundColor:colors.WHITE,
+              backgroundColor:colors.APP_PRIMARY,
+              paddingTop: moderateScale(-30)
             },
             tabBarIndicatorStyle: {
-              backgroundColor:colors.APP_PRIMARY ,
+              backgroundColor:colors.WHITE ,
             },
           }}
           tabBarPosition="top">
@@ -83,9 +84,10 @@ const TopTab = props => {
                 tabBarShowLabel: true,
                 tabBarLabel: tab.name,
                 tabBarLabelStyle: {
-                  color: colors.BLACK,
+                  color: colors.WHITE,
                   fontFamily: fonts.BOLD,
-                  fontSize: moderateScale(15),
+                  fontSize: moderateScale(18),
+                  fontWeight: 'bold',
                   textTransform: 'none',
                 },
                 tabBarBadgeStyle: {backgroundColor: colors.APP_PRIMARY},
@@ -99,3 +101,18 @@ const TopTab = props => {
 };
 
 export default TopTab;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: colors.WHITE,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  statusBar: {
+    backgroundColor: colors.APP_PRIMARY,
+    width: '100%',
+    height: moderateScale(47),
+  }
+})

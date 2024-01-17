@@ -1,4 +1,4 @@
-import {TouchableOpacity, View} from 'react-native';
+import {Platform, TouchableOpacity, View} from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {styles} from './LoginStyles';
 import LoginLogo from '../../Assets/images/login_logo.svg';
@@ -58,7 +58,11 @@ const Login = ({navigation}) => {
         <KeyboardAwareScrollView
           style={styles.keyboard}
           keyboardShouldPersistTaps="handled">
-          <View style={{alignItems: 'center', marginTop: moderateScale(-30)}}>
+          <View
+            style={{
+              alignItems: 'center',
+              marginTop: Platform.OS === 'ios' && moderateScale(-50),
+            }}>
             <LoginLogo width={200} height={200} />
           </View>
           <View style={styles.titleContainer}>

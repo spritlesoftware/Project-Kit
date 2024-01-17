@@ -45,7 +45,7 @@ export default function Tiles({navigation}) {
         }}>
         <TouchableOpacity
           onPress={() => {
-            drawer.current.openDrawer();
+            navigation.openDrawer();
           }}>
           <Feather
             name="menu"
@@ -76,17 +76,17 @@ export default function Tiles({navigation}) {
       </View>
       <ScrollView>
         <View style={styles.tileflexcontainer}>
-          {components.map(({name, navigation, image}) => {
+          {components.map((item, index) => {
             return (
               <TouchableOpacity
                 onPress={() => {
-                  onClickTile(navigation);
+                  onClickTile(item.navigation);
                 }}
                 style={styles.tilecontainer}
-                key={name}>
-                <Image style={styles.image} source={image} />
+                key={index}>
+                <Image style={styles.image} source={item.image} />
                 <Text style={[styles.tiletext, {fontFamily: fonts.REGULAR}]}>
-                  {name}
+                  {item.name}
                 </Text>
               </TouchableOpacity>
             );

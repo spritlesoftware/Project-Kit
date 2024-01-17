@@ -1,5 +1,5 @@
 // Register.js
-import {View, TouchableOpacity} from 'react-native';
+import {View, TouchableOpacity, Platform} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -39,7 +39,12 @@ const Register = ({navigation}) => {
       <KeyboardAwareScrollView
         style={styles.keyboard}
         keyboardShouldPersistTaps="handled">
-        <View style={{alignItems: 'center', marginTop: moderateScale(-20)}}>
+        <View
+          style={{
+            alignItems: 'center',
+            marginTop:
+              Platform.OS === 'ios' ? moderateScale(-50) : moderateScale(-20),
+          }}>
           <LoginLogo width={200} height={200} />
         </View>
         <View style={styles.titleContainer}>

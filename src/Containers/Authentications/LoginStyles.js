@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
   center: {
     backgroundColor: colors.WHITE,
     height: '100%',
-    padding: moderateScale(20),
+    paddingHorizontal: moderateScale(20),
   },
 
   inputContainer: {

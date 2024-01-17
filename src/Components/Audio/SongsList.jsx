@@ -46,7 +46,6 @@ function SongsList({HandleFavourites, handleItemPress, ConditionChecker}) {
         <View
           style={{
             justifyContent: 'center',
-            padding: moderateScale(10),
           }}>
           <PlayingTrackBottom
             currentTrack={currentTrack}

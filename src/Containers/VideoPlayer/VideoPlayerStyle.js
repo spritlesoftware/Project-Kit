@@ -32,6 +32,7 @@ export const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     justifyContent: 'center',
     alignItems: 'center',
+    bottom: moderateScale(10)
   },
 
   timerText: {
@@ -66,6 +67,8 @@ export const styles = StyleSheet.create({
 
   title: {
     fontFamily: fonts.BOLD,
+    fontSize: moderateScale(18),
+    fontWeight: 'bold',
     color: colors.APP_PRIMARY,
     marginTop: moderateScale(20),
   },
