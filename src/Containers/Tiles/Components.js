@@ -45,11 +45,11 @@ export const components = [
     navigation: 'DatePickerHome',
   },
 
-  // {
-  //   name: 'Post & Polls',
-  //   image: require('../../Assets/images/post.jpg'),
-  //   navigation: 'VideoList',
-  // },
+  {
+    name: 'Posts',
+    image: require('../../Assets/images/post.jpg'),
+    navigation: 'Post',
+  },
   {
     name: 'Bottom Tab',
     image: require('../../Assets/images/tabs.png'),

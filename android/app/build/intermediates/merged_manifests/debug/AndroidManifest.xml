@@ -175,6 +175,15 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
+        </provider>
+        <provider
+            android:name="com.imagepicker.ImagePickerProvider"
+            android:authorities="com.kit_box.imagepickerprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/imagepicker_provider_paths" />
         </provider> <!-- The main service, handles playback, playlists and media buttons -->
         <service
             android:name="com.doublesymmetry.trackplayer.service.MusicService"
